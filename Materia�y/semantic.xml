@@ -1,0 +1,165 @@
+<?xml version="1.0" encoding="windows-1250"?>
+<semantic>
+	<!-- elementy glowne -->
+	<nodes>
+	    <!-- 
+		    cn - nazwa tagu w jakim wystepuje on w XML
+			normal-cn - nazwa unormowana (potrzebna do logiki) wartosc domyslna cn
+			label - nazwa wyswietlana w edytorze
+			rootNode - czy element glowny (false)
+			branchNode - czy element jest galezia (false)
+		-->
+		<node cn="ustawa" normal-cn="ustawa" label="Ustawa" rootNode="true"/>
+		<node cn="uchwala" label="Uchwała" rootNode="true"/>
+		<node cn="rozporzadzenie" label="Rozporządzenie" rootNode="true"/>
+		<node cn="zarzadzenie" label="Zarządzenie" rootNode="true"/>
+		<node cn="informacja" label="Informacja" rootNode="true"/>
+		<node cn="komunikat" label="Komunikat" rootNode="true"/>
+		<node cn="decyzja" label="Decyzja" rootNode="true"/>
+		<node cn="oswiadczenie" label="Oświadczenie" rootNode="true"/>
+		<node cn="postanowienie" label="Postanowienie" rootNode="true"/>
+		<node cn="wyrok" label="Wyrok" rootNode="true"/>
+		<node cn="wyrok_TK" label="Wyrok Trybunału Konstytucyjnego" rootNode="true"/>
+		<node cn="porozumienie" label="Porozumienie" rootNode="true"/>
+		<node cn="ogloszenie" label="Ogłoszenie" rootNode="true"/>
+		<node cn="obwieszczenie" label="Obwieszczenie" rootNode="true"/>
+		<node cn="tyt" label="Tytuł (jako element grupujący)"/>
+		<node cn="dzial" label="Dział"/>
+		<node cn="rozdzial" label="Rozdział"/>
+		<node cn="artykul" label="Artykuł"/>
+		<node cn="paragraf" label="Paragraf"/>
+		<node cn="ustep" label="Ustęp"/>
+		<node cn="punkt" label="Punkt"/>
+		<node cn="litera" label="Litera"/>
+		<node cn="tiret" label="Tiret"/>
+		<node cn="punktowanie" label="Punktowanie"/>
+		<node cn="adres-publikacji" label="Adres publikacji"/>
+		<node cn="adres-dzu" label="Adres dziennika ustaw"/>
+		<node cn="tytul" label="Tytuł"/>
+		<node cn="preambula" label="Preambuła"/>
+		<node cn="organ-wydajacy" label="Organ wydający"/>
+		<node cn="zalaczniki" label="Załączniki"/>
+		<node cn="zalacznik" label="Załącznik"/>
+		<node cn="podpisy" label="Podpisy"/>
+		<node cn="podpis" label="Podpis"/>
+		<node cn="z-upowaznienia" label="Z upoważnienia"/>
+		<node cn="zatwierdzil" label="Zatwierdził"/>
+		<node cn="tekst-zatwierdzenia" label="Tekst zatwierdzenia"/>
+		<node cn="uwaga" label="Uwaga"/>
+		<node cn="imie-nazwisko" label="Imię i nazwisko"/>
+		<node cn="stopien-naukowy" label="Stopień naukowy"/>
+		<node cn="funkcja" label="Funkcja"/>		
+		<node cn="data-wydania" label="Data wydania"/>
+		<node cn="uchylony" label="Uchylony"/>
+		<node cn="nr" label="Numer"/>
+		<node cn="data-wydania" label="Data wydania"/>
+		<node cn="naglowek" label="Nagłówek"/>
+		<node cn="stopka" label="Stopka"/>
+		<node cn="rok" label="Rok"/>		
+		<node cn="pozycja" label="Pozycja"/>
+		<node cn="z-upowaznienia" label="Z upoważnienia"/>
+		<node cn="data-zatwierdzenia" label="Data zatwierdzenia"/>
+		<node cn="nazwa" label="Nazwa"/>
+		<node cn="marginalia" label="Marginalia"/>
+		<node cn="tresc-przypisu" label="Treść przypisu"/>
+		<node cn="tresc-przypisow" label="Przypisy"/>		
+		<node cn="metryczka" label="Metryczka"/>	
+		<node cn="fragment" label="Fragment" branchNode="true"/>
+		<node cn="blok" label="Blok" branchNode="true"/>
+		<node cn="przypis" label="Przypis" />	
+		<node cn="definicja" label="Definicja" branchNode="true"/>
+		<node cn="link" label="Link" branchNode="true"/>	
+		<node cn="przywolanie" label="Przywołanie" branchNode="true"/>	
+		<node cn="dodaj" label="Dodaj"/>	
+		<node cn="uchyl" label="Uchyl"/>	
+		<node cn="zastap" label="Zastąp"/>	
+		<node cn="cytowanie" label="Cytowanie"/>	
+		<node cn="akapit" label="Akapit"/>	
+		<node cn="trybunal" label="Trybunał"/>	
+		<node cn="przepisy-wykonawcze" label="Przepisy wykonawcze"/>	
+		<node cn="dyrektywa" label="Dyrektywa"/>	
+		<node cn="wyspa" label="Wyspa"/>	
+		<node cn="zalacznik_bin" label="Załącznik binarny"/>
+        <node cn="sklad" label="Skład"/>
+        <node cn="zasakarzenie" label="Zaskarżenie"/>
+        <node cn="sentencja" label="Sentencja"/>
+        <node cn="uzasadnienie" label="Uzasadnienie"/>
+        <node cn="ksiega" label="Księga"/>
+        <node cn="czesc" label="Część" />
+		<!--dotyczy przypisow-->
+		<node cn="ustep-przypisu" label="Ustęp przypisu"/>
+		<node cn="tiret-przypisu" label="Tiret przypisu"/>
+		<node cn="litera-przypisu" label="Litera przypisu"/>
+		<node cn="punkt-przypisu" label="Punkt przypisu"/>
+		<node cn="artykul-przypisu" label="Artykuł przypisu"/>
+        
+
+	</nodes>
+	<attributes>
+		<attribute cn="status-aktu" normal-cn="status-aktu" label="Status aktu">
+			<enum cn="projekt" label="Projekt"/>
+			<enum cn="uchwalony" label="Uchwalony"/>
+			<enum cn="przyjety" label="Przyjęty"/>
+			<enum cn="ogloszony" label="Ogloszony"/>
+		</attribute>
+		<attribute cn="nazwa" label="Nazwa"/>
+		<attribute cn="organ-wydajacy" label="Organ wydający"/>
+		<attribute cn="data" label="Data"/>
+		<attribute cn="numer" label="Numer"/>
+		<attribute cn="obowiazuje-od" label="Obowiązuje od"/>
+		<attribute cn="obowiazuje-do" label="Obowiązuje do"/>
+		<attribute cn="opis-typu" label="Opis typu"/>
+		<attribute cn="kadencja" label="Kadencja"/>
+		<attribute cn="wyrownanie" label="Wyrównanie">
+			<enum cn="do-lewej" label="Do lewej"/>
+			<enum cn="do-prawej" label="Do prawej"/>
+			<enum cn="wysrodkowane" label="Wyśrodkowane"/>
+			<enum cn="wyjustowane" label="Wyjustowane"/>
+		</attribute>
+		<attribute cn="typ" label="Typ">
+			<enum cn="zwykla" label="Zwykła"/>
+			<enum cn="marginalia" label="Marginalia"/>
+			<enum cn="poprawka" label="Poprawka"/>			
+		</attribute>
+        <attribute cn="opis" label="Opis"/>
+	</attributes>
+    <html-mapping>
+		<tag html="strong" xml="wytluszczenie" ommit="true"/>
+		<tag html="em" xml="kursywa" ommit="true"/>
+		<tag html="u" xml="podkreslenie" ommit="true"/>
+		<tag html="sup" xml="indeks-gorny" ommit="true"/>
+		<tag html="sub" xml="indeks-dolny" ommit="true"/>
+        <tag html="table" xml="tabela"/>
+		<!-- tagi specjalnego znaczenia, sa one pomijane 
+		      ale powoduja przestawienie flagi, od nich zalezec bedzie czy w jaki sposob zostanie zwizualizowany element tr lub th z ich srodka
+		-->
+		<tag html="thead" xml="naglowek-tabeli" />
+		<tag html="tbody" xml="tbody" ommit="true"/>
+		<tag html="tfoot" xml="stopka-tabeli"/>        
+        <tag html="tr" xml="wiersz"/>		
+        <tag html="th" xml="th-komorka"/>
+		<tag html="td" xml="komorka"> <!-- bedzie korygowana na th -->
+            <attribute name="style" value="text-align: left;" xml-name="wyrownanie" xml-value="do-lewej" fop-name="text-align" fop-value="left"/>
+            <attribute name="style" value="text-align: center;" xml-name="wyrownanie" xml-value="wysrodkowane" fop-name="text-align" fop-value="center"/>
+            <attribute name="style" value="text-align: right;" xml-name="wyrownanie" xml-value="do-prawej" fop-name="text-align" fop-value="right"/>
+            <attribute name="style" value="text-align: justify;" xml-name="wyrownanie" xml-value="wyjustowane" fop-name="text-align" fop-value="justify"/>
+
+            <attribute name="align" value="left" xml-name="wyrownanie" xml-value="do-lewej" reverse="true" fop-name="text-align" fop-value="left"/>
+            <attribute name="align" value="center" xml-name="wyrownanie" xml-value="wysrodkowane" reverse="true" fop-name="text-align" fop-value="center"/>
+            <attribute name="align" value="right" xml-name="wyrownanie" xml-value="do-prawej" reverse="true" fop-name="text-align" fop-value="right"/>
+            <attribute name="align" value="justify" xml-name="wyrownanie" xml-value="wyjustowane" reverse="true" fop-name="text-align" fop-value="justify"/>
+
+            <attribute name="style" value="vertical-align: top;" xml-name="wyrownanie-w-pionie" xml-value="do-gory" fop-name="vertical-align" fop-value="top"/>
+            <attribute name="style" value="vertical-align: bottom;" xml-name="wyrownanie-w-pionie" xml-value="do-dolu" fop-name="vertical-align" fop-value="bottom"/>
+            <attribute name="style" value="vertical-align: center;" xml-name="wyrownanie-w-pionie" xml-value="wysrodkowane" fop-name="vertical-align" fop-value="center"/>
+			
+            <attribute name="valign" value="top" xml-name="wyrownanie-w-pionie" xml-value="do-gory" reverse="true" fop-name="vertical-align" fop-value="top"/>
+            <attribute name="valign" value="bottom" xml-name="wyrownanie-w-pionie" xml-value="do-dolu" reverse="true" fop-name="vertical-align" fop-value="bottom"/>
+            <attribute name="valign" value="center" xml-name="wyrownanie-w-pionie" xml-value="wysrodkowane" reverse="true" fop-name="vertical-align" fop-value="center"/>
+			
+            <attribute name="rowspan" xml-name="scal-pionowo" fop-name="number-rows-spanned" reverse="true"/> <!-- jesli nie mam value - to znaczy ze wartosz bedzie przepisana -->
+            <attribute name="colspan" xml-name="scal-poziomo" fop-name="number-columns-spanned" reverse="true"/>
+        </tag>                
+        
+    </html-mapping>
+</semantic>
