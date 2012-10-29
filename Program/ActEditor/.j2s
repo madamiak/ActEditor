@@ -1,6 +1,6 @@
 #Java2Script Configuration
-#Mon Oct 29 14:07:48 CET 2012
-j2s.resources.list=../../../../Download/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/net.sf.j2s.lib_2.0.0/j2slib/java.runtime.j2x,../../../../Download/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/net.sf.j2s.lib_2.0.0/j2slib/swt.j2x,bin/pl/wroc/pwr/student/acteditor/Tester.js
+#Mon Oct 29 14:26:56 CET 2012
+j2s.resources.list=../../../../Download/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/net.sf.j2s.lib_2.0.0/j2slib/java.runtime.j2x,../../../../Download/eclipse-jee-juno-SR1-win32-x86_64/eclipse/plugins/net.sf.j2s.lib_2.0.0/j2slib/swt.j2x,bin/pl/wroc/pwr/student/acteditor/Tester.js,bin/pl/wroc/pwr/student/acteditor/TesterTest.js
 j2s.output.path=bin
 j2s.abandoned.resources.list=
 j2s.compiler.status=enable
