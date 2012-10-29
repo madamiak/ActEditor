@@ -1,0 +1,4 @@
+ActEditor
+=========
+
+Edytor aktów prawnych
