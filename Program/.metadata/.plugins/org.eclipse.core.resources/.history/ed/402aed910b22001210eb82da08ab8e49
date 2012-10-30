@@ -1,0 +1,18 @@
+package pl.wroc.pwr.student.acteditor;
+
+import pl.wroc.pwr.student.acteditor.view.Window;
+import pl.wroc.pwr.student.acteditor.view.WindowFactory;
+import pl.wroc.pwr.student.acteditor.view.WindowFactory.WindowType;
+
+public final class Application {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Application.run();
+	}
+
+	private static void run() {
+		Window window = WindowFactory.getWindow(WindowType.MAIN);
+}

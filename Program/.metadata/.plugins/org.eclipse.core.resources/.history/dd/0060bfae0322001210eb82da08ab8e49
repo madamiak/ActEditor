@@ -1,0 +1,17 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+
+public class DisplayThread {
+	private static Display display;
+	
+	private DisplayThread() {
+	}
+	
+	public static Display get() {
+		if(display == null) {
+			display = new Display();
+		}
+		return display;
+	}
+}

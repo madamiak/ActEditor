@@ -1,0 +1,15 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+public class DisplayThread {
+	private static DisplayThread display;
+	
+	private DisplayThread() {
+	}
+	
+	public static DisplayThread get() {
+		if(display == null) {
+			display = new DisplayThread();
+		}
+		return display;
+	}
+}

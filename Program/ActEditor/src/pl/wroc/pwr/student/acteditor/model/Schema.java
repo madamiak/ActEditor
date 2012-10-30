@@ -1,7 +1,391 @@
 package pl.wroc.pwr.student.acteditor.model;
 
 public final class Schema {
-	private static String schemaContent = "								<xsd:attributeGroup ref=\"atr-sterujace\"/>\n"+
+	private static String schemaContent = "" +
+			"<xsd:schema targetNamespace=\"http://www.crd.mswia.gov.pl/repo/\" xmlns=\"http://www.crd.mswia.gov.pl/repo/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n"+
+			"<!--  D o k u m e n t y  -->\n"+
+			"	<xsd:element name=\"ustawa\">\n"+
+			"		<xsd:annotation>\n"+
+			"			<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego ustawê.</xsd:documentation>\n"+
+			"		</xsd:annotation>\n"+
+			"		<xsd:complexType>\n"+
+			"			<xsd:sequence>\n"+
+			"				<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"trybunal\"/>\n"+
+			"				<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"				<xsd:choice>\n"+
+			"					<xsd:element maxOccurs=\"unbounded\" ref=\"ksiega\"/>\n"+
+			"					<xsd:sequence>\n"+
+			"						<xsd:element maxOccurs=\"unbounded\" ref=\"tyt\"/>\n"+
+			"						<xsd:element maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"czesc\"/>\n"+
+			"					</xsd:sequence>\n"+
+			"					<xsd:element maxOccurs=\"unbounded\" ref=\"dzial\"/>\n"+
+			"					<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"					<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"				</xsd:choice>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"				<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"			</xsd:sequence>\n"+
+			"			<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"		</xsd:complexType>\n"+
+			"	</xsd:element>\n"+
+			"				<xsd:element name=\"rozporzadzenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego rozporz¹dzenie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tyt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"dzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"uchwala\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego uchwa³ê.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tyt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"dzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"akapit\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zarzadzenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego zarz¹dzenie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"informacja\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego informacjê.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"punkt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"litera\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tiret\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"komunikat\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego komunikat.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"punkt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"litera\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tiret\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"decyzja\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego decyzjê.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"punkt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"litera\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tiret\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"oswiadczenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego oœwiadczenie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"punkt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"litera\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tiret\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"wyrok_TK\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element glowny dokumentu XML-owego reprezentujacego wyrok Trybunalu Konstytucyjnego.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"sklad\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"zaskarzenie\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"sentencja\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"akapit\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"uzasadnienie\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"sygn-akt\" use=\"required\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"postanowienie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element glowny dokumentu XML-owego reprezentujacego wyrok Trybunalu Konstytucyjnego.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"metryczka\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" name=\"sygn-akt\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:element maxOccurs=\"1\" minOccurs=\"0\" ref=\"sklad\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"sentencja\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"akapit\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"uzasadnienie\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"wyrok\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego wyrok.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"sygn-akt\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"porozumienie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego porozumienie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"punkt\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"tiret\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"ogloszenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego og³oszenie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"obwieszczenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element g³ówny dokumentu XML-owego reprezentuj¹cego obwieszczenie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"1\" ref=\"metryczka\"/>\n"+
+			"																<xsd:group maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"preambula\"/>\n"+
+			"																<xsd:choice>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"ustep\"/>\n"+
+			"																</xsd:choice>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalaczniki\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tresc-przypisow\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"podpisy\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zatwierdzil\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zalacznik_bin\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  G r u p y   a t r y b u t o w  -->\n"+
+			"				<xsd:attributeGroup name=\"atr-czasowe\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty okreslajace poczatkowa i koncowa date obowiazywania elementu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute name=\"obowiazuje-od\" type=\"data\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Data poczatku obowiazywania elementu.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"								</xsd:attribute>\n"+
+			"								<xsd:attribute name=\"obowiazuje-do\" type=\"data\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Data konca obowiazywania elementu.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"								</xsd:attribute>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-wizualizacyjne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty sterujace wyswietlaniem elementu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute default=\"tak\" name=\"widoczny\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Informacja, czy element ma byc wizualizowany.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"												<xsd:simpleType>\n"+
+			"																<xsd:restriction base=\"xsd:string\">\n"+
+			"																				<xsd:enumeration value=\"tak\"/>\n"+
+			"																				<xsd:enumeration value=\"nie\"/>\n"+
+			"																</xsd:restriction>\n"+
+			"												</xsd:simpleType>\n"+
+			"								</xsd:attribute>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-sterujace\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty ogolnego przeznaczenia.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute name=\"status\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Stan elementu - atrybut ogolnego przeznaczenia.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"								</xsd:attribute>\n"+
+			"								<xsd:attribute name=\"komentarz\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Komentarz do elementu - atrybut ogolnego przeznaczenia.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"								</xsd:attribute>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-wspolne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Podstawowy zestaw atrybutow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute default=\"nie\" name=\"uchylony\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Informacja, czy element zostal uchylony.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"												<xsd:simpleType>\n"+
+			"																<xsd:restriction base=\"xsd:string\">\n"+
+			"																				<xsd:enumeration value=\"tak\"/>\n"+
+			"																				<xsd:enumeration value=\"nie\"/>\n"+
+			"																</xsd:restriction>\n"+
+			"												</xsd:simpleType>\n"+
+			"								</xsd:attribute>\n"+
+			"								<xsd:attributeGroup ref=\"atr-sterujace\"/>\n"+
 			"								<xsd:attributeGroup ref=\"atr-wizualizacyjne\"/>\n"+
 			"								<xsd:attributeGroup ref=\"atr-czasowe\"/>\n"+
 			"				</xsd:attributeGroup>\n"+

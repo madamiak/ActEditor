@@ -1,0 +1,22 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+
+public class Decision extends Window {
+	public Decision(Display display) {
+		this.display = display;
+		this.shell = new Shell(display);
+	}
+
+	@Override
+	public void initialize() {
+		
+	}
+
+	@Override
+	public void setupComponents() {
+		shell.setText("Decyzja");
+	}
+
+}

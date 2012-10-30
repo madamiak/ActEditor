@@ -1,0 +1,68 @@
+package pl.wroc.pwr.student.acteditor.parsing;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import junit.framework.Test;
+
+public class XSDParser implements Parser {
+	private String xsdContent;
+	private String[] xsdLines;
+	
+	public XSDParser(String xsdContent) {
+		this.xsdContent = xsdContent;
+	}
+	
+	public String[] getElement(String elementName) {
+		List<String> result;
+		
+		if(xsdLines == null) {
+			xsdLines = xsdContent.split("\n");
+		}
+
+		result = getLinesWithElement(elementName, xsdLines);
+		String[] tmp = new String[result.size()];
+		result.toArray(tmp);
+		
+		return tmp;
+	}
+	
+	private List<String> getLinesWithElement(String elementName, String[] lines) {
+		boolean read = false;
+		String pattern = "";
+		List<String> result = new ArrayList<String>();
+		
+		for(int i = 0; i < xsdLines.length; i++) {
+			String currentLine = getWithoutInitialSpaces(xsdLines[i]);
+			if(hasElement(elementName, currentLine)) {
+				read = true;
+				pattern = getTagName(currentLine);
+				System.out.println(currentLine);
+				result.add(currentLine);
+				continue;
+			}
+			
+			if(read == true) {
+				String tmp = pattern.replaceAll("<", "</") + ">";
+				if(currentLine.equals(tmp)) {
+					read = false;
+				}
+				System.out.println(currentLine);
+				result.add(currentLine);
+			}			
+		}
+		return result;
+	}
+	
+	private String getWithoutInitialSpaces(String text) {
+		return text.substring(text.indexOf("<"));
+	}
+	
+	private boolean hasElement(String elementName, String line) {
+		return line.contains("element name=\"" + elementName);
+	}
+	
+	private String getTagName(String line) {
+		return line.split(" ")[0];
+	}
+}

@@ -1,0 +1,35 @@
+package pl.wroc.pwr.student.acteditor.test;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.layout.*;
+import org.eclipse.swt.widgets.*;
+
+public class Tester {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		final Display display = new Display();
+		Shell shell = new Shell(display);
+		shell.setSize(715, 555);
+		shell.setText("Hello world!");
+		shell.setLayout(new FormLayout());
+		shell.setMaximized(true);
+		
+		Group grpUtwrz = new Group(shell, SWT.NONE);
+		FormData fd = new FormData();
+		fd.right = new FormAttachment(100, -10);
+		fd.bottom = new FormAttachment(100, -10);
+		fd.left = new FormAttachment(100, -346);
+		fd.top = new FormAttachment(0, 10);
+		grpUtwrz.setLayoutData(fd);
+		grpUtwrz.setText("Utw\u00F3rz");
+		shell.open();
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch())
+				display.sleep();
+		}
+		display.dispose();
+	}
+}

@@ -1,0 +1,15 @@
+package pl.wroc.pwr.student.acteditor;
+
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
+
+public class Schema {
+	public Schema() {
+		try {
+			FileInputStream stream = new FileInputStream("\\..\\..\\Materia³y\\schema.xsd");
+		} catch (FileNotFoundException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+	}
+}

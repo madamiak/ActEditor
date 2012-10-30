@@ -1,0 +1,16 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+public class WindowFactory {
+	private Window window;
+	public enum WindowType {
+		MAIN,
+	}
+	
+	public Window getWindow(WindowType type) {
+		switch(type) {
+		case MAIN:
+			return new Main();
+		}
+		return null;
+	}
+}

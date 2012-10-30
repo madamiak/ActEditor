@@ -1,0 +1,10 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+public class Decision extends Window {
+
+	@Override
+	public void setupComponents() {
+		shell.setText("Decyzja");
+	}
+
+}

@@ -1,0 +1,18 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+public abstract class Window {
+	protected Display display;
+	protected Shell shell;
+	
+	public Window() {
+		initialize();
+		open();
+		dispose();
+	}
+	
+	protected abstract void initialize();
+	
+	protected abstract void open();
+	
+	protected abstract void dispose();
+}

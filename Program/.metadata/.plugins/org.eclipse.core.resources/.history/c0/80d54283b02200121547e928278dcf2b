@@ -1,0 +1,37 @@
+package pl.wroc.pwr.student.acteditor.parsing;
+
+public class XSDParser implements Parser {
+	private String xsdContent;
+	private String[] xsdLines;
+	
+	public XSDParser(String xsdContent) {
+		this.xsdContent = xsdContent;
+	}
+	
+	public void getElement(String elementName) {
+		boolean read = false;
+		String pattern = "";
+		
+		if(xsdLines == null) {
+			xsdLines = xsdContent.split("\n");
+		}
+		
+		for(int i = 0; i < xsdLines.length; i++) {
+			String currentLine = xsdLines[i].substring(xsdLines[i].indexOf("<"));
+			if(currentLine.contains(elementName)) {
+				read = true;
+				pattern = currentLine.split(" ")[0];
+				System.out.println(currentLine);
+				continue;
+			}
+			
+			if(read == true) {
+				String tmp = pattern.replaceAll("<", "</") + ">";
+				if(currentLine.equals(tmp)) {
+					read = false;
+				}
+				System.out.println(currentLine);
+			}			
+		}
+	}
+}

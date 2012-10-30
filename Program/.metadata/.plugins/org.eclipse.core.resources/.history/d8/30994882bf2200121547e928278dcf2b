@@ -1,0 +1,10 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+public class Law implements Tag {
+
+	@Override
+	public String whoAmI() {
+		return "Ustawa";
+	}
+
+}

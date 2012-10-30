@@ -1,0 +1,5 @@
+package pl.wroc.pwr.student.acteditor.parsing;
+
+public class XMLFormatter implements Formatter {
+
+}

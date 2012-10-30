@@ -1,0 +1,20 @@
+1351516269611	Delete element
+1351529170365	Encapsulate field 'schemaContent'
+1351533267753	Delete element
+1351533497422	Delete element
+1351535524663	Delete element
+1351535892944	Move compilation unit
+1351535930768	Move compilation unit
+1351536022778	Delete element
+1351541252792	Delete element
+1351544468961	Delete elements
+1351617591605	Rename method 'hasElement'
+1351617923705	Rename method 'getElement'
+1351619115505	Move compilation unit
+1351619143822	Move compilation unit
+1351619921451	Rename type 'Decision'
+1351619929648	Rename type 'Main'
+1351619970910	Rename package 'pl.wroc.pwr.student.acteditor.model.tag'
+1351620135452	Delete element
+1351620140512	Delete element
+1351620970920	Rename package 'pl.wroc.pwr.student.acteditor.paarsing'

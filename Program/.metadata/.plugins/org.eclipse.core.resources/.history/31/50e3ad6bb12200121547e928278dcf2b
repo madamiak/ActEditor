@@ -1,0 +1,45 @@
+package pl.wroc.pwr.student.acteditor.parsing;
+
+public class XSDParser implements Parser {
+	private String xsdContent;
+	private String[] xsdLines;
+	
+	public XSDParser(String xsdContent) {
+		this.xsdContent = xsdContent;
+	}
+	
+	public void getElement(String elementName) {
+		if(xsdLines == null) {
+			xsdLines = xsdContent.split("\n");
+		}
+		
+		for(int i = 0; i < xsdLines.length; i++) {
+			writeLineContains(elementName, xsdLines[i]);
+		}
+	}
+	
+	private String getLineWithoutTabs(String line) {
+		return line.substring(line.indexOf("<"));
+	}
+	
+	private void writeLineContains(String element, String currentLine) {
+		boolean read = false;
+		String pattern = "";
+		String currentLine = element.substring(element.indexOf("<"));
+		
+		if(currentLine.contains("element name=\"" + element)) {
+			read = true;
+			pattern = currentLine.split(" ")[0];
+			System.out.println(currentLine);
+			return;
+		}
+		
+		if(read == true) {
+			String tmp = pattern.replaceAll("<", "</") + ">";
+			if(currentLine.equals(tmp)) {
+				read = false;
+			}
+			System.out.println(currentLine);
+		}			
+	}
+}

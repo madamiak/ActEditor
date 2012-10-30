@@ -1,0 +1,14 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+import static org.junit.Assert.*;
+
+import org.junit.Test;
+
+public class TagFactoryTest {
+
+	@Test
+	public void testGetTagsFromStructure() {
+		
+	}
+
+}

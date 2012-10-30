@@ -1,0 +1,22 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+
+public final class WindowFactory {
+	private static Window window;
+	public enum WindowType {
+		MAIN,
+		DECISION,
+	}
+	
+	public static Window getWindow(WindowType type) {
+		Display display = DisplayThread.get();
+		switch(type) {
+		case MAIN:
+			window = new Main(display);
+		case DECISION:
+			window = new Decision(display);
+		}
+		return null;
+	}
+}

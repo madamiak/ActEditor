@@ -1,6 +1,6 @@
 package pl.wroc.pwr.student.acteditor;
 
-import pl.wroc.pwr.student.acteditor.view.Main;
+import pl.wroc.pwr.student.acteditor.view.MainWindow;
 
 
 public final class Application {
@@ -13,6 +13,6 @@ public final class Application {
 	}
 
 	private static void run() {
-		new Main();
+		new MainWindow();
 	}
 }

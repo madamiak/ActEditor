@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<qualifiedTypeNameHistroy>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.Schema"/>
+<fullyQualifiedTypeName name="java.io.InputStreamReader"/>
+<fullyQualifiedTypeName name="java.io.FileInputStream"/>
+<fullyQualifiedTypeName name="java.io.InputStream"/>
+<fullyQualifiedTypeName name="java.io.IOException"/>
+<fullyQualifiedTypeName name="java.io.BufferedReader"/>
+<fullyQualifiedTypeName name="java.io.FileReader"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.view.WindowFactory"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.view.Window"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.view.WindowFactory.WindowType"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Display"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.view.DisplayThread"/>
+<fullyQualifiedTypeName name="org.eclipse.swt.widgets.Shell"/>
+<fullyQualifiedTypeName name="java.awt.Window"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.view.Main"/>
+<fullyQualifiedTypeName name="junit.framework.Test"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.model.Schema"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser"/>
+<fullyQualifiedTypeName name="java.util.List"/>
+<fullyQualifiedTypeName name="pl.wroc.pwr.student.acteditor.util.Utils"/>
+</qualifiedTypeNameHistroy>

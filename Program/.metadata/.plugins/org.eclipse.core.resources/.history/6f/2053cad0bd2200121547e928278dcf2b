@@ -1,0 +1,20 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+import pl.wroc.pwr.student.acteditor.model.Schema;
+import pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser;
+
+public class TagFactory {
+	private XSDParser parser;
+	
+	public TagFactory() {
+		parser = new XSDParser(Schema.getSchemaContent());
+	}
+	
+	public String[] getTagsFromStructure(String[] structure) {
+		String[] result = null;
+		
+		
+		
+		return result;
+	}
+}

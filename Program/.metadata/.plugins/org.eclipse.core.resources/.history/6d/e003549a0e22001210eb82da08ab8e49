@@ -1,0 +1,34 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Shell;
+
+public class Main extends Window {
+
+	@Override
+	protected void initialize() {
+		display = new Display();
+		shell = new Shell(display);
+		shell.setText("Welcome to Act Editor");
+	}
+
+	@Override
+	protected void open() {
+		shell.open();
+		new Decision(display);
+	}
+
+	@Override
+	protected void dispose() {
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch())
+				display.sleep();
+		}
+		display.dispose();
+	}
+
+	public Display getMainDisplay() {
+		return display;
+	}
+
+}

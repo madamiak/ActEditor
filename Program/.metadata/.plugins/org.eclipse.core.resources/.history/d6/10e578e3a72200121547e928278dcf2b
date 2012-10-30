@@ -1,0 +1,9 @@
+package pl.wroc.pwr.student.acteditor.parsing;
+
+public class XSDParser implements Parser {
+	private String xsdContent;
+	
+	public XSDParser(String xsdContent) {
+		this.xsdContent = xsdContent;
+	}
+}

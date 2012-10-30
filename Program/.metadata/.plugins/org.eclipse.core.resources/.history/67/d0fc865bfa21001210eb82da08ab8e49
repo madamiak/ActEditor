@@ -1,0 +1,11 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+public abstract class Window {
+	public Window() {
+		
+	}
+	
+	public void initialize() {
+		
+	}
+}

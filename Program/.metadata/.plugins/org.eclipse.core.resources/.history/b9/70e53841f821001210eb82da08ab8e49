@@ -1,0 +1,17 @@
+package pl.wroc.pwr.student.acteditor;
+
+import java.awt.Window;
+
+public final class Application {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		
+	}
+
+	private static void runApplication() {
+		new Window();
+	}
+}

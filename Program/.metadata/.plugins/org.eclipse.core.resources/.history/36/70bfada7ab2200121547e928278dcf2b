@@ -1,0 +1,13 @@
+package pl.wroc.pwr.student.acteditor.test;
+
+public class Load {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+
+	}
+
+}

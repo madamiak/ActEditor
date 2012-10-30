@@ -1,0 +1,1598 @@
+package pl.wroc.pwr.student.acteditor.model;
+
+public final class Schema {
+	private static String schemaContent = "" +
+			"								<xsd:attributeGroup ref=\"atr-sterujace\"/>\n"+
+			"								<xsd:attributeGroup ref=\"atr-wizualizacyjne\"/>\n"+
+			"								<xsd:attributeGroup ref=\"atr-czasowe\"/>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-wspolne-nr\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty dla elementow numerowanych.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute name=\"nr\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Numer elementu struktury.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"								</xsd:attribute>\n"+
+			"								<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-identyfikacyjne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty identyfikujace zakres nowelizacji tekstowej.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute default=\"ostatnie\" name=\"wystapienie\">\n"+
+			"												<xsd:simpleType>\n"+
+			"																<xsd:restriction base=\"xsd:string\">\n"+
+			"																				<xsd:enumeration value=\"pierwsze\"/>\n"+
+			"																				<xsd:enumeration value=\"drugie\"/>\n"+
+			"																				<xsd:enumeration value=\"ostatnie\"/>\n"+
+			"																				<xsd:enumeration value=\"wszystkie\"/>\n"+
+			"																</xsd:restriction>\n"+
+			"												</xsd:simpleType>\n"+
+			"								</xsd:attribute>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-nowelizacyjne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty dla znacznikow nowelizacyjnych.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attributeGroup ref=\"atr-wizualizacyjne\"/>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-wyrownanie-poz\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty sterujace wyrownaniem w poziomie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute name=\"wyrownanie\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Wyrownanie: do lewej, do prawej, wysrodkowane, wyjustowane.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"												<xsd:simpleType>\n"+
+			"																<xsd:restriction base=\"xsd:token\">\n"+
+			"																				<xsd:enumeration value=\"do-lewej\"/>\n"+
+			"																				<xsd:enumeration value=\"do-prawej\"/>\n"+
+			"																				<xsd:enumeration value=\"wysrodkowane\"/>\n"+
+			"																				<xsd:enumeration value=\"wyjustowane\"/>\n"+
+			"																</xsd:restriction>\n"+
+			"												</xsd:simpleType>\n"+
+			"								</xsd:attribute>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"				<xsd:attributeGroup name=\"atr-wyrownanie-pion\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Atrybuty sterujace wyrownaniem w pionie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:attribute name=\"wyrownanie-w-pionie\">\n"+
+			"												<xsd:annotation>\n"+
+			"																<xsd:documentation>Wyrownanie: do gory, do dolu, wysrodkowane.</xsd:documentation>\n"+
+			"												</xsd:annotation>\n"+
+			"												<xsd:simpleType>\n"+
+			"																<xsd:restriction base=\"xsd:token\">\n"+
+			"																				<xsd:enumeration value=\"do-gory\"/>\n"+
+			"																				<xsd:enumeration value=\"wysrodkowane\"/>\n"+
+			"																				<xsd:enumeration value=\"do-dolu\"/>\n"+
+			"																</xsd:restriction>\n"+
+			"												</xsd:simpleType>\n"+
+			"								</xsd:attribute>\n"+
+			"				</xsd:attributeGroup>\n"+
+			"<!--  T y p y   p r o s t e  -->\n"+
+			"				<xsd:simpleType name=\"data\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Wzorzec dat (RRRR-MM-DD).</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:restriction base=\"xsd:string\">\n"+
+			"												<xsd:pattern value=\"(19|20)[0-9]{2}\\-(01|02|03|04|05|06|07|08|09|10|11|12)\\-([0-2]{1}[0-9]{1}|30|31)\"/>\n"+
+			"								</xsd:restriction>\n"+
+			"				</xsd:simpleType>\n"+
+			"				<xsd:simpleType name=\"zakres_lat\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Wzorzec zakresu lat (RRRR-RRR).</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:restriction base=\"xsd:string\">\n"+
+			"												<xsd:pattern value=\"(19|20)[0-9]{2}\\-(19|20)[0-9]{2}\\\"/>\n"+
+			"								</xsd:restriction>\n"+
+			"				</xsd:simpleType>\n"+
+			"				<xsd:simpleType name=\"liczba\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Wzorzec dla liczb naturalnych.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:restriction base=\"xsd:nonNegativeInteger\">\n"+
+			"												<xsd:pattern value=\"[0-9]+\"/>\n"+
+			"								</xsd:restriction>\n"+
+			"				</xsd:simpleType>\n"+
+			"<!--  F r a g m e n t y   d e f i n i c j i  -->\n"+
+			"				<xsd:complexType name=\"elem-struktury\">\n"+
+			"								<xsd:choice minOccurs=\"0\">\n"+
+			"												<xsd:element ref=\"preambula\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"ksiega\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"czesc\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"tyt\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"dzial\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"oddzial\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"paragraf\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"ustep\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"punkt\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"litera\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"tiret\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"akapit\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"ustep-przypisu\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"punkt-przypisu\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"litera-przypisu\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"tiret-przypisu\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"tabela\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"wiersz\"/>\n"+
+			"												<xsd:element maxOccurs=\"unbounded\" ref=\"zalacznik\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:complexType>\n"+
+			"				<xsd:group name=\"elem-nowelizacyjne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Elementy nowelizacyjne.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:element ref=\"dodaj\"/>\n"+
+			"												<xsd:element ref=\"uchyl\"/>\n"+
+			"												<xsd:element ref=\"zastap\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"elem-komentarza\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Elementy komentarza.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:element minOccurs=\"0\" ref=\"uwaga\"/>\n"+
+			"												<xsd:element minOccurs=\"0\" ref=\"wyspa\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"elem-formatowania\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Elementy formatowania.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:element ref=\"wytluszczenie\"/>\n"+
+			"												<xsd:element ref=\"kursywa\"/>\n"+
+			"												<xsd:element ref=\"podkreslenie\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"elem-grupujace\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Elementy grupujace.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:element ref=\"fragment\"/>\n"+
+			"												<xsd:element ref=\"blok\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"elem-tekstowe\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Elementy dozwolone w &quot;zwyklym&quot; tekscie (formatowanie i indeksy).</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:group ref=\"elem-formatowania\"/>\n"+
+			"												<xsd:element ref=\"indeks-dolny\"/>\n"+
+			"												<xsd:element ref=\"indeks-gorny\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"elem-grupowe\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Rozszerzenie zwyklego tekstu o elementy grupujace.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"												<xsd:group ref=\"elem-grupujace\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"elem-wewnetrzne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Rozszerzenie elementow grupowych o reprezentacje powiazan.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:group ref=\"elem-grupowe\"/>\n"+
+			"												<xsd:element ref=\"przypis\"/>\n"+
+			"												<xsd:element ref=\"definicja\"/>\n"+
+			"												<xsd:element ref=\"link\"/>\n"+
+			"												<xsd:element ref=\"przywolanie\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"				<xsd:group name=\"rozsz-elem-wewnetrzne\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Rozszerzenie elementow wewnetrznych o znaczniki nowelizacyjne, cytowanie i tabele.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:choice>\n"+
+			"												<xsd:group ref=\"elem-wewnetrzne\"/>\n"+
+			"												<xsd:group ref=\"elem-nowelizacyjne\"/>\n"+
+			"												<xsd:element ref=\"cytowanie\"/>\n"+
+			"												<xsd:element ref=\"tabela\"/>\n"+
+			"								</xsd:choice>\n"+
+			"				</xsd:group>\n"+
+			"<!--  M e t r y c z k a  -->\n"+
+			"				<xsd:element name=\"metryczka\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Metryczka aktu, uzywana jako naglowek badz informacja w przywolaniu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"1\" minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"adres-publikacji\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"status-aktu\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Informacja o stanie prac nad aktem prawnym.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"projekt\"/>\n"+
+			"																								<xsd:enumeration value=\"uchwalony\"/>\n"+
+			"																								<xsd:enumeration value=\"przyjety\"/>\n"+
+			"																								<xsd:enumeration value=\"ogloszony\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"nazwa\" use=\"optional\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Nazwa aktu (&quot;ustawa&quot;, &quot;konstytucja&quot;, &quot;regulamin&quot; itp.)</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"organ-wydajacy\" use=\"optional\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Organ wydajacy akt - w dopelniaczu; uzupelnienie nazwy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"data\" type=\"data\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Data uchwalenia/wydania aktu.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"numer\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer aktu prawnego.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"opis-typu\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Opis aktu prawnego (rozszerzenie numeru aktu).</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"kadencja\" type=\"zakres_lat\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Okreslenie kadencji organu wydajacego.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  E l e m e n t y   s t r u k t u r y  -->\n"+
+			"				<xsd:element name=\"tytul\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy tytul aktu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:element ref=\"przypis\"/>\n"+
+			"																<xsd:element ref=\"fragment\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"srodtytul\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy srodtytul.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:element ref=\"przypis\"/>\n"+
+			"																<xsd:element ref=\"fragment\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"element_redakcyjny\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element redakcyjny posiadaj¹cy pe³n¹ funkcjonalnoœæ.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"punkt\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"litera\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tiret\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"akapit\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"preambula\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy preambule.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"<!-- dodane na wniosek TK -->\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"punkt\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"litera\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tiret\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"akapit\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"czesc\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy czesc.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:choice>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"ksiega\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"tyt\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"ksiega\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy ksiege.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:choice>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"tyt\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tyt\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy tytul (jako czesc struktury).</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:choice>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"dzial\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"dzial\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy dzial.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:choice>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"rozdzial\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"rozdzial\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy rozdzial.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:choice>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"oddzial\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"srodtytul\"/>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"oddzial\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy oddzial.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"artykul\"/>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"artykul\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy artykul.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"ustep\"/>\n"+
+			"																<xsd:element ref=\"paragraf\"/>\n"+
+			"																<xsd:element ref=\"punkt\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:element ref=\"wejscie-w-zycie\"/>\n"+
+			"																<xsd:element ref=\"stosowanie\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"paragraf\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy paragraf.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"ustep\"/>\n"+
+			"																<xsd:element ref=\"punkt\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"sentencja\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy sentencjê.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"ustep\"/>\n"+
+			"																<xsd:element ref=\"paragraf\"/>\n"+
+			"																<xsd:element ref=\"punkt\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:element ref=\"wejscie-w-zycie\"/>\n"+
+			"																<xsd:element ref=\"stosowanie\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"element_redakcyjny\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"ustep\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy ustep.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"punkt\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zaskarzenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy ustep.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"<!-- dodane na wniosek TK -->\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:element ref=\"ustep\"/>\n"+
+			"																<xsd:element ref=\"paragraf\"/>\n"+
+			"																<xsd:element ref=\"punkt\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"element_redakcyjny\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"punkt\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy punkt.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"litera\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy litere.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tiret\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy tiret, uzywany takze do wyliczen.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:element ref=\"akapit\"/>\n"+
+			"																<xsd:element ref=\"trybunal\"/>\n"+
+			"																<xsd:element ref=\"przepisy-wykonawcze\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"akapit\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy akapit.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"<!-- dodane na wniosek TK -->\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"element_redakcyjny\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  E l e m e n t y   p o m o c n i c z e  -->\n"+
+			"				<xsd:element name=\"indeks-gorny\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy tekst w indeksie gornym.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\"/>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"indeks-dolny\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy tekst w indeksie dolnym.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\"/>\n"+
+			"				</xsd:element>\n"+
+			"<!--  U w a g a  -->\n"+
+			"				<xsd:element name=\"uwaga\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element przechowujacy uwage tekstowa.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:attribute default=\"zwykla\" name=\"typ\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Typ uwagi: zwykla, marginesowa, reprezentujaca poprawke.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"zwykla\"/>\n"+
+			"																								<xsd:enumeration value=\"marginalia\"/>\n"+
+			"																								<xsd:enumeration value=\"poprawka\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wyrownanie-poz\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  A d r e s   p u b l i k a c j i  -->\n"+
+			"				<xsd:element name=\"adres-publikacji\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy adres publikacji aktu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"adres-dzu\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"adres-dzu\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element identyfikujacy dziennik urzedowy, w ktorym opublikowano akt.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute default=\"Dziennik Ustaw\" name=\"typ\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Nazwa dziennika.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"Dziennik Ustaw\"/>\n"+
+			"																								<xsd:enumeration value=\"Monitor Polski\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Finansow\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Zdrowia\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Narodowego Banku Polskiego\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Sprawiedliwosci\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Srodowiska i Glownego Inspektora Ochrony Srodowiska\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Skarbu Panstwa\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Infrastruktury\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Urzedu Regulacji Telekomunikacji i Poczty\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Transportu i Budownictwa\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Urzedu Komunikacji Elektronicznej\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Spraw Wewnetrznych i Administracji\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Transportu\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Budownictwa\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Nauki i Szkolnictwa Wyzszego\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Glownego Urzedu Miar\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Edukacji Narodowej\"/>\n"+
+			"																								<xsd:enumeration value=\"Dziennik Urzedowy Ministra Gospodarki Morskiej\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"rok\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Rok wydania.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:pattern value=\"(19|20)[0-9]{2}\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"numer\" type=\"xsd:positiveInteger\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer wydania.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"pozycja\" type=\"xsd:positiveInteger\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Pozycja aktu w wydaniu.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute default=\"nie\" name=\"tj\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Informacja, czy akt zamieszczony pod wskazana pozycja jest tekstem jednolitym.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"tak\"/>\n"+
+			"																								<xsd:enumeration value=\"nie\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  Z a l a c z n i k i  -->\n"+
+			"				<xsd:element name=\"zalaczniki\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Lista zalacznikow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"zalacznik\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"uzasadnienie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Lista zalacznikow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"zalacznik\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zalacznik\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Pojedynczy zalacznik.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"tytul\"/>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																				<xsd:element ref=\"preambula\"/>\n"+
+			"																				<xsd:element ref=\"ksiega\"/>\n"+
+			"																				<xsd:element ref=\"czesc\"/>\n"+
+			"																				<xsd:element ref=\"dzial\"/>\n"+
+			"																				<xsd:element ref=\"rozdzial\"/>\n"+
+			"																				<xsd:element ref=\"artykul\"/>\n"+
+			"																				<xsd:element ref=\"paragraf\"/>\n"+
+			"																				<xsd:element ref=\"ustep\"/>\n"+
+			"																				<xsd:element ref=\"punkt\"/>\n"+
+			"																				<xsd:element ref=\"litera\"/>\n"+
+			"																				<xsd:element ref=\"tiret\"/>\n"+
+			"																				<xsd:element ref=\"link\"/>\n"+
+			"																				<xsd:element ref=\"tabela\"/>\n"+
+			"																				<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  P o d p i s y  -->\n"+
+			"				<xsd:element name=\"podpisy\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Lista podpisow (nieelektronicznych) pod aktem prawnym.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"podpis\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"podpis\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Pojedynczy podpis.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute name=\"funkcja\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Funkcja/stanowisko osoby podpisujacej.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"tytul\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Tytul naukowy/zawodowy osoby podpisujacej.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"imie\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Imie/imiona osoby podpisujacej.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"nazwisko\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Nazwisko osoby podpisujacej.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wizualizacyjne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zatwierdzil\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Tekstowa informacja o osobie odpowiedzialnej za zatwierdzenie aktu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\"/>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"osoba\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"tytul_nauk\" use=\"optional\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Tytul (naukowy)</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"nazwisko\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Nazwisko</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"imie\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Imie</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"funkcja\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>funkcja w zespole</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"sklad\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Lista sedziow orzekajacych.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence maxOccurs=\"unbounded\" minOccurs=\"1\">\n"+
+			"																<xsd:element ref=\"osoba\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  P r z y p i s y  -->\n"+
+			"				<xsd:element name=\"przypis\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Odnosnik do przypisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute name=\"nr\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer (oznaczenie) przypisu.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tresc-przypisow\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element grupujacy tresci przypisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"tresc-przypisu\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tresc-przypisu\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Tresc pojedynczego przypisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"																<xsd:element ref=\"ustep-przypisu\"/>\n"+
+			"																<xsd:element ref=\"punkt-przypisu\"/>\n"+
+			"																<xsd:element ref=\"litera-przypisu\"/>\n"+
+			"																<xsd:element ref=\"tiret-przypisu\"/>\n"+
+			"																<xsd:element ref=\"adres-publikacji\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attribute name=\"nr\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer (oznaczenie) przypisu, ktorego tresc reprezentuje dany element.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"ustep-przypisu\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Ustep w podstrukturze przypisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"																<xsd:element ref=\"punkt-przypisu\"/>\n"+
+			"																<xsd:element ref=\"litera-przypisu\"/>\n"+
+			"																<xsd:element ref=\"tiret-przypisu\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"punkt-przypisu\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Punkt w postrukturze przypisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"																<xsd:element ref=\"litera-przypisu\"/>\n"+
+			"																<xsd:element ref=\"tiret-przypisu\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"litera-przypisu\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Litera w podstrukturze przypisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"																<xsd:element ref=\"tiret-przypisu\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne-nr\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tiret-przypisu\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Tiret w podstrukturze przypisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"																<xsd:element ref=\"dyrektywa\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  P r z y w o l a n i e  -->\n"+
+			"				<xsd:element name=\"przywolanie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Specjalny rodzaj linku do przywolywanego aktu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"metryczka\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"przypis\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"akt-id\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Identyfikator aktu.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute default=\"nowelizacyjne\" name=\"typ\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Rodzaj przywolania (nowelizacyjne, informacyjne, cytujace, odsylajace).</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"nowelizacyjne\"/>\n"+
+			"																								<xsd:enumeration value=\"informacyjne\"/>\n"+
+			"																								<xsd:enumeration value=\"cytujace\"/>\n"+
+			"																								<xsd:enumeration value=\"odsylajace\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute default=\"nie\" name=\"zamrozone\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Informacja o rezygnacji z aktualizacji przywolan (dla tekstow zarchiwizowanych).</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"tak\"/>\n"+
+			"																								<xsd:enumeration value=\"nie\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  E l e m e n t y   f o r m a t o w a n i a  -->\n"+
+			"				<xsd:element name=\"wytluszczenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Oznaczenie tekstu wytluszczonego.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-wewnetrzne\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"kursywa\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Oznaczenie tekstu zapisanego kursywa.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-wewnetrzne\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"podkreslenie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Oznaczenie tekstu podkreslonego.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-wewnetrzne\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"wyspa\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element umozliwiajacy zapis dowolnego fragmentu tekstu wykraczajacego struktura badz formatowaniem poza niniejszy schemat.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:attribute name=\"opis\" type=\"xsd:string\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Tekstowy opis zawartosci wyspy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"typ\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Format zapisu tekstu wewnatrz wyspy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"odf\"/>\n"+
+			"																								<xsd:enumeration value=\"ooxml\"/>\n"+
+			"																								<xsd:enumeration value=\"xhtml\"/>\n"+
+			"																								<xsd:enumeration value=\"latex\"/>\n"+
+			"																								<xsd:enumeration value=\"rtf\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zalacznik_bin\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element umo¿liwiaj¹cy zapis dowolnego pliku, jako czesc aktu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:attribute name=\"nazwa\" type=\"xsd:string\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Nazwa pliku.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"hash\" type=\"xsd:string\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Skrót kryptograficzny pliku.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"typ\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Funkcja skrótu.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"MD5\"/>\n"+
+			"																								<xsd:enumeration value=\"SHA-1\"/>\n"+
+			"																								<xsd:enumeration value=\"SHA-2\"/>\n"+
+			"																								<xsd:enumeration value=\"RIPEMD-160\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  Z n a c z n i k i   n o w e l i z a c y j n e   i   c y t o w a n i e  -->\n"+
+			"				<xsd:element name=\"dodaj\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy dodanie przepisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:choice>\n"+
+			"																<xsd:sequence>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"po-elemencie\"/>\n"+
+			"																				<xsd:element ref=\"element\"/>\n"+
+			"																</xsd:sequence>\n"+
+			"																<xsd:sequence>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"w-elemencie\"/>\n"+
+			"																				<xsd:element ref=\"po-tekscie\"/>\n"+
+			"																				<xsd:element minOccurs=\"0\" ref=\"akcja\"/>\n"+
+			"																				<xsd:sequence>\n"+
+			"																								<xsd:element minOccurs=\"0\" ref=\"tekst\"/>\n"+
+			"																								<xsd:element minOccurs=\"0\" ref=\"element\"/>\n"+
+			"																				</xsd:sequence>\n"+
+			"																</xsd:sequence>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-nowelizacyjne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"uchyl\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy uchylenie przepisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:choice minOccurs=\"0\">\n"+
+			"																				<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																								<xsd:element ref=\"element\"/>\n"+
+			"																								<xsd:element ref=\"elementy\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:sequence>\n"+
+			"																								<xsd:element maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"w-elemencie\"/>\n"+
+			"																								<xsd:element ref=\"tekst\"/>\n"+
+			"																				</xsd:sequence>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" ref=\"oprocz\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attributeGroup ref=\"atr-nowelizacyjne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zastap\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy zmiane brzmienia przepisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:choice>\n"+
+			"																<xsd:sequence>\n"+
+			"																				<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																								<xsd:element ref=\"element\"/>\n"+
+			"																								<xsd:element ref=\"elementy\"/>\n"+
+			"																				</xsd:choice>\n"+
+			"																				<xsd:element minOccurs=\"0\" ref=\"elementem\"/>\n"+
+			"																</xsd:sequence>\n"+
+			"																<xsd:sequence>\n"+
+			"																				<xsd:element maxOccurs=\"unbounded\" minOccurs=\"0\" ref=\"w-elemencie\"/>\n"+
+			"																				<xsd:element ref=\"tekst\"/>\n"+
+			"																				<xsd:element minOccurs=\"0\" ref=\"akcja\"/>\n"+
+			"																				<xsd:element ref=\"tekstem\"/>\n"+
+			"																</xsd:sequence>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-nowelizacyjne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"cytowanie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element umozliwiajacy cytowanie przepisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:choice>\n"+
+			"																<xsd:element ref=\"element\"/>\n"+
+			"																<xsd:element ref=\"cytowanie\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"po-elemencie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element wskazujacy sciezke do elementu struktury, po ktorym maja zostac dodane nowe przepisy.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute name=\"id\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Sciezka w postaci wyrazenia XPath identyfikujaca element.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"w-elemencie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element wskazujacy sciezke do elementu struktury, w ktorym maja zostac zmienione przepisy.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute name=\"id\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Sciezka w postaci wyrazenia XPath identyfikujaca element.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"w-zdaniu\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer zdania, w ktorym ma nastapic zamiana tekstu.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"element\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element wskazujacy sciezke do elementu struktury, w ktorym ma zostac znowelizowana tresc lub zawierajacy nowe brzmienie dodawanych przepisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:complexContent>\n"+
+			"																<xsd:extension base=\"elem-struktury\">\n"+
+			"																				<xsd:attribute name=\"id\">\n"+
+			"																								<xsd:annotation>\n"+
+			"																												<xsd:documentation>Sciezka w postaci wyrazenia XPath identyfikujaca element.</xsd:documentation>\n"+
+			"																								</xsd:annotation>\n"+
+			"																				</xsd:attribute>\n"+
+			"																</xsd:extension>\n"+
+			"												</xsd:complexContent>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"elementy\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element wskazujacy sciezke do ciagu elementow nowelizowanej struktury.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute name=\"od\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Sciezka w postaci wyrazenia XPath identyfikujaca element poczatkowy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"do\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Sciezka w postaci wyrazenia XPath identyfikujaca element koncowy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"elementem\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy nowe brzmienie nowelizowanej czesci aktu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:complexContent>\n"+
+			"																<xsd:extension base=\"elem-struktury\">\n"+
+			"																				<xsd:attribute name=\"poziom\">\n"+
+			"																								<xsd:annotation>\n"+
+			"																												<xsd:documentation>Nazwa elementu obudowujacego nowa czesc struktury: paragraf lub ustep.</xsd:documentation>\n"+
+			"																								</xsd:annotation>\n"+
+			"																								<xsd:simpleType>\n"+
+			"																												<xsd:restriction base=\"xsd:string\">\n"+
+			"																																<xsd:enumeration value=\"paragraf\"/>\n"+
+			"																																<xsd:enumeration value=\"ustep\"/>\n"+
+			"																												</xsd:restriction>\n"+
+			"																								</xsd:simpleType>\n"+
+			"																				</xsd:attribute>\n"+
+			"																</xsd:extension>\n"+
+			"												</xsd:complexContent>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"po-tekscie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy fragment tekstu, po ktorym ma zostac dodana nowa tresc przepisu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-identyfikacyjne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tekst\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy fragment tekstu, ktory ma zostac znowelizowany.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-identyfikacyjne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"akcja\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentuacy fragment tekstu pomiedzy starym i nowym brzmieniem zmienianego tekstu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"tekstem\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy nowe wyrazy przepisu zmieniajacego brzmienie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"oprocz\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element reprezentujacy strukture pozostawiana w akcie po uchyleniu go w calosci.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																				<xsd:element ref=\"element\"/>\n"+
+			"																				<xsd:element ref=\"elementy\"/>\n"+
+			"																</xsd:choice>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"do\" type=\"data\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Data konca obowiazywania pozostawionych przepisow.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  Z n a c z n i k i   i n t e r p r e t a c y j n e  -->\n"+
+			"				<xsd:element name=\"trybunal\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element umozliwiajacy oznaczenie w tekscie ustawy wyrokow Trybunalu Konstytucyjnego.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"adres-dzu\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"zakwestionowany\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"komentarz\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"stan\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Stan procesu rozpatrywania zgodnosci przepisow z Konstytucja: &quot;zaskarzony&quot; lub &quot;po wyroku&quot;.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"zaskarzony\"/>\n"+
+			"																								<xsd:enumeration value=\"po-wyroku\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"zakwestionowany\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element obudowujacy zaskarzone przepisy.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"rozsz-elem-wewnetrzne\"/>\n"+
+			"																<xsd:element ref=\"ustep\"/>\n"+
+			"																<xsd:element ref=\"paragraf\"/>\n"+
+			"																<xsd:element ref=\"punkt\"/>\n"+
+			"																<xsd:element ref=\"litera\"/>\n"+
+			"																<xsd:element ref=\"tiret\"/>\n"+
+			"																<xsd:group ref=\"elem-komentarza\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"komentarz\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Tekstowy komentarz do obowiazujacego stanu prawnego.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\"/>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"wejscie-w-zycie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Informacja o dacie wejscia przepisow w zycie.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:element ref=\"od\">\n"+
+			"																				<xsd:annotation>\n"+
+			"																								<xsd:documentation>Reprezentacja grupy przepisow o wspolnej dacie wejscia w zycie.</xsd:documentation>\n"+
+			"																				</xsd:annotation>\n"+
+			"																</xsd:element>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"stosowanie\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Informacja o dacie stosowania przepisow.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:element ref=\"od\">\n"+
+			"																				<xsd:annotation>\n"+
+			"																								<xsd:documentation>Reprezentacja grupy przepisow o wspolnej dacie poczatku stosowania.</xsd:documentation>\n"+
+			"																				</xsd:annotation>\n"+
+			"																</xsd:element>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"od\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Reprezentacja grupy przepisow o wspolnej dacie wejscia w zycie/poczatku stosowania.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:element ref=\"element\"/>\n"+
+			"																<xsd:element ref=\"elementy\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attribute name=\"data\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Data poczatku stosowania/wejscia w zycie przepisow.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"przepisy-wykonawcze\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Element wskazujacy miejsce umieszczenia przepisow wykonawczych.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType/>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"dyrektywa\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Przywolanie dyrektywy UE.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element ref=\"tytul\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"adres-publikacji-ue\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"												<xsd:attribute name=\"nr\" type=\"xsd:positiveInteger\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer dyrektywy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"data\" type=\"data\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Data wydania dyrektywy.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"adres-publikacji-ue\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Adres publikacji aktu w Dzienniku Urzedowym UE.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"adres-dzu-ue\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"adres-dzu-ue\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Adres Dziennika Urzedowego UE.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:attribute name=\"seria\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Seria Dziennika Urzedowego UE.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"L\"/>\n"+
+			"																								<xsd:enumeration value=\"C\"/>\n"+
+			"																								<xsd:enumeration value=\"S\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"nr\" type=\"xsd:positiveInteger\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Numer Dziennika.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"data\" type=\"data\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Data wydania Dziennika.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  L i n k i  -->\n"+
+			"				<xsd:element name=\"link\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Link ogolnego przeznaczenia.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:attribute name=\"cel\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Sciezka/wskazanie elementu docelowego linku.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute default=\"hiperlink\" name=\"typ\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Typ linku (hiperlink, link do zalacznika, link do definicji).</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:enumeration value=\"hiperlink\"/>\n"+
+			"																								<xsd:enumeration value=\"zalacznik\"/>\n"+
+			"																								<xsd:enumeration value=\"definicja\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute name=\"mime\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Typ MIME wlaczanej zawartosci.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"definicja\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Oznaczenie miejsca wystapienia definicji.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:attribute name=\"pojecie\" use=\"required\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Definiowane pojecie.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  E l e m e n t y   g r u p u j a c e  -->\n"+
+			"				<xsd:element name=\"fragment\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Znakowy fragment tekstu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-wewnetrzne\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wspolne\"/>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"blok\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Akapitowy fragment tekstu.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-wewnetrzne\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"<!--  T a b e l e  -->\n"+
+			"				<xsd:element name=\"tabela\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Tabela.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"naglowek-tabeli\"/>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"wiersz\"/>\n"+
+			"																<xsd:element minOccurs=\"0\" ref=\"stopka-tabeli\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"naglowek-tabeli\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Naglowek tabeli.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"wiersz\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"stopka-tabeli\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Stopka tabeli.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:sequence>\n"+
+			"																<xsd:element maxOccurs=\"unbounded\" ref=\"wiersz\"/>\n"+
+			"												</xsd:sequence>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"wiersz\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Wiersz tabeli.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType>\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\">\n"+
+			"																<xsd:element ref=\"komorka\"/>\n"+
+			"												</xsd:choice>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"				<xsd:element name=\"komorka\">\n"+
+			"								<xsd:annotation>\n"+
+			"												<xsd:documentation>Pojedyncza komorka.</xsd:documentation>\n"+
+			"								</xsd:annotation>\n"+
+			"								<xsd:complexType mixed=\"true\">\n"+
+			"												<xsd:choice maxOccurs=\"unbounded\" minOccurs=\"0\">\n"+
+			"																<xsd:group ref=\"elem-tekstowe\"/>\n"+
+			"												</xsd:choice>\n"+
+			"												<xsd:attribute default=\"1\" name=\"scal-poziomo\" type=\"liczba\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Liczba kolumn, na ktore rozciaga sie komorka.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attribute default=\"1\" name=\"scal-pionowo\" type=\"liczba\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Liczba wierszy, na ktore rozciaga sie komorka.</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"												</xsd:attribute>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wyrownanie-poz\"/>\n"+
+			"												<xsd:attributeGroup ref=\"atr-wyrownanie-pion\"/>\n"+
+			"												<xsd:attribute name=\"szerokosc\">\n"+
+			"																<xsd:annotation>\n"+
+			"																				<xsd:documentation>Procentowa szerokosc komorki (kolumny).</xsd:documentation>\n"+
+			"																</xsd:annotation>\n"+
+			"																<xsd:simpleType>\n"+
+			"																				<xsd:restriction base=\"xsd:string\">\n"+
+			"																								<xsd:pattern value=\"\\d+%\"/>\n"+
+			"																				</xsd:restriction>\n"+
+			"																</xsd:simpleType>\n"+
+			"												</xsd:attribute>\n"+
+			"								</xsd:complexType>\n"+
+			"				</xsd:element>\n"+
+			"</xsd:schema>\n";
+
+	public static String getSchemaContent() {
+		return schemaContent.replaceAll("\t", "  ");
+	}
+}
