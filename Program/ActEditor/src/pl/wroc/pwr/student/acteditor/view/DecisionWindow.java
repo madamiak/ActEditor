@@ -7,9 +7,11 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.layout.FormLayout;
 import org.eclipse.swt.layout.FormData;
 import org.eclipse.swt.layout.FormAttachment;
+import org.eclipse.swt.widgets.Button;
 
 public class DecisionWindow extends Window {
 	private Text text;
+	
 	public DecisionWindow(Display display) {
 		this.display = display;
 	}
@@ -19,9 +21,9 @@ public class DecisionWindow extends Window {
 	 */
 	@Override
 	protected void initialize() {
-		shell = new Shell(display);
-//		Display display = new Display();
-//		Shell shell = new Shell(display);
+//		shell = new Shell(display);
+		Display display = new Display();
+		Shell shell = new Shell(display);
 		shell.setSize(793, 657);
 		shell.setText("Decision");
 		shell.setMaximized(true);
@@ -29,11 +31,18 @@ public class DecisionWindow extends Window {
 		
 		text = new Text(shell, SWT.BORDER);
 		FormData fd_text = new FormData();
-		fd_text.top = new FormAttachment(0, 194);
+		fd_text.top = new FormAttachment(0, 10);
 		fd_text.right = new FormAttachment(100, -10);
-		fd_text.left = new FormAttachment(100, -638);
 		fd_text.bottom = new FormAttachment(100, -10);
 		text.setLayoutData(fd_text);
+		
+		Button btnNewButton = new Button(shell, SWT.NONE);
+		fd_text.left = new FormAttachment(btnNewButton, 6);
+		FormData fd_btnNewButton = new FormData();
+		fd_btnNewButton.top = new FormAttachment(0, 10);
+		fd_btnNewButton.left = new FormAttachment(0, 10);
+		btnNewButton.setLayoutData(fd_btnNewButton);
+		btnNewButton.setText("New Button");
 	}
 
 	@Override
