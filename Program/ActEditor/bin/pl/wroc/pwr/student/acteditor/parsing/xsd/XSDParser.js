@@ -28,4 +28,8 @@ return description;
 }}
 return null;
 }, "~S");
+Clazz.overrideMethod (c$, "getElement", 
+function (elementName) {
+return null;
+}, "~S");
 });

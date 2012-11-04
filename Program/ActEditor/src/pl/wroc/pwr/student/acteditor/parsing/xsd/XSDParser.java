@@ -41,4 +41,9 @@ public class XSDParser implements Parser {
 		return null;
 	}
 
+	@Override
+	public Element getElement(String elementName) {
+		return null; //TODO: poprawic
+	}
+
 }

@@ -8,4 +8,10 @@ public final class Utils {
 		list.toArray(result);
 		return result;
 	}
+	
+	public enum CompositorType {
+		SEQUENCE,
+		CHOICE,
+		ALL
+	};
 }

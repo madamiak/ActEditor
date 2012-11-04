@@ -1,16 +1,13 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
 public class SimpleElement implements Element {
+	private String minOccurs = "1";
+	private String maxOccurs = "1";
 	private String name;
-	private Type type;
+	private String description;
 	
 	public SimpleElement(String name) {
 		this.name = name;
-	}
-	
-	public SimpleElement(String name, Type type) {
-		this.name = name;
-		this.type = type;
 	}
 
 	@Override
@@ -37,18 +34,19 @@ public class SimpleElement implements Element {
 		this.name = name;
 	}
 
-	public Type getType() {
-		return type;
-	}
-
-	public void setType(Type type) {
-		this.type = type;
+	@Override
+	public void getElements() {
+		
 	}
 
 	@Override
-	public void getElements() {
-		String tmp = type == null ? "" : type.toString() + "\"";
-		System.out.println("name=\"" + name + "\" " + tmp);
+	public String getDescription() {
+		return description;
+	}
+
+	@Override
+	public void setDescription(String description) {
+		this.description = description;
 	}
 
 }

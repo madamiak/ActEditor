@@ -5,4 +5,6 @@ public interface Element {
 	public void remove(Element element);
 	public Element get(int index);
 	public void getElements();
+	public String getDescription();
+	public void setDescription(String description);
 }

@@ -4,6 +4,8 @@ import static org.junit.Assert.*;
 
 import org.junit.Test;
 
+import pl.wroc.pwr.student.acteditor.util.Utils.CompositorType;
+
 public class Attributes {
 
 	@Test
@@ -39,29 +41,6 @@ public class Attributes {
 				"</xsd:complexType>\n" , 
 				"</xsd:element>\n"
 		};
-		
-		Element composite = new CompositeElement("rozporzadzenie");
-		Element attrs = new CompositeElement("annotation");
-		attrs.add(new SimpleElement("documentation"));
-		composite.add(attrs);
-		attrs = new CompositeElement();
-		attrs.add(new SimpleElement("metryczka"));
-		attrs.add(new SimpleElement("elem-komentarza"));
-		attrs.add(new SimpleElement("preambula"));
-		Element ats = new CompositeElement();
-		ats.add(new SimpleElement("tyt"));
-		ats.add(new SimpleElement("dzial"));
-		ats.add(new SimpleElement("rozdzial"));
-		ats.add(new SimpleElement("paragraf"));
-		attrs.add(ats);
-		attrs.add(new SimpleElement("zalaczniki"));
-		attrs.add(new SimpleElement("tresc-przypisow"));
-		attrs.add(new SimpleElement("podpisy"));
-		attrs.add(new SimpleElement("zatwierdzil"));
-		attrs.add(new SimpleElement("zalacznik_bin"));
-		composite.add(attrs);
-		
-		composite.getElements();
 	}
 
 }
