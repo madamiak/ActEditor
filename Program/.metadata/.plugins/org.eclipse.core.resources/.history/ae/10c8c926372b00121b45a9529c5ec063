@@ -1,0 +1,10 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+
+public class WindowBuilder {
+	public Window openWindow(Display display, int choice) {
+		Window decisionWindow = new DecisionWindow(display);
+		return decisionWindow;
+	}
+}

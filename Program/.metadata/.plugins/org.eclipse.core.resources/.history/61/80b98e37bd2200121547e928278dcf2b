@@ -1,9 +1,0 @@
-package pl.wroc.pwr.student.acteditor.model.tags;
-
-public class TagFactory {
-	public String[] getTagsFromStructure(String structure) {
-		String[] result = null;
-		
-		return result;
-	}
-}

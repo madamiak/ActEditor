@@ -1,0 +1,28 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+
+public class LawWindow extends Window {
+	public LawWindow(Display display) {
+		this.display = display;
+	}
+
+	@Override
+	protected void initialize() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void open() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	@Override
+	protected void dispose() {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
