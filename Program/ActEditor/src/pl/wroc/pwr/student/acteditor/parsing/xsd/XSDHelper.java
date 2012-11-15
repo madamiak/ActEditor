@@ -1,19 +1,25 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
+
+import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
 
 public class XSDHelper {
 	String[] xsdLines;
+	ElementRegistry registry;
 	
 	public XSDHelper(String[] xsdLines) {
 		this.xsdLines = xsdLines;
+		this.registry = ElementRegistry.getRegistry();
+		function();
 	}
 	
-	public List<String> getLinesWithElement(String elementName) {
+	public List getLinesWithElement(String elementName) {
 		boolean read = false;
 		String tag = "";
-		List<String> result = new ArrayList<String>();
+		List result = Collections.synchronizedList(new ArrayList());
 
 		for (int i = 0; i < xsdLines.length; i++) {
 			String currentLine = getWithoutInitialSpaces(xsdLines[i]);
@@ -63,5 +69,42 @@ public class XSDHelper {
 
 	private String getEndingTag(String tag) {
 		return tag.replaceAll("<", "</") + ">";
+	}
+
+	private void function() {
+		boolean flag = false;
+		Element element = null;
+		for(String s : xsdLines) {
+			if(!flag && s.contains("element") && s.contains("name=")) {
+				String name = s.substring(s.indexOf("name=\"") + "name=\"".length(), s.indexOf("\"", s.indexOf("name=\"") + "name=\"".length()));
+				Element e = new Composition(name, "all");
+				flag = true;
+				element = e;
+				continue;
+			}
+			
+			if(flag) {
+				if(s.contains("</xsd:element>")) {
+					flag = false;
+					registry.add(element);
+					continue;
+				} else if (s.contains("element") && !s.contains("name")) {
+					try{
+					String name = s.substring(s.indexOf("ref=\"") + "ref=\"".length(), s.indexOf("\"", s.indexOf("ref=\"") + "ref=\"".length()));
+					element.add(new SimpleElement(name));}
+					catch(StringIndexOutOfBoundsException e) {
+					}
+				}
+				
+				if(s.contains("documentation")) {
+					element.setDescription("\t" + s.substring(s.indexOf(">") + 1, s.lastIndexOf("<")));
+					continue;
+				}
+			}
+		}
+	}
+
+	public Element getElementByName(String elementName) {
+		return registry.get(elementName);
 	}
 }

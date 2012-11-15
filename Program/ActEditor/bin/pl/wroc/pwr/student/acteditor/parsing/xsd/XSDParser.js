@@ -30,6 +30,6 @@ return null;
 }, "~S");
 Clazz.overrideMethod (c$, "getElement", 
 function (elementName) {
-return null;
+return this.helper.getElementByName (elementName);
 }, "~S");
 });

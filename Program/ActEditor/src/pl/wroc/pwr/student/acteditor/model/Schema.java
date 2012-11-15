@@ -1,7 +1,7 @@
 package pl.wroc.pwr.student.acteditor.model;
 
-public final class Schema {
-	private static String schemaContent = "" +
+public class Schema {
+	private String schemaContent = "" +
 			"<xsd:schema targetNamespace=\"http://www.crd.mswia.gov.pl/repo/\" xmlns=\"http://www.crd.mswia.gov.pl/repo/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n"+
 			"<!--  D o k u m e n t y  -->\n"+
 			"	<xsd:element name=\"ustawa\">\n"+
@@ -1975,7 +1975,7 @@ public final class Schema {
 			"				</xsd:element>\n"+
 			"</xsd:schema>\n";
 
-	public static String getSchemaContent() {
+	public String getSchemaContent() {
 		return schemaContent.replaceAll("\t", "  ");
 	}
 }

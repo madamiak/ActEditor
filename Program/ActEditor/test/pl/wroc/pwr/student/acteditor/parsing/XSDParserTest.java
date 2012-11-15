@@ -13,7 +13,7 @@ public class XSDParserTest {
 	
 	@Before
 	public void setUp() {
-		parser = new XSDParser(Schema.getSchemaContent());
+//		parser = new XSDParser(Schema.getSchemaContent());
 	}
 
 	@Test

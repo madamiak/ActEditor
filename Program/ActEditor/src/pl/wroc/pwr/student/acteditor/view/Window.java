@@ -6,14 +6,15 @@ import org.eclipse.swt.widgets.Shell;
 public abstract class Window {
 	protected Display display;
 	protected Shell shell;
+	protected String name;
 	
-	public Window() {
-		initialize();
+	public Window(String name) {
+		initialize(name);
 		open();
 		dispose();
 	}
 	
-	protected abstract void initialize();
+	protected abstract void initialize(String name);
 	
 	protected abstract void open();
 	

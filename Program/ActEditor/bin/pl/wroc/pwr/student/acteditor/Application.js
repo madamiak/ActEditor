@@ -7,6 +7,6 @@ pl.wroc.pwr.student.acteditor.Application.run ();
 }, "~A");
 c$.run = Clazz.defineMethod (c$, "run", 
 ($fz = function () {
- new pl.wroc.pwr.student.acteditor.view.MainWindow ();
+ new pl.wroc.pwr.student.acteditor.view.MainWindow (null);
 }, $fz.isPrivate = true, $fz));
 });

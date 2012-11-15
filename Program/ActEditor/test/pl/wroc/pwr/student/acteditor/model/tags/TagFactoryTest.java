@@ -3,6 +3,9 @@ package pl.wroc.pwr.student.acteditor.model.tags;
 import org.junit.Before;
 import org.junit.Test;
 
+import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
+import pl.wroc.pwr.student.acteditor.parsing.xsd.SimpleElement;
+
 public class TagFactoryTest {
 	TagFactory factory;
 	

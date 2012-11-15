@@ -1,10 +1,12 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
+import java.util.List;
+
 public class SimpleElement implements Element {
 	private String minOccurs = "1";
 	private String maxOccurs = "1";
-	private String name;
-	private String description;
+	private String name = "";
+	private String description = "";
 	
 	public SimpleElement(String name) {
 		this.name = name;
@@ -35,8 +37,8 @@ public class SimpleElement implements Element {
 	}
 
 	@Override
-	public void getElements() {
-		
+	public List getElements() {
+		return null;
 	}
 
 	@Override
@@ -47,6 +49,21 @@ public class SimpleElement implements Element {
 	@Override
 	public void setDescription(String description) {
 		this.description = description;
+	}
+	
+	public String toString() {
+		return name + " " + description;
+	}
+
+	@Override
+	public String getType() {
+		// unsupported
+		return null;
+	}
+
+	@Override
+	public void setType(String type) {
+		// unsupporte
 	}
 
 }

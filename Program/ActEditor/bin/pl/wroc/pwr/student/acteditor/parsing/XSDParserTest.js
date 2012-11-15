@@ -1,12 +1,10 @@
 ﻿Clazz.declarePackage ("pl.wroc.pwr.student.acteditor.parsing");
-Clazz.load (null, "pl.wroc.pwr.student.acteditor.parsing.XSDParserTest", ["pl.wroc.pwr.student.acteditor.model.Schema", "pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser"], function () {
 c$ = Clazz.decorateAsClass (function () {
 this.parser = null;
 Clazz.instantialize (this, arguments);
 }, pl.wroc.pwr.student.acteditor.parsing, "XSDParserTest");
 Clazz.defineMethod (c$, "setUp", 
 function () {
-this.parser =  new pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser (pl.wroc.pwr.student.acteditor.model.Schema.getSchemaContent ());
 });
 Clazz.defineMethod (c$, "testGetAllElements", 
 function () {
@@ -41,5 +39,4 @@ function () {
 var elementName = "asdsghd";
 var result = this.parser.getDescription (elementName);
 org.junit.Assert.assertNull (result);
-});
 });

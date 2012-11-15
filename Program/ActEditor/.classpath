@@ -7,5 +7,6 @@
 	<classpathentry kind="var" path="ECLIPSE_SWT"/>
 	<classpathentry kind="con" path="org.eclipse.jdt.junit.JUNIT_CONTAINER/4"/>
 	<classpathentry kind="lib" path="lib/easymock-3.1.jar"/>
+	<classpathentry kind="lib" path="D:/Download/swtbot-update-site-2.0.5.20111003_1754-3676ac8-dev-e36.zip"/>
 	<classpathentry kind="output" path="bin"/>
 </classpath>

@@ -1,10 +1,6 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
-import static org.junit.Assert.*;
-
 import org.junit.Test;
-
-import pl.wroc.pwr.student.acteditor.util.Utils.CompositorType;
 
 public class Attributes {
 

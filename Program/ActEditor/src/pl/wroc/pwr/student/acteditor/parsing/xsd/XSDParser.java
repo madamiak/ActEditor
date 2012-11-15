@@ -16,7 +16,7 @@ public class XSDParser implements Parser {
 
 	@Override
 	public String[] getElementStructure(String elementName) {
-		List<String> result;
+		List result;
 
 		result = helper.getLinesWithElement(elementName);
 		String[] tmp = Utils.convertStringListToArray(result);
@@ -43,7 +43,7 @@ public class XSDParser implements Parser {
 
 	@Override
 	public Element getElement(String elementName) {
-		return null; //TODO: poprawic
+		return helper.getElementByName(elementName);
 	}
 
 }

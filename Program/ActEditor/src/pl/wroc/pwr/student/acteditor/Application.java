@@ -13,6 +13,6 @@ public final class Application {
 	}
 
 	private static void run() {
-		new MainWindow();
+		new MainWindow(null);
 	}
 }
