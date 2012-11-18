@@ -19,7 +19,8 @@ import org.eclipse.swt.widgets.TreeItem;
 
 import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
 import pl.wroc.pwr.student.acteditor.model.Schema;
-import pl.wroc.pwr.student.acteditor.parsing.xsd.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser;
 import pl.wroc.pwr.student.acteditor.test.TokenTest;
 
 public class SubWindow extends Window {
@@ -45,8 +46,10 @@ public class SubWindow extends Window {
 		shell.setText(name);
 		shell.setLayout(new FormLayout());
 		
-		TokenTest t = new TokenTest(new Schema().getSchemaContent().split("\n"));
-		t.loadElementsToRegistry();
+		Schema schema = new Schema();
+		String[] data = schema.getSchemaContent().split("\n");
+		XSDParser parser = new XSDParser(data);
+		parser.loadData();
 		
 		final ElementRegistry registry = ElementRegistry.getRegistry();
 		Element e = registry.get(name);

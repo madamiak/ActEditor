@@ -1,4 +1,4 @@
-package pl.wroc.pwr.student.acteditor.parsing.xsd;
+package pl.wroc.pwr.student.acteditor.model.tags;
 
 import java.util.ArrayList;
 import java.util.Collections;

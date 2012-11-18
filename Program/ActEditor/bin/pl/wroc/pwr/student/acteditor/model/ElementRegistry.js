@@ -21,7 +21,7 @@ if ((each).getName ().equals (element.getName ())) {
 return ;
 }}
 this.elements.add (element);
-}, "pl.wroc.pwr.student.acteditor.parsing.xsd.Element");
+}, "pl.wroc.pwr.student.acteditor.model.tags.Element");
 Clazz.defineMethod (c$, "get", 
 function (name) {
 for (var each, $each = this.elements.iterator (); $each.hasNext () && ((each = $each.next ()) || true);) {

@@ -1,5 +1,5 @@
 ﻿Clazz.declarePackage ("pl.wroc.pwr.student.acteditor.test");
-Clazz.load (null, "pl.wroc.pwr.student.acteditor.test.TokenTest", ["java.util.Stack", "pl.wroc.pwr.student.acteditor.model.ElementRegistry", "pl.wroc.pwr.student.acteditor.parsing.xsd.Composition", "$.SimpleElement"], function () {
+Clazz.load (null, "pl.wroc.pwr.student.acteditor.test.TokenTest", ["java.util.Stack", "pl.wroc.pwr.student.acteditor.model.ElementRegistry", "pl.wroc.pwr.student.acteditor.model.tags.Composition", "$.SimpleElement"], function () {
 c$ = Clazz.decorateAsClass (function () {
 this.lines = null;
 this.registry = null;
@@ -40,7 +40,7 @@ elements.push (parent);
 desc = true;
 }break;
 case 5:
-sequence =  new pl.wroc.pwr.student.acteditor.parsing.xsd.Composition ("(sekwencja)", "seq");
+sequence =  new pl.wroc.pwr.student.acteditor.model.tags.Composition ("(sekwencja)", "seq");
 elements.push (sequence);
 break;
 case 7:
@@ -50,7 +50,7 @@ parent.add (group);
 elements.push (parent);
 break;
 case 8:
-choice =  new pl.wroc.pwr.student.acteditor.parsing.xsd.Composition ("(wybór)", "choice");
+choice =  new pl.wroc.pwr.student.acteditor.model.tags.Composition ("(wybór)", "choice");
 elements.push (choice);
 break;
 }
@@ -148,19 +148,19 @@ return line.substring (line.indexOf (">") + 1, line.lastIndexOf ("<"));
 Clazz.defineMethod (c$, "createComposition", 
 ($fz = function (line, type) {
 var name = this.getAttribute ("name", line);
-var e =  new pl.wroc.pwr.student.acteditor.parsing.xsd.Composition (name, type);
+var e =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, type);
 return e;
 }, $fz.isPrivate = true, $fz), "~S,~S");
 Clazz.defineMethod (c$, "createReference", 
 ($fz = function (line) {
 var name = this.getAttribute ("ref", line);
-var e =  new pl.wroc.pwr.student.acteditor.parsing.xsd.SimpleElement (name);
+var e =  new pl.wroc.pwr.student.acteditor.model.tags.SimpleElement (name);
 return e;
 }, $fz.isPrivate = true, $fz), "~S");
 Clazz.defineMethod (c$, "createGroup", 
 ($fz = function (line, type) {
 var name = this.getAttribute ("ref", line);
-var e =  new pl.wroc.pwr.student.acteditor.parsing.xsd.Composition (name, type);
+var e =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, type);
 return e;
 }, $fz.isPrivate = true, $fz), "~S,~S");
 Clazz.defineMethod (c$, "checkIfClosed", 

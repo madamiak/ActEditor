@@ -1,5 +1,5 @@
 ﻿Clazz.declarePackage ("pl.wroc.pwr.student.acteditor.view");
-Clazz.load (["pl.wroc.pwr.student.acteditor.view.Window"], "pl.wroc.pwr.student.acteditor.view.SubWindow", ["$wt.graphics.Color", "$.Point", "$wt.layout.FormAttachment", "$.FormData", "$.FormLayout", "$.GridLayout", "$wt.widgets.Display", "$.Group", "$.Listener", "$.Shell", "$.Text", "$.Tree", "$.TreeItem", "pl.wroc.pwr.student.acteditor.model.ElementRegistry", "$.Schema", "pl.wroc.pwr.student.acteditor.test.TokenTest"], function () {
+Clazz.load (["pl.wroc.pwr.student.acteditor.view.Window"], "pl.wroc.pwr.student.acteditor.view.SubWindow", ["$wt.graphics.Color", "$.Point", "$wt.layout.FormAttachment", "$.FormData", "$.FormLayout", "$.GridLayout", "$wt.widgets.Display", "$.Group", "$.Listener", "$.Shell", "$.Text", "$.Tree", "$.TreeItem", "pl.wroc.pwr.student.acteditor.model.ElementRegistry", "$.Schema", "pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser"], function () {
 c$ = Clazz.decorateAsClass (function () {
 this.text = null;
 Clazz.instantialize (this, arguments);
@@ -18,8 +18,10 @@ this.shell.setBackground (white);
 this.shell.setSize (793, 657);
 this.shell.setText (name);
 this.shell.setLayout ( new $wt.layout.FormLayout ());
-var t =  new pl.wroc.pwr.student.acteditor.test.TokenTest ( new pl.wroc.pwr.student.acteditor.model.Schema ().getSchemaContent ().$plit ("\n"));
-t.loadElementsToRegistry ();
+var schema =  new pl.wroc.pwr.student.acteditor.model.Schema ();
+var data = schema.getSchemaContent ().$plit ("\n");
+var parser =  new pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser (data);
+parser.loadData ();
 var registry = pl.wroc.pwr.student.acteditor.model.ElementRegistry.getRegistry ();
 var e = registry.get (name);
 var tree =  new $wt.widgets.Tree (this.shell, 2048);
@@ -71,7 +73,7 @@ return ;
 }for (var e, $e = element.getElements ().iterator (); $e.hasNext () && ((e = $e.next ()) || true);) {
 this.fillTree (ti, registry, e, level);
 }
-}, $fz.isPrivate = true, $fz), "~O,pl.wroc.pwr.student.acteditor.model.ElementRegistry,pl.wroc.pwr.student.acteditor.parsing.xsd.Element,~N");
+}, $fz.isPrivate = true, $fz), "~O,pl.wroc.pwr.student.acteditor.model.ElementRegistry,pl.wroc.pwr.student.acteditor.model.tags.Element,~N");
 Clazz.overrideMethod (c$, "open", 
 function () {
 this.shell.pack ();

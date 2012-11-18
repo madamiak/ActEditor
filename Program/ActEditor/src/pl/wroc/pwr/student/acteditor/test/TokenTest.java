@@ -5,9 +5,9 @@ import java.util.List;
 import java.util.Stack;
 
 import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
-import pl.wroc.pwr.student.acteditor.parsing.xsd.Composition;
-import pl.wroc.pwr.student.acteditor.parsing.xsd.Element;
-import pl.wroc.pwr.student.acteditor.parsing.xsd.SimpleElement;
+import pl.wroc.pwr.student.acteditor.model.tags.Composition;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
 
 public class TokenTest {
 	private String[] lines;

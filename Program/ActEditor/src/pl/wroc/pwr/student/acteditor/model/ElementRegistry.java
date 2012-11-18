@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-import pl.wroc.pwr.student.acteditor.parsing.xsd.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
 
 public class ElementRegistry {
 	private static ElementRegistry registry;
