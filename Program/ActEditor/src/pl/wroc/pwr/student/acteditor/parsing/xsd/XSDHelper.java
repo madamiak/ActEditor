@@ -1,110 +1,139 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
-import java.util.ArrayList;
-import java.util.Collections;
-import java.util.List;
-
 import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
 
 public class XSDHelper {
-	String[] xsdLines;
+	String[] linesInXSDFile;
 	ElementRegistry registry;
 	
 	public XSDHelper(String[] xsdLines) {
-		this.xsdLines = xsdLines;
+		this.linesInXSDFile = xsdLines;
 		this.registry = ElementRegistry.getRegistry();
-		function();
-	}
-	
-	public List getLinesWithElement(String elementName) {
-		boolean read = false;
-		String tag = "";
-		List result = Collections.synchronizedList(new ArrayList());
-
-		for (int i = 0; i < xsdLines.length; i++) {
-			String currentLine = getWithoutInitialSpaces(xsdLines[i]);
-
-			if (hasElementInLine(elementName, currentLine)) {
-				read = true;
-				tag = getTagName(currentLine);
-
-				System.out.println(currentLine);
-				result.add(currentLine);
-
-				continue;
-			}
-
-			if (read == true) {
-				String endingTag = getEndingTag(tag);
-
-				if (currentLine.equals(endingTag)) {
-					read = false;
-				}
-
-				System.out.println(currentLine);
-				result.add(currentLine);
-			}
-		}
-		return result;
-	}
-	
-	public String getLineWithDescription(String eachLine) {
-		if (eachLine.contains("xsd:documentation>")) {
-			return eachLine.substring(eachLine.indexOf("<xsd:documentation>"), eachLine.indexOf("</xsd:documentation>"));
-		}
-		return null;
+		loadElementsToRegistry();
 	}
 
-	private String getWithoutInitialSpaces(String text) {
-		return text.substring(text.indexOf("<"));
-	}
-
-	public boolean hasElementInLine(String elementName, String line) {
-		return line.contains("element name=\"" + elementName);
-	}
-
-	private String getTagName(String line) {
-		return line.split(" ")[0];
-	}
-
-	private String getEndingTag(String tag) {
-		return tag.replaceAll("<", "</") + ">";
-	}
-
-	private void function() {
-		boolean flag = false;
+	private void loadElementsToRegistry() {
+		boolean readElement = false;
 		Element element = null;
-		for(String s : xsdLines) {
-			if(!flag && s.contains("element") && s.contains("name=")) {
-				String name = s.substring(s.indexOf("name=\"") + "name=\"".length(), s.indexOf("\"", s.indexOf("name=\"") + "name=\"".length()));
-				Element e = new Composition(name, "all");
-				flag = true;
-				element = e;
-				continue;
+		int token = -1;
+		for(String eachLine : linesInXSDFile) {
+			token = -1;
+			if(hasElementAndName(eachLine)) {
+				token = 0;
+			} else if(readElement) {
+				token = 1;
+			} else if(hasGroupAndName(eachLine)) {
+				token = 2;
 			}
 			
-			if(flag) {
-				if(s.contains("</xsd:element>")) {
-					flag = false;
-					registry.add(element);
-					continue;
-				} else if (s.contains("element") && !s.contains("name")) {
-					try{
-					String name = s.substring(s.indexOf("ref=\"") + "ref=\"".length(), s.indexOf("\"", s.indexOf("ref=\"") + "ref=\"".length()));
-					element.add(new SimpleElement(name));}
-					catch(StringIndexOutOfBoundsException e) {
-					}
-				}
-				
-				if(s.contains("documentation")) {
-					element.setDescription("\t" + s.substring(s.indexOf(">") + 1, s.lastIndexOf("<")));
-					continue;
-				}
+			switch(token) {
+			case 0:
+				element = createComposition(eachLine, "all");
+				break;
+			case 1:
+				element = fillElement(element, eachLine);
+				break;
+			case 2:
+				element = createComposition(eachLine, "group");
+				break;
 			}
+			readElement = element == null ? false : true;
 		}
+	}
+
+	private boolean hasGroupAndName(String line) {
+		if (line.contains("group") && line.contains("name=")) {
+			 return true;
+		 }
+		 return false;
+	}
+
+	private Element fillElement(Element element, String line) {
+		if(isElementClosed(line)) {
+			registry.add(element);
+			return null;
+		}
+		
+		if (hasElementAndRef(line)) {
+			try {
+				String name = getAttribute("ref", line);
+				String min = getAttribute("minOccurs", line);
+				String max = getAttribute("maxOccurs", line);
+				element.add(new SimpleElement(name));
+			} catch (StringIndexOutOfBoundsException e) {
+			} 
+		}
+		
+		if(hasDescription(line)) {
+			element.setDescription(getDescription(line));
+		}
+		
+		if(hasGroup(line)) {
+			String name = getAttribute("ref", line);
+			String min = getAttribute("minOccurs", line);
+			String max = getAttribute("maxOccurs", line);
+			element.add(new Composition(name, "group"));
+		}
+		
+		return element;
+	}
+
+	private boolean hasGroup(String line) {
+		if(line.contains("group")) {
+			return true;
+		}
+		return false;
+	}
+
+	private String getDescription(String line) {
+		return line.substring(line.indexOf(">") + 1, line.lastIndexOf("<"));
+	}
+
+	private boolean hasDescription(String line) {
+		if(line.contains("documentation")) {
+			return true;
+		}
+		return false;
+	}
+
+	private boolean hasElementAndRef(String line) {
+		 if (line.contains("element") && line.contains("ref")) {
+			 return true;
+		 }
+		 return false;
+	}
+
+	private boolean isElementClosed(String line) {
+		if(line.contains("</xsd:element>")) {
+			return true;
+		}
+		return false;
+	}
+
+	private Element createComposition(String line, String type) {
+		String name = getAttribute("name", line);
+		Element e = new Composition(name, type);
+		return e;
+	}
+
+	private boolean hasElementAndName(String line) {
+		if(line.contains("element") && line.contains("name=")) {
+			return true;
+		}
+		return false;
 	}
 
 	public Element getElementByName(String elementName) {
 		return registry.get(elementName);
+	}
+	
+	private String getAttribute(String name, String line) {
+		if(line.contains(name)) {
+			int begin = line.indexOf(name + "=\"") + (name + "=\"").length();
+			int end = line.indexOf("\"", line.indexOf(name + "=\"") + (name + "=\"").length());
+			return line.substring(begin, end);
+		}
+		
+		return null;
 	}
 }

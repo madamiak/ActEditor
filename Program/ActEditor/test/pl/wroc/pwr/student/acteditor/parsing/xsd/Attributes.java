@@ -1,10 +1,16 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
+import static org.junit.Assert.*;
+
+import org.junit.Ignore;
 import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.Schema;
+import pl.wroc.pwr.student.acteditor.test.TokenTest;
 
 public class Attributes {
 
-	@Test
+	@Ignore
 	public void testGetAttributes() {
 		String[] structure = { 
 				"<xsd:element name=\"ustawa\">\n",
@@ -37,6 +43,12 @@ public class Attributes {
 				"</xsd:complexType>\n" , 
 				"</xsd:element>\n"
 		};
+	}
+
+	@Test
+	public void testTokenTest() {
+		TokenTest t = new TokenTest(new Schema().getSchemaContent().split("\n"));
+		t.loadElementsToRegistry();
 	}
 
 }
