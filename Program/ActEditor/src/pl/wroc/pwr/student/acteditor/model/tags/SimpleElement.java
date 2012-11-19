@@ -43,7 +43,7 @@ public class SimpleElement implements Element {
 
 	@Override
 	public String getDescription() {
-		return description;
+		return description+"\n"+minOccurs+"\n"+maxOccurs;
 	}
 
 	@Override
@@ -63,7 +63,27 @@ public class SimpleElement implements Element {
 
 	@Override
 	public void setType(String type) {
-		// unsupporte
+		// unsupported
+	}
+
+	@Override
+	public String getMinOccurs() {
+		return minOccurs;
+	}
+
+	@Override
+	public void setMinOccurs(String minOccurs) {
+		this.minOccurs = minOccurs;
+	}
+
+	@Override
+	public String getMaxOccurs() {
+		return maxOccurs;
+	}
+
+	@Override
+	public void setMaxOccurs(String maxOccurs) {
+		this.maxOccurs = maxOccurs;
 	}
 
 }

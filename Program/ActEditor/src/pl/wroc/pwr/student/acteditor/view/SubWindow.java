@@ -4,13 +4,12 @@ import org.eclipse.swt.SWT;
 import org.eclipse.swt.graphics.Color;
 import org.eclipse.swt.graphics.Device;
 import org.eclipse.swt.graphics.Point;
-import org.eclipse.swt.layout.FormAttachment;
-import org.eclipse.swt.layout.FormData;
-import org.eclipse.swt.layout.FormLayout;
+import org.eclipse.swt.layout.GridData;
 import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Composite;
 import org.eclipse.swt.widgets.Display;
 import org.eclipse.swt.widgets.Event;
-import org.eclipse.swt.widgets.Group;
+import org.eclipse.swt.widgets.Label;
 import org.eclipse.swt.widgets.Listener;
 import org.eclipse.swt.widgets.Shell;
 import org.eclipse.swt.widgets.Text;
@@ -21,7 +20,6 @@ import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
 import pl.wroc.pwr.student.acteditor.model.Schema;
 import pl.wroc.pwr.student.acteditor.model.tags.Element;
 import pl.wroc.pwr.student.acteditor.parsing.xsd.XSDParser;
-import pl.wroc.pwr.student.acteditor.test.TokenTest;
 
 public class SubWindow extends Window {
 	private Text text;
@@ -41,10 +39,9 @@ public class SubWindow extends Window {
 		shell = new Shell(display);
 //		Display display = new Display();
 //		Shell shell = new Shell(display);
+		shell.setSize(561, 384);
 		shell.setBackground(white);
-		shell.setSize(793, 657);
 		shell.setText(name);
-		shell.setLayout(new FormLayout());
 		
 		Schema schema = new Schema();
 		String[] data = schema.getSchemaContent().split("\n");
@@ -53,36 +50,36 @@ public class SubWindow extends Window {
 		
 		final ElementRegistry registry = ElementRegistry.getRegistry();
 		Element e = registry.get(name);
+		shell.setLayout(new GridLayout(3, false));
 
-		final Tree tree = new Tree(shell, SWT.BORDER);
+		final Tree tree = new Tree(shell, SWT.NONE);
+		GridData gd_tree = new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 1);
+		gd_tree.heightHint = 242;
+		gd_tree.widthHint = 186;
+		tree.setLayoutData(gd_tree);
 		fillTree(tree, registry, e, 0);
 		
-		FormData fd_tree = new FormData();
-		fd_tree.bottom = new FormAttachment(0, 443);
-		fd_tree.right = new FormAttachment(0, 276);
-		fd_tree.top = new FormAttachment(0, 10);
-		fd_tree.left = new FormAttachment(0, 10);
-		tree.setLayoutData(fd_tree);
+		Label label = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
+		label.setBackground(white);
+		GridData gd_label = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 2);
+		gd_label.heightHint = 336;
+		gd_label.widthHint = 14;
+		label.setLayoutData(gd_label);
+		
+		Composite composite = new Composite(shell, SWT.NONE);
+		composite.setBackground(white);
+		GridData gd_composite = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2);
+		gd_composite.widthHint = 436;
+		gd_composite.heightHint = 336;
+		composite.setLayoutData(gd_composite);
 		
 		text = new Text(shell, SWT.READ_ONLY | SWT.WRAP);
+		GridData gd_text = new GridData(SWT.FILL, SWT.BOTTOM, false, false, 1, 1);
+		gd_text.widthHint = 115;
+		gd_text.heightHint = 67;
+		text.setLayoutData(gd_text);
 		text.setBackground(white);
 		text.setEditable(false);
-		FormData fd_text = new FormData();
-		fd_text.top = new FormAttachment(tree, 6);
-		fd_text.right = new FormAttachment(tree, 0, SWT.RIGHT);
-		fd_text.bottom = new FormAttachment(tree, 73, SWT.BOTTOM);
-		fd_text.left = new FormAttachment(0, 10);
-		text.setLayoutData(fd_text);
-		
-		Group group = new Group(shell, SWT.NONE);
-		group.setBackground(white);
-		group.setLayout(new GridLayout(2, false));
-		FormData fd_group = new FormData();
-		fd_group.top = new FormAttachment(0, 10);
-		fd_group.right = new FormAttachment(tree, 491, SWT.RIGHT);
-		fd_group.left = new FormAttachment(tree, 6);
-		fd_group.bottom = new FormAttachment(0, 443);
-		group.setLayoutData(fd_group);
 		
 		tree.addListener(SWT.MouseDown, new Listener() {
       public void handleEvent(Event event) {
@@ -105,13 +102,6 @@ public class SubWindow extends Window {
 		}
 		level++;
 		
-//		System.out.print("\n");
-//		
-//		for(int i = 0; i < level; i++) {
-//			System.out.print(" ");
-//		}
-//		
-//		System.out.print(element.getName());
 		TreeItem ti = null;
 		if (tree instanceof Tree) {
 			ti = new TreeItem((Tree) tree, SWT.NONE);

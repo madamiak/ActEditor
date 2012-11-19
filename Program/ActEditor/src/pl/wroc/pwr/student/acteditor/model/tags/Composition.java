@@ -10,6 +10,8 @@ public class Composition implements Element {
 	private String description = "";
 	private String name = "";
 	private String type = "";
+	private String minOccurs = "1";
+	private String maxOccurs = "1";
 	
 	public Composition(String name, String type) {
 		this.name = name;
@@ -41,7 +43,7 @@ public class Composition implements Element {
 
 	@Override
 	public String getDescription() {
-		return description;
+		return description+"\n"+minOccurs+"\n"+maxOccurs;
 	}
 
 	@Override
@@ -71,6 +73,26 @@ public class Composition implements Element {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	@Override
+	public String getMinOccurs() {
+		return minOccurs;
+	}
+
+	@Override
+	public void setMinOccurs(String minOccurs) {
+		this.minOccurs = minOccurs;
+	}
+
+	@Override
+	public String getMaxOccurs() {
+		return maxOccurs;
+	}
+
+	@Override
+	public void setMaxOccurs(String maxOccurs) {
+		this.maxOccurs = maxOccurs;
 	}
 
 }

@@ -14,10 +14,6 @@ this.registry = pl.wroc.pwr.student.acteditor.model.ElementRegistry.getRegistry 
 }, "~A");
 Clazz.overrideMethod (c$, "loadData", 
 function () {
-this.loadElementsToRegistry ();
-});
-Clazz.defineMethod (c$, "loadElementsToRegistry", 
-($fz = function () {
 var token = -1;
 var desc = false;
 var elements =  new java.util.Stack ();
@@ -46,7 +42,9 @@ elements.push (parent);
 desc = true;
 }break;
 case 5:
-sequence =  new pl.wroc.pwr.student.acteditor.model.tags.Composition ("(sekwencja)", "seq");
+var seqDesc = "Wszystkie tagi do wypełnienia.";
+sequence =  new pl.wroc.pwr.student.acteditor.model.tags.Composition ("...", "seq");
+sequence.setDescription (seqDesc);
 elements.push (sequence);
 break;
 case 7:
@@ -56,7 +54,9 @@ parent.add (group);
 elements.push (parent);
 break;
 case 8:
-choice =  new pl.wroc.pwr.student.acteditor.model.tags.Composition ("(wybór)", "choice");
+var choiceDesc = "Wybrany tag do wypełnienia.";
+choice =  new pl.wroc.pwr.student.acteditor.model.tags.Composition ("...", "choice");
+choice.setDescription (choiceDesc);
 elements.push (choice);
 break;
 }
@@ -80,5 +80,5 @@ elements.push (parent);
 break;
 }
 }
-}, $fz.isPrivate = true, $fz));
+});
 });

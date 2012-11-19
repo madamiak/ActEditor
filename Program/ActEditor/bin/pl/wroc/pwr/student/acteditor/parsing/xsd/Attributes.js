@@ -8,6 +8,6 @@ var structure = ["<xsd:element name=\"ustawa\">\n", "<xsd:annotation>", "<xsd:do
 Clazz.defineMethod (c$, "testTokenTest", 
 function () {
 var t =  new pl.wroc.pwr.student.acteditor.test.TokenTest ( new pl.wroc.pwr.student.acteditor.model.Schema ().getSchemaContent ().$plit ("\n"));
-t.loadElementsToRegistry ();
+t.loadAttributesToRegistry ();
 });
 });

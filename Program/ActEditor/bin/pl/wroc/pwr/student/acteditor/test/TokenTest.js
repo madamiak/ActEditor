@@ -1,15 +1,104 @@
 ﻿Clazz.declarePackage ("pl.wroc.pwr.student.acteditor.test");
-Clazz.load (null, "pl.wroc.pwr.student.acteditor.test.TokenTest", ["java.util.Stack", "pl.wroc.pwr.student.acteditor.model.ElementRegistry", "pl.wroc.pwr.student.acteditor.model.tags.Composition", "$.SimpleElement"], function () {
+Clazz.load (null, "pl.wroc.pwr.student.acteditor.test.TokenTest", ["java.util.Stack", "pl.wroc.pwr.student.acteditor.model.AttributeRegistry", "$.ElementRegistry", "pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup", "$.Composition", "$.SimpleElement"], function () {
 c$ = Clazz.decorateAsClass (function () {
 this.lines = null;
 this.registry = null;
+this.aRegistry = null;
 Clazz.instantialize (this, arguments);
 }, pl.wroc.pwr.student.acteditor.test, "TokenTest");
 Clazz.makeConstructor (c$, 
 function (lines) {
 this.lines = lines;
 this.registry = pl.wroc.pwr.student.acteditor.model.ElementRegistry.getRegistry ();
+this.aRegistry = pl.wroc.pwr.student.acteditor.model.AttributeRegistry.getRegistry ();
 }, "~A");
+Clazz.defineMethod (c$, "loadAttributesToRegistry", 
+function () {
+var token = -1;
+var attributes =  new java.util.Stack ();
+var attribute = null;
+var parent = null;
+for (var line, $line = 0, $$line = this.lines; $line < $$line.length && ((line = $$line[$line]) || true); $line++) {
+token = this.getAToken (line);
+switch (token) {
+case 0:
+attribute = this.createAttributeGroup (line);
+this.aRegistry.add (attribute);
+}
+}
+System.out.println (this.aRegistry.getAttributes ());
+});
+Clazz.defineMethod (c$, "createAttributeGroup", 
+($fz = function (line) {
+var name = this.getAttribute ("name", line);
+var result =  new pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup ();
+result.setName (name);
+return result;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "closedAttributeGroupDefinition", 
+($fz = function (line) {
+return line.contains ("</xsd:attributeGroup>") ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "closedAttributeGroupReference", 
+($fz = function (line) {
+return (line.contains ("attributeGroup") && line.contains ("/>")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "closedSimpleType", 
+($fz = function (line) {
+return line.contains ("</xsd:simpleType>") ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "closedRestriction", 
+($fz = function (line) {
+return line.contains ("</xsd:restriction>") ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "closedAttributeDefinition", 
+($fz = function (line) {
+return (line.contains ("</xsd:attribute>") || (this.hasAttributeDefinition (line) && line.contains ("/>"))) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "closedAttributeReference", 
+($fz = function (line) {
+return (line.contains ("attribute") && !line.contains ("attributeGroup") && line.contains ("ref=") && line.contains ("/>")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "getAToken", 
+($fz = function (line) {
+if (this.hasAttributeGroupDefinition (line)) {
+return 0;
+} else if (this.hasAttributeGroupReference (line)) {
+return 1;
+} else if (this.hasSimpleType (line)) {
+return 2;
+} else if (this.hasRestriction (line)) {
+return 3;
+} else if (this.hasAttributeDefinition (line)) {
+return 4;
+} else if (this.hasAttributeReference (line)) {
+return 5;
+}return -1;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "hasAttributeGroupReference", 
+($fz = function (line) {
+return (line.contains ("attributeGroup") && line.contains ("ref=")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "hasSimpleType", 
+($fz = function (line) {
+return (line.contains ("simpleType")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "hasAttributeDefinition", 
+($fz = function (line) {
+return (line.contains ("attribute") && !line.contains ("attributeGroup") && line.contains ("name=")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "hasAttributeReference", 
+($fz = function (line) {
+return (line.contains ("attribute") && !line.contains ("attributeGroup") && line.contains ("ref=")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "hasRestriction", 
+($fz = function (line) {
+return (line.contains ("restriction") && line.contains ("base=")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "hasAttributeGroupDefinition", 
+($fz = function (line) {
+return (line.contains ("attributeGroup") && line.contains ("name=")) ? true : false;
+}, $fz.isPrivate = true, $fz), "~S");
 Clazz.defineMethod (c$, "loadElementsToRegistry", 
 function () {
 var token = -1;

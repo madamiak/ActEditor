@@ -4,7 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 import java.util.Stack;
 
+import pl.wroc.pwr.student.acteditor.model.AttributeRegistry;
 import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup;
 import pl.wroc.pwr.student.acteditor.model.tags.Composition;
 import pl.wroc.pwr.student.acteditor.model.tags.Element;
 import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
@@ -12,12 +15,139 @@ import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
 public class TokenTest {
 	private String[] lines;
 	private ElementRegistry registry;
+	private AttributeRegistry aRegistry;
 	
 	public TokenTest(String[] lines) {
 		this.lines = lines;
 		registry = ElementRegistry.getRegistry();
+		aRegistry = AttributeRegistry.getRegistry();
 	}
 	
+	public void loadAttributesToRegistry() {
+		int token = -1;
+		Stack attributes = new Stack();
+		Attribute attribute = null;
+		Attribute parent = null;
+		
+		for(String line : lines) {
+			token = getAToken(line);
+//			if(token != -1) {
+//				System.out.println(token + "\t" + line);
+//			}
+//			token = getAClosedToken(line);
+//			if(token != -1) {
+//				System.out.println("\t" + line + "\t" + token);
+//			}
+			switch(token) {
+			case 0:
+				attribute = createAttributeGroup(line);
+				aRegistry.add(attribute);
+			}
+		}
+		System.out.println(aRegistry.getAttributes());
+	}
+	
+	private Attribute createAttributeGroup(String line) {
+		String name = getAttribute("name", line);
+		Attribute result = new AttributeGroup();
+		result.setName(name);
+		return result;
+	}
+
+	private int getAClosedToken(String line) {
+		if(closedAttributeGroupDefinition(line)) {
+			return 6;
+		} else if(closedAttributeGroupReference(line)) {
+			return 7;
+		} else if(closedSimpleType(line)) {
+			return 8;
+		} else if(closedRestriction(line)) {
+			return 9;
+		} else if(closedAttributeDefinition(line)) {
+			return 10;
+		} else if(closedAttributeReference(line)) {
+			return 11;
+		}
+		return -1;
+	}
+	
+	private boolean closedAttributeGroupDefinition(String line) {
+		return line.contains("</xsd:attributeGroup>") ? true : false;
+	}
+
+	private boolean closedAttributeGroupReference(String line) {
+		return (line.contains("attributeGroup") && line.contains("/>")) ? true : false;
+	}
+
+	private boolean closedSimpleType(String line) {
+		return line.contains("</xsd:simpleType>") ? true : false;
+	}
+
+	private boolean closedRestriction(String line) {
+		return line.contains("</xsd:restriction>") ? true : false;
+	}
+
+	private boolean closedAttributeDefinition(String line) {
+		return (line.contains("</xsd:attribute>") || (hasAttributeDefinition(line) && line.contains("/>"))) ? true : false;
+	}
+
+	private boolean closedAttributeReference(String line) {
+		return (line.contains("attribute") && !line.contains("attributeGroup") && line.contains("ref=") && line.contains("/>")) ? true : false;
+	}
+
+	private int getAToken(String line) {
+		if(hasAttributeGroupDefinition(line)) {
+			return 0;
+		} else if(hasAttributeGroupReference(line)) {
+			return 1;
+		} else if(hasSimpleType(line)) {
+			return 2;
+		} else if(hasRestriction(line)) {
+			return 3;
+		} else if(hasAttributeDefinition(line)) {
+			return 4;
+		} else if(hasAttributeReference(line)) {
+			return 5;
+		}
+		return -1;
+	}
+
+	private boolean hasAttributeGroupReference(String line) {
+		return (line.contains("attributeGroup") && line.contains("ref=")) ? true : false;
+	}
+
+	private boolean hasSimpleType(String line) {
+		return (line.contains("simpleType")) ? true : false;
+	}
+
+	private boolean hasAttributeDefinition(String line) {
+		return (line.contains("attribute") && !line.contains("attributeGroup") && line.contains("name=")) ? true : false;
+	}
+
+	private boolean hasAttributeReference(String line) {
+		return (line.contains("attribute") && !line.contains("attributeGroup") && line.contains("ref=")) ? true : false;
+	}
+
+	private boolean hasRestriction(String line) {
+		return (line.contains("restriction") && line.contains("base=")) ? true : false;
+	}
+
+	private boolean hasAttributeGroupDefinition(String line) {
+		return (line.contains("attributeGroup") && line.contains("name=")) ? true : false;
+	}
+	
+	
+	
+	
+	
+	
+	
+	
+	
+
+	
+
+	////////////////////////////////////ELEMENTS///////////////////////////////////////
 	public void loadElementsToRegistry() {
 		int token = -1; 
 		boolean desc = false;

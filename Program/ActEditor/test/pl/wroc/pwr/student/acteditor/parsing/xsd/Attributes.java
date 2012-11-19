@@ -48,7 +48,8 @@ public class Attributes {
 	@Test
 	public void testTokenTest() {
 		TokenTest t = new TokenTest(new Schema().getSchemaContent().split("\n"));
-		t.loadElementsToRegistry();
+//		t.loadElementsToRegistry();
+		t.loadAttributesToRegistry();
 	}
 
 }

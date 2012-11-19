@@ -13,4 +13,8 @@ public interface Element {
 	public void setName(String name);
 	public String getType();
 	public void setType(String type);
+	public String getMinOccurs();
+	public void setMinOccurs(String minOccurs);
+	public String getMaxOccurs();
+	public void setMaxOccurs(String maxOccurs);
 }

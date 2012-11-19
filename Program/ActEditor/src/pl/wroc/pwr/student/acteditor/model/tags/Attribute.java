@@ -3,6 +3,7 @@ package pl.wroc.pwr.student.acteditor.model.tags;
 import java.util.List;
 
 public interface Attribute {
+	public String toString();
 	public String getName();
 	public void setName(String name);
 	public String getType();
