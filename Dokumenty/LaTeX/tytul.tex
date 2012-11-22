@@ -1,0 +1,85 @@
+\makeatletter
+%Uczelnia
+\newcommand\uczelnia[1]{\renewcommand\@uczelnia{#1}}
+\newcommand\@uczelnia{}
+%Wydzia³
+\newcommand\wydzial[1]{\renewcommand\@wydzial{#1}}
+\newcommand\@wydzial{}
+%Kierunek
+\newcommand\kierunek[1]{\renewcommand\@kierunek{#1}}
+\newcommand\@kierunek{}
+%Specjalnoœæ
+\newcommand\specjalnosc[1]{\renewcommand\@specjalnosc{#1}}
+\newcommand\@specjalnosc{}
+%Tytu³ po angielsku
+\newcommand\titleEN[1]{\renewcommand\@titleEN{#1}}
+\newcommand\@titleEN{}
+%Promotor
+\newcommand\promotor[1]{\renewcommand\@promotor{#1}}
+\newcommand\@promotor{}
+
+\def\maketitle{%
+  \null
+  \thispagestyle{empty}%
+	\begin{center}
+		{\fontsize{22pt}{24pt} \@uczelnia \\} \vspace{0.4cm}
+		{\fontsize{22pt}{24pt} \@wydzial \\} \vspace*{0.5cm}
+		\hrule \vspace*{0.7cm}
+	\end{center}
+	\begin{flushleft}
+		{\fontsize{14pt}{16pt} KIERUNEK: \@kierunek \\}
+		{\fontsize{14pt}{16pt}SPECJALNOŒÆ: \@specjalnosc\\}
+	\end{flushleft}
+	\begin{center}
+	\vspace{1.3cm}
+		{\fontsize{24pt}{26pt} PRACA DYPLOMOWA \\ } \vspace{0.5cm}
+		{\fontsize{24pt}{26pt} MAGISTERSKA }
+		\begin{textblock*}{0mm}(0mm,0mm) % parametry dla MiKTeX 2.7
+			%\begin{textblock*}{210mm}(0mm,0mm) % parametry dla MiKTeX 2.6
+			\noindent\unitlength1mm%
+			\begin{picture}(0,0)  
+				%UWAGA: tutaj jest miejsce na tyty³ w jêzyku polskim
+				\put(132,-125){\makebox(0,0){\parbox{115mm}{\centering\fontsize{16pt}{18pt} \@title}}}
+				%UWAGA: tutaj jest miejsce na tyty³ w jêzyku angielskim
+				\put(132,-145){\makebox(0,0){\parbox{115mm}{\centering\fontsize{16pt}{18pt} \@titleEN}}}
+				%UWAGA: tutaj jest miejsce na autora pracy
+				\put(132,-165){\makebox(0,0){\centering\fontsize{16pt}{18pt}{AUTOR:}}}%
+				\put(132,-172){\makebox(0,0){\centering\fontsize{14pt}{16pt} \@author}}%
+				%UWAGA: tutaj jest miejsce na promotora pracy
+				\put(110,-195){\makebox(0,0)[l]{\fontsize{16pt}{18pt}{PROWADZ¥CY PRACÊ:}}}%
+				\put(110,-202){\makebox(0,0)[l]{\fontsize{14pt}{16pt}\@promotor}}%
+				\put(110,-245){\makebox(0,0)[l]{\fontsize{16pt}{18pt}{OCENA PRACY:}}}%
+				\put(30,-275){\line(1,0){160}}%
+				\put(86,-279){\makebox(0,0)[l]{\fontsize{16pt}{18pt}%
+				%UWAGA: tutaj jest miejsce na datê
+				{WROC£AW 2011}}}%
+			\end{picture}
+	  \end{textblock*}
+  \end{center}
+ \vfill
+ \null
+ \cleardoublepage
+}
+\makeatother
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

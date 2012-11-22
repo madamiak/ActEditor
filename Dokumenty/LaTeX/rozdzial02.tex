@@ -1,0 +1,88 @@
+\chapter{Wymagania projektowe}
+\section{Wymagania funkcjonalne}
+Zrealizowany projekt zosta³ wykonany w oparciu o serwis EDAP na potrzeby pracy in¿ynierskiej na kierunku Informatyka na Politechnice Wroc³awskiej. Projekt nosi nazwê AtEditor. Aplikacja stanowi narzêdzie, maj¹ce na celu usprawnienie pisania aktów prawnych zgodnie ze schematem narzuconym przez ministerstwo.
+
+Serwis EDAP – elektroniczna forma aktów prawnych, zosta³ przygotowany przez MSWiA w zwi¹zku z wejœciem w ¿ycie rozporz¹dzenia w sprawie wymaga technicznych dokumentów elektronicznych zawieraj¹cych akty normatywne i inne akty prawne, elektronicznej formy dzienników urzêdowych oraz œrodków komunikacji elektronicznej i informatycznych noœników danych (Dz. U. 2008 Nr 75, poz 451 z póŸn. zm.).
+
+Aplikacja s³u¿y do tworzenia oraz edycji aktów prawnych, wspomaga tak¿e zarz¹dzanie oraz przechowywanie stworzonych dokumentów. 
+
+Akty prawne s¹ generowane w postaci pliku z rozszerzeniem .xml oraz .pdf w oparciu o elektroniczny schemat aktów prawnych, przygotowany przez MSWiA w postaci pliku schema.xsd. W tym projekcie generowanie pliku zosta³o zast¹pione wyœwietleniem zawartoœci takiego pliku w aplikacji.
+
+Aplikacja ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzy-stanie z takiego narzêdzia, jak generator aktów prawnych. Istniej¹cy serwis EDAP bywa pod tym wzglêdem ma³o intuicyjny. Korzystanie z Java2Script powinno umo¿liwiæ korzystanie ze stworzonej aplikacji za pomoc¹ interfejsu webowego.
+
+Poni¿ej przedstawiony zosta³ diagram przypadków u¿ycia serwisu EDAP. Wyró¿nione zosta³y funkcje systemu, które zosta³y zaimplementowane w ActEditor.
+•	TODO: tu jakieœ diagramy przypadków u¿ycia EDAPa.
+
+\section{Wymagania niefunkcjonalne}
+Poni¿ej zosta³y przedstawione jêzyki programowania, jêzyki znaczników, narzêdzia wspomagaj¹ce oraz technologie u¿yte w projekcie.
+\begin{itemize}
+	\item[] \textbf{Java} \hfill \\
+	G³ówny jêzyk programowania, u¿yty w projekcie. Oprogramowana jest w nim ca³a logika biznesowa, opieraj¹ca siê na wczytaniu danych z pliku schema.xsd, wyœwietleniu i obs³udze danych w oknie aplikacji, generowaniu rezultatu, jakim jest plik XML.
+	\item[] \textbf{JavaScript}	\hfill \\
+
+	\item[] \textbf{HTML} \hfill \\
+ 
+	\item[] \textbf{XML} \hfill \\
+
+	\item[] \textbf{XSD} \hfill \\
+
+	\item[] \textbf{Eclipse IDE} \hfill \\
+
+	\item[] \textbf{Java2Script} \hfill \\
+ 
+	\item[] \textbf{Github, EGit} \hfill \\
+
+	\item[] \textbf{…//TODO: uzupe³niæ} \hfill \\
+ 
+\end{itemize}
+
+\section{Cykl ¿ycia projektu}
+Cykl ¿ycia projektu reprezentuje model przyrostowy (iteracyjny). W stosunku do modelu kaskadowego daje o wiele wiêksz¹ elastycznoœæ, dziêki powrotom do wstêpnych faz projektu i pozwala reagowaæ na opóŸnienia, czyli przyspieszaæ prace nad innymi czêœciami projektu. Daje te¿ elastycznoœæ pod wzglêdem definiowania wymagañ – mo¿emy pocz¹tkowo zdefiniowaæ wstêpne wymagania, podczas gdy koñcowa specyfikacja mo¿e powstaæ dopiero na etapie testowania.
+
+\begin{enumerate}
+	\item	Definiowanie projektu
+	\begin{enumerate}
+		\item Etap inicjowania projektu
+		\begin{description}
+			\item Inicjowanie projektu wymaga odpowiedzi na pytania: jaka jest tematyka przedsiêwziêcia? Jakie s¹ g³ówne problemy zagadnienia? Jakie problemy ma rozwi¹zaæ projekt?
+		\end{description}
+		\item Etap definiowania celu
+		\begin{description}
+			\item Definiowanie zagadnienia polega na wyspecyfikowaniu kluczowego problemu, który formu³ujemy jako cel g³ówny. Identyfikuje siê tutaj równie¿ cele cz¹stkowe, które musz¹ zostaæ zrealizowane, by osi¹gn¹æ cel koñcowy, a tak¿e prognozuje siê potencjalne przeszkody, które mog¹ wp³yn¹æ na sukces projektu. 
+		\end{description}
+		\item Etap weryfikacji
+		\begin{description}
+			\item W tym etapie ocenia siê mo¿liwoœæ wykonania postanowionych wymagañ oraz weryfikuje szanse na osi¹gniêcie sukcesu projektu.
+		\end{description}
+	\end{enumerate}
+	\item Planowanie
+	\begin{description}
+		\item Podsumowanie tego, co musi byæ wykonane w ramach projektu, aby osi¹gn¹æ cel. Tworzy siê tu podzia³ na podzadania, które s¹ ³atwe do zorganizowania i zarz¹dzania.
+	\end{description}
+	\item Wykonanie planu projektu
+	\begin{enumerate}
+		\item	Organizacja kamieni milowych
+		\begin{description}
+			\item Ustalenie kolejnoœci wykonywanych podzadañ wraz z rozmieszczeniem ich w czasie. Specyfikowana jest tutaj kolejnoœæ wykonywania zadañ oraz ich przewidywany czas wykonania.
+		\end{description}
+		\item Wprowadzenie planu w ¿ycie
+		\begin{description}
+			\item Wykonanie wyspecyfikowanych zadañ i d¹¿enie do ich realizacji przed up³ywem ich szacowanego czasu trwania.
+		\end{description}
+		\item Przetestowanie aplikacji
+		\begin{description}
+			\item Testowanie implementowanych czêœci systemu. Najczêœciej jest to etap iteracyjny, który jest wykonywany po zaimplementowaniu konkretnej funkcji w systemie.
+		\end{description}
+	\end{enumerate}
+	\item Zamykanie projektu
+	\begin{enumerate}
+		\item	Ocena projektu
+		\begin{description}
+			\item Nastêpuje tu ocena odpowiednioœci, efektywnoœci, skutecznoœci projektu. Jest to przegl¹d osi¹gniêæ realizowanego projektu w stosunku do pocz¹tkowych oczekiwañ. Odpowiada na pytania: czy rezultaty projektu by³y zgodne z oczekiwaniami? Czy prace zosta³y wykonane zgodnie z planem? 
+		\end{description}
+		\item Wnioski
+		\begin{description}
+			\item Wyci¹gniêcie wniosków z realizacji projektu. Opis doœwiadczeñ zdobytych w trakcie wykonywania zadania, które maj¹ s³u¿yæ poprawie przysz³ych projektów i programów.
+		\end{description}
+	\end{enumerate}
+\end{enumerate}
