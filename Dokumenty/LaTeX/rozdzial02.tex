@@ -1,17 +1,23 @@
 \chapter{Wymagania projektowe}
-\section{Wymagania funkcjonalne}
 Zrealizowany projekt zosta³ wykonany w oparciu o serwis EDAP na potrzeby pracy in¿ynierskiej na kierunku Informatyka na Politechnice Wroc³awskiej. Projekt nosi nazwê AtEditor. Aplikacja stanowi narzêdzie, maj¹ce na celu usprawnienie pisania aktów prawnych zgodnie ze schematem narzuconym przez ministerstwo.
 
-Serwis EDAP – elektroniczna forma aktów prawnych, zosta³ przygotowany przez MSWiA w zwi¹zku z wejœciem w ¿ycie rozporz¹dzenia w sprawie wymaga technicznych dokumentów elektronicznych zawieraj¹cych akty normatywne i inne akty prawne, elektronicznej formy dzienników urzêdowych oraz œrodków komunikacji elektronicznej i informatycznych noœników danych (Dz. U. 2008 Nr 75, poz 451 z póŸn. zm.).
+Serwis EDAP – elektroniczna forma aktów prawnych, zosta³ przygotowany przez MSWiA w zwi¹zku z wejœciem w ¿ycie rozporz¹dzenia w sprawie wymagañ technicznych dokumentów elektronicznych zawieraj¹cych akty normatywne i inne akty prawne, elektronicznej formy dzienników urzêdowych oraz œrodków komunikacji elektronicznej i informatycznych noœników danych (Dz. U. 2008 Nr 75, poz 451 z póŸn. zm.).
 
 Aplikacja s³u¿y do tworzenia oraz edycji aktów prawnych, wspomaga tak¿e zarz¹dzanie oraz przechowywanie stworzonych dokumentów. 
 
-Akty prawne s¹ generowane w postaci pliku z rozszerzeniem .xml oraz .pdf w oparciu o elektroniczny schemat aktów prawnych, przygotowany przez MSWiA w postaci pliku schema.xsd. W tym projekcie generowanie pliku zosta³o zast¹pione wyœwietleniem zawartoœci takiego pliku w aplikacji.
+Akty prawne s¹ generowane w postaci pliku z rozszerzeniem .xml oraz .pdf w oparciu o elektroniczny schemat aktów prawnych, przygotowany przez MSWiA w postaci pliku schema.xsd.
 
-Aplikacja ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzy-stanie z takiego narzêdzia, jak generator aktów prawnych. Istniej¹cy serwis EDAP bywa pod tym wzglêdem ma³o intuicyjny. Korzystanie z Java2Script powinno umo¿liwiæ korzystanie ze stworzonej aplikacji za pomoc¹ interfejsu webowego.
+\section{Wymagania funkcjonalne}
+Aplikacja ActEditor ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzystanie z takiego narzêdzia, jak generator aktów prawnych. Istniej¹cy serwis EDAP bywa pod tym wzglêdem ma³o intuicyjny. Korzystanie z Java2Script powinno umo¿liwiæ korzystanie ze stworzonej aplikacji za pomoc¹ interfejsu webowego.
 
-Poni¿ej przedstawiony zosta³ diagram przypadków u¿ycia serwisu EDAP. Wyró¿nione zosta³y funkcje systemu, które zosta³y zaimplementowane w ActEditor.
-•	TODO: tu jakieœ diagramy przypadków u¿ycia EDAPa.
+Na rys.~\ref{fig:EDAP_use-case} zosta³ diagram przypadków u¿ycia serwisu EDAP. Na zielono wyró¿nione zosta³y funkcje systemu, które zosta³y zaimplementowane w ActEditor, a na szaro które nie zosta³y zrealizowane, m.in. ze wzglêdu na ograniczenia u¿ytych technologii.
+
+\begin{figure}[!ht]
+	\centering
+		\includegraphics[width=0.7\linewidth]{./rys01/EDAP_use-case.png}
+	\caption{Diagram przypadków u¿ycia dla u¿ytkownika serwisu EDAP}
+	\label{fig:EDAP_use-case}
+\end{figure}
 
 \section{Wymagania niefunkcjonalne}
 Poni¿ej zosta³y przedstawione jêzyki programowania, jêzyki znaczników, narzêdzia wspomagaj¹ce oraz technologie u¿yte w projekcie.
@@ -37,7 +43,7 @@ Poni¿ej zosta³y przedstawione jêzyki programowania, jêzyki znaczników, narzêdzia
 \end{itemize}
 
 \section{Cykl ¿ycia projektu}
-Cykl ¿ycia projektu reprezentuje model przyrostowy (iteracyjny). W stosunku do modelu kaskadowego daje o wiele wiêksz¹ elastycznoœæ, dziêki powrotom do wstêpnych faz projektu i pozwala reagowaæ na opóŸnienia, czyli przyspieszaæ prace nad innymi czêœciami projektu. Daje te¿ elastycznoœæ pod wzglêdem definiowania wymagañ – mo¿emy pocz¹tkowo zdefiniowaæ wstêpne wymagania, podczas gdy koñcowa specyfikacja mo¿e powstaæ dopiero na etapie testowania.
+Cykl ¿ycia projektu reprezentuje model przyrostowy (iteracyjny). W stosunku do modelu kaskadowego daje on o wiele wiêksz¹ elastycznoœæ, dziêki powrotom do wstêpnych faz projektu i pozwala reagowaæ na opóŸnienia, czyli przyspieszaæ prace nad innymi czêœciami projektu. Daje te¿ elastycznoœæ pod wzglêdem definiowania wymagañ – mo¿emy pocz¹tkowo zdefiniowaæ wstêpne wymagania, podczas gdy koñcowa specyfikacja mo¿e powstaæ dopiero na etapie testowania.
 
 \begin{enumerate}
 	\item	Definiowanie projektu

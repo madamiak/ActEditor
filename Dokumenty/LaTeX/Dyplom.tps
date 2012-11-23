@@ -11,14 +11,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
-Document=rozdzial04.tex
+Document=rozdzial03.tex
 
 [Frame0_View0,0]
-TopLine=71
-Cursor=5530
+TopLine=18
+Cursor=1354
 
 [Frame1]
 Flags=0
@@ -29,14 +29,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
-Document=rozdzial02.tex
+Document=rozdzial04.tex
 
 [Frame1_View0,0]
-TopLine=72
-Cursor=5301
+TopLine=12
+Cursor=1523
 
 [Frame2]
 Flags=0
@@ -47,14 +47,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
-Document=rozdzial03.tex
+Document=rozdzial02.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=38
+TopLine=23
+Cursor=1486
 
 [Frame3]
 Flags=0
@@ -65,14 +65,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
 Document=rozdzial01.tex
 
 [Frame3_View0,0]
-TopLine=13
-Cursor=3300
+TopLine=0
+Cursor=3164
 
 [Frame4]
 Flags=0
@@ -83,14 +83,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
-Document=rozdzial05.tex
+Document=skroty.tex
 
 [Frame4_View0,0]
 TopLine=0
-Cursor=22
+Cursor=258
 
 [Frame5]
 Flags=0
@@ -101,14 +101,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
-Document=dodatek01.tex
+Document=Dyplom.tex
 
 [Frame5_View0,0]
-TopLine=0
-Cursor=31
+TopLine=256
+Cursor=147
 
 [Frame6]
 Flags=0
@@ -119,14 +119,14 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
-Document=Dyplom.tex
+Document=rozdzial05.tex
 
 [Frame6_View0,0]
-TopLine=248
-Cursor=8922
+TopLine=0
+Cursor=22
 
 [Frame7]
 Flags=0
@@ -137,8 +137,8 @@ MaxPos.x=-1
 MaxPos.y=-1
 NormalPos.left=4
 NormalPos.top=26
-NormalPos.right=1113
-NormalPos.bottom=488
+NormalPos.right=548
+NormalPos.bottom=472
 Class=LaTeXView
 Document=rozdzial06.tex
 

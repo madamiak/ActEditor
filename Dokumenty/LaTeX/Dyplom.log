@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.9)  22 NOV 2012 21:50
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.9)  23 NOV 2012 20:53
 entering extended mode
 **Dyplom.tex
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.tex"
@@ -660,33 +660,17 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <17.28> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 20.
 ) [5]
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial02.tex"
-LaTeX Font Info:    Try loading font information for OMS+ptm on input line 14.
+<./rys01/EDAP_use-case.png, id=133, 426.84468pt x 337.26pt>
+File: ./rys01/EDAP_use-case.png Graphic file (type png)
 
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\omsptm.fd"
-File: omsptm.fd 
-)
-LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
-(Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 14.
+<use ./rys01/EDAP_use-case.png>
+Package pdftex.def Info: ./rys01/EDAP_use-case.png used on input line 17.
+(pdftex.def)             Requested size: 318.66946pt x 251.80193pt.
  [6
 
 
 
 ]
-Underfull \hbox (badness 10000) in paragraph at lines 21--22
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 23--24
-
- []
-
-
-Underfull \hbox (badness 10000) in paragraph at lines 25--26
-
- []
-
-
 Underfull \hbox (badness 10000) in paragraph at lines 27--28
 
  []
@@ -711,54 +695,84 @@ Underfull \hbox (badness 10000) in paragraph at lines 35--36
 
  []
 
-[7] [8]) [9] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial03.tex") [10
+
+Underfull \hbox (badness 10000) in paragraph at lines 37--38
+
+ []
+
+[7 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys01/EDAP_use-case.png>]
+Underfull \hbox (badness 10000) in paragraph at lines 39--40
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+[8]) [9] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial03.tex"
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 17.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+) [10
 
 
 
 ]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial04.tex"
+<./rys01/architektura.png, id=171, 564.1075pt x 323.2075pt>
+File: ./rys01/architektura.png Graphic file (type png)
+
+<use ./rys01/architektura.png>
+Package pdftex.def Info: ./rys01/architektura.png used on input line 21.
+(pdftex.def)             Requested size: 364.19666pt x 208.6719pt.
+
+Underfull \hbox (badness 1546) in paragraph at lines 28--29
+[]\T1/ptm/m/n/12 J2S wspiera klasy wy-ª¡cz-nie z pa-kie-tów: \T1/pcr/m/n/12 jav
+a.io\T1/ptm/m/n/12 , \T1/pcr/m/n/12 java.util\T1/ptm/m/n/12 , \T1/pcr/m/n/12 ja
+va.lang\T1/ptm/m/n/12 ,
+ []
+
+<./rys02/karoolark-web-messenger.jpg, id=172, 1284.8pt x 803.0pt>
+File: ./rys02/karoolark-web-messenger.jpg Graphic file (type jpg)
+
+<use ./rys02/karoolark-web-messenger.jpg>
+Package pdftex.def Info: ./rys02/karoolark-web-messenger.jpg used on input line
+ 34.
+(pdftex.def)             Requested size: 364.19666pt x 227.61984pt.
+ [11 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys01/architektura.png>]
+<./rys03/dove.png, id=177, 1054.94125pt x 698.61pt>
+File: ./rys03/dove.png Graphic file (type png)
+ <use ./rys03/dove.png>
+Package pdftex.def Info: ./rys03/dove.png used on input line 43.
+(pdftex.def)             Requested size: 364.19666pt x 241.1806pt.
+
+<./rys04/imageViewerScreenshot.png, id=178, 458.46281pt x 420.06938pt>
+File: ./rys04/imageViewerScreenshot.png Graphic file (type png)
+
+<use ./rys04/imageViewerScreenshot.png>
+Package pdftex.def Info: ./rys04/imageViewerScreenshot.png used on input line 5
+1.
+(pdftex.def)             Requested size: 318.66946pt x 291.99545pt.
+) [12 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys02/karoolark-web-messenger.jpg>] 
+[13 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys03/dove.png> <D:/Opera Unite/EDAP/D
+okumenty/LaTeX/rys04/imageViewerScreenshot.png>] ("D:\Opera Unite\EDAP\Dokument
+y\LaTeX\rozdzial04.tex"
 Underfull \hbox (badness 1436) in paragraph at lines 8--9
 \T1/ptm/m/n/12 wa-nia, in-te-gra-cji i we-ry-fi-ka-cji urz¦-do-wych da-nych po-
 sia-da-j¡-cych aspekt
  []
 
-[11
+[14
+
+
+
+] [15]) [16] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial05.tex") [17
 
 
 
 ]
-
-! LaTeX Error: \begin{enumerate} on input line 5 ended by \end{enumeration}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.23 	\end{enumeration}
-                       
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-
-! LaTeX Error: \begin{enumerate} on input line 3 ended by \end{enumeration}.
-
-See the LaTeX manual or LaTeX Companion for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.24 \end{enumeration}
-                      
-Your command was ignored.
-Type  I <command> <return>  to replace it with another command,
-or  <return>  to continue without it.
-
-[12]) [13] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial05.tex") [14
-
-
-
-]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial06.tex") [15
+("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial06.tex") [18
 
 
 
@@ -768,14 +782,14 @@ bibitemlist
 
 LaTeX Warning: Empty `thebibliography' environment on input line 3.
 
-) [16
+) [19
 
 
-] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek01.tex") [17
+] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek01.tex") [20
 
 
 ]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek02.tex") [18
+("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek02.tex") [21
 
 
 
@@ -797,25 +811,25 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 278.
 Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 278.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 278.
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: A8859DE4B20C1C63315C8B81E00A33ED;1015.
+(rerunfilecheck)             Checksum: D3C914AC5BCFD9B47B66E0870DF8F95F;1153.
  ) 
 Here is how much of TeX's memory you used:
- 9161 strings out of 494045
- 130500 string characters out of 3145964
- 254797 words of memory out of 3000000
- 12238 multiletter control sequences out of 15000+200000
- 39295 words of font info for 50 fonts, out of 3000000 for 9000
+ 9229 strings out of 494045
+ 131661 string characters out of 3145964
+ 254501 words of memory out of 3000000
+ 12283 multiletter control sequences out of 15000+200000
+ 39916 words of font info for 52 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 32i,12n,31p,646b,538s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,12n,31p,809b,540s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
-m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)
-/MiKTeX 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9
-/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type
-1/urw/times/utmri8a.pfb>
-Output written on Dyplom.pdf (18 pages, 109095 bytes).
+m Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX
+ 2.9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
+type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
+imes/utmri8a.pfb>
+Output written on Dyplom.pdf (21 pages, 802491 bytes).
 PDF statistics:
- 241 PDF objects out of 1000 (max. 8388607)
- 72 named destinations out of 1000 (max. 500000)
- 145 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 279 PDF objects out of 1000 (max. 8388607)
+ 82 named destinations out of 1000 (max. 500000)
+ 186 words of extra memory for PDF output out of 10000 (max. 10000000)
 

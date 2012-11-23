@@ -5,13 +5,15 @@
 \contentsline {chapter}{\chapternumberline {2}Wymagania projektowe}{6}{chapter.2}
 \contentsline {section}{\numberline {2.1}Wymagania funkcjonalne}{6}{section.2.1}
 \contentsline {section}{\numberline {2.2}Wymagania niefunkcjonalne}{7}{section.2.2}
-\contentsline {section}{\numberline {2.3}Cykl \.zycia projektu}{7}{section.2.3}
-\contentsline {chapter}{\chapternumberline {3}Analiza przypadk\'ow u\.zycia?}{10}{chapter.3}
-\contentsline {chapter}{\chapternumberline {4}Opis implementacji}{11}{chapter.4}
-\contentsline {section}{\numberline {4.1}Pierwsza iteracja}{11}{section.4.1}
-\contentsline {section}{\numberline {4.2}Druga iteracja}{12}{section.4.2}
-\contentsline {chapter}{\chapternumberline {5}Testowanie}{14}{chapter.5}
-\contentsline {chapter}{\chapternumberline {6}Podsumowanie}{15}{chapter.6}
-\contentsline {chapter}{Literatura}{16}{section*.3}
-\contentsline {appendix}{\chapternumberline {A}Instrukcja wdro\.zenia}{17}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Instrukcja u\.zytkownika}{18}{appendix.B}
+\contentsline {section}{\numberline {2.3}Cykl \.zycia projektu}{8}{section.2.3}
+\contentsline {chapter}{\chapternumberline {3}Java2Script}{10}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analiza technologii}{10}{section.3.1}
+\contentsline {section}{\numberline {3.2}Analiza istniej\k acych przypadk\'ow u\.zycia}{11}{section.3.2}
+\contentsline {chapter}{\chapternumberline {4}Opis implementacji}{14}{chapter.4}
+\contentsline {section}{\numberline {4.1}Pierwsza iteracja}{14}{section.4.1}
+\contentsline {section}{\numberline {4.2}Druga iteracja}{15}{section.4.2}
+\contentsline {chapter}{\chapternumberline {5}Testowanie}{17}{chapter.5}
+\contentsline {chapter}{\chapternumberline {6}Podsumowanie}{18}{chapter.6}
+\contentsline {chapter}{Literatura}{19}{section*.3}
+\contentsline {appendix}{\chapternumberline {A}Instrukcja wdro\.zenia}{20}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Instrukcja u\.zytkownika}{21}{appendix.B}
