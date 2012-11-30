@@ -1,20 +1,32 @@
 \BOOKMARK [0][-]{spisTresci.1.0}{Spis tresci}{}% 1
 \BOOKMARK [0][-]{skroty.1.0}{Skr\363ty}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Wstep}{}% 3
-\BOOKMARK [1][-]{section.1.1}{Cel}{chapter.1}% 4
-\BOOKMARK [1][-]{section.1.2}{Zakres}{chapter.1}% 5
-\BOOKMARK [0][-]{chapter.2}{Wymagania projektowe}{}% 6
-\BOOKMARK [1][-]{section.2.1}{Wymagania funkcjonalne}{chapter.2}% 7
-\BOOKMARK [1][-]{section.2.2}{Wymagania niefunkcjonalne}{chapter.2}% 8
-\BOOKMARK [1][-]{section.2.3}{Cykl zycia projektu}{chapter.2}% 9
-\BOOKMARK [0][-]{chapter.3}{Java2Script}{}% 10
-\BOOKMARK [1][-]{section.3.1}{Analiza technologii}{chapter.3}% 11
-\BOOKMARK [1][-]{section.3.2}{Analiza istniejacych przypadk\363w uzycia}{chapter.3}% 12
-\BOOKMARK [0][-]{chapter.4}{Opis implementacji}{}% 13
-\BOOKMARK [1][-]{section.4.1}{Pierwsza iteracja}{chapter.4}% 14
-\BOOKMARK [1][-]{section.4.2}{Druga iteracja}{chapter.4}% 15
-\BOOKMARK [0][-]{chapter.5}{Testowanie}{}% 16
-\BOOKMARK [0][-]{chapter.6}{Podsumowanie}{}% 17
-\BOOKMARK [0][-]{section*.3}{Literatura}{}% 18
-\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 19
-\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 20
+\BOOKMARK [1][-]{section.1.1}{Cel i zakres projektu}{chapter.1}% 4
+\BOOKMARK [0][-]{chapter.2}{Wymagania projektowe}{}% 5
+\BOOKMARK [1][-]{section.2.1}{Wymagania funkcjonalne}{chapter.2}% 6
+\BOOKMARK [2][-]{subsection.2.1.1}{Wyb\363r aktu prawnego}{section.2.1}% 7
+\BOOKMARK [2][-]{subsection.2.1.2}{Edycja aktu prawnego}{section.2.1}% 8
+\BOOKMARK [2][-]{subsection.2.1.3}{Generowanie zawartosci pliku XML}{section.2.1}% 9
+\BOOKMARK [1][-]{section.2.2}{Wymagania niefunkcjonalne}{chapter.2}% 10
+\BOOKMARK [2][-]{subsection.2.2.1}{Srodowisko pracy systemu}{section.2.2}% 11
+\BOOKMARK [2][-]{subsection.2.2.2}{Wykorzystywane technologie}{section.2.2}% 12
+\BOOKMARK [1][-]{section.2.3}{Cykl zycia projektu}{chapter.2}% 13
+\BOOKMARK [0][-]{chapter.3}{Java2Script}{}% 14
+\BOOKMARK [1][-]{section.3.1}{Analiza technologii}{chapter.3}% 15
+\BOOKMARK [1][-]{section.3.2}{Zasada dzia\233ania}{chapter.3}% 16
+\BOOKMARK [1][-]{section.3.3}{Java2Script a Java}{chapter.3}% 17
+\BOOKMARK [1][-]{section.3.4}{System dziedziczenia w zanurzonym JavaScript}{chapter.3}% 18
+\BOOKMARK [1][-]{section.3.5}{Analiza istniejacych przypadk\363w uzycia}{chapter.3}% 19
+\BOOKMARK [0][-]{chapter.4}{XML i Schemat XML}{}% 20
+\BOOKMARK [1][-]{section.4.1}{XML}{chapter.4}% 21
+\BOOKMARK [1][-]{section.4.2}{Schemat XML}{chapter.4}% 22
+\BOOKMARK [1][-]{section.4.3}{Parsowanie dokument\363w XML}{chapter.4}% 23
+\BOOKMARK [0][-]{chapter.5}{Opis cyklu zycia projektu}{}% 24
+\BOOKMARK [1][-]{section.5.1}{Pierwsza iteracja}{chapter.5}% 25
+\BOOKMARK [1][-]{section.5.2}{Druga iteracja}{chapter.5}% 26
+\BOOKMARK [0][-]{chapter.6}{Opis implementacji}{}% 27
+\BOOKMARK [0][-]{chapter.7}{Testowanie}{}% 28
+\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 29
+\BOOKMARK [0][-]{section*.3}{Literatura}{}% 30
+\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 31
+\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 32

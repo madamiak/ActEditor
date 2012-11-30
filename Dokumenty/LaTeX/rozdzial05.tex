@@ -1,1 +1,82 @@
-\chapter{Testowanie}
+\chapter{Opis cyklu ¿ycia projektu}
+\section{Pierwsza iteracja}
+\begin{enumerate}
+	\item	Definiowanie projektu
+	\begin{enumerate}
+		\item Etap inicjowania projektu
+		
+		Pierwsza wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis semWeb, którego tematyk¹ by³o wykorzystanie metadanych i sieci semantycznych do wyszukiwania, integracji i weryfikacji urzêdowych danych posiadaj¹cych aspekt czasowo-przestrzenny.
+		
+		\item Etap definiowania celu
+		
+		Celem projektu mia³o byæ stworzenie interfejsu aplikacji sieciowej, która posiada³a ju¿ pe³n¹ funkcjonalnoœæ. Interfejs mia³ ³¹czyæ siê z bazowym systemem, jakim by³ semWeb. Dostarcza³ on endpoint, umo¿liwiaj¹cy zarz¹dzanie dziedzinow¹ baz¹ wiedzy. Serwis bazowy by³ oparty na fasadowym wzorcu projektowym, co by³o jednym z powodów, dla którego zosta³ on wybrany jako potencjalna baza, ze wzglêdu na ³atwoœæ integracji modu³u interfejsu z reszt¹ aplikacji. 
+
+Potencjalnymi zagro¿eniami by³y problemy z importem plików o rozszerzeniu \texttt{.jar} do projektu. Powodem tego jest obecna implementacja wtyczki Java2Script, która opiera siê na wczytywaniu skompilowanych klas œrodowiska Java, ale tylko tych, które umieszczone s¹ bezpoœrednio w projekcie, lub nale¿¹ do konkretnych, wbudowanych bibliotek, jak \texttt{java.lang} (//TODO: odnoœnik do strony J2S).
+
+		\item Etap weryfikacji
+		
+		Z uwagi na to, ¿e nie da³o siê do³¹czyæ plików \texttt{.jar} do projektu w taki sposób, by kompilator Java2Script móg³ prawid³owo za³adowaæ klasy oraz skonwertowaæ je do plików z rozsze¿eniem \texttt{.js}, projekt nie przeszed³ pozytywnie przez fazê weryfikacji i zosta³ odrzucony.
+
+Brak mo¿liwoœci do³¹czania zewnêtrznych archiwów .jar oraz wbudowanych bibliotek, takich jak \texttt{java.sql}, uniemo¿liwi³o po³¹czenie siê z baz¹ danych. Konsekwencj¹ tego by³ brak mo¿liwoœci zbudowania aplikacji, która spe³nia³aby minimalne wymagania zawarte w etapie definiowania projektu.
+W zwi¹zku z tym kolejnym krokiem w cyklu ¿ycia projektu by³o przejœcie do kolejnej iteracji i zdefiniowanie nowego problemu.
+
+	\end{enumerate}
+\end{enumerate}
+\section{Druga iteracja}
+\begin{enumerate}
+	\item	Definiowanie projektu
+	\begin{enumerate}
+		\item Etap inicjowania projektu
+		
+		Druga wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis EDAP, którego tematyk¹ by³o tworzenie dokumentów prawnych, ich edycja oraz zarz¹dzanie ju¿ istniej¹cymi dokumentami. 
+			
+Projekt u³atwia skonstruowanie wybranego dokumentu prawnego zgodnie ze schematem narzuconym przez MSWiA. Dokument generowany jest w postaci pliku o formacie XML, a wszelkie obostrzenia i zasady jego utworzenia zawiera plik \texttt{schema.xsd}. U¿ywaj¹c serwisu EDAP, u¿ytkownik mo¿e tak¿e wczytaæ ju¿ istniej¹cy plik z rozszerzeniem \texttt{.xml} i zmodyfikowaæ go.
+
+		\item Etap definiowania celu
+		
+		Celem projektu by³o stworzenie aplikacji sieciowej, zawieraj¹cej g³ówn¹ funkcjê serwisu EDAP, czyli konstruowanie dokumentu prawnego w postaci pliku XML na podstawie schematu zawartego w pliku \texttt{schema.xsd}.
+			
+Aby osi¹gn¹æ cel g³ówny, nale¿a³o wykonaæ 3 podstawowe kroki: odpowiednio wczytaæ zawartoœæ pliku ze schematem XML, nastêpnie stworzyæ interfejs u¿ytkownika, który wyœwietla³by dostêpne pozycje do wype³nienia przez u¿ytkownika, z których potem generowany by³by plik XML.
+
+G³ównymi potencjalnymi problemami by³y operacje na plikach, takie jak wczytywanie i generowanie, które nie s¹ wspierane przez Java2Script. Oprócz tego problemem mog³o siê okazaæ odpowiednie wczytanie zawartoœci schematu XML, gdy¿ nie mo¿na by³o skorzystaæ z zewnêtrznych bibliotek, które by to u³atwia³y. Powodem tego by³ brak mo¿liwoœci do³¹czenia takich bibliotek w taki sposób, by Java2Script móg³ je za³adowaæ.
+
+		\item Etap weryfikacji
+		
+		Projekt przeszed³ pozytywnie etap weryfikacji z uwagi na realn¹ mo¿liwoœæ stworzenia aplikacji, której celem by³oby skonstruowanie dokumentu prawnego w postaci pliku XML.
+		
+Projekt zak³ada jedynie generowanie takiego pliku, nie jego modyfikacjê. Kolejnym za³o¿eniem jest brak generowania samego pliku XML, a jedynie wyœwietlenie jego zawartoœci w aplikacji. Oba za³o¿enia wynikaj¹ z braku mo¿liwoœci operacji na plikach, które nie s¹ wspierane przez wtyczkê Java2Script.
+
+	\end{enumerate}
+	\item Planowanie
+	
+	Ostateczna wersja wymagañ zosta³a zamieszczona w punkcie ~\ref{wymagania}. Aby osi¹gn¹æ cel, nale¿a³o wykonaæ trzy podstawowe podzadania. Nale¿a³y do nich: 
+\begin{inparaenum}[\itshape a\upshape)]
+	\item wczytanie schematu XML, który jest odpowiedzialny za dobrze sformatowany plik XML;
+	\item konwersja wczytanych danych na obiekty jêzyka Java;
+	\item zbudowanie graficznego interfejsu u¿ytkownika, prezentuj¹cego formularze do wype³niania cia³a dokumentu;
+	\item zaimplementowanie generowania zawartoœci pliku XML na podstawie wype³nionych formularzy.
+\end{inparaenum}	
+	
+	\item Wykonanie planu projektu
+	\begin{enumerate}
+		\item	Organizacja kamieni milowych
+		
+		Pierwsza iteracja zajê³a spor¹ czêœæ czasu, przeznaczonego na wykonanie projektu, st¹d zosta³ jedynie miesi¹c na wykonanie drugiego planu. 
+		Organizacja harmonogramu wygl¹da³a nastêpuj¹co: najwiêcej czasu -- ok. 2 tygodnie -- zosta³o przeznaczone na pierwsze dwa podzadania, jakimi by³y wczytanie schematu XML oraz jego odpowiednia konwersja. Kolejny tydzieñ zosta³ przewidziany na zbudowanie interfejsu i generatora zawartoœci pliku XML. Ostatni tydzieñ zosta³ przeznaczony na testowanie oraz dokumentacjê.
+	
+		\item Wprowadzenie planu w ¿ycie
+		
+		~\ref{implementacja}.
+		
+		\item Przetestowanie aplikacji
+		
+		~\ref{testowanie}.		
+		
+	\end{enumerate}
+	\item Zamykanie projektu
+	\begin{enumerate}
+	
+		~\ref{podsumowanie}.	
+		
+	\end{enumerate}
+\end{enumerate}

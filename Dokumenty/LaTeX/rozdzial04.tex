@@ -1,80 +1,30 @@
-\chapter{Opis implementacji}
-\section{Pierwsza iteracja}
-\begin{enumerate}
-	\item	Definiowanie projektu
-	\begin{enumerate}
-		\item Etap inicjowania projektu
-		\begin{description}
-			\item Pierwsza wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis semWeb, którego tematyk¹ by³o wykorzystanie metadanych i sieci semantycznych do wyszukiwania, integracji i weryfikacji urzêdowych danych posiadaj¹cych aspekt czasowo-przestrzenny.
-		\end{description}
-		\item Etap definiowania celu
-		\begin{description}
-			\item Celem projektu mia³o byæ stworzenie interfejsu aplikacji sieciowej, która posiada³a ju¿ pe³n¹ funkcjonalnoœæ. Interfejs mia³ ³¹czyæ siê z bazowym systemem, jakim by³ semWeb. Dostarcza³ on endpoint, umo¿liwiaj¹cy zarz¹dzanie dziedzinow¹ baz¹ wiedzy. Serwis bazowy by³ oparty na fasadowym wzorcu projektowym, co by³o jednym z powodów, dla którego zosta³ on wybrany jako potencjalna baza, ze wzglêdu na ³atwoœæ integracji modu³u interfejsu z reszt¹ aplikacji. 
+\chapter{XML i Schemat XML}
+\label{xml}
+\section{XML}
+XML to prosty i elastyczny jêzyk znaczników, który zosta³ zaprojektowany z myœl¹ o tym, by stawiæ czo³a reprezentacji danych w strukturalizowany sposób. Wywodzi siê z technologii SGML, która jednak by³a o wiele bardziej zawi³a, a zadaniem, jakie postawili sobie twórcy jêzyka XML, by³o uproszczenie SGML-a tam, gdzie siê tylko da³o.
 
-Potencjalnymi zagro¿eniami by³y problemy z importem plików o rozszerzeniu \texttt{.jar} do projektu. Powodem tego jest obecna implementacja wtyczki Java2Script, która opiera siê na wczytywaniu skompilowanych klas œrodowiska Java, ale tylko tych, które umieszczone s¹ bezpoœrednio w projekcie, lub nale¿¹ do konkretnych, wbudowanych bibliotek, jak \texttt{java.lang} (//TODO: odnoœnik do strony J2S).
-		\end{description}
-		\item Etap weryfikacji
-		\begin{description}
-			\item Z uwagi na to, ¿e nie da³o siê do³¹czyæ plików \texttt{.jar} do projektu w taki sposób, by kompilator Java2Script móg³ prawid³owo za³adowaæ klasy oraz skonwertowaæ je do plików z rozsze¿eniem \texttt{.js}, projekt nie przeszed³ pozytywnie przez fazê weryfikacji i zosta³ odrzucony.
+Jêzyk XML oferuje nam m.in. sformalizowany zapis informacji, pozwala zapisaæ wszystko, co mo¿e byæ wyra¿one tekstem, a dziêki regularnej sk³adni i przyjêtym standardom -- przejrzystoœæ dla cz³owieka oraz prostotê przetwarzania dla komputera. Wszelkiego typu parsery (procesory) XML s¹ ju¿ zaimplementowane w wielu programach (np. przegl¹darkach internetowych).
 
-Brak mo¿liwoœci do³¹czania zewnêtrznych archiwów .jar oraz wbudowanych bibliotek, takich jak \texttt{java.sql}, uniemo¿liwi³o po³¹czenie siê z baz¹ danych. Konsekwencj¹ tego by³ brak mo¿liwoœci zbudowania aplikacji, która spe³nia³aby minimalne wymagania zawarte w etapie definiowania projektu.
-W zwi¹zku z tym kolejnym krokiem w cyklu ¿ycia projektu by³o przejœcie do kolejnej iteracji i zdefiniowanie nowego problemu.
-		\end{description}
-	\end{enumerate}
-\end{enumerate}
-\section{Druga iteracja}
-\begin{enumerate}
-	\item	Definiowanie projektu
-	\begin{enumerate}
-		\item Etap inicjowania projektu
-		\begin{description}
-			\item Druga wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis EDAP, którego tematyk¹ by³o tworzenie dokumentów prawnych, ich edycja oraz zarz¹dzanie ju¿ istniej¹cymi dokumentami. 
-			
-Projekt u³atwia skonstruowanie wybranego dokumentu prawnego zgodnie ze schematem narzuconym przez MSWiA. Dokument generowany jest w postaci pliku o formacie XML, a wszelkie obostrzenia i zasady jego utworzenia zawiera plik \texttt{schema.xsd}. U¿ywaj¹c serwisu EDAP, u¿ytkownik mo¿e tak¿e wczytaæ ju¿ istniej¹cy plik z rozszerzeniem \texttt{.xml} i zmodyfikowaæ go.
-		\end{description}
-		\item Etap definiowania celu
-		\begin{description}
-			\item Celem projektu by³o stworzenie aplikacji sieciowej, zawieraj¹cej g³ówn¹ funkcjê serwisu EDAP, czyli konstruowanie dokumentu prawnego w postaci pliku XML na podstawie schematu zawartego w pliku \texttt{schema.xsd}.
-			
-Aby osi¹gn¹æ cel g³ówny, nale¿a³o wykonaæ 3 podstawowe kroki: odpowiednio wczytaæ zawartoœæ pliku ze schematem XML, nastêpnie stworzyæ interfejs u¿ytkownika, który wyœwietla³by dostêpne pozycje do wype³nienia przez u¿ytkownika, z których potem generowany by³by plik XML.
+Aby utworzyæ poprawny dokument XML, nale¿y trzymaæ siê okreœlonych regu³. Poprawny sk³adniowo dokument powinien np. zawieraæ deklaracjê XML, która musi byæ umieszczona na samym pocz¹tku pliku. Musi te¿ zawieraæ dok³adnie jeden element g³ówny, zwany korzeniem. Wszelkie elementy, które zawieraj¹ dane, musz¹ byæ otoczone dwoma znacznikami - pocz¹tkowym i koñcowym, natomiast elementy puste stanowi¹ wyj¹tek i posiadaj¹ tylko jeden tag.
 
-G³ównymi potencjalnymi problemami by³y operacje na plikach, takie jak wczytywanie i generowanie, które nie s¹ wspierane przez Java2Script. Oprócz tego problemem mog³o siê okazaæ odpowiednie wczytanie zawartoœci schematu XML, gdy¿ nie mo¿na by³o skorzystaæ z zewnêtrznych bibliotek, które by to u³atwia³y. Powodem tego by³ brak mo¿liwoœci do³¹czenia takich bibliotek w taki sposób, by Java2Script móg³ je za³adowaæ.
-		\end{description}
-		\item Etap weryfikacji
-		\begin{description}
-			\item Projekt przeszed³ pozytywnie etap weryfikacji z uwagi na realn¹ mo¿liwoœæ stworzenia aplikacji, której celem by³oby skonstruowanie dokumentu prawnego w postaci pliku XML.
-		
-Projekt zak³ada jedynie generowanie takiego pliku, nie jego modyfikacjê. Kolejnym za³o¿eniem jest brak generowania samego pliku XML, a jedynie wyœwietlenie jego zawartoœci w aplikacji. Oba za³o¿enia wynikaj¹ z braku mo¿liwoœci operacji na plikach, które nie s¹ wspierane przez wtyczkê Java2Script.
-		\end{description}
-	\end{enumerate}
-	\item Planowanie
-	\begin{description}
-		\item 
-	\end{description}
-	\item Wykonanie planu projektu
-	\begin{enumerate}
-		\item	Organizacja kamieni milowych
-		\begin{description}
-			\item
-		\end{description}
-		\item Wprowadzenie planu w ¿ycie
-		\begin{description}
-			\item 
-		\end{description}
-		\item Przetestowanie aplikacji
-		\begin{description}
-			\item 
-		\end{description}
-	\end{enumerate}
-	\item Zamykanie projektu
-	\begin{enumerate}
-		\item	Ocena projektu
-		\begin{description}
-			\item 
-		\end{description}
-		\item Wnioski
-		\begin{description}
-			\item 
-		\end{description}
-	\end{enumerate}
-\end{enumerate}
+XML znajduje swoje zastosowanie w wielu dziedzinach informatyki. Jedn¹ z nich jest Internet. Choæ na dzieñ dzisiejszy panuje tutaj HTML, to istniej¹ jeszcze takie rozwi¹zania jak WML oraz XHTML, które s¹ dialektami XML.
+
+Za pomoc¹ XML-a mo¿emy równie¿ przyspieszyæ wyszukiwanie informacji w Sieci, poniewa¿ umo¿liwia on przedstawienie zasobów dostêpnych w Internecie. Mo¿emy tu wymieniæ takie technologie jak RDF, OWL.
+
+XML u³atwia nam te¿ konstruowanie dokumentów, które maj¹ pewn¹, okreœlon¹ strukturê, lecz bywa ona zmienna lub s³abo ustalona. W takim przypadku XML radzi sobie o wiele lepiej z reprezentacj¹ danych w porównaniu z relacyjnymi bazami danych.
+
+Mo¿na stwierdziæ, ¿e XML znalaz³ ju¿ swoje miejsce w informatyce, a jako rozwi¹zanie doœæ m³ode, jest stale rozbudowywany. Zmiany te odbijaj¹ siê w pewnym stopniu na twórcach implementacji opartych na XML, jednak nie s¹ one na tyle radykalne, by by³o to wiêkszym problemem.
+
+\section{Schemat XML}
+Regu³y, które precyzuj¹ tworzenie dokumentów XML, bywaj¹ niewystarczaj¹ce dla u¿ytkowników, którzy chcieliby narzuciæ w³asne zasady budowania dokumentu XML. Do tego celu s³u¿¹ takie technologie jak Document Type Definition (DTD), Simple Object XML (SOX) czy Schemat XML (XSD).
+
+Schemat XML pozwala na formalne opisanie elementów, które maj¹ znaleŸæ siê w dokumencie XML, a tak¿e zwi¹zki miêdzy elementami i atrybutami. Opis ten umo¿liwia sprawdzenie poprawnoœci (walidacji) generowanego dokumentu.
+
+Schematy umo¿liwiaj¹ precyzyjne deklarowanie typów danych, pozwalaj¹ na definiowanie fragmentów modelu, które póŸniej mog¹ byæ wiele razy wykorzystywane w innych jego fragmentach, umo¿liwiaj¹ zdefiniowanie zbiorów elementów wraz z okreœleniem rodzaju tego zbioru (czy kolejnoœæ elementów jest wa¿na, czy wszystkie elementy musz¹ byæ u¿yte) i iloœci jego wyst¹pieñ.
+
+\section{Parsowanie dokumentów XML}
+Istniej¹ dwa podejœcia do implementacji parserów, na których opiera siê operowanie na dokumentach XML. S¹ nimi DOM i SAX.
+
+Parser DOM dokonuje przekszta³cenia dokumentu XML w drzewo DOM. Ka¿dy element lub atrybut XML jest wêz³em w tym drzewie. Ka¿de drzewo zawiera korzeñ (wêze³ g³ówny), który jest nadrzêdny w stosunku do pozosta³ych obiektów. Implementacja wczytania danych za pomoc¹ tej metody wymaga stworzenia interfejsów danego rodzaju wêz³a.
+
+Metoda SAX polega na wczytywaniu dokumentu XML znacznik po znaczniku, przy ka¿dym z nich zg³aszaj¹c zdarzenie, które nale¿y obs³u¿yæ. To podejœcie zosta³o u¿yte w projekcie ActEditor. Jednak w tym przypadku algorytm zosta³ zaimplementowany tak, aby zachowaæ w pamiêci strukturê dokumentu, w celu jego póŸniejszego odtworzenia.

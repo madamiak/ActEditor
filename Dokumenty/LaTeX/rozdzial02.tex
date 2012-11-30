@@ -1,15 +1,14 @@
 \chapter{Wymagania projektowe}
+\label{wymagania}
 Zrealizowany projekt zosta³ wykonany w oparciu o serwis EDAP na potrzeby pracy in¿ynierskiej na kierunku Informatyka na Politechnice Wroc³awskiej. Projekt nosi nazwê AtEditor. Aplikacja stanowi narzêdzie, maj¹ce na celu usprawnienie pisania aktów prawnych zgodnie ze schematem narzuconym przez ministerstwo.
 
 Serwis EDAP – elektroniczna forma aktów prawnych, zosta³ przygotowany przez MSWiA w zwi¹zku z wejœciem w ¿ycie rozporz¹dzenia w sprawie wymagañ technicznych dokumentów elektronicznych zawieraj¹cych akty normatywne i inne akty prawne, elektronicznej formy dzienników urzêdowych oraz œrodków komunikacji elektronicznej i informatycznych noœników danych (Dz. U. 2008 Nr 75, poz 451 z póŸn. zm.).
 
-Aplikacja s³u¿y do tworzenia oraz edycji aktów prawnych, wspomaga tak¿e zarz¹dzanie oraz przechowywanie stworzonych dokumentów. 
+System EDAP pozwala na tworzenie oraz edycjê aktów prawnych, wspomaga tak¿e zarz¹dzanie oraz przechowywanie stworzonych dokumentów. 
 
 Akty prawne s¹ generowane w postaci pliku z rozszerzeniem .xml oraz .pdf w oparciu o elektroniczny schemat aktów prawnych, przygotowany przez MSWiA w postaci pliku schema.xsd.
 
 \section{Wymagania funkcjonalne}
-Aplikacja ActEditor ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzystanie z takiego narzêdzia, jak generator aktów prawnych. Istniej¹cy serwis EDAP bywa pod tym wzglêdem ma³o intuicyjny. Korzystanie z Java2Script powinno umo¿liwiæ korzystanie ze stworzonej aplikacji za pomoc¹ interfejsu webowego.
-
 Na rys.~\ref{fig:EDAP_use-case} zosta³ diagram przypadków u¿ycia serwisu EDAP. Na zielono wyró¿nione zosta³y funkcje systemu, które zosta³y zaimplementowane w ActEditor, a na szaro które nie zosta³y zrealizowane, m.in. ze wzglêdu na ograniczenia u¿ytych technologii.
 
 \begin{figure}[!ht]
@@ -19,76 +18,108 @@ Na rys.~\ref{fig:EDAP_use-case} zosta³ diagram przypadków u¿ycia serwisu EDAP. N
 	\label{fig:EDAP_use-case}
 \end{figure}
 
+\subsection{Wybór aktu prawnego}
+System umo¿liwia u¿ytkownikowi wybranie aktu prawnego, który ma zostaæ utworzony. Lista wyboru jest zale¿na od wersji schematu XML. U¿ytkownik wybiera rodzaj dokumentu z listy rozwijanej, po czym tworzona jest w pamiêci zawartoœæ pliku XML generowanego aktu, a u¿ytkownik przechodzi do jego edycji. U¿ytkownik ma mo¿liwoœæ konstrukcji dokumentu od nowa w przypadku, gdy wybierze z³y rodzaj aktu lub postanowi zaniechaæ edycji ju¿ utworzonego dokumentu. W tym przypadku zawartoœæ pliku XML jest wymazana z pamiêci.
+
+\subsection{Edycja aktu prawnego}
+Aplikacja daje mo¿liwoœæ wype³nienia aktu prawnego, który zosta³ uprzednio wybrany z listy dostêpnych dokumentów. Edycja dokumentu jest zale¿na od schematu XML, poniewa¿ ka¿da opcja modyfikacji aktu jest opisana w pliku \texttt{schema.xsd}. U¿ytkownik wybiera do modyfikacji jedynie dostêpne opcje, co pozwala na otrzymanie dokumentu zgodnego z regu³ami narzuconymi przez ministerstwo.
+
+\subsection{Generowanie zawartoœci pliku XML}
+Serwis umo¿liwia wygenerowanie zawartoœci pliku XML zgodnego ze schematem \texttt{schema.xsd}. U¿ytkownik otrzymuje na wyjœciu dokument w formacie XML z wype³nionymi wszystkimi polami, które wczeœniej wype³ni³ w edytorze.
+
 \section{Wymagania niefunkcjonalne}
+System powinien prezentowaæ u¿ytkownikowi funkcjonalnoœæ, która pozwoli na szybkie i intuicyjne tworzenie skomplikowanych aktów prawnych.
+
+Serwis powinien zapewniæ u¿ytkownikowi wybór tworzenia aktu online lub offline. Narzêdzie offline ma mieæ postaæ aplikacji desktopowej, a konstruowanie aktów prawnych online ma odbywaæ siê poprzez interfejs webowy, utworzony dziêki Java2Script.
+
+Aplikacja ActEditor ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzystanie z takiego narzêdzia, jak generator aktów prawnych. System w wersji offline pozwala na tworzenie dokumentów jednemu u¿ytkownikowi na raz, natomiast wersja sieciowa aplikacji pozwala na korzystanie z jej funkcji wielu u¿ytkownikom w tym samym czasie.
+
+\subsection{Œrodowisko pracy systemu}
+Wersja online programu ActEditor pozwala na dzia³anie na ka¿dym systemie operacyjnym, jednak ograniczeniem jest rodzaj przegl¹darki, która bêdzie ten serwis prezentowaæ - aplikacja ma dzia³aæ w przegl¹darkach, które s¹ wspierane przez technologiê J2S. Aplikacja w wersji desktopowej bêdzie mog³a zostaæ uruchomiona na ka¿dym systemie operacyjnym wspieranym przez bibliotekê SWT. 
+
+\subsection{Wykorzystywane technologie}
 Poni¿ej zosta³y przedstawione jêzyki programowania, jêzyki znaczników, narzêdzia wspomagaj¹ce oraz technologie u¿yte w projekcie.
+
 \begin{itemize}
 	\item[] \textbf{Java} \hfill \\
 	G³ówny jêzyk programowania, u¿yty w projekcie. Oprogramowana jest w nim ca³a logika biznesowa, opieraj¹ca siê na wczytaniu danych z pliku schema.xsd, wyœwietleniu i obs³udze danych w oknie aplikacji, generowaniu rezultatu, jakim jest plik XML.
-	\item[] \textbf{JavaScript}	\hfill \\
-
-	\item[] \textbf{HTML} \hfill \\
- 
-	\item[] \textbf{XML} \hfill \\
-
-	\item[] \textbf{XSD} \hfill \\
-
-	\item[] \textbf{Eclipse IDE} \hfill \\
+	\item[] \textbf{SWT} \hfill \\
+	Jest to biblioteka graficzna na platformê Java, która zosta³a u¿yta w systemie ActEditor do przedstawienia makiet interfejsu u¿ytkownika. Zosta³a wybrana ze wzglêdu na kompatybilnoœæ z technologi¹ Java2Script. Jest alternatyw¹ dla takich rozwi¹zañ jak AWT czy Swing.
+	
+	Aby wyœwietliæ kontrolki, implementacja SWT siêga po natywne biblioteki systemu operacyjnego, korzystaj¹c z Java Native Interface (JNI). Ze wzglêdu na to, ¿e SWT u¿ywa ró¿nych bibliotek dla ró¿nych platform, istnieje ryzyko wyst¹pienia b³êdów charakterystycznych dla danego systemu.
+	
+	Wed³ug Eclipse Foundation celem SWT, w odró¿nieniu od Swing, by³o zapewnienie powszechnego API, aby siêgn¹æ po natywne kontrolki systemu operacyjnego.
 
 	\item[] \textbf{Java2Script} \hfill \\
- 
-	\item[] \textbf{Github, EGit} \hfill \\
+	Technologia szczegó³owo opisana jest w rozdziale ~\ref{java2script}.
+	
+	\item[] \textbf{JavaScript}	\hfill \\
+	Jêzyk skryptowy powszechnie implementowany w przegl¹darkach internetowych. W stworzonej aplikacji do generowania aktów prawnych skrypty JavaScript s¹ utworzone dziêki kompilatorowi Java2Script, a nastêpnie zanurzone w HTML, dziêki czemu u¿ytkownik uzyskuje interfejs webowy. Szczegó³y dotycz¹ce tworzenia plików Ÿród³owych JavaScript z klas Java s¹ zawarte w rozdziale ~\ref{java2script}.
 
-	\item[] \textbf{…//TODO: uzupe³niæ} \hfill \\
+	\item[] \textbf{HTML} \hfill \\
+HyperText Markup Language jest g³ównym jêzykiem znaczników, s³u¿¹cym do wyœwietlania stron internetowych w przegl¹darkach.
+
+Informacje na temat jak, gdzie i co ma byæ wyœwietlane, zawarte s¹ w znacznikach (tagach), zazwyczaj wystêpuj¹cych w parach - tag otwieraj¹cy i zamykaj¹cy, a pomiêdzy nimi zawarty jest tekst, komentarz lub inny typ tekstowy.
+
+Jêzyk ten s³u¿y do budowania szkieletu strony, jednak konkretny wygl¹d i funkcjonalnoœæ serwisu oparta jest g³ównie na stylach CSS oraz skryptach JavaScript i PHP.
+
+	\item[] \textbf{XML, XML Schema} \hfill \\
+	Technologie zosta³y opisane w rozdziale ~\ref{xml}.
+	
+	\item[] \textbf{Eclipse IDE} \hfill \\
+	Œrodowisko, w którym zosta³ utworzony projekt. Jest to jedyne narzêdzie, które wspiera technologiê Java2Script. 
+	
+	Platforma zosta³a stworzona przez firmê IBM i udostêpniona na zasadzie open-source. Nie dostarcza ona ¿adnych narzêdzi s³u¿¹cych do tworzenia kodu i budowania aplikacji, jednak wspiera obs³ugê wtyczek, które rozszerzaj¹ jej funkcjonalnoœæ.
  
 \end{itemize}
 
 \section{Cykl ¿ycia projektu}
-Cykl ¿ycia projektu reprezentuje model przyrostowy (iteracyjny). W stosunku do modelu kaskadowego daje on o wiele wiêksz¹ elastycznoœæ, dziêki powrotom do wstêpnych faz projektu i pozwala reagowaæ na opóŸnienia, czyli przyspieszaæ prace nad innymi czêœciami projektu. Daje te¿ elastycznoœæ pod wzglêdem definiowania wymagañ – mo¿emy pocz¹tkowo zdefiniowaæ wstêpne wymagania, podczas gdy koñcowa specyfikacja mo¿e powstaæ dopiero na etapie testowania.
+Produkt zosta³ wytworzony przy u¿yciu modelu przyrostowego (iteracyjnego). W stosunku do modelu kaskadowego daje on o wiele wiêksz¹ elastycznoœæ, dziêki powrotom do wstêpnych faz projektu i pozwala reagowaæ na opóŸnienia, czyli przyspieszaæ prace nad innymi czêœciami projektu. Daje te¿ elastycznoœæ pod wzglêdem definiowania wymagañ – mo¿emy pocz¹tkowo zdefiniowaæ wstêpne wymagania, podczas gdy koñcowa specyfikacja mo¿e powstaæ dopiero na etapie testowania.
 
 \begin{enumerate}
 	\item	Definiowanie projektu
 	\begin{enumerate}
 		\item Etap inicjowania projektu
-		\begin{description}
-			\item Inicjowanie projektu wymaga odpowiedzi na pytania: jaka jest tematyka przedsiêwziêcia? Jakie s¹ g³ówne problemy zagadnienia? Jakie problemy ma rozwi¹zaæ projekt?
-		\end{description}
+		
+		Inicjowanie projektu wymaga odpowiedzi na pytania: jaka jest tematyka przedsiêwziêcia? Jakie s¹ g³ówne problemy zagadnienia? Jakie problemy ma rozwi¹zaæ projekt?
+		
 		\item Etap definiowania celu
-		\begin{description}
-			\item Definiowanie zagadnienia polega na wyspecyfikowaniu kluczowego problemu, który formu³ujemy jako cel g³ówny. Identyfikuje siê tutaj równie¿ cele cz¹stkowe, które musz¹ zostaæ zrealizowane, by osi¹gn¹æ cel koñcowy, a tak¿e prognozuje siê potencjalne przeszkody, które mog¹ wp³yn¹æ na sukces projektu. 
-		\end{description}
+		
+		Definiowanie zagadnienia polega na wyspecyfikowaniu kluczowego problemu, który formu³ujemy jako cel g³ówny. Identyfikuje siê tutaj równie¿ cele cz¹stkowe, które musz¹ zostaæ zrealizowane, by osi¹gn¹æ cel koñcowy, a tak¿e prognozuje siê potencjalne przeszkody, które mog¹ wp³yn¹æ na sukces projektu. 
+		
 		\item Etap weryfikacji
-		\begin{description}
-			\item W tym etapie ocenia siê mo¿liwoœæ wykonania postanowionych wymagañ oraz weryfikuje szanse na osi¹gniêcie sukcesu projektu.
-		\end{description}
+		
+		W tym etapie ocenia siê mo¿liwoœæ wykonania postanowionych wymagañ oraz weryfikuje szanse na osi¹gniêcie sukcesu projektu.
+		
 	\end{enumerate}
 	\item Planowanie
-	\begin{description}
-		\item Podsumowanie tego, co musi byæ wykonane w ramach projektu, aby osi¹gn¹æ cel. Tworzy siê tu podzia³ na podzadania, które s¹ ³atwe do zorganizowania i zarz¹dzania.
-	\end{description}
+	
+	Podsumowanie tego, co musi byæ wykonane w ramach projektu, aby osi¹gn¹æ cel. Tworzy siê tu podzia³ na podzadania, które s¹ ³atwe do zorganizowania i zarz¹dzania.
+	
 	\item Wykonanie planu projektu
 	\begin{enumerate}
 		\item	Organizacja kamieni milowych
-		\begin{description}
-			\item Ustalenie kolejnoœci wykonywanych podzadañ wraz z rozmieszczeniem ich w czasie. Specyfikowana jest tutaj kolejnoœæ wykonywania zadañ oraz ich przewidywany czas wykonania.
-		\end{description}
+		
+		Ustalenie kolejnoœci wykonywanych podzadañ wraz z rozmieszczeniem ich w czasie. Specyfikowana jest tutaj kolejnoœæ wykonywania zadañ oraz ich przewidywany czas wykonania.
+		
 		\item Wprowadzenie planu w ¿ycie
-		\begin{description}
-			\item Wykonanie wyspecyfikowanych zadañ i d¹¿enie do ich realizacji przed up³ywem ich szacowanego czasu trwania.
-		\end{description}
+		
+		Wykonanie wyspecyfikowanych zadañ i d¹¿enie do ich realizacji przed up³ywem ich szacowanego czasu trwania.
+		
 		\item Przetestowanie aplikacji
-		\begin{description}
-			\item Testowanie implementowanych czêœci systemu. Najczêœciej jest to etap iteracyjny, który jest wykonywany po zaimplementowaniu konkretnej funkcji w systemie.
-		\end{description}
+		
+		Testowanie implementowanych czêœci systemu. Najczêœciej jest to etap iteracyjny, który jest wykonywany po zaimplementowaniu konkretnej funkcji w systemie.
+		
 	\end{enumerate}
 	\item Zamykanie projektu
 	\begin{enumerate}
 		\item	Ocena projektu
-		\begin{description}
-			\item Nastêpuje tu ocena odpowiednioœci, efektywnoœci, skutecznoœci projektu. Jest to przegl¹d osi¹gniêæ realizowanego projektu w stosunku do pocz¹tkowych oczekiwañ. Odpowiada na pytania: czy rezultaty projektu by³y zgodne z oczekiwaniami? Czy prace zosta³y wykonane zgodnie z planem? 
-		\end{description}
+		
+		Nastêpuje tu ocena odpowiednioœci, efektywnoœci, skutecznoœci projektu. Jest to przegl¹d osi¹gniêæ realizowanego projektu w stosunku do pocz¹tkowych oczekiwañ. Odpowiada na pytania: czy rezultaty projektu by³y zgodne z oczekiwaniami? Czy prace zosta³y wykonane zgodnie z planem? 
+		
 		\item Wnioski
-		\begin{description}
-			\item Wyci¹gniêcie wniosków z realizacji projektu. Opis doœwiadczeñ zdobytych w trakcie wykonywania zadania, które maj¹ s³u¿yæ poprawie przysz³ych projektów i programów.
-		\end{description}
+		
+		Wyci¹gniêcie wniosków z realizacji projektu. Opis doœwiadczeñ zdobytych w trakcie wykonywania zadania, które maj¹ s³u¿yæ poprawie przysz³ych projektów i programów.
+		
 	\end{enumerate}
 \end{enumerate}

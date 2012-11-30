@@ -1,31 +1,23 @@
 \chapter{Wstêp}
-W dzisiejszych czasach Internet to g³ówne Ÿród³o wiedzy i informacji. Dziennie przegl¹damy dziesi¹tki stron WWW, pobieramy wiele plików, kontaktujemy siê z innymi u¿ytkownikami, u¿ywamy bankowoœci internetowej. Nie sposób wymieniæ dzisiaj wszystkich funkcji, jakie oferuje nam sieæ.
+Dziêki dynamicznemu rozwojowi technologii informacyjnych Internet sta³ siê obecnie jednym z podstawowych mediów stosowanym do wymiany danych, komunikacji interpersonalnej, publikowania zasobów cyfrowych itp. Na bazie Internetu powsta³a sieæ WWW, wykorzystuj¹ca protokó³ HTTP oraz jêzyk HTML do opisu opublikowanych zasobów. Dla zwyk³ych u¿ytkowników sieæ WWW kojarzona jest g³ównie z witrynami portali, do których mo¿na siêgn¹æ z poziomu okna w³asnej przegl¹darki. Jednak selekcja towarów, obs³uga poczty elektronicznej, przegl¹danie najnowszych wiadomoœci ze œwiata, ogl¹danie filmów jak równie¿ realizacja innych, niezliczonych wrêcz funkcji oferowanych w sieci bywa ró¿nie oceniana przez ich odbiorców. Poza samym faktem spe³nienia zadeklarowanej roli przez dan¹ witrynê (aplikacjê sieciow¹), na tê ocenê du¿y wp³yw ma ergonomia i inteligencja zaimplementowanych w niej rozwi¹zañ. Mówi¹c proœciej - przyjaznoœæ interfejsu u¿ytkownika.
 
-Jednym z podstawowych elementów dzia³ania sieci s¹ serwisy internetowe. To dziêki nim mo¿emy korzystaæ z dobrodziejstw, jakie daje nam Internet. Przegl¹danie towarów w sklepie internetowym, skrzynka pocztowa, czytanie najnowszych wiadomoœci ze œwiata, ogl¹danie filmów online – takie aktywnoœci wymagaj¹ stron internetowych lub aplikacji sieciowych. 
+Historia budowy przyjaznego interfejsu u¿ytkownika jest tak d³uga, jak d³uga jest historia rozwoju komputerów. Od chwili powstania pierwszej maszyny licz¹cej projektanci musieli stawiaæ czo³o zadaniu skonstruowania odpowiedniego zestawu przyrz¹dów, które u³atwi³yby cz³owiekowi interakcje z tworzonymi przez nich urz¹dzeniami. Pojawi³y siê wiêc monitory, wyœwietlacze, drukarki, klawiatury, myszki, joysticki i inne urz¹dzenia wejœcia/wyjœcia. Jednak pomimo up³ywu czasu i wprowadzania coraz to nowszego sprzêtu nie zmieni³ siê zbytnio charakter sposobu prezentacji danych u¿ytkownikowi, za którym kryje siê oprogramowanie. Mo¿na powiedzieæ, ¿e w tym obszarze nadal obowi¹zuje podzia³ na interfejs tekstowy i interfejs graficzny, przy czym ten drugi obecnie przewa¿a. Zapewne w przysz³oœci dojdzie do usprawnienia interfejsów do komunikacji na linii cz³owiek-maszyn¹, by uczyniæ j¹ bardziej naturaln¹ i wygodn¹ dla cz³owieka. Ju¿ teraz prowadzone s¹ badania nad rzeczywistoœci¹ wirtualn¹, czy interfejsami mózg-maszyna. Zanim jednak te rozwi¹zania trafi¹ do produkcji nale¿y dobrze wykorzystaæ te œrodki, które s¹ obecnie dostêpne.
 
-Stajemy tu przed problemem komunikacji u¿ytkownika z serwisem lub aplikacj¹ sieciow¹. Cz³owiek, u¿ywaj¹c interfejsu u¿ytkownika, ma mo¿liwoœæ interakcji z komputerem i korzystania z funkcji programu czy te¿ strony internetowej. 
+Dla projektantów systemów, poza spe³nieniem oczekiwañ u¿ytkowników, istotne jest równie¿ narzêdziowe wsparcie, jakie mog¹ uzyskaæ stosuj¹c dane technologie. Tak wiêc obok interesów u¿ytkowników twórcy nowych technologii musz¹ braæ pod uwagê interesy programistów. Ze wzglêdu na specyfikê problemu (tj. zasadê dzia³ania, wykorzystywane technologie, architekturê rozwi¹zañ) tworzenie interfejsu u¿ytkownika dla aplikacji sieciowych nie jest ³atwe. Trudnoœci pojawiaj¹ siê ju¿ na etapie tworzenia makiet, aby urosn¹æ jeszcze przy próbach debuggowania i testowania. Aby je pokonaæ stosuje siê ró¿ne techniki polegaj¹ce na powi¹zaniu ró¿nych technologii - tych, które umo¿liwiaj¹ ³atwe projektowanie i testowanie interfejsów aplikacji typu desktop, oraz tych, które wykorzystywane s¹ podczas wdra¿ania aplikacji sieciowych. Do takich technologii nale¿y Java2Script. Niniejszy projekt in¿ynierski skupia siê w³aœnie na wykorzystaniu tej technologii. 
 
-Historia interfejsu u¿ytkownika jest tak d³uga, jak d³uga jest historia komputera. Od czasu powstania maszyny licz¹cej, projektant stawa³ przed zadaniem skonstruowania odpowiedniego zestawu przyrz¹dów, które u³atwi¹ korzystaj¹cemu z maszyny interakcjê z urz¹dzeniem.
+\section{Cel i zakres projektu}
+Celem niniejszej projektu jest zbadanie mo¿liwoœci technologii Java2Script oraz wykonanie implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej oferuj¹cej dostêp do funkcji wybranego systemu.
 
-Rozró¿niamy trzy rodzaje interfejsu u¿ytkownika: tekstowy, graficzny i interfejs strony internetowej. Najubo¿szy jest tryb tekstowy, oferuj¹cy nam urz¹dzenia wejœcia-wyjœcia w postaci klawiatury i wyœwietlacza lub drukarki znakowej.
-
-Jednak jako ludzie, jesteœmy nauczeni wskazywaæ, jest to dla nas naturalne, st¹d drugi typ interfejsu, jakim jest interfejs graficzny. Aby umo¿liwiæ ³atwiejsz¹ interakcjê z komputerem, wymyœlono urz¹dzenie, które popularnie nazywamy myszk¹. Pozwala nam ona wskazywaæ na elementy wyœwietlacza i wchodziæ w bardziej naturaln¹ dla nas interakcjê z komputerem. Postêp techniki w tym wzglêdzie prowadzi nas w stronê ekranów dotykowych, co u³atwia nam komunikacjê z maszynami. Niepotrzebne s¹ wtedy ¿adne urz¹dzenia zewnêtrzne, takie jak myszka.
-
-Ostatnim rodzajem interfejsu jest strona internetowa. To rozwi¹zanie powsta³o na potrzeby rozwoju sieci. Przegl¹darka internetowa wyœwietla nam po¿¹dan¹ stronê, po której nastêpnie nawigujemy i wchodzimy w interakcjê z systemem, który jest po stronie serwera.
-
-Przysz³oœæ interfejsu u¿ytkownika czeka jeszcze d³uga droga, by komunikacja z maszyn¹ odbywa³a siê w œrodowisku naturalniejszym dla cz³owieka. Prowadzone s¹ badania nad rzeczywistoœci¹ wirtualn¹, czy interfejsami mózg-maszyna, które mog¹ u³atwiæ u¿ytkownikowi wspó³pracê z komputerem.
-
-Ten projekt in¿ynierski skupia siê w³aœnie na implementacji interfejsu u¿ytkownika. Stworzona aplikacja posiada graficzny interfejs u¿ytkownika, tworz¹cy komunikacjê miêdzy cz³owiekiem a maszyn¹ i umo¿liwia u¿ytkownikowi na korzystanie z zaimplementowanych funkcji systemu.
-
-\section{Cel}
-Celem niniejszej pracy jest implementacja interfejsu graficznego dla u¿ytkownika aplikacji sieciowej, realizuj¹cej funkcje wybranego systemu.
-
-\section{Zakres}
-Zakres powsta³ego projektu obejmuje:
+Zakres projektu obejmuje:
 \begin{enumerate}
-	\item Implementacja logiki biznesowej w jêzyku Java,
-	\item Implementacja interfejsu graficznego dla u¿ytkownika aplikacji, u¿ywaj¹c biblioteki graficznej SWT,
-	\item Wygenerowanie strony HTML – z zawartym skryptem Javascript – przy u¿yciu wtyczki do Eclipse’a – Java2Script,
-	\item Przetestowanie dzia³ania serwisu,
-	\item Napisanie dokumentacji projektowej wraz z instrukcj¹ wdro¿enia.
+ \item Przygotowanie i wykonanie projektu informatycznego, a w nim:
+ \begin{itemize}
+ \item dokonanie analizy wymagañ,
+ \item implementacja logiki biznesowej aplikacji sieciowej w jêzyku Java,
+ \item implementacja graficznego interfejsu u¿ytkownika aplikacji z wykorzystaniem biblioteki SWT,
+ \item wygenerowanie strony HTML z zanurzonym skryptem Javascript z wykorzystaniem technologii Java2Script (plugin do œrodowiska Eclipse),
+ \item przetestowanie dzia³ania serwisu,
+ \item opracowanie dokumentacji oraz instrukcji wdro¿eniowej,
+ \end{itemize}
+ \item Dokonanie podsumowania wykonanych prac, a w nim opisanie zalet i wad wykorzystanej technologii.
 \end{enumerate}
