@@ -21,11 +21,12 @@
 \contentsline {section}{\numberline {4.2}Schemat XML}{19}{section.4.2}
 \contentsline {section}{\numberline {4.3}Parsowanie dokument\'ow XML}{19}{section.4.3}
 \contentsline {chapter}{\chapternumberline {5}Opis cyklu \.zycia projektu}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Pierwsza iteracja}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Druga iteracja}{21}{section.5.2}
-\contentsline {chapter}{\chapternumberline {6}Opis implementacji}{23}{chapter.6}
-\contentsline {chapter}{\chapternumberline {7}Testowanie}{24}{chapter.7}
-\contentsline {chapter}{\chapternumberline {8}Podsumowanie}{25}{chapter.8}
-\contentsline {chapter}{Literatura}{26}{section*.3}
-\contentsline {appendix}{\chapternumberline {A}Instrukcja wdro\.zenia}{27}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Instrukcja u\.zytkownika}{28}{appendix.B}
+\contentsline {section}{\numberline {5.1}Pierwsza iteracja -- wyszukiwarka semantyczna}{20}{section.5.1}
+\contentsline {section}{\numberline {5.2}Druga iteracja -- ActEditor}{21}{section.5.2}
+\contentsline {section}{\numberline {5.3}Trzecia iteracja -- LawCreator}{24}{section.5.3}
+\contentsline {chapter}{\chapternumberline {6}Opis implementacji}{26}{chapter.6}
+\contentsline {chapter}{\chapternumberline {7}Testowanie}{27}{chapter.7}
+\contentsline {chapter}{\chapternumberline {8}Podsumowanie}{28}{chapter.8}
+\contentsline {chapter}{Literatura}{29}{section*.3}
+\contentsline {appendix}{\chapternumberline {A}Instrukcja wdro\.zenia}{30}{appendix.A}
+\contentsline {appendix}{\chapternumberline {B}Instrukcja u\.zytkownika}{31}{appendix.B}

@@ -1,6 +1,6 @@
 \chapter{Wymagania projektowe}
 \label{wymagania}
-Zrealizowany projekt zosta³ wykonany w oparciu o serwis EDAP na potrzeby pracy in¿ynierskiej na kierunku Informatyka na Politechnice Wroc³awskiej. Projekt nosi nazwê AtEditor. Aplikacja stanowi narzêdzie, maj¹ce na celu usprawnienie pisania aktów prawnych zgodnie ze schematem narzuconym przez ministerstwo.
+Zrealizowany projekt zosta³ wykonany w oparciu o serwis EDAP na potrzeby pracy in¿ynierskiej na kierunku Informatyka na Politechnice Wroc³awskiej. Projekt nosi nazwê LawCreator. Aplikacja stanowi narzêdzie, maj¹ce na celu usprawnienie pisania aktów prawnych zgodnie ze schematem narzuconym przez ministerstwo.
 
 Serwis EDAP – elektroniczna forma aktów prawnych, zosta³ przygotowany przez MSWiA w zwi¹zku z wejœciem w ¿ycie rozporz¹dzenia w sprawie wymagañ technicznych dokumentów elektronicznych zawieraj¹cych akty normatywne i inne akty prawne, elektronicznej formy dzienników urzêdowych oraz œrodków komunikacji elektronicznej i informatycznych noœników danych (Dz. U. 2008 Nr 75, poz 451 z póŸn. zm.).
 
@@ -9,7 +9,7 @@ System EDAP pozwala na tworzenie oraz edycjê aktów prawnych, wspomaga tak¿e zarz
 Akty prawne s¹ generowane w postaci pliku z rozszerzeniem .xml oraz .pdf w oparciu o elektroniczny schemat aktów prawnych, przygotowany przez MSWiA w postaci pliku schema.xsd.
 
 \section{Wymagania funkcjonalne}
-Na rys.~\ref{fig:EDAP_use-case} zosta³ diagram przypadków u¿ycia serwisu EDAP. Na zielono wyró¿nione zosta³y funkcje systemu, które zosta³y zaimplementowane w ActEditor, a na szaro które nie zosta³y zrealizowane, m.in. ze wzglêdu na ograniczenia u¿ytych technologii.
+Na rys.~\ref{fig:EDAP_use-case} zosta³ diagram przypadków u¿ycia serwisu EDAP. Na zielono wyró¿nione zosta³y funkcje systemu, które zosta³y zaimplementowane w LawCreator, a na szaro które nie zosta³y zrealizowane, m.in. ze wzglêdu na ograniczenia u¿ytych technologii.
 
 \begin{figure}[!ht]
 	\centering
@@ -19,10 +19,10 @@ Na rys.~\ref{fig:EDAP_use-case} zosta³ diagram przypadków u¿ycia serwisu EDAP. N
 \end{figure}
 
 \subsection{Wybór aktu prawnego}
-System umo¿liwia u¿ytkownikowi wybranie aktu prawnego, który ma zostaæ utworzony. Lista wyboru jest zale¿na od wersji schematu XML. U¿ytkownik wybiera rodzaj dokumentu z listy rozwijanej, po czym tworzona jest w pamiêci zawartoœæ pliku XML generowanego aktu, a u¿ytkownik przechodzi do jego edycji. U¿ytkownik ma mo¿liwoœæ konstrukcji dokumentu od nowa w przypadku, gdy wybierze z³y rodzaj aktu lub postanowi zaniechaæ edycji ju¿ utworzonego dokumentu. W tym przypadku zawartoœæ pliku XML jest wymazana z pamiêci.
+System umo¿liwia u¿ytkownikowi jednego z dokumentów, umieszczonych w Schemacie XML. Jest nim uchwa³a, która posiada takie elementy jak metryka, preambu³a i inne. U¿ytkownik w³¹cza aplikacjê LawCreator, po czym tworzona jest w pamiêci zawartoœæ pliku XML generowanego aktu, a u¿ytkownik przechodzi do jego edycji. U¿ytkownik ma mo¿liwoœæ konstrukcji dokumentu od nowa w przypadku, gdy wybierze z³y rodzaj aktu lub postanowi zaniechaæ edycji ju¿ utworzonego dokumentu. W tym przypadku zawartoœæ pliku XML jest wymazana z pamiêci.
 
 \subsection{Edycja aktu prawnego}
-Aplikacja daje mo¿liwoœæ wype³nienia aktu prawnego, który zosta³ uprzednio wybrany z listy dostêpnych dokumentów. Edycja dokumentu jest zale¿na od schematu XML, poniewa¿ ka¿da opcja modyfikacji aktu jest opisana w pliku \texttt{schema.xsd}. U¿ytkownik wybiera do modyfikacji jedynie dostêpne opcje, co pozwala na otrzymanie dokumentu zgodnego z regu³ami narzuconymi przez ministerstwo.
+Aplikacja daje mo¿liwoœæ wype³nienia aktu prawnego -- uchwa³y. Edycja dokumentu jest zale¿na od schematu XML, poniewa¿ ka¿da opcja modyfikacji aktu jest opisana w pliku \texttt{schema.xsd}. U¿ytkownik wybiera do modyfikacji jedynie dostêpne opcje, co pozwala na otrzymanie dokumentu zgodnego z regu³ami narzuconymi przez ministerstwo.
 
 \subsection{Generowanie zawartoœci pliku XML}
 Serwis umo¿liwia wygenerowanie zawartoœci pliku XML zgodnego ze schematem \texttt{schema.xsd}. U¿ytkownik otrzymuje na wyjœciu dokument w formacie XML z wype³nionymi wszystkimi polami, które wczeœniej wype³ni³ w edytorze.
@@ -32,10 +32,10 @@ System powinien prezentowaæ u¿ytkownikowi funkcjonalnoœæ, która pozwoli na szybk
 
 Serwis powinien zapewniæ u¿ytkownikowi wybór tworzenia aktu online lub offline. Narzêdzie offline ma mieæ postaæ aplikacji desktopowej, a konstruowanie aktów prawnych online ma odbywaæ siê poprzez interfejs webowy, utworzony dziêki Java2Script.
 
-Aplikacja ActEditor ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzystanie z takiego narzêdzia, jak generator aktów prawnych. System w wersji offline pozwala na tworzenie dokumentów jednemu u¿ytkownikowi na raz, natomiast wersja sieciowa aplikacji pozwala na korzystanie z jej funkcji wielu u¿ytkownikom w tym samym czasie.
+Aplikacja LawCreator ma prezentowaæ u¿ytkownikowi przyjazny interfejs, który u³atwi mu korzystanie z takiego narzêdzia, jak generator aktów prawnych. System w wersji offline pozwala na tworzenie dokumentów jednemu u¿ytkownikowi na raz, natomiast wersja sieciowa aplikacji pozwala na korzystanie z jej funkcji wielu u¿ytkownikom w tym samym czasie.
 
 \subsection{Œrodowisko pracy systemu}
-Wersja online programu ActEditor pozwala na dzia³anie na ka¿dym systemie operacyjnym, jednak ograniczeniem jest rodzaj przegl¹darki, która bêdzie ten serwis prezentowaæ - aplikacja ma dzia³aæ w przegl¹darkach, które s¹ wspierane przez technologiê J2S. Aplikacja w wersji desktopowej bêdzie mog³a zostaæ uruchomiona na ka¿dym systemie operacyjnym wspieranym przez bibliotekê SWT. 
+Wersja online programu LawCreator pozwala na dzia³anie na ka¿dym systemie operacyjnym, jednak ograniczeniem jest rodzaj przegl¹darki, która bêdzie ten serwis prezentowaæ - aplikacja ma dzia³aæ w przegl¹darkach, które s¹ wspierane przez technologiê J2S. Aplikacja w wersji desktopowej bêdzie mog³a zostaæ uruchomiona na ka¿dym systemie operacyjnym wspieranym przez bibliotekê SWT. 
 
 \subsection{Wykorzystywane technologie}
 Poni¿ej zosta³y przedstawione jêzyki programowania, jêzyki znaczników, narzêdzia wspomagaj¹ce oraz technologie u¿yte w projekcie.
