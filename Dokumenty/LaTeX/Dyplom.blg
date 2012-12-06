@@ -11,6 +11,18 @@ A level-1 auxiliary file: rozdzial08.aux
 The style file: plalpha.bst
 A level-1 auxiliary file: dodatek01.aux
 A level-1 auxiliary file: dodatek02.aux
-I found no \citation commands---while reading file D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.aux
 Database file #1: dokumentacja.bib
-(There was 1 error message)
+Warning--to sort, need author or key in EDAP10
+Warning--to sort, need author or key in SCHEMA
+Warning--to sort, need author or key in J2SSWT
+Warning--to sort, need author or key in SWTFAQ
+Warning--to sort, need author or key in J2SFeatures
+Warning--to sort, need author or key in J2S
+Warning--to sort, need author or key in J2SOOP
+Warning--to sort, need author or key in J2SSup
+Warning--to sort, need author or key in XMLWik
+Warning--to sort, need author or key in PLOUG2003
+Warning--to sort, need author or key in Traczyk
+Warning--to sort, need author or key in DOM
+Warning--to sort, need author or key in SAX
+(There were 13 warnings)

@@ -16,7 +16,7 @@
 \BOOKMARK [1][-]{section.3.2}{Zasada dzia\233ania}{chapter.3}% 16
 \BOOKMARK [1][-]{section.3.3}{Java2Script a Java}{chapter.3}% 17
 \BOOKMARK [1][-]{section.3.4}{System dziedziczenia w zanurzonym JavaScript}{chapter.3}% 18
-\BOOKMARK [1][-]{section.3.5}{Analiza istniejacych przypadk\363w uzycia}{chapter.3}% 19
+\BOOKMARK [1][-]{section.3.5}{Przeglad istniejacych serwis\363w, w kt\363rych wykorzystano Java2Script}{chapter.3}% 19
 \BOOKMARK [0][-]{chapter.4}{XML i Schemat XML}{}% 20
 \BOOKMARK [1][-]{section.4.1}{XML}{chapter.4}% 21
 \BOOKMARK [1][-]{section.4.2}{Schemat XML}{chapter.4}% 22
@@ -27,7 +27,10 @@
 \BOOKMARK [1][-]{section.5.3}{Trzecia iteracja \205 LawCreator}{chapter.5}% 27
 \BOOKMARK [0][-]{chapter.6}{Opis implementacji}{}% 28
 \BOOKMARK [0][-]{chapter.7}{Testowanie}{}% 29
-\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 30
-\BOOKMARK [0][-]{section*.3}{Literatura}{}% 31
-\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 32
-\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 33
+\BOOKMARK [1][-]{section.7.1}{Testy jednostkowe}{chapter.7}% 30
+\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 31
+\BOOKMARK [1][-]{section.8.1}{Ocena projektu}{chapter.8}% 32
+\BOOKMARK [1][-]{section.8.2}{Wnioski}{chapter.8}% 33
+\BOOKMARK [0][-]{section*.13}{Literatura}{}% 34
+\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 35
+\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 36

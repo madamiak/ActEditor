@@ -2,7 +2,7 @@
 % Encoding: Cp1250
 
 @MISC{DOM,
-  title = {http://www.brainbell.com/tutorials/XML/How\_The\_DOM\_Works.htm},
+  title = {http://www.brainbell.com/tutorials/XML/How_The_DOM_Works.htm},
   owner = {Mateusz},
   timestamp = {2012.12.05}
 }
@@ -15,12 +15,6 @@
 
 @MISC{J2S,
   title = {http://j2s.sourceforge.net/},
-  owner = {Mateusz},
-  timestamp = {2012.12.05}
-}
-
-@MISC{J2SFeatures,
-  title = {http://j2s.sourceforge.net/overview.html\#j2s-features},
   owner = {Mateusz},
   timestamp = {2012.12.05}
 }
@@ -44,7 +38,7 @@
 }
 
 @MISC{PLOUG2003,
-  title = {http://www.ia.pw.edu.pl/\~ttraczyk/pdf/ploug2003\_art.pdf},
+  title = {http://www.ia.pw.edu.pl/~ttraczyk/pdf/ploug2003_art.pdf},
   owner = {Mateusz},
   timestamp = {2012.12.05}
 }
@@ -55,20 +49,8 @@
   timestamp = {2012.12.05}
 }
 
-@MISC{SCHEMA,
-  title = {http://crd.gov.pl/xml/schematy/edap/2010/01/02/schemat.xsd},
-  owner = {Mateusz},
-  timestamp = {2012.12.05}
-}
-
-@MISC{SWTFAQ,
-  title = {http://wiki.eclipse.org/FAQ\_Is\_SWT\_better\_than\_Swing%3F},
-  owner = {Mateusz},
-  timestamp = {2012.12.05}
-}
-
 @MISC{Traczyk,
-  title = {http://www.ploug.org.pl/konf\_01/materialy/pdf/traczyk.pdf},
+  title = {http://www.ploug.org.pl/konf_01/materialy/pdf/traczyk.pdf},
   owner = {Mateusz},
   timestamp = {2012.12.05}
 }

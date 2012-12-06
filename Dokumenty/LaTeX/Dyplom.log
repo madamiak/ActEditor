@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.9)  2 DEC 2012 11:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.9)  6 DEC 2012 04:57
 entering extended mode
 **Dyplom.tex
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.tex"
@@ -429,12 +429,21 @@ Package: paralist 2002/03/18 v2.3b Extended list environments (BS)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\times.sty"
 Package: times 2005/04/12 PSNFSS-v9.2a (SPQR) 
 )
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\enumitem\enumitem.sty"
+Package: enumitem 2011/09/28 v3.5.2 Customized lists
+\enitkv@toks@=\toks25
+\labelindent=\skip192
+\enit@outerparindent=\dimen154
+\enit@toks=\toks26
+\enit@inbox=\box29
+\enitdp@description=\count143
+)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphicx.sty"
 Package: graphicx 1999/02/16 v1.0f Enhanced LaTeX Graphics (DPC,SPQR)
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\keyval.sty"
 Package: keyval 1999/03/16 v1.13 key=value parser (DPC)
-\KV@toks@=\toks25
+\KV@toks@=\toks27
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\graphics\graphics.sty"
 Package: graphics 2009/02/05 v1.0o Standard LaTeX Graphics (DPC,SPQR)
@@ -447,8 +456,8 @@ File: graphics.cfg 2007/01/18 v1.5 graphics configuration of teTeX/TeXLive
 )
 Package graphics Info: Driver file: pdftex.def on input line 91.
 )
-\Gin@req@height=\dimen154
-\Gin@req@width=\dimen155
+\Gin@req@height=\dimen155
+\Gin@req@width=\dimen156
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hyperref.sty"
 Package: hyperref 2011/12/04 v6.82m Hypertext links for LaTeX
@@ -495,14 +504,14 @@ Package: hycolor 2011/01/30 v1.7 Color options of hyperref/bookmark (HO)
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\kvoptions.sty"
 Package: kvoptions 2010/12/23 v3.10 Keyval support for LaTeX options (HO)
 )
-\@linkdim=\dimen156
-\Hy@linkcounter=\count143
-\Hy@pagecounter=\count144
+\@linkdim=\dimen157
+\Hy@linkcounter=\count144
+\Hy@pagecounter=\count145
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\pd1enc.def"
 File: pd1enc.def 2011/12/04 v6.82m Hyperref: PDFDocEncoding definition (HO)
 )
-\Hy@SavedSpaceFactor=\count145
+\Hy@SavedSpaceFactor=\count146
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\00miktex\hyperref.cfg"
 File: hyperref.cfg 2002/06/06 v1.2 hyperref configuration of TeXLive
@@ -514,16 +523,16 @@ Package hyperref Info: Plain pages OFF on input line 4061.
 Package hyperref Info: Backreferencing OFF on input line 4066.
 Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
 Package hyperref Info: Bookmarks ON on input line 4284.
-\c@Hy@tempcnt=\count146
+\c@Hy@tempcnt=\count147
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\ltxmisc\url.sty"
 \Urlmuskip=\muskip10
 Package: url 2006/04/12  ver 3.3  Verb mode for urls, etc.
 )
 LaTeX Info: Redefining \url on input line 4637.
-\Fld@menulength=\count147
-\Field@Width=\dimen157
-\Fld@charsize=\dimen158
+\Fld@menulength=\count148
+\Field@Width=\dimen158
+\Fld@charsize=\dimen159
 Package hyperref Info: Hyper figures OFF on input line 5757.
 Package hyperref Info: Link nesting OFF on input line 5762.
 Package hyperref Info: Hyper index ON on input line 5765.
@@ -533,31 +542,31 @@ Package hyperref Info: Link coloring with OCG OFF on input line 5782.
 Package hyperref Info: PDF/A mode OFF on input line 5787.
 LaTeX Info: Redefining \ref on input line 5827.
 LaTeX Info: Redefining \pageref on input line 5831.
-\Hy@abspage=\count148
-\c@Item=\count149
-\c@Hfootnote=\count150
+\Hy@abspage=\count149
+\c@Item=\count150
+\c@Hfootnote=\count151
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\memoir\memhfixc.sty"
 Package: memhfixc 2010/08/17 v1.15 nameref/hyperref package fixes for memoir cl
 ass
-\c@memhycontfloat=\count151
+\c@memhycontfloat=\count152
 )
 
 Package hyperref Message: Driver: hpdftex.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\hpdftex.def"
 File: hpdftex.def 2011/12/04 v6.82m Hyperref driver for pdfTeX
-\Fld@listcount=\count152
-\c@bookmark@seq@number=\count153
+\Fld@listcount=\count153
+\c@bookmark@seq@number=\count154
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\oberdiek\rerunfilecheck.sty"
 Package: rerunfilecheck 2011/04/15 v1.7 Rerun checks for auxiliary files (HO)
 Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 82.
 )
-\Hy@SectionHShift=\skip192
+\Hy@SectionHShift=\skip193
 )
-\mytemplengtha=\skip193
+\mytemplengtha=\skip194
 
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.aux"
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\skroty.aux")
@@ -571,77 +580,77 @@ Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial08.aux")
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek01.aux")
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek02.aux"))
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 246.
-LaTeX Font Info:    ... okay on input line 246.
-LaTeX Font Info:    Try loading font information for T1+ptm on input line 246.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 247.
+LaTeX Font Info:    ... okay on input line 247.
+LaTeX Font Info:    Try loading font information for T1+ptm on input line 247.
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1ptm.fd"
 File: t1ptm.fd 2001/06/04 font definitions for T1/ptm.
 )
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\context\base\supp-pdf.mkii"
 [Loading MPS to PDF converter (version 2006.09.02).]
-\scratchcounter=\count154
-\scratchdimen=\dimen159
-\scratchbox=\box29
-\nofMPsegments=\count155
-\nofMParguments=\count156
-\everyMPshowfont=\toks26
-\MPscratchCnt=\count157
-\MPscratchDim=\dimen160
-\MPnumerator=\count158
-\makeMPintoPDFobject=\count159
-\everyMPtoPDFconversion=\toks27
+\scratchcounter=\count155
+\scratchdimen=\dimen160
+\scratchbox=\box30
+\nofMPsegments=\count156
+\nofMParguments=\count157
+\everyMPshowfont=\toks28
+\MPscratchCnt=\count158
+\MPscratchDim=\dimen161
+\MPnumerator=\count159
+\makeMPintoPDFobject=\count160
+\everyMPtoPDFconversion=\toks29
 )
-\AtBeginShipoutBox=\box30
-Package hyperref Info: Link coloring OFF on input line 246.
+\AtBeginShipoutBox=\box31
+Package hyperref Info: Link coloring OFF on input line 247.
  ("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\hyperref\nameref.sty"
 Package: nameref 2010/04/30 v2.40 Cross-referencing by name of section
 
 ("C:\Program Files (x86)\MiKTeX 2.9\tex\generic\oberdiek\gettitlestring.sty"
 Package: gettitlestring 2010/12/03 v1.4 Cleanup title references (HO)
 )
-\c@section@level=\count160
+\c@section@level=\count161
 )
 Redoing nameref's sectioning
 Redoing nameref's label
-LaTeX Info: Redefining \nameref on input line 246.
-LaTeX Info: Redefining \ref on input line 246.
-LaTeX Info: Redefining \pageref on input line 246.
-LaTeX Info: Redefining \nameref on input line 246.
+LaTeX Info: Redefining \nameref on input line 247.
+LaTeX Info: Redefining \ref on input line 247.
+LaTeX Info: Redefining \pageref on input line 247.
+LaTeX Info: Redefining \nameref on input line 247.
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.out")
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.out")
 \@outlinefile=\write4
-LaTeX Font Info:    Calculating math sizes for size <14> on input line 257.
+LaTeX Font Info:    Calculating math sizes for size <14> on input line 258.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <14> on input line 257.
+(Font)              <14> on input line 258.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <9.79996> on input line 257.
+(Font)              <9.79996> on input line 258.
 LaTeX Font Info:    External font `cmex10' loaded for size
-(Font)              <7> on input line 257.
+(Font)              <7> on input line 258.
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 257--257
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 258--258
 [][] 
  []
 
 
-Underfull \hbox (badness 10000) in alignment at lines 257--257
+Underfull \hbox (badness 10000) in alignment at lines 258--258
 [][] 
  []
 
 
-Overfull \hbox (17.62482pt too wide) in paragraph at lines 257--257
+Overfull \hbox (17.62482pt too wide) in paragraph at lines 258--258
 [][] 
  []
 
@@ -649,7 +658,7 @@ Overfull \hbox (17.62482pt too wide) in paragraph at lines 257--257
 
 {C:/ProgramData/MiKTeX/2.9/pdftex/config/pdftex.map}]
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <24.88> not available
-(Font)              Font shape `T1/ptm/b/n' tried instead on input line 261.
+(Font)              Font shape `T1/ptm/b/n' tried instead on input line 262.
 
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.toc"
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <12> not available
@@ -677,12 +686,17 @@ LaTeX Font Info:    Font shape `OMS/ptm/m/n' in size <12> not available
 (Font)              Font shape `OMS/cmsy/m/n' tried instead on input line 15.
 ) [6]
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial02.tex"
-<./rys01/EDAP_use-case.png, id=200, 426.84468pt x 337.26pt>
+LaTeX Font Info:    Try loading font information for T1+pcr on input line 9.
+
+("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
+File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
+)
+<./rys01/EDAP_use-case.png, id=217, 426.84468pt x 337.26pt>
 File: ./rys01/EDAP_use-case.png Graphic file (type png)
 
 <use ./rys01/EDAP_use-case.png>
 Package pdftex.def Info: ./rys01/EDAP_use-case.png used on input line 16.
-(pdftex.def)             Requested size: 318.66946pt x 251.80193pt.
+(pdftex.def)             Requested size: 364.19666pt x 287.77878pt.
 LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 (Font)              Font shape `T1/ptm/b/n' tried instead on input line 21.
  [7
@@ -690,112 +704,101 @@ LaTeX Font Info:    Font shape `T1/ptm/bx/n' in size <14.4> not available
 
 
 ]
-LaTeX Font Info:    Try loading font information for T1+pcr on input line 25.
-
-("C:\Program Files (x86)\MiKTeX 2.9\tex\latex\psnfss\t1pcr.fd"
-File: t1pcr.fd 2001/06/04 font definitions for T1/pcr.
-)
 Underfull \hbox (badness 6825) in paragraph at lines 28--29
 \T1/ptm/m/n/12 Serwis umo»-li-wia wy-ge-ne-ro-wa-nie za-war-to-±ci pliku XML zg
 od-nego ze sche-ma-tem
  []
 
-[8 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys01/EDAP_use-case.png>] [9] [10]
-[11]) [12] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial03.tex" [13
+[8 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys01/EDAP_use-case.png>] [9] [10])
+[11] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial03.tex" [12
 
 
 
 ]
-<./rys01/architektura.png, id=249, 564.1075pt x 323.2075pt>
-File: ./rys01/architektura.png Graphic file (type png)
+<./rys01/dataflow.jpg, id=280, 741.77126pt x 903.375pt>
+File: ./rys01/dataflow.jpg Graphic file (type jpg)
 
-<use ./rys01/architektura.png>
-Package pdftex.def Info: ./rys01/architektura.png used on input line 24.
-(pdftex.def)             Requested size: 364.19666pt x 208.6719pt.
-
-Underfull \hbox (badness 4595) in paragraph at lines 35--36
-\T1/pcr/m/n/12 java.util\T1/ptm/m/n/12 , \T1/pcr/m/n/12 java.lang\T1/ptm/m/n/12
- , \T1/pcr/m/n/12 java.lang.reflect\T1/ptm/m/n/12 , \T1/pcr/m/n/12 junit\T1/ptm
-/m/n/12 , \T1/pcr/m/n/12 org.eclipse.swt\T1/ptm/m/n/12 .
- []
-
-[14 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys01/architektura.png>]
-<./rys02/karoolark-web-messenger.jpg, id=255, 1284.8pt x 803.0pt>
+<use ./rys01/dataflow.jpg>
+Package pdftex.def Info: ./rys01/dataflow.jpg used on input line 24.
+(pdftex.def)             Requested size: 455.2441pt x 554.43512pt.
+ [13] [14 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys01/dataflow.jpg>]
+<./rys02/karoolark-web-messenger.jpg, id=295, 1284.8pt x 803.0pt>
 File: ./rys02/karoolark-web-messenger.jpg Graphic file (type jpg)
 
 <use ./rys02/karoolark-web-messenger.jpg>
 Package pdftex.def Info: ./rys02/karoolark-web-messenger.jpg used on input line
- 56.
-(pdftex.def)             Requested size: 364.19666pt x 227.61984pt.
- [15]
-Underfull \hbox (badness 10000) in paragraph at lines 62--63
+ 53.
+(pdftex.def)             Requested size: 455.2441pt x 284.52174pt.
 
- []
-
-<./rys03/dove.png, id=260, 1054.94125pt x 698.61pt>
+<./rys03/dove.png, id=296, 1054.94125pt x 698.61pt>
 File: ./rys03/dove.png Graphic file (type png)
  <use ./rys03/dove.png>
-Package pdftex.def Info: ./rys03/dove.png used on input line 66.
-(pdftex.def)             Requested size: 364.19666pt x 241.1806pt.
+Package pdftex.def Info: ./rys03/dove.png used on input line 59.
+(pdftex.def)             Requested size: 455.2441pt x 301.4731pt.
 
-[16 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys02/karoolark-web-messenger.jpg> <D:
-/Opera Unite/EDAP/Dokumenty/LaTeX/rys03/dove.png>]
-<./rys04/imageViewerScreenshot.png, id=267, 458.46281pt x 420.06938pt>
+<./rys04/imageViewerScreenshot.png, id=297, 458.46281pt x 420.06938pt>
 File: ./rys04/imageViewerScreenshot.png Graphic file (type png)
 
 <use ./rys04/imageViewerScreenshot.png>
-Package pdftex.def Info: ./rys04/imageViewerScreenshot.png used on input line 7
-6.
-(pdftex.def)             Requested size: 318.66946pt x 291.99545pt.
-) [17 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys04/imageViewerScreenshot.png>]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial04.tex" [18
+Package pdftex.def Info: ./rys04/imageViewerScreenshot.png used on input line 6
+5.
+(pdftex.def)             Requested size: 455.2441pt x 417.1391pt.
+ [15 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys02/karoolark-web-messenger.jpg>]) 
+[16 <D:/Opera Unite/EDAP/Dokumenty/LaTeX/rys03/dove.png>] [17 <D:/Opera Unite/E
+DAP/Dokumenty/LaTeX/rys04/imageViewerScreenshot.png>] ("D:\Opera Unite\EDAP\Dok
+umenty\LaTeX\rozdzial04.tex" [18
 
 
 
-]) [19]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial05.tex" [20
+])
+[19] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial05.tex" [20
 
 
 
-] [21]
+] [21] [22]
+[23] [24]) [25] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial06.tex"
+Underfull \hbox (badness 2005) in paragraph at lines 5--6
+[]\T1/pcr/m/n/12 pl.wroc.pwr.student.lawcreator \T1/ptm/m/n/12 -- gªówny pa-kie
+t, który za-wiera klas¦
+ []
 
-LaTeX Warning: Reference `sax' on page 22 undefined on input line 70.
-
-[22] [23] [24]) [25] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial06.tex")
 [26
 
 
 
-] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial07.tex") [27
+] [27]) [28] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial07.tex") [29
 
 
 
 ]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial08.tex") [28
+("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial08.tex" [30
 
 
 
-]
+] [31]) [32]
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.bbl"
 bibitemlist
 
-LaTeX Warning: Empty `thebibliography' environment on input line 3.
+Overfull \hbox (145.17851pt too wide) in paragraph at lines 7--8
+[]\T1/ptm/m/n/12 http://bip.msw.gov.pl/portal/bip/185/18658/edytor_aktow_prawny
+ch_edap__wersja_z_dnia_31_marca_2010_r.html. 
+ []
 
-) [29
+) [33
 
 
-] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek01.tex") [30
+] ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek01.tex") [34
 
 
 ]
-("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek02.tex") [31
+("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek02.tex") [35
 
 
 
 ]
 \tf@toc=\write5
-Package atveryend Info: Empty hook `BeforeClearDocument' on input line 281.
-Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
+Package atveryend Info: Empty hook `BeforeClearDocument' on input line 282.
+Package atveryend Info: Empty hook `AfterLastShipout' on input line 282.
 
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\Dyplom.aux"
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\skroty.aux")
@@ -809,23 +812,19 @@ Package atveryend Info: Empty hook `AfterLastShipout' on input line 281.
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\rozdzial08.aux")
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek01.aux")
 ("D:\Opera Unite\EDAP\Dokumenty\LaTeX\dodatek02.aux"))
-Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 281.
-Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 281.
+Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 282.
+Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 282.
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
-(rerunfilecheck)             Checksum: C00BB25A8B2E646CA3F5DCBA4DD1AE5B;2168.
-
-
-LaTeX Warning: There were undefined references.
-
+(rerunfilecheck)             Checksum: F974D6BCD37E6DF38B393E090C8A8865;2382.
  ) 
 Here is how much of TeX's memory you used:
- 9448 strings out of 494045
- 135106 string characters out of 3145964
- 260809 words of memory out of 3000000
- 12449 multiletter control sequences out of 15000+200000
+ 9789 strings out of 494045
+ 140523 string characters out of 3145964
+ 267885 words of memory out of 3000000
+ 12756 multiletter control sequences out of 15000+200000
  44363 words of font info for 55 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
- 32i,12n,34p,1173b,491s stack positions out of 5000i,500n,10000p,200000b,50000s
+ 32i,12n,34p,1556b,605s stack positions out of 5000i,500n,10000p,200000b,50000s
 {C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
 m Files (x86)/MiKTeX 2.9/fonts/type1/public/amsfonts/cm/cmsy10.pfb><C:/Program 
 Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
@@ -833,9 +832,9 @@ Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x8
 .9/fonts/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/ty
 pe1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/tim
 es/utmri8a.pfb>
-Output written on Dyplom.pdf (31 pages, 849024 bytes).
+Output written on Dyplom.pdf (35 pages, 952362 bytes).
 PDF statistics:
- 411 PDF objects out of 1000 (max. 8388607)
- 113 named destinations out of 1000 (max. 500000)
- 290 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 490 PDF objects out of 1000 (max. 8388607)
+ 143 named destinations out of 1000 (max. 500000)
+ 314 words of extra memory for PDF output out of 10000 (max. 10000000)
 

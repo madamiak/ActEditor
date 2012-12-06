@@ -1,2 +1,31 @@
 \chapter{Podsumowanie}
 \label{podsumowanie}
+\section{Ocena projektu}
+Przedstawiona praca dotyczy³a technologii Java2Script oraz budowy interfejsu u¿ytkownika aplikacji sieciowej. Do³o¿ono wszelkich starañ, by projekt zakoñczy³ siê sukcesem, co widaæ po iloœci iteracji -- korygowano zakres projektu tak, aby mo¿na by³o zaprezentowaæ funkcjonalny serwis. Niestety mimo wszelkich starañ, nie uda³o siê wygenerowaæ poprawnie dzia³aj¹cej strony HTML z zanurzonym skryptem JavaScript.
+
+Prezentowana aplikacja, choæ prosta w za³o¿eniu, okaza³a siê byæ du¿o bardziej z³o¿ona, a napotykane problemy uniemo¿liwi³y osi¹gniêcie pocz¹tkowych wymagañ.
+
+W pierwszej iteracji zak³adano, ¿e uda siê stworzyæ interfejs u¿ytkownika i do³¹czyæ go do ju¿ istniej¹cej logiki biznesowej systemu webSem. Jak siê okaza³o -- by³o to zadanie bardzo trudne, ze wzglêdu na szereg wykorzystywanych klas Java, które nie by³y wspierane przez J2S. Sukces mo¿na by³o osi¹gn¹æ przez zbudowanie aplikacji proxy, która zajmowa³aby siê jedynie obs³ug¹ bazy danych. Jednak próba skomunikowania aplikacji skoñczy³a siê niepowodzeniem i podjêto decyzjê o przejœciu do kolejnej iteracji.
+
+W kolejnym podejœciu problem znowu wydawa³ siê ma³o skomplikowany i do tego realny z punktu widzenia Java2Script. Wymaga³ on jedynie operacji na ci¹gach znaków, co nie wymaga³o u¿ywania zewnêtrznych plików \texttt{.jar}. Jednak napisanie w³asnego parsera XML nie jest spraw¹ prost¹. Próba ujednolicenia wyœwietlanych formularzy na podstawie wczytanych danych ze schematu zakoñczy³a siê niepowodzeniem z powodu pewnych nieœcis³oœci pliku \texttt{schema.xsd}. W ramach tej iteracji powsta³a jednak namiastka aplikacji, która prezentowa³a u¿ytkownikowi wybór dokumentu, który móg³ stworzyæ oraz edytowaæ, natomiast nie uda³o siê doprowadziæ do tego, by sprawdziæ poprawnoœæ wprowadzonych danych, a tak¿e wygenerowaæ akt prawny w postaci XML.
+
+Ostatecznie w ramach projektu zaprezentowano aplikacjê offline, której celem jest u³atwienie tworzenia dokumentu prawnego, jakim jest uchwa³a. Zosta³y spe³nione za³o¿enia dotycz¹ce funkcjonalnoœci aplikacji, jakimi by³y utworzenie i edycja aktu prawnego -- uchwa³y, a tak¿e generowanie zawartoœci dokumentu w formacie XML.
+
+\section{Wnioski}
+Technologia Java2Script jest interesuj¹ca pod wzglêdem idei. Twórca chcia³ po³¹czyæ ze sob¹ zorientowan¹ obiektowo platformê Java z wykorzystywanym w stronach internetowych JavaScriptem. Efektem tego jest wtyczka do Eclipse, która umo¿liwia tworzenie stron HTML z zagnie¿d¿onym skryptem JavaScript, który wczeœniej zosta³ wygenerowany z plików Ÿród³owych \texttt{.java}. Posiada to swoje niew¹tpliwe zalety:
+\begin{itemize}
+	\item[--] mo¿liwoœæ generowania stron HTML, u¿ywaj¹c jedynie natywnego kodu Java,
+	\item[--] brak koniecznoœci znajomoœci sk³adni JavaScript do tworzenia skryptów,
+	\item[--] generowane pliki \texttt{.js} zachowuj¹ zasady programowania zorientowanego obiektowo,
+	\item[--] ³atwoœæ debuggowania kodu, dziêki u¿yciu œrodowiska Eclipse,
+	\item[--] mo¿liwoœæ umieszczania natywnego kodu JavaScript w klasach Javy.
+\end{itemize}
+Zachowuj¹c jednak obiektywizm -- rzadko spotyka siê strony, które s¹ stworzone przy u¿yciu tej technologii. Oprócz kilku przyk³adowych serwisów zamieszczonych na g³ównej stronie Java2Script, bardzo ciê¿ko jest znaleŸæ stronê internetow¹, która korzysta³aby z tego rozwi¹zania. Przyczyn takiego stanu rzeczy mo¿e byæ kilka, zaczynaj¹c od ma³ej liczby osób zainteresowanych tym tematem, którzy zdolni s¹ pomóc w rozwoju technologii, poprzez ma³¹ aktywnoœæ na grupach dyskusyjnych do braku wsparcia wielu wbudowanych bibliotek Java i b³êdów, na które napotykamy siê raz po raz.
+
+Java2Script potrafi zachowywaæ siê nieprzewidywalnie, niestabilnie i niedeterministycznie. Przyk³adem takiego zachowania jest np. u¿ywanie s³uchaczy do obs³ugi zdarzeñ wywo³ywanych przez u¿ytkownika. Mo¿na spotkaæ siê z tym, ¿e na ró¿nych wersjach wtyczki i na ró¿nych œrodowiskach IDE, aplikacja potrafi dzia³aæ dobrze, potrafi nie obs³ugiwaæ zdarzeñ a nawet w ogóle siê nie wyœwietlaæ, nie informuj¹c u¿ytkownika nawet o b³êdach w konsoli. Bywa tak, ¿e pracuj¹c z Java2Script, po ma³ej zmianie w kodzie, jakim jest przekszta³cenie jednej wiêkszej funkcji na mniejsze, aplikacja potrafi przestaæ siê wyœwietlaæ w przegl¹darce i nie pomaga powrót do poprzedniego rozwi¹zania. Takie cechy technologii skutecznie mog¹ zniechêciæ u¿ytkownika, st¹d byæ mo¿e ma³e zainteresowanie na forach i grupach dyskusyjnych.
+
+Tworzenie aplikacji w Java2Script nie nale¿y do najprostszych, ale jeœli ktoœ chce stworzyæ prost¹ aplikacjê, która nie bêdzie potrzebowa³a wielkiej logiki biznesowej, to jest to rozwi¹zanie doœæ wygodne -- szczególnie dla osób nie posiadaj¹cych bieg³ej znajomoœci HTML i JavaScript. Jednak do bardziej z³o¿onych serwisów, które dodatkowo potrzebuj¹ pewnego przep³ywu interfejsów na kszta³t stron internetowych, jest to technologia, która potrafi utrudniæ budowanie takiego serwisu. 
+
+Budowanie aplikacji, jak¹ by³ ActEditor, a póŸniej LawCreator, pozwoli³o równie¿ zg³êbiæ temat dokumentów XML oraz schematów XML. Jêzyk XSD pozwala na zdefiniowanie struktury dokumentu XML i stanowi alternatywê dla DTD. W odró¿nieniu od DTD schematy umo¿liwiaj¹ precyzyjne deklarowanie typów danych, pozwalaj¹ te¿ na jednokrotne definiowanie powtarzaj¹cych siê fragmentów modelu.
+
+Schemat XML, który regulowa³ zasady generowania zawartoœci XML w przypadku ActEditor oraz LawCreator nosi³ nazwê \texttt{schema.xsd} i by³ skonstruowany przez MSWiA. Nie mo¿na go chyba jednak uznaæ za udany. Jak sama nazwa wskazuje, schemat powinien precyzyjnie opisywaæ to, co, gdzie i jak mo¿e zostaæ u¿yte. Jednak w tym przypadku opis ten bywa zaciemniony i niejasny. WeŸmy pod uwagê np. to, ¿e nie ma jasno opisane, który element mo¿e posiadaæ cia³o (treœæ elementu), a który nie. Inn¹ nieœcis³oœci¹ jest to, ¿e pewne elementy powinny byæ zagnie¿d¿one tylko w konkretnej, ustalonej kolejnoœci, natomiast dostêpny schemat doœæ niejasno okreœla tego typu powi¹zania. Kolejnym przyk³adem jest to, ¿e w pewnym miejscu elementu sygnatura aktu jest atrybutem, a w innym miejscu jest ju¿ elementem -- tutaj mo¿na zacz¹æ zadawaæ sobie pytanie, czy taki zabieg by³ celowy, czy jest to zwyk³e przeoczenie.

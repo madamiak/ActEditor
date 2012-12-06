@@ -1,54 +1,51 @@
 \chapter{Opis cyklu ¿ycia projektu}
 \section{Pierwsza iteracja -- wyszukiwarka semantyczna}
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm]
 	\item	Definiowanie projektu
-	\begin{enumerate}
-		\item Etap inicjowania projektu
+	\begin{enumerate}[leftmargin=0.3cm]
+		\item Etap inicjowania projektu:
+		pierwsza iteracja projektu dotyczy³a implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis semWeb. Tematyk¹ projektu semWeb by³o wykorzystanie metadanych i sieci semantycznych do wyszukiwania, integracji i weryfikacji urzêdowych danych posiadaj¹cych aspekt czasowo-przestrzenny.
 		
-		Pierwsza wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis semWeb, którego tematyk¹ by³o wykorzystanie metadanych i sieci semantycznych do wyszukiwania, integracji i weryfikacji urzêdowych danych posiadaj¹cych aspekt czasowo-przestrzenny.
-		
-		\item Etap definiowania celu
-		
-		Celem projektu mia³o byæ stworzenie interfejsu aplikacji sieciowej, która posiada³a ju¿ pe³n¹ funkcjonalnoœæ. Interfejs mia³ ³¹czyæ siê z bazowym systemem, jakim by³ semWeb. Dostarcza³ on endpoint, umo¿liwiaj¹cy zarz¹dzanie dziedzinow¹ baz¹ wiedzy. Serwis bazowy by³ oparty na fasadowym wzorcu projektowym, co by³o jednym z powodów, dla którego zosta³ on wybrany jako potencjalna baza, ze wzglêdu na ³atwoœæ integracji modu³u interfejsu z reszt¹ aplikacji. 
+		\item Etap definiowania celu:
+		celem projektu mia³o byæ stworzenie interfejsu aplikacji sieciowej, która posiada³a ju¿ pe³n¹ funkcjonalnoœæ. Interfejs mia³ ³¹czyæ siê z bazowym systemem, jakim by³ semWeb. Dostarcza³ on endpoint, umo¿liwiaj¹cy zarz¹dzanie dziedzinow¹ baz¹ wiedzy. Serwis bazowy by³ oparty na fasadowym wzorcu projektowym, co by³o jednym z powodów, dla którego zosta³ on wybrany jako potencjalna baza. Wzorzec fasadowy zapewnia³ ³atwoœæ integracji modu³u interfejsu z reszt¹ aplikacji. 
 
-Potencjalnymi zagro¿eniami by³y problemy z importem plików o rozszerzeniu \texttt{.jar} do projektu. Powodem tego jest obecna implementacja wtyczki Java2Script, która opiera siê na wczytywaniu skompilowanych klas œrodowiska Java, ale tylko tych, które umieszczone s¹ bezpoœrednio w projekcie, lub nale¿¹ do konkretnych, wbudowanych bibliotek, jak \texttt{java.lang} (//TODO: odnoœnik do strony J2S).
+Potencjalnymi przeszkodami w rozwoju projektu by³y problemy z importem plików o rozszerzeniu \texttt{.jar} do projektu. Powodem tego jest obecna implementacja wtyczki Java2Script, która opiera siê na wczytywaniu skompilowanych klas œrodowiska Java, ale tylko tych, które umieszczone s¹ bezpoœrednio w projekcie, lub nale¿¹ do konkretnych, wbudowanych bibliotek, jak \texttt{java.lang}.
 
-		\item Etap weryfikacji
-		
-		Z uwagi na to, ¿e nie da³o siê do³¹czyæ plików \texttt{.jar} do projektu w taki sposób, by kompilator Java2Script móg³ prawid³owo za³adowaæ klasy oraz skonwertowaæ je do plików z rozsze¿eniem \texttt{.js}, projekt nie przeszed³ pozytywnie przez fazê weryfikacji i zosta³ odrzucony.
+		\item Etap weryfikacji:
+		z uwagi na to, ¿e nie da³o siê do³¹czyæ plików \texttt{.jar} do projektu w taki sposób, by kompilator Java2Script móg³ prawid³owo za³adowaæ klasy oraz skonwertowaæ je do plików z rozsze¿eniem \texttt{.js}, projekt nie przeszed³ pozytywnie przez fazê weryfikacji i zosta³ odrzucony.
 
 Brak mo¿liwoœci do³¹czania zewnêtrznych archiwów .jar oraz wbudowanych bibliotek, takich jak \texttt{java.sql}, uniemo¿liwi³o po³¹czenie siê z baz¹ danych. Konsekwencj¹ tego by³ brak mo¿liwoœci zbudowania aplikacji, która spe³nia³aby minimalne wymagania zawarte w etapie definiowania projektu.
+
+Rozwi¹zaniem mog³oby byæ zbudowanie aplikacji, która zajmowa³aby siê jedynie obs³ug¹ po³¹czenia z baz¹ danych, jednak problemy ze zbudowaniem komunikacji miêdzy aplikacjami przewa¿y³ o niepowodzeniu tej czêœci projektu.
+
 W zwi¹zku z tym kolejnym krokiem w cyklu ¿ycia projektu by³o przejœcie do kolejnej iteracji i zdefiniowanie nowego problemu.
 
 	\end{enumerate}
 \end{enumerate}
 \section{Druga iteracja -- ActEditor}
-\begin{enumerate}
+\label{druga}
+\begin{enumerate}[leftmargin=0.5cm]
 	\item	Definiowanie projektu
-	\begin{enumerate}
-		\item Etap inicjowania projektu
-		
-		Druga wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis EDAP, którego tematyk¹ by³o tworzenie dokumentów prawnych, ich edycja oraz zarz¹dzanie ju¿ istniej¹cymi dokumentami. 
+	\begin{enumerate}[leftmargin=0.3cm]
+		\item Etap inicjowania projektu:
+		druga wersja aplikacji mia³a dotyczyæ implementacji graficznego interfejsu u¿ytkownika aplikacji sieciowej, jak¹ by³ serwis EDAP. Jego tematyk¹ by³o tworzenie dokumentów prawnych, ich edycja oraz zarz¹dzanie ju¿ istniej¹cymi dokumentami. 
 			
-Projekt u³atwia skonstruowanie wybranego dokumentu prawnego zgodnie ze schematem narzuconym przez MSWiA. Dokument generowany jest w postaci pliku o formacie XML, a wszelkie obostrzenia i zasady jego utworzenia zawiera plik \texttt{schema.xsd}. U¿ywaj¹c serwisu EDAP, u¿ytkownik mo¿e tak¿e wczytaæ ju¿ istniej¹cy plik z rozszerzeniem \texttt{.xml} i zmodyfikowaæ go.
+Projekt u³atwia skonstruowanie wybranego dokumentu prawnego zgodnie ze schematem narzuconym przez MSWiA. Dokument generowany jest w postaci pliku o formacie XML, a wszelkie obostrzenia i zasady jego konstruowania zawiera plik \texttt{schema.xsd}. U¿ywaj¹c serwisu EDAP, u¿ytkownik mo¿e tak¿e wczytaæ ju¿ istniej¹cy plik z rozszerzeniem \texttt{.xml} i zmodyfikowaæ go.
 
-		\item Etap definiowania celu
-		
-		Celem projektu by³o stworzenie aplikacji sieciowej, zawieraj¹cej g³ówn¹ funkcjê serwisu EDAP, czyli konstruowanie dokumentu prawnego w postaci pliku XML na podstawie schematu zawartego w pliku \texttt{schema.xsd}.
+		\item Etap definiowania celu:
+		celem projektu by³o stworzenie aplikacji sieciowej, zawieraj¹cej g³ówn¹ funkcjê serwisu EDAP, czyli konstruowanie dokumentu prawnego w postaci pliku XML na podstawie schematu zawartego w pliku \texttt{schema.xsd}. Aplikacja powinna posiadaæ mechanizm wczytywania danych ze schematu XML oraz takiego ich przetworzenia, by w razie zmian w schemacie, nie ingerowa³oby to w stabilnoœæ i niezawodnoœæ aplikacji.
 			
 Aby osi¹gn¹æ cel g³ówny, nale¿a³o wykonaæ 3 podstawowe kroki: odpowiednio wczytaæ zawartoœæ pliku ze schematem XML, nastêpnie stworzyæ interfejs u¿ytkownika, który wyœwietla³by dostêpne pozycje do wype³nienia przez u¿ytkownika, z których potem generowany by³by plik XML.
 
 G³ównymi potencjalnymi problemami by³y operacje na plikach, takie jak wczytywanie i generowanie, które nie s¹ wspierane przez Java2Script. Oprócz tego problemem mog³o siê okazaæ odpowiednie wczytanie zawartoœci schematu XML, gdy¿ nie mo¿na by³o skorzystaæ z zewnêtrznych bibliotek, które by to u³atwia³y. Powodem tego by³ brak mo¿liwoœci do³¹czenia takich bibliotek w taki sposób, by Java2Script móg³ je za³adowaæ.
 
-		\item Etap weryfikacji
-		
-		Projekt przeszed³ pozytywnie etap weryfikacji z uwagi na realn¹ mo¿liwoœæ stworzenia aplikacji, której celem by³oby skonstruowanie dokumentu prawnego w postaci pliku XML.
+		\item Etap weryfikacji:
+		projekt przeszed³ pozytywnie etap weryfikacji z uwagi na realn¹ mo¿liwoœæ stworzenia aplikacji, której celem by³oby skonstruowanie dokumentu prawnego w postaci pliku XML.
 		
 Projekt zak³ada jedynie generowanie takiego pliku, nie jego modyfikacjê. Kolejnym za³o¿eniem jest brak generowania samego pliku XML, a jedynie wyœwietlenie jego zawartoœci w aplikacji. Oba za³o¿enia wynikaj¹ z braku mo¿liwoœci operacji na plikach, które nie s¹ wspierane przez wtyczkê Java2Script.
 
 	\end{enumerate}
-	\item Planowanie
-	
+	\item Planowanie \hfill \\
 	Aby osi¹gn¹æ cel, nale¿a³o wykonaæ trzy podstawowe podzadania. Nale¿a³y do nich: 
 \begin{inparaenum}[\itshape a\upshape)]
 	\item wczytanie schematu XML, który jest odpowiedzialny za dobrze sformatowany plik XML;
@@ -58,24 +55,22 @@ Projekt zak³ada jedynie generowanie takiego pliku, nie jego modyfikacjê. Kolejny
 \end{inparaenum}	
 	
 	\item Wykonanie planu projektu
-	\begin{enumerate}
-		\item	Organizacja kamieni milowych
-		
-		Pierwsza iteracja zajê³a spor¹ czêœæ czasu, przeznaczonego na wykonanie projektu, st¹d zosta³ jedynie miesi¹c na wykonanie drugiego planu. 
+	\begin{enumerate}[leftmargin=0.3cm]
+		\item	Organizacja kamieni milowych:
+		pierwsza iteracja zajê³a spor¹ czêœæ czasu, przeznaczonego na wykonanie projektu, st¹d zosta³ jedynie miesi¹c na wykonanie drugiego planu. 
 		
 		Organizacja harmonogramu wygl¹da³a nastêpuj¹co: najwiêcej czasu -- ok. 2 tygodnie -- zosta³o przeznaczone na pierwsze dwa podzadania, jakimi by³y wczytanie schematu XML oraz jego odpowiednia konwersja. Kolejny tydzieñ zosta³ przewidziany na zbudowanie interfejsu i generatora zawartoœci pliku XML. Ostatni tydzieñ zosta³ przeznaczony na testowanie oraz dokumentacjê.
 	
-		\item Wprowadzenie planu w ¿ycie
+		\item Wprowadzenie planu w ¿ycie:
+		plan zak³ada³ pocz¹tkowo skupienie siê na odpowiednim wczytaniu danych z pliku \texttt{schema.xsd}. Pocz¹tkowo ³adowanie znaczników odbywa³o siê za pomoc¹ rzêdu instrukcji \texttt{if/else} i sprawdzano, czy w danej linii wyst¹pi³o dane s³owo kluczowe. Jednak po bardzo szybkim wzroœcie liczby linii kodu oraz ogólnym jego zaciemnieniu, zdecydowano, ¿e lepszym rozwi¹zaniem bêdzie wywo³ywanie zdarzenia na podstawie znacznika z nim zwi¹zanego, które nastêpnie ma zostaæ obs³u¿one. Metoda ta nosi nazwê SAX (Simple API to XML) i jest opisana w punkcie ~\ref{sax}.
 		
-		Plan zak³ada³ pocz¹tkowo skupienie siê na odpowiednim wczytaniu danych z pliku \texttt{schema.xsd}. Pocz¹tkowo ³adowanie znaczników odbywa³o siê za pomoc¹ rzêdu instrukcji \texttt{if/else} i sprawdzano, czy w danej linii wyst¹pi³o dane s³owo kluczowe. Jednak po bardzo szybkim wzroœcie liczby linii kodu oraz ogólnym jego zaciemnieniu, zdecydowano, ¿e lepszym rozwi¹zaniem bêdzie wywo³ywanie na podstawie znacznika danego zdarzenia z nim zwi¹zanego, które nastêpnie ma zostaæ obs³u¿one. Metoda ta nosi nazwê SAX (Simple API to XML) i jest opisana w punkcie ~\ref{sax}.
+		G³ównym celem wczytywania danych by³o utworzenie konkretnych obiektów XML wed³ug znaczników z nimi zwi¹zanych. Poniewa¿ schemat XML zawiera wiele zagnie¿d¿eñ znaczników, a zawartoœæ jest przetwarzana linia po linii, st¹d wynik³a potrzeba pamiêtania znacznika nadrzêdnego, do którego nale¿¹ znaczniki potomne w danej chwili przetwarzane. Rozwi¹zaniem tego problemu by³o zastosowanie wbudowanej w jêzyku Java kolekcji \texttt{Stack}. Wywo³ana obs³uga zdarzenia mog³a mieæ jedn¹ z trzech mo¿liwoœci: stworzyæ obiekt rodzica i do³o¿yæ go na wierzch stosu, stworzyæ obiekt dziecka, od³o¿yæ obiekt ze stosu, do³¹czyæ do niego dziecko i do³o¿yæ obiekt rodzica z powrotem na stos, a przy znacznikach zamykaj¹cych od³o¿yæ obiekt ze stosu i dodaæ do rodzica lub rejstru.
 		
-		G³ównym celem wczytywania danych by³o utworzenie konkretnych obiektów XML wed³ug znaczników z nimi zwi¹zanych. Poniewa¿ taki Schemat XML zawiera wiele zagnie¿d¿eñ znaczników, a zawartoœæ jest przetwarzana linia po linii, st¹d wynik³a potrzeba pamiêtania znacznika nadrzêdnego, do którego nale¿¹ znaczniki potomne w danej chwili przetwarzane. Rozwi¹zaniem tego problemu by³o zastosowanie wbudowanej w jêzyku Java kolekcji \texttt{stos}. Wywo³ana obs³uga zdarzenia mog³a mieæ jedn¹ z trzech mo¿liwoœci: stworzyæ obiekt rodzica i wrzuciæ do³o¿yæ go na wierzch stosu, stworzyæ obiekt dziecka, od³o¿yæ obiekt ze stosu, do³¹czyæ do niego dziecko i do³o¿yæ obiekt rodzica z powrotem na stos, a przy znacznikach zamykaj¹cych od³o¿yæ obiekt ze stosu i dodaæ do rodzica lub rejstru.
-		
-		Istniej¹ trzy rejestry, których rol¹ jest zapamiêtanie konkretnych obiektów wed³ug ich nazw. Poniewa¿ wczytywanie zawartoœci linia po linii niesie ze sob¹ konsekwencjê nie pamiêtania tego, co siê dzieje wczeœniej, ani przewidywania, co siê stanie póŸniej, nale¿a³o wymyœliæ sposób, aby te informacje zapamiêtaæ w programie. Rejetry mog³y przechowywaæ dane o elementach struktury (znacznikach), ich atrybutach oraz typach. Z powodu licznych referencji do obiektów, których definicje znajdowa³y siê w ró¿nych miejscach w dokumencie \texttt{schema.xsd}, rejestry pozwala³y odtworzyæ póŸniej tak¹ strukturê. Odbywa³o siê to dziêki temu, ¿e z rejestru mo¿na by³o pobraæ obiekt definicji po jego nazwie. Gdy pojawi³ siê znacznik, mówi¹cy o referencji (deklaracji) do innego obiektu, konstruowana by³a jedynie namiastka o danej nazwie, a po wczytaniu ca³ego pliku, namiastki te by³y uzupe³niane, wczytuj¹c obiekt z rejestru.
+		Istniej¹ trzy rejestry, których rol¹ jest zapamiêtanie konkretnych obiektów wed³ug ich nazw. Rejetry mog³y przechowywaæ dane o elementach struktury (znacznikach), ich atrybutach oraz typach. Z powodu licznych referencji do obiektów, których definicje znajdowa³y siê w ró¿nych miejscach w dokumencie \texttt{schema.xsd}, rejestry pozwala³y odtworzyæ póŸniej tak¹ strukturê. Odbywa³o siê to dziêki temu, ¿e z rejestru mo¿na by³o pobraæ obiekt definicji po jego nazwie. Gdy pojawi³ siê znacznik, mówi¹cy o referencji do innego obiektu (deklaruj¹cy jego wyst¹pienie), konstruowana by³a jedynie namiastka o danej nazwie, a po wczytaniu ca³ego pliku, namiastki te by³y uzupe³niane, wczytuj¹c obiekt z rejestru.
 		
 		Zastosowane podejœcie mia³o tê wadê, ¿e uzupe³nienie namiastek musia³o zostaæ ograniczone do iloœci poziomów, poniewa¿ pewne elementy struktury (np. litera, punkt, tiret), mog³y zawieraæ w sobie referencje do samych siebie, co powodowa³o nieskoñczony poziom zagnie¿d¿enia. Wynikaj¹ce trudnoœci zosta³y obs³u¿one przez wprowadzenie maksymalnego poziomu zagnie¿d¿enia takiego drzewa. 
 		
-		Podczas wczytywania Schematu XML generowane by³y zdarzenia, które nastêpnie mia³y metody je obs³uguj¹ce. Generowanie zdarzenia odbywa³o siê na podstawie s³ów kluczowych, zawartych w jednej linii dokumentu \texttt{schema.xsd}. Jeœli dane s³owa kluczowe zosta³y zawarte we wczytywanej linii, zwracano idektyfikator zdarzenia, a nastêpnie wed³ug wartoœci identyfikatora by³a wybierana metoda do jego obs³ugi.
+		Podczas wczytywania Schematu XML generowane by³y zdarzenia, które nastêpnie by³y obs³ugiwane przez konkretne metody. Generowanie zdarzenia odbywa³o siê na podstawie s³ów kluczowych, zawartych w jednej linii dokumentu \texttt{schema.xsd}. Jeœli dane s³owa kluczowe zosta³y zawarte we wczytywanej linii, zwracano idektyfikator zdarzenia, a nastêpnie wed³ug wartoœci identyfikatora by³a wybierana metoda do jego obs³ugi.
 		
 		Trzeba wspomnieæ, ¿e tego rodzaju parser jest ju¿ z powodzeniem zaimplementowany na platformê Java, jednak w przypadku ActEditor nie móg³ zostaæ u¿yty. Powodem by³ brak mo¿liwoœci do³¹czenia do projektu plików \texttt{.jar}, poniewa¿ ich import nie jest wspierany przez technologiê Java2Script. Przyczyny takiego stanu rzeczy bêd¹ opisane w rozdziale {podsumowanie}. Zapad³a wiêc decyzja skonstruowania w³asnego parsera dokumentu XML, który móg³by wczytaæ jego zawartoœæ do pamiêci programu. Poniewa¿ uniwersalny procesor przetwarzaj¹cy dokumenty XML jest bardzo rozbudowany, w przypadku ActEditor obs³ugiwa³ on tylko niektóre elementy, a ca³oœæ by³a okrojona i dostosowana do zawartoœci pliku \texttt{schema.xsd}. 
 		
@@ -92,54 +87,43 @@ Projekt zak³ada jedynie generowanie takiego pliku, nie jego modyfikacjê. Kolejny
 			\item[-] nieœcis³oœci w strukturze Schematu XML utrudniaj¹ jego wczytanie,
 			\item[-] automatyzacja wyœwietlania formularzy wzglêdem wczytanej zawartoœci Schematu XML jest bardzo trudna, ze wzglêdu na konstrukcjê takiego schematu.
 		\end{itemize}
-		
 	\end{enumerate}
 \end{enumerate}
 \section{Trzecia iteracja -- LawCreator}
-\begin{enumerate}
+\begin{enumerate}[leftmargin=0.5cm]
 	\item	Definiowanie projektu
-	\begin{enumerate}
-		\item Etap inicjowania projektu
-		
-		Ostateczna wersja aplikacji dotyczy³a zbudowania aplikacji do generowania aktu prawnego, jakim jest uchwa³a.
+	\begin{enumerate}[leftmargin=0.3cm]
+		\item Etap inicjowania projektu:
+		ostateczna wersja aplikacji dotyczy³a zbudowania aplikacji do generowania aktu prawnego, jakim jest uchwa³a.
 
-		\item Etap definiowania celu
-		
-		Aplikacja LawCreator jest okrojon¹ wersj¹ serwisu ActEditor, która pozwala na wygenerowanie uchwa³y w postaci zawartoœci dokumentu XML. Konstruowanie takiego aktu opiera siê o zasady i regu³y, opisane w \texttt{schema.xsd}.
+		\item Etap definiowania celu:
+		aplikacja LawCreator jest okrojon¹ wersj¹ serwisu ActEditor, która pozwala na wygenerowanie uchwa³y w postaci zawartoœci dokumentu XML. Konstruowanie takiego aktu opiera siê o zasady i regu³y, opisane w \texttt{schema.xsd}.
 		
 		G³ównym potencjalnym problemem by³o ograniczenie czasowe, którego przyczyn¹ by³y narzuty czasowe, powsta³e w poprzednich iteracjach.
 
-		\item Etap weryfikacji
-		
-		Projekt przeszed³ pozytywnie etap weryfikacji z uwagi na to, ¿e czêœæ programu zosta³a ju¿ zaimplementowana w poprzedniej iteracji, a zmiana podejœcia do tematu generowania aktów prawnych, czyli skupienie siê na skonstruowaniu edytora do tylko jednego rodzaju takiego aktu, jakim by³a uchwa³a, mia³a na celu przyspieszenie prac i zakoñczenie sukcesem ca³ego projektu.
+		\item Etap weryfikacji:
+		projekt przeszed³ pozytywnie etap weryfikacji z uwagi na to, ¿e czêœæ programu zosta³a ju¿ zaimplementowana w poprzedniej iteracji, a zmiana podejœcia do tematu generowania aktów prawnych, czyli skupienie siê na skonstruowaniu edytora do tylko jednego rodzaju takiego aktu, jakim by³a uchwa³a, mia³a na celu przyspieszenie prac i zakoñczenie sukcesem ca³ego projektu.
 
 	\end{enumerate}
-	\item Planowanie
-	
+	\item Planowanie \hfill \\
 	Ostateczna wersja wymagañ zosta³a zamieszczona w punkcie ~\ref{wymagania}. Podzia³ projektu na podzadania wygl¹da³ nastêpuj¹co -- nale¿a³o zbudowaæ makietê interfejsu u¿ytkownika aplikacji, która u³atwia³aby nawigowanie po jej funkcjach, zbudowaæ formularze dla konkretnych elementów ustawy oraz zaimplementowaæ parser, który wczytane dane z formularzy przekonwertowa³by na dokument XML.
 	
 	\item Wykonanie planu projektu
-	\begin{enumerate}
-		\item	Organizacja kamieni milowych
-		
-		Z uwagi na ograniczenia czasowe, nie zdecydowano siê na okreœlenie konkretnych ram czasowych dla poszczególnych pozadañ, poniewa¿ ka¿de zadanie musia³o zostaæ wykonane najszybciej, jak by³o to mo¿liwe.
+	\begin{enumerate}[leftmargin=0.3cm]
+		\item	Organizacja kamieni milowych:
+		z uwagi na ograniczenia czasowe, nie zdecydowano siê na okreœlenie konkretnych ram czasowych dla poszczególnych pozadañ, poniewa¿ ka¿de zadanie musia³o zostaæ wykonane najszybciej, jak by³o to mo¿liwe.
 	
-		\item Wprowadzenie planu w ¿ycie
+		\item Wprowadzenie planu w ¿ycie:		
+		szczegó³y implementacyjne zosta³y umieszczone w rozdziale~\ref{implementacja}.
 		
-		~\ref{implementacja}
-		
-		\item Przetestowanie aplikacji
-		
-		~\ref{testowanie}
+		\item Przetestowanie aplikacji:		
+		opis metod testowania oraz u¿ytych do tego technologii zosta³ zawarty w rozdziale~\ref{testowanie}.
 		
 	\end{enumerate}
 	
-		
-	
 	\item Zamykanie projektu
-	\begin{enumerate}
-	
-		\item ~\ref{podsumowanie}.	
+	\begin{enumerate}[leftmargin=0.3cm]
+		\item Ocena projektu oraz podsumowanie zosta³y umieszczone w rozdziale~\ref{podsumowanie}.	
 		
 	\end{enumerate}
 \end{enumerate}
