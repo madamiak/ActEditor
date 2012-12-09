@@ -1,1 +1,39 @@
 \chapter{Instrukcja u¿ytkownika}
+Niniejszy dodatek stanowi instrukcjê obs³ugi edytora aktu prawnego -- uchwa³y, o roboczej nazwie LawCreator. Edytor umo¿liwia utworzenie uchwa³y i wygenerowanie jej w postaci dokumentu XML.
+
+Na rys.~\ref{fig:lawcreator} przedstawiony zosta³ interfejs u¿ytkownika aplikacji, który uka¿e siê po uruchomieniu programu (opis wdro¿enia aplikacji zosta³ opisany w dodatku~\ref{sec:wdrozenie}.
+
+\begin{figure}[!htb]
+	\centering
+		\includegraphics[width=0.9\linewidth]{./rys01/zrzut_zaz.png}
+	\caption{Interfejs u¿ytkownika aplikacji LawCreator}
+	\label{fig:lawcreator}
+\end{figure}
+
+G³ówny ekran aplikacji zawiera:
+\begin{itemize}
+	\item[--] drzewo dostêpnych elementów (1),
+	\item[--] opis wybranego elementu (3),
+	\item[--] formularz do wype³nienia elementu (4),
+	\item[--] drzewo elementów uzupe³nionych, które znajd¹ siê w wygenerowanym dokumencie XML,
+	\item[--] przycisk generuj¹cy dokument XML (6).
+\end{itemize}
+	
+\paragraph{1 -- drzewo dostêpnych elementów:}ten kontener zawiera dostêpne znaczniki, które opisane s¹ w schemacie XML. Dziêki temu u¿ytkownik wybiera do wype³nienia tylko te elementy, których u¿ycie jest dozwolone w dokumencie XML, opisuj¹cym ustawê. U¿ytkownik mo¿e rozwin¹æ element, gdy znajduje siê przy nim znak trójk¹ta. Oznacza to, ¿e dany element mo¿e posiadaæ w swoim ciele elementy potomne, które równie¿ mo¿na wype³niæ.
+\paragraph{2 -- wybrany element:}u¿ytkownik ma mo¿liwoœæ wyboru jednego z elementów drzewa (1) do edycji. Jeœli dany element nie posiada ¿adnych atrybutów do wype³nienia lub nie jest wspierany przez aplikacjê LawEditor, u¿ytkownikowi ukazuje siê specjalne okno dialogowe o tym informuj¹ce (~\ref{fig:dialog}).
+\begin{figure}[!htb]
+	\centering
+		\includegraphics[width=0.9\linewidth]{./rys01/dialog.png}
+	\caption{Okno dialogowe}
+	\label{fig:dialog}
+\end{figure}
+\paragraph{3 -- opis elementu:}po wyborze elementu z drzewa (1) w tym polu zostaje wyœwietlony opis tego elementu.
+\paragraph{4 -- formularz:}po wyborze elementu z drzewa (1) u¿ytkownikowi ukazuje siê formularz, zawieraj¹cy pola do wype³nienia. Po wprowadzeniu odpowiednich wartoœci w formularzu, u¿ytkownik zatwierdza je naciskaj¹c przycisk "`Zapisz"'.
+\paragraph{5 -- drzewo zapisanych elementów:}po zapisaniu formularza (4) do tego drzewa dodawany jest wype³niony element. Aby powróciæ do jego edycji, nale¿y wybraæ odpowiedni¹ pozycjê z tego drzewa, a formularz z wczeœniej wype³nionymi danymi znowu uka¿e siê w polu (4).
+\paragraph{6 -- generowanie dokumentu XML:}po naciœniêciu przycisku "`Generuj XML"' u¿ytkownikowi ukazuje siê okno aplikacji (~\ref{fig:xml}), zawieraj¹ce treœæ dokumentu XML wygenerowanego na podstawie wczeœniej wype³nionych informacji.
+\begin{figure}[t]
+	\centering
+		\includegraphics[width=0.9\linewidth]{./rys01/xml.png}
+	\caption{Wygenerowany dokument XML}
+	\label{fig:xml}
+\end{figure}

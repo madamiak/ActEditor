@@ -1,4 +1,117 @@
 \chapter{Testowanie}
 \label{testowanie}
 \section{Testy jednostkowe}
-Testy jednostkowe zosta³y napisane przy u¿yciu technologii JUnit. 
+
+\begin{wrapfigure}{r}{0.45\textwidth}
+  \begin{center}
+    \includegraphics[width=0.4\textwidth]{./rys01/tests.png}
+  \end{center}
+	\label{fig:tests}
+  \caption{Wykonane testy jednostkowe}
+\end{wrapfigure}
+Testy jednostkowe zosta³y napisane przy u¿yciu technologii JUnit, wymienionej w rozdziale~\ref{sec:technologie}.
+
+Test jednostkowy (ang.\ \emph{unit test}) pozwala na zweryfikowanie poprawnoœci dzia³ania pojedynczych elementów programu. Strukturê testu mo¿na podzieliæ na 3 czêœci:
+\begin{itemize}
+	\item[--] inicjalizacja parametrów (\emph{given}),
+	\item[--] wykonanie metody poddanej testowi (\emph{when}),
+	\item[--] porównanie wyniku dzia³ania metody z wynikiem oczekiwanym (\emph{then}).
+\end{itemize}
+G³ówn¹ zalet¹ testów jednostkowych jest mo¿liwoœæ szybkiego wychwycenia b³êdów w aktualnie modyfikowanych elementach programu, zanim wprowadzi siê go do programu. Inn¹ cech¹ testów jest to, ¿e mog¹ one byæ równie¿ form¹ specyfikacji - programista mo¿e wyczytaæ z testów, do czego s³u¿y dana metoda, poprzez wprawdzenie jej oczekiwanego dzia³ania.
+
+Przyk³adowy test aplikacji LawCreator przedstawia listing~\ref{lis:test}. Testuje on metodê \texttt{toXML()}, która zwraca ³añcuch znaków, zawieraj¹cy drzewo aktu prawnego w formacie XML. Adnotacja \texttt{@Test} jest znakiem dla frameworku JUnit, ¿e dana metoda testowa ma siê wykonaæ. W wypadku braku tej adnotacji lub zast¹pieniu jej adnotacj¹ \texttt{@Ignore} nie zostanie ona wykonana. W pierwszej czêœci (linie 4-23) oznaczonej komentarzem \texttt{given} nastêpuje inicjalizacja wêz³ów potomnych wraz z wartoœciami oraz atrybutów wêz³ów i ich wartoœciami. W kolejnej sekcji \texttt{when} wywo³ywana jest testowana funkcja, a nastêpnie sprawdzane jest, czy zwróci³a ona poprawny ³añcuch znaków.
+
+\begin{lstlisting}[language=JAVA,firstnumber=65,label=lis:test,caption=Testowanie metody toXML()]
+@Test
+public void gettingXMLTest() {
+	\\ given
+	Attribute att1 = new Attribute();
+	att1.setName("att1");
+	att1.setValue("v1");
+	Attribute att2 = new Attribute();
+	att2.setName("att2");
+	att2.setValue("v2");
+	Attribute att3 = new Attribute();
+	att3.setName("att3");
+	att3.setValue("v3");
+	Node child1 = new Node();
+	child1.setName("ch1");
+	child1.setValue("v1");
+	child1.addAttribute(att1);
+	Node child2 = new Node();
+	child2.setName("ch2");
+	child2.setValue("v2");
+	child2.addAttribute(att2);
+	node.addAttribute(att3);
+	node.addNote(child1);
+	node.addNote(child2);
+	
+	\\ when
+	String xml = node.toXML();
+
+	\\ then
+	assertTrue(xml.contains("<ch1 att1=\"v1\">\nv1\n</ch1>\n<ch2 att2=\"v2\">\nv2\n</ch2>"));
+}
+\end{lstlisting}
+
+\section{Testy akceptacyjne}
+Ten rodzaj testów, w odró¿nieniu od testów jednostkowych, nie stawia sobie za cel wykrycia b³êdów. Celem testów akceptacyjnych jest uzyskanie formalnego potwierdzenia, czy wykonane oprogramowanie jest odpowiedniej jakoœci. S¹ one udokumentowaniem wartoœci danych, otrzymanych na wejœciu i powi¹zanych z nimi wartoœci na wyjœciu. Opisuj¹ zestawy poprawnych odpowiedzi na podawane dane wejœciowe.
+
+\subsection{Przyk³adowy test akceptacyjny aplikacji LawCreator}
+
+W tym podrozdziale zosta³ przedstawiony przyk³adowy test akceptacyjny serwisu LawCreator. Zosta³ w nim opisany scenariusz, wed³ug którego nale¿a³o postêpowaæ, a tak¿e przedstawiony zosta³ oczekiwany wynik po wykonaniu wszystkich operacji. Nastêpnie zosta³y szczegó³owo przedstawione przypadki testowe, zawarte w scenariuszu.
+
+\paragraph{Cel scenariusza:} Utworzenie nowego aktu prawnego.
+\paragraph{Opis scenariusza:}
+\begin{enumerate}
+	\item Uruchomienie programu
+	\item Wype³nienie i zapis elementu "`Metryka"'
+	\item Wype³nienie i zapis elementu "`Akapit"'
+	\item Ponowne wype³nienie i zapis elementu "`Akapit"'
+	\item Wybór "`Generuj XML"'
+\end{enumerate}
+\paragraph{Oczekiwane wyniki:} Treœæ dokumentu XML (~\ref{lis:xml}).
+\begin{lstlisting}[language=XML,label=lis:xml,caption=Oczekiwana treœæ dokumentu XML]
+<?xml version="1.0" encoding="UTF-8"?>
+<uchwala xmlns="http://www.crd.gov.pl/xml/schematy/edap/2010/01/02" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.crd.gov.pl/xml/schematy/edap /2010/01/02 http://crd.gov.pl/xml/schematy/edap/2010/01/02/ schemat.xsd">
+<metryczka status-aktu="uchwalony">
+</metryczka>
+<akapit obowiazuje-od="2012-12-12">
+To jest treœæ elementu "Akapit"
+</akapit>
+</uchwala>
+\end{lstlisting}
+\paragraph{Przypadek testowy nr 1} Uruchomienie programu \\
+Dane wejœciowe: brak.\\
+Oczekiwany wynik: U¿ytkownikowi ma ukazaæ siê g³ówne okno aplikacji.\\
+Uzyskany wynik: U¿ytkownikowi ukazuje siê g³ówne okno aplikacji.\\
+Uwagi: brak.
+\paragraph{Przypadek testowy nr 2} Wype³nienie i zapis elementu "`Metryka"'. \\
+Dane wejœciowe: Pole "`Status aktu"' ustawione na "`Uchylony"'.\\
+Oczekiwany wynik: Element ma zostaæ dodany do drzewa po prawej stronie.\\
+Uzyskany wynik: Element zosta³ poprawnie dodany do drzewa.\\
+Uwagi: brak
+\paragraph{Przypadek testowy nr 3} Wype³nienie i zapis elementu "`Akapit"'. \\
+Dane wejœciowe: W pole "`Obowi¹zuje od"' wpisane "`12.12.2012"', a w "`Treœæ elementu"' wpisany tekst "`To jest treœæ elementu "`Akapit"'"'.\\
+Oczekiwany wynik: U¿ytkownikowi ma ukazaæ siê okno dialogowe, informuj¹ce o Ÿle wype³nionym polu "`Obowi¹zuje od"'.\\
+Uzyskany wynik: U¿ytkownikowi ukazuje siê oczekiwane okno dialogowe.\\
+Uwagi: brak.
+\paragraph{Przypadek testowy nr 4} Ponowne wype³nienie i zapis elementu "`Akapit"'.\\
+Dane wejœciowe: W pole "`Obowi¹zuje od"' wpisane "`2012-12-12"'.\\
+Oczekiwany wynik: Element ma zostaæ dodany do drzewa po prawej stronie.\\
+Uzyskany wynik: Element zosta³ poprawnie dodany do drzewa.\\
+Uwagi: brak.
+\paragraph{Przypadek testowy nr 5} Wybór "`Generuj XML"'.\\
+Dane wejœciowe: brak.\\
+Oczekiwany wynik: U¿ytkonikowi ma ukazaæ siê okno, zawieraj¹ce treœæ dokumentu XML (~\ref{lis:xml}).\\
+Uzyskany wynik: U¿ytkownikowi ukazuje siê okno zawieraj¹ce treœæ dokumentu XML.\\
+Uwagi: W pewnych miejscach (np. po atrybucie \texttt{status-aktu}) wystêpuj¹ bia³e znaki.
+
+\section{Testy funkcjonalne}
+Testy funkcjonalne czêsto opisywane s¹ jako testy czarnej skrzynki. Tester nie ma wgl¹du do Ÿróde³, nie zna te¿ struktury aplikacji. Ma dostêp jedynie do interfejsu u¿ytkownika.
+
+Tego typu testy polegaj¹ na sprawdzeniu poprawnoœci dzia³ania aplikacji zgodnie z ustalonymi wczeœniej wymaganiami. Inaczej mówi¹c - testy sprawdzaj¹, czy oprogramowanie im poddane dzia³a w oczekiwany sposób. Testy czarnej skrzynki posiadaj¹ du¿¹ szansê wykrycia b³êdów w oprogramowaniu, jednak nie dostarczaj¹ zwykle dok³adnej informacji i przyczynie tych b³êdów.
+
+W testowaniu funkcjonalnym aplikacji opartych na SWT pomaga biblioteka SWTBot. Udostêpnia ona API, które ukrywa skomplikowane mechanizmy komunikacji z SWT, a pozwala na prost¹ ich obs³ugê. Narzêdzie umo¿liwia nagranie tego, co ma siê wykonaæ na ekranie aplikacji, a nastêpnie zostaje to odtwarzane podczas testów. SWTBot pomaga przede wszystkim zautomatyzowaæ testy funkcjonalne -- mo¿na nagraæ wiele scenariuszy, które nastêpnie automatycznie bêd¹ siê uruchamiaæ. Nie ma wtedy potrzeby, by jakiœ tester wykonywa³ wci¹¿ te same czynnoœci, które mo¿na zautomatyzowaæ.
+
+Testy z u¿yciem tego narzêdzia mia³y byæ czêœci¹ projektu LawCreator, jednak problemy odpowiednim ustawieniem tej biblioteki tak, aby mog³a odtwarzaæ nagrane zachowania, uniemo¿liwi³y wykonania tak zautomatyzowanych testów funkcjonalnych. Warto jednak podkreœliæ, ¿e samo narzêdzie jest bardzo przydatne i jest jednym z najlepszych -- oferowanych na rynku -- narzêdzi do testowania aplikacji opartych na SWT.

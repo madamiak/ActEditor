@@ -1,42 +1,58 @@
-\begin{thebibliography}{DOM}
+\begin{thebibliography}{10}
 
-\bibitem[DOM]{DOM}
-http://www.brainbell.com/tutorials/xml/how\_the\_dom\_works.htm.
+\bibitem{EDAP10}
+{EDAP - Elektroniczna forma akt\'{o}w prawnych}.
+\newblock
+  \url{http://bip.msw.gov.pl/portal/bip/185/18658/Edytor_Aktow_Prawnych_EDAP__wersja_z_dnia_31_marca_2010_r.html}.
 
-\bibitem[EDA]{EDAP10}
-http://bip.msw.gov.pl/portal/bip/185/18658/edytor\_aktow\_prawnych\_edap\_\_wersja\_z\_dnia\_31\_marca\_2010\_r.html.
+\bibitem{SCHEMA}
+{Plik \'{z}r\'{o}d\l{}owy schemat.xsd}.
+\newblock \url{http://crd.gov.pl/xml/schematy/edap/2010/01/02/schemat.xsd}.
 
-\bibitem[J2Sa]{J2S}
-http://j2s.sourceforge.net/.
+\bibitem{J2SSWT}
+{JavaScript version of Eclipse Standard Widget Toolkit(SWT)}.
+\newblock \url{http://j2s.sourceforge.net/overview.html#j2s-swt}.
 
-\bibitem[J2Sb]{J2SOOP}
-http://j2s.sourceforge.net/articles/oop-in-js-by-j2s.html.
+\bibitem{SWTFAQ}
+{FAQ: Is SWT better than Swing?}
+\newblock \url{http://wiki.eclipse.org/FAQ_Is_SWT_better_than_Swing%3F}.
 
-\bibitem[J2Sc]{J2SSup}
-http://j2s.sourceforge.net/document.html.
+\bibitem{J2SFeatures}
+{Java2Script Features}.
+\newblock \url{http://j2s.sourceforge.net/overview.html#j2s-features}.
 
-\bibitem[J2Sd]{J2SFeatures}
-http://j2s.sourceforge.net/overview.html\#j2s-features.
+\bibitem{J2S}
+{Java2Script (J2S) Pacemaker}.
+\newblock \url{http://j2s.sourceforge.net/}.
 
-\bibitem[J2Se]{J2SSWT}
-http://j2s.sourceforge.net/overview.html\#j2s-swt.
+\bibitem{J2SOOP}
+{Object Oriented Programming in JavaScript by Java2Script(Draft)}.
+\newblock \url{http://j2s.sourceforge.net/articles/oop-in-js-by-j2s.html}.
 
-\bibitem[PLO]{PLOUG2003}
-http://www.ia.pw.edu.pl/\~ttraczyk/pdf/ploug2003\_art.pdf.
+\bibitem{J2SSup}
+{Java2Script - Document}.
+\newblock \url{http://j2s.sourceforge.net/document.html}.
 
-\bibitem[SAX]{SAX}
-http://www.sqlmag.com/article/xml/how-sax-works.
+\bibitem{XMLWik}
+{XML}.
+\newblock \url{http://pl.wikipedia.org/wiki/XML}.
 
-\bibitem[SCH]{SCHEMA}
-http://crd.gov.pl/xml/schematy/edap/2010/01/02/schemat.xsd.
+\bibitem{PLOUG2003}
+Tomasz Traczyk.
+\newblock {XML: stan obecny i trendy rozwojowe}.
+\newblock \url{http://www.ia.pw.edu.pl/~ttraczyk/pdf/ploug2003_art.pdf}.
 
-\bibitem[SWT]{SWTFAQ}
-http://wiki.eclipse.org/faq\_is\_swt\_better\_than\_swing%3f.
+\bibitem{Traczyk}
+Tomasz Traczyk.
+\newblock {Schematy XML}.
+\newblock \url{http://www.ploug.org.pl/konf_01/materialy/pdf/traczyk.pdf}.
 
-\bibitem[Tra]{Traczyk}
-http://www.ploug.org.pl/konf\_01/materialy/pdf/traczyk.pdf.
+\bibitem{DOM}
+{Parsing XML with the DOM}.
+\newblock \url{http://www.brainbell.com/tutorials/XML/How_The_DOM_Works.htm}.
 
-\bibitem[XML]{XMLWik}
-http://pl.wikipedia.org/wiki/xml.
+\bibitem{SAX}
+{How SAX Works}.
+\newblock \url{http://www.sqlmag.com/article/xml/how-sax-works}.
 
 \end{thebibliography}

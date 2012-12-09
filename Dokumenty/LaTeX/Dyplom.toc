@@ -1,45 +1,69 @@
 \select@language {polish}
 \contentsline {chapter}{\chapternumberline {1}Wst\k ep}{5}{chapter.1}
 \contentsline {section}{\numberline {1.1}Cel i zakres projektu}{6}{section.1.1}
-\contentsline {chapter}{\chapternumberline {2}Wymagania projektowe}{7}{chapter.2}
+\contentsline {chapter}{\chapternumberline {2}Za\IeC {\l }o\.zenia projektowe}{7}{chapter.2}
 \contentsline {section}{\numberline {2.1}Wymagania funkcjonalne}{7}{section.2.1}
-\contentsline {subsection}{\numberline {2.1.1}Wyb\'or aktu prawnego}{7}{subsection.2.1.1}
+\contentsline {subsection}{\numberline {2.1.1}Wyb\'or aktu prawnego}{8}{subsection.2.1.1}
 \contentsline {subsection}{\numberline {2.1.2}Edycja aktu prawnego}{8}{subsection.2.1.2}
-\contentsline {subsection}{\numberline {2.1.3}Generowanie zawarto\'sci pliku XML}{8}{subsection.2.1.3}
+\contentsline {subsection}{\numberline {2.1.3}Generowanie zawarto\'sci pliku XML}{9}{subsection.2.1.3}
 \contentsline {section}{\numberline {2.2}Wymagania niefunkcjonalne}{9}{section.2.2}
 \contentsline {subsection}{\numberline {2.2.1}\'Srodowisko pracy systemu}{9}{subsection.2.2.1}
 \contentsline {subsection}{\numberline {2.2.2}Wykorzystywane technologie}{9}{subsection.2.2.2}
-\contentsline {paragraph}{Java}{9}{section*.2}
-\contentsline {paragraph}{SWT}{9}{section*.3}
-\contentsline {paragraph}{Java2Script}{10}{section*.4}
-\contentsline {paragraph}{JavaScript}{10}{section*.5}
-\contentsline {paragraph}{HTML}{10}{section*.6}
-\contentsline {paragraph}{XML, XML Schema}{10}{section*.7}
-\contentsline {paragraph}{Eclipse IDE}{10}{section*.8}
-\contentsline {section}{\numberline {2.3}Cykl \.zycia projektu}{10}{section.2.3}
-\contentsline {chapter}{\chapternumberline {3}Java2Script}{12}{chapter.3}
-\contentsline {section}{\numberline {3.1}Analiza technologii}{12}{section.3.1}
+\contentsline {paragraph}{Java}{9}{section*.3}
+\contentsline {paragraph}{SWT}{10}{section*.4}
+\contentsline {paragraph}{Java2Script}{10}{section*.5}
+\contentsline {paragraph}{JavaScript}{10}{section*.6}
+\contentsline {paragraph}{HTML}{10}{section*.7}
+\contentsline {paragraph}{XML, XML Schema}{10}{section*.8}
+\contentsline {paragraph}{Eclipse IDE}{10}{section*.9}
+\contentsline {paragraph}{JUnit}{10}{section*.10}
+\contentsline {paragraph}{Visual Paradigm}{11}{section*.11}
+\contentsline {paragraph}{Microsoft Visio}{11}{section*.12}
+\contentsline {section}{\numberline {2.3}Cykl \.zycia projektu}{11}{section.2.3}
+\contentsline {chapter}{\chapternumberline {3}Java2Script}{13}{chapter.3}
+\contentsline {section}{\numberline {3.1}Analiza technologii}{13}{section.3.1}
 \contentsline {section}{\numberline {3.2}Zasada dzia\IeC {\l }ania}{13}{section.3.2}
-\contentsline {section}{\numberline {3.3}Java2Script a Java}{13}{section.3.3}
-\contentsline {section}{\numberline {3.4}System dziedziczenia w zanurzonym JavaScript}{13}{section.3.4}
-\contentsline {section}{\numberline {3.5}Przegl\k ad istniej\k acych serwis\'ow, w kt\'orych wykorzystano Java2Script}{15}{section.3.5}
-\contentsline {paragraph}{Karoo Lark Web Messenger}{15}{section*.9}
-\contentsline {paragraph}{Lemon Dove Web Mail Client}{16}{section*.10}
-\contentsline {paragraph}{Advanced Image Viewer}{16}{section*.11}
-\contentsline {chapter}{\chapternumberline {4}XML i Schemat XML}{18}{chapter.4}
-\contentsline {section}{\numberline {4.1}XML}{18}{section.4.1}
-\contentsline {section}{\numberline {4.2}Schemat XML}{19}{section.4.2}
-\contentsline {section}{\numberline {4.3}Parsowanie dokument\'ow XML}{19}{section.4.3}
-\contentsline {chapter}{\chapternumberline {5}Opis cyklu \.zycia projektu}{20}{chapter.5}
-\contentsline {section}{\numberline {5.1}Pierwsza iteracja -- wyszukiwarka semantyczna}{20}{section.5.1}
-\contentsline {section}{\numberline {5.2}Druga iteracja -- ActEditor}{21}{section.5.2}
-\contentsline {section}{\numberline {5.3}Trzecia iteracja -- LawCreator}{24}{section.5.3}
-\contentsline {chapter}{\chapternumberline {6}Opis implementacji}{26}{chapter.6}
-\contentsline {chapter}{\chapternumberline {7}Testowanie}{29}{chapter.7}
-\contentsline {section}{\numberline {7.1}Testy jednostkowe}{29}{section.7.1}
-\contentsline {chapter}{\chapternumberline {8}Podsumowanie}{30}{chapter.8}
-\contentsline {section}{\numberline {8.1}Ocena projektu}{30}{section.8.1}
-\contentsline {section}{\numberline {8.2}Wnioski}{31}{section.8.2}
-\contentsline {chapter}{Literatura}{33}{section*.13}
-\contentsline {appendix}{\chapternumberline {A}Instrukcja wdro\.zenia}{34}{appendix.A}
-\contentsline {appendix}{\chapternumberline {B}Instrukcja u\.zytkownika}{35}{appendix.B}
+\contentsline {section}{\numberline {3.3}Java2Script a Java}{15}{section.3.3}
+\contentsline {section}{\numberline {3.4}System dziedziczenia w zanurzonym JavaScript}{15}{section.3.4}
+\contentsline {section}{\numberline {3.5}Przegl\k ad istniej\k acych serwis\'ow, w kt\'orych wykorzystano Java2Script}{16}{section.3.5}
+\contentsline {paragraph}{Karoo Lark Web Messenger}{16}{section*.14}
+\contentsline {paragraph}{Lemon Dove Web Mail Client}{16}{section*.18}
+\contentsline {paragraph}{Advanced Image Viewer}{18}{section*.19}
+\contentsline {chapter}{\chapternumberline {4}XML i Schemat XML}{19}{chapter.4}
+\contentsline {section}{\numberline {4.1}XML}{19}{section.4.1}
+\contentsline {section}{\numberline {4.2}Schemat XML}{20}{section.4.2}
+\contentsline {section}{\numberline {4.3}Parsowanie dokument\'ow XML}{20}{section.4.3}
+\contentsline {chapter}{\chapternumberline {5}Opis cyklu \.zycia projektu}{21}{chapter.5}
+\contentsline {section}{\numberline {5.1}Pierwsza iteracja -- wyszukiwarka semantyczna}{21}{section.5.1}
+\contentsline {section}{\numberline {5.2}Druga iteracja -- ActEditor}{22}{section.5.2}
+\contentsline {section}{\numberline {5.3}Trzecia iteracja -- LawCreator}{25}{section.5.3}
+\contentsline {chapter}{\chapternumberline {6}Opis implementacji}{27}{chapter.6}
+\contentsline {chapter}{\chapternumberline {7}Testowanie}{30}{chapter.7}
+\contentsline {section}{\numberline {7.1}Testy jednostkowe}{30}{section.7.1}
+\contentsline {section}{\numberline {7.2}Testy akceptacyjne}{32}{section.7.2}
+\contentsline {subsection}{\numberline {7.2.1}Przyk\IeC {\l }adowy test akceptacyjny aplikacji LawCreator}{32}{subsection.7.2.1}
+\contentsline {paragraph}{Cel scenariusza:}{32}{section*.21}
+\contentsline {paragraph}{Opis scenariusza:}{32}{section*.22}
+\contentsline {paragraph}{Oczekiwane wyniki:}{32}{section*.23}
+\contentsline {paragraph}{Przypadek testowy nr 1}{33}{section*.24}
+\contentsline {paragraph}{Przypadek testowy nr 2}{33}{section*.25}
+\contentsline {paragraph}{Przypadek testowy nr 3}{33}{section*.26}
+\contentsline {paragraph}{Przypadek testowy nr 4}{33}{section*.27}
+\contentsline {paragraph}{Przypadek testowy nr 5}{33}{section*.28}
+\contentsline {section}{\numberline {7.3}Testy funkcjonalne}{34}{section.7.3}
+\contentsline {chapter}{\chapternumberline {8}Podsumowanie}{35}{chapter.8}
+\contentsline {section}{\numberline {8.1}Ocena projektu}{35}{section.8.1}
+\contentsline {section}{\numberline {8.2}Wnioski}{36}{section.8.2}
+\contentsline {chapter}{Literatura}{38}{section*.30}
+\contentsline {appendix}{\chapternumberline {A}Instrukcja wdro\.zenia}{39}{appendix.A}
+\contentsline {section}{\numberline {A.1}Aplikacja desktopowa}{39}{section.A.1}
+\contentsline {subsection}{\numberline {A.1.1}Znane problemy}{39}{subsection.A.1.1}
+\contentsline {paragraph}{Cannot load 32-bit SWT libraries on 64-bit JVM}{39}{section*.31}
+\contentsline {section}{\numberline {A.2}Aplikacja sieciowa}{40}{section.A.2}
+\contentsline {appendix}{\chapternumberline {B}Instrukcja u\.zytkownika}{41}{appendix.B}
+\contentsline {paragraph}{1 -- drzewo dost\k epnych element\'ow:}{42}{section*.33}
+\contentsline {paragraph}{2 -- wybrany element:}{42}{section*.34}
+\contentsline {paragraph}{3 -- opis elementu:}{42}{section*.36}
+\contentsline {paragraph}{4 -- formularz:}{42}{section*.37}
+\contentsline {paragraph}{5 -- drzewo zapisanych element\'ow:}{42}{section*.38}
+\contentsline {paragraph}{6 -- generowanie dokumentu XML:}{43}{section*.39}

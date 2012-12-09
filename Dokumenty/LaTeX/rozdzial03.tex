@@ -7,26 +7,25 @@ G³ównym pomys³odawc¹ i konstruktorem wtyczki jest Zhou Renjian, który od 2005 ro
 
 G³ówne funkcje i w³aœciwoœci J2S \cite{J2SOOP}:
 \begin{itemize}
-	\item [-] Polimorfizm,
-	\item [-] Dziedziczenie,
-	\item [-] Implementacja interfejsów,
-	\item [-] Zapewnia generowanie klas anonimowych,
-	\item [-] Zapewnia poprawne dzia³anie zmiennych finalnych,
-	\item [-] Zapewnia poprawne dzia³anie typów klas.
+	\item[--] Polimorfizm,
+	\item[--] Dziedziczenie,
+	\item[--] Implementacja interfejsów,
+	\item[--] Zapewnia generowanie klas anonimowych,
+	\item[--] Zapewnia poprawne dzia³anie zmiennych finalnych,
+	\item[--] Zapewnia poprawne dzia³anie typów klas.
 \end{itemize}
 
 \section{Zasada dzia³ania}
-
-Zasadê dzia³ania wtyczki w porównaniu do normalnego kompilatora Java pokazuje rys.~\ref{fig:j2s} Po zainstalowaniu J2S mo¿emy wybraæ, czy chcemy skompilowaæ projekt u¿ywaj¹c standardowego kompilatora, czy kompilatora Java2Script. Gdy wybierzemy tê drug¹ opcjê, J2S utworzy do ka¿dej klasy \texttt{.java} plik \texttt{.js}. Zostanie te¿ wygenerowany plik \texttt{.html} do ka¿dej klasy, posiadaj¹cej metodê \texttt{main()}. Do tego pliku do³¹czony zostaje powsta³y skrypt \texttt{.js}, który w swoim ciele mo¿e ju¿ odwo³ywaæ siê do innych powsta³ych plików Ÿród³owych JavaScript. Plik w formacie HTML otwieramy w przegl¹darce internetowej i korzystamy z funkcjonalnej aplikacji sieciowej jak ze strony internetowej.
+Zasadê dzia³ania wtyczki w porównaniu do normalnego kompilatora Java pokazano na rys.~\ref{fig:j2s}. Po zainstalowaniu J2S mo¿na wybraæ, czy projekt ma byæ kompilowany z u¿yciem standardowego kompilatora, czy kompilatora Java2Script. Po wybraniu drugiej opcji dla ka¿dej klasy \texttt{.java} J2S utworzy plik \texttt{.js}. Zostanie te¿ wygenerowany plik \texttt{.html} dla ka¿dej klasy, posiadaj¹cej metodê \texttt{main()}. Do tego pliku do³¹czony zostanie powsta³y skrypt \texttt{.js}, który w swoim ciele mo¿e odwo³ywaæ siê do innych powsta³ych plików Ÿród³owych JavaScript. Plik w formacie HTML mo¿na otwieraæ w przegl¹darce internetowej, korzystaj¹c z nich jak z pe³ni funkcjonalnej aplikacji sieciowej.
 
 \begin{figure}[!ht]
 		\centering
 			\includegraphics[width=1.0\linewidth]{./rys01/dataflow.jpg}
-		\caption{Zasada dzia³ania Java2Script (opracowanie w³asne)}
+		\caption{Zasada dzia³ania Java2Script}
 		\label{fig:j2s}
 	\end{figure}
 
-Twórca wtyczki ocenia, ¿e dziêki œrodowisku Eclipse z do³¹czon¹ wtyczk¹ J2S mo¿na poprawnie przet³umaczyæ nawet 90\% plików Ÿród³owych Java \cite{J2SOOP}. Niestety wystêpuj¹ pewne rozbie¿noœci, miêdzy tymi dwoma jêzykami, których nie da siê rozwi¹zaæ. U¿ytkownicy wtyczki musz¹ np. pamiêtaæ, ¿e pola statyczne klasy mog¹ nie kompilowaæ siê poprawnie, typy prymitywne: \texttt{char, byte, short, int, long, float, double} s¹ traktowane jako \texttt{Number}, a tak¿e brak jest wsparcia dla w¹tków czy asynchronicznoœci.
+Twórca wtyczki ocenia, ¿e dziêki œrodowisku Eclipse z do³¹czon¹ wtyczk¹ J2S mo¿na poprawnie przet³umaczyæ nawet 90\% plików Ÿród³owych Java \cite{J2SOOP}. Niestety, miêdzy tymi dwoma jêzykami wystêpuj¹ pewne rozbie¿noœci, których nie da siê rozwi¹zaæ. U¿ytkownicy wtyczki musz¹ np.\ pamiêtaæ, ¿e pola statyczne klasy mog¹ nie kompilowaæ siê poprawnie, typy prymitywne: \texttt{char, byte, short, int, long, float, double} s¹ traktowane jako \texttt{Number}, a tak¿e brak jest wsparcia dla w¹tków czy asynchronicznoœci.
 
 \section{Java2Script a Java}
 Bior¹c pod uwagê to, ¿e stosowanie siê do zasad programowania obiektowego, które znamy z platformy Java, w JavaScript jest trudne i frustruj¹ce, autor Java2Script d¹¿y³ do tego, aby móc pisaæ aplikacje w jêzyku w pe³ni wspieraj¹cym OOP, jakim jest Java i u¿yæ go do tworzenia zorientowanych obiektowo skryptów JS.
@@ -37,37 +36,37 @@ Jednak ze wzglêdu na ró¿nice pomiêdzy jêzykiem Java a JavaScript, wyniknê³y pewn
 
 Technologia J2S ma na celu konwersjê klas œrodowiska Java do skryptów JavaScript. Autor wtyczki zaznacza ró¿nice miêdzy podejœciem do programowania obiektowego w przypadku natywnego JavaScript w porównaniu do tego, jak OOP jest realizowane na platformie Java \cite{J2SOOP}. Podstawowe ró¿nice to:
 \begin{itemize}
-	\item brak idei klas i metod abstrakcyjnych,
-	\item idea konstruktorów w JavaScript jest bardzo zaciemniona, chyba ¿e za³o¿ymy, ¿e ka¿da funkcja mo¿e byæ rozpatrywana jako konstruktor,
-	\item metody mog¹ byæ ³atwo przeci¹¿ane bez wsparcia polimorfizmu,
-	\item w przypadku przeci¹¿enia nie ma jednak mo¿liwoœci odwo³ania siê do metody nadrzêdnej,
-	\item brak kontroli nad dostêpem do pól obiektu,
-	\item wystêpowanie bibliotek JavaScript jest rzadkoœci¹,
-	\item JavaScript pozwala na bezpoœredni¹ konwersjê bardzo wielu typów.
+	\item[--] brak idei klas i metod abstrakcyjnych,
+	\item[--] idea konstruktorów w JavaScript jest niejasna, chyba ¿e za³o¿ymy, ¿e ka¿da funkcja mo¿e byæ rozpatrywana jako konstruktor,
+	\item[--] metody mog¹ byæ ³atwo przeci¹¿ane bez wsparcia polimorfizmu,
+	\item[--] w przypadku przeci¹¿enia nie ma jednak mo¿liwoœci odwo³ania siê do metody nadrzêdnej,
+	\item[--] brak kontroli nad dostêpem do pól obiektu,
+	\item[--] wystêpowanie bibliotek JavaScript jest rzadkoœci¹,
+	\item[--] JavaScript pozwala na bezpoœredni¹ konwersjê bardzo wielu typów.
 \end{itemize}
 
 \section{Przegl¹d istniej¹cych serwisów, w których wykorzystano Java2Script}	
 \paragraph{Karoo Lark Web Messenger} \hfill \\
 		\begin{figure}[!htb]
 		\centering
-			\includegraphics[width=1.0\linewidth]{./rys02/karoolark-web-messenger.jpg}
-		\caption{Interfejs u¿ytkownika aplikacji Karoo Lark Web Messenger \newline(http://karoolark.com/images/karoolark-web-messenger.jpg dostêp z dnia 5 grudnia 2012r.)}
+			\includegraphics[width=0.8\linewidth]{./rys02/karoolark-web-messenger.jpg}
+		\caption{Interfejs u¿ytkownika aplikacji Karoo Lark Web Messenger (\url{http://karoolark.com/images/karoolark-web-messenger.jpg} dostêp z dnia 5 grudnia 2012r.)}
 		\label{fig:web_messenger}
 	\end{figure}
 	\begin{figure}[!htb]
 		\centering
-			\includegraphics[width=1.0\linewidth]{./rys03/dove.png}
-		\caption{Interfejs u¿ytkownika aplikacji Lemon Dove Web Mail Client \newline(http://lemondove.com/images/dove.png dostêp z dnia 5 grudnia 2012r.)}
+			\includegraphics[width=0.8\linewidth]{./rys03/dove.png}
+		\caption{Interfejs u¿ytkownika aplikacji Lemon Dove Web Mail Client (\url{http://lemondove.com/images/dove.png} dostêp z dnia 5 grudnia 2012r.)}
 		\label{fig:web_mail}
 	\end{figure}
 	\begin{figure}[!htb]
 		\centering
-			\includegraphics[width=1.0\linewidth]{./rys04/imageViewerScreenshot.png}
-		\caption{Interfejs u¿ytkownika aplikacji Advanced Image Viewer (opracowanie w³asne)}
+			\includegraphics[width=0.7\linewidth]{./rys04/imageViewerScreenshot.png}
+		\caption{Interfejs u¿ytkownika aplikacji Advanced Image Viewer}
 		\label{fig:image_viewer}
 	\end{figure}
-	Rys.~\ref{fig:web_messenger} zawiera zrzut ekranu z interfejsem u¿ytkownika aplikacji. Serwis udostêpnia wersje online s³ynnych komunikatorów, takich jak Facebook Chat, Google Talk czy Windows Live Messenger (MSN). G³ównymi zaletami takiego rozwi¹zania s¹: ³atwoœæ wyboru komunikatorów, których chcemy u¿ywaæ oraz ³atwe prze³¹czanie siê miêdzy nimi. Jednak aplikacja posiada równie¿ inn¹ zaletê. WyobraŸmy sobie sytuacjê, gdy jesteœmy uczniem lub studentem i korzystamy z komputera nale¿¹cego do jednostki edukacyjnej. Niektóre z nich blokuj¹ us³ugi komunikatorów przy u¿yciu zapór ogniowych. Jednak zazwyczaj nie blokuj¹ one stron internetowych, takich jak karoolark.com. Dziêki temu serwisowi mo¿emy bez obaw zalogowaæ siê do interesuj¹cych nas komunikatorów.
+Na rys.~\ref{fig:web_messenger} pokazano zrzut ekranu z interfejsem u¿ytkownika aplikacji. Serwis udostêpnia wersje online s³ynnych komunikatorów, takich jak Facebook Chat, Google Talk czy Windows Live Messenger (MSN). G³ównymi zaletami takiego rozwi¹zania s¹: ³atwoœæ wyboru komunikatorów, których chcemy u¿ywaæ oraz ³atwe prze³¹czanie siê miêdzy nimi. Jednak aplikacja posiada równie¿ inn¹ zaletê. WyobraŸmy sobie sytuacjê, gdy jesteœmy uczniem lub studentem i korzystamy z komputera nale¿¹cego do jednostki edukacyjnej. Niektóre z nich blokuj¹ us³ugi komunikatorów przy u¿yciu zapór ogniowych. Jednak zazwyczaj nie blokuj¹ one stron internetowych, takich jak karoolark.com. Dziêki temu serwisowi mo¿emy bez obaw zalogowaæ siê do interesuj¹cych nas komunikatorów.
 	\paragraph{Lemon Dove Web Mail Client} \hfill \\
 Serwis ten jest darmowym klientem poczty elektronicznej. Zapewnia po³¹czenie z najpopularniejszymi skrzynkami pocztowymi, takimi jak Google Mail, Hotmail, Yahoo! Mail, czy AOL/AIM Mail. G³ówn¹ zalet¹ tego rozwi¹zania jest to, ¿e mo¿emy zalogowaæ siê do konkretnej skrzynki pomimo zapory ogniowej, która mo¿e blokowaæ tak¹ us³ugê. Serwis zaprojektowany jest z myœl¹ o uruchamianiu go na ró¿nych systemach operacyjnych i w ró¿nych sytuacjach - czy w domu, czy w biurze z w³¹czon¹ zapor¹. Zapewnia te¿ doœæ intuicyjne korzystanie z aplikacji dla u¿ytkowników poczty Gmail, ze wzglêdu na podobieñstwo interfejsu, co widaæ na rys.~\ref{fig:web_mail}.
 	\paragraph{Advanced Image Viewer} \hfill \\
-Aplikacja pozwala u¿ytkownikowi za³adowaæ obraz z Internetu, obejrzeæ i manipulowaæ nim online. Wspierane s¹ takie operacje, jak obrót, zbli¿enie, import, eksport, zaawansowane filtry (np. rozmycie), wykrywanie krawêdzi i wiele innych. Aplikacja przeznaczona jest dla u¿ytkowników, którzy chc¹ w sposób zaawansowany manipulowaæ danym obrazem w pe³ni po stronie klienta serwisu. W odró¿nieniu do wiêkszoœci projektów z u¿yciem J2S, nie u¿ywa biblioteki SWT do wyœwietlenia interfejsu. U¿ywa natomiast YUI z frameworkiem Raphaël -- rys.~\ref{fig:image_viewer} przedstawia interfejs u¿ytkownika aplikacji Advanced Image Viewer.
+Aplikacja pozwala u¿ytkownikowi za³adowaæ obraz z Internetu, obejrzeæ i manipulowaæ nim online. Wspierane s¹ takie operacje, jak obrót, zbli¿enie, import, eksport, zaawansowane filtry (np. rozmycie), wykrywanie krawêdzi i wiele innych. Aplikacja przeznaczona jest dla u¿ytkowników, którzy chc¹ w sposób zaawansowany manipulowaæ danym obrazem w pe³ni po stronie klienta serwisu. W odró¿nieniu do wiêkszoœci projektów z u¿yciem J2S, nie u¿ywa biblioteki SWT do wyœwietlenia interfejsu. U¿ywa natomiast YUI z frameworkiem Raphaël -- na rys.~\ref{fig:image_viewer} przedstawiono jak wygl¹da ten interfejs.

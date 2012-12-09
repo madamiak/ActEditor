@@ -2,7 +2,7 @@
 \BOOKMARK [0][-]{skroty.1.0}{Skr\363ty}{}% 2
 \BOOKMARK [0][-]{chapter.1}{Wstep}{}% 3
 \BOOKMARK [1][-]{section.1.1}{Cel i zakres projektu}{chapter.1}% 4
-\BOOKMARK [0][-]{chapter.2}{Wymagania projektowe}{}% 5
+\BOOKMARK [0][-]{chapter.2}{Za\233ozenia projektowe}{}% 5
 \BOOKMARK [1][-]{section.2.1}{Wymagania funkcjonalne}{chapter.2}% 6
 \BOOKMARK [2][-]{subsection.2.1.1}{Wyb\363r aktu prawnego}{section.2.1}% 7
 \BOOKMARK [2][-]{subsection.2.1.2}{Edycja aktu prawnego}{section.2.1}% 8
@@ -28,9 +28,15 @@
 \BOOKMARK [0][-]{chapter.6}{Opis implementacji}{}% 28
 \BOOKMARK [0][-]{chapter.7}{Testowanie}{}% 29
 \BOOKMARK [1][-]{section.7.1}{Testy jednostkowe}{chapter.7}% 30
-\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 31
-\BOOKMARK [1][-]{section.8.1}{Ocena projektu}{chapter.8}% 32
-\BOOKMARK [1][-]{section.8.2}{Wnioski}{chapter.8}% 33
-\BOOKMARK [0][-]{section*.13}{Literatura}{}% 34
-\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 35
-\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 36
+\BOOKMARK [1][-]{section.7.2}{Testy akceptacyjne}{chapter.7}% 31
+\BOOKMARK [2][-]{subsection.7.2.1}{Przyk\233adowy test akceptacyjny aplikacji LawCreator}{section.7.2}% 32
+\BOOKMARK [1][-]{section.7.3}{Testy funkcjonalne}{chapter.7}% 33
+\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 34
+\BOOKMARK [1][-]{section.8.1}{Ocena projektu}{chapter.8}% 35
+\BOOKMARK [1][-]{section.8.2}{Wnioski}{chapter.8}% 36
+\BOOKMARK [0][-]{section*.30}{Literatura}{}% 37
+\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 38
+\BOOKMARK [1][-]{section.A.1}{Aplikacja desktopowa}{appendix.A}% 39
+\BOOKMARK [2][-]{subsection.A.1.1}{Znane problemy}{section.A.1}% 40
+\BOOKMARK [1][-]{section.A.2}{Aplikacja sieciowa}{appendix.A}% 41
+\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 42

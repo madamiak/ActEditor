@@ -21,11 +21,35 @@
 \usepackage{setspace}
 \usepackage{tabularx}
 \usepackage{color,calc}
+\usepackage{xcolor}
 \usepackage{paralist}
 %\usepackage{soul} % pakiet z komendami do podkreœlania tekstu
 %\usepackage{fourier} % pakiet zmieniaj¹cy czcionki na utopia
 \usepackage{times} % pakiet zmieniaj¹cy czcionki na times 
 \usepackage{enumitem}
+\usepackage{array,longtable,calc}
+\usepackage{wrapfig}
+\usepackage{courier}
+\usepackage{color}
+\usepackage{listings}
+\usepackage{caption}
+\DeclareCaptionFont{white}{\color{white}}
+\DeclareCaptionFormat{listing}{\colorbox{gray}{\parbox{\textwidth}{#1#2#3}}}
+\captionsetup[lstlisting]{format=listing,labelfont=white,textfont=white}
+\lstset{
+	numbers=left,
+	basicstyle=\ttfamily,
+	breaklines=true,
+	showstringspaces=false,
+	breakatwhitespace=true,
+	frame=bottomline
+}
+\lstset{prebreak=\raisebox{0ex}[0ex][0ex]
+        {\ensuremath{\rhookswarrow}}}
+%\lstset{postbreak=\raisebox{0ex}[0ex][0ex]
+%        {\ensuremath{\rcurvearrowse\space}}}
+%\lstset{breaklines=true, breakatwhitespace=true}
+%\lstset{numbers=left, numberstyle=\scriptsize}
 
 %\usepackage{longtable}
 %\usepackage{ltxtable}
@@ -78,6 +102,27 @@
 \renewcommand{\bottomfraction}{0.95}
 \renewcommand{\textfraction}{0.05}
 \renewcommand{\floatpagefraction}{0.35}
+
+
+\makeatletter
+\makeatletter
+\renewenvironment{itemize}{
+  \begin{list}{  
+  \csname labelitem\romannumeral\the\@listdepth\endcsname}{
+  \setlength{\leftmargin}{1em}
+	\setlength{\topsep}{6pt}%
+	\setlength{\partopsep}{0pt}%
+	\setlength{\parskip}{0pt}%
+	\setlength{\parsep}{0pt}%
+	\setlength{\itemsep}{0pt}}
+}{
+  \end{list}
+}
+\renewenvironment{quote}{
+  \begin{list}{}{}
+	 \item[]}
+	 {\unskip\end{list}}
+\makeatother
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -245,7 +290,7 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 %                  Pocz¹tek dokumentu 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{document}
-\title{Budowa graficznego interfejsu u¿ytkownika aplikacji sieciowej z wykorzystaniem Java2Script}
+\title{Budowa graficznego interfejsu u¿ytkownika aplikacji sieciowej z~wykorzystaniem Java2Script}
 \titleShort{LawCreator}
 \titleEN{Development of a web application's GUI with the use of Java2Script}
 \author{Mateusz Adamiak}
@@ -271,7 +316,7 @@ SPECJALNOŒÆ: & \@specjalnosc\\
 \include{rozdzial07}
 \include{rozdzial08}
 
-\bibliographystyle{plalpha}
+\bibliographystyle{plunsrt}
 %UWAGA: bibliotekê referencji nale¿y przygotowaæ samemu. Dobrym do tego narzêdziem jest JabRef.
 %       Nazwê przygotowanej biblioteki wpisuje siê poni¿ej bez rozszerzenia 
 %       (w tym przypadku jest to "dokumentacja.bib")

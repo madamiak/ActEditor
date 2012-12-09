@@ -1,1 +1,41 @@
 \chapter{Instrukcja wdro¿enia}
+\label{sec:wdrozenie}
+\section{Aplikacja desktopowa}
+
+Aby uruchomiæ aplikacjê LawCreator, musz¹ zostaæ spe³nione okreœlone wymagania wstêpne:
+\begin{itemize}
+	\item[--] system operacyjny Windows, Linus lub Mac OS,
+	\item[--] zainstalowane œrodowisko uruchomieniowe Java JRE w wersji Standard Edition 5.0 lub nowszej.
+\end{itemize}
+Uruchomienie aplikacji mo¿e odbywaæ siê na dwa sposoby:
+\begin{itemize}
+	\item[--] przez uruchomienie wykonywalnego archiwum Java \texttt{LawCreator.jar},
+	\item[--] przez uruchomienie pliku wsadowego \texttt{start.bat}.
+\end{itemize}
+Oba pliki umieszczone s¹ w g³ównym folderze aplikacji.
+
+\subsection{Znane problemy}
+\paragraph{Cannot load 32-bit SWT libraries on 64-bit JVM}
+B³¹d spowodowany jest brakiem kompatybilnoœci, pomiêdzy 64-bitow¹ Wirtualn¹ Maszyn¹ Java, a 32-bitowymi bibliotekami SWT. Problem zosta³ rozpoznany w œrodowisku Windows.
+
+Rozwi¹zaniem problemu mog¹ byæ:
+\begin{itemize}
+	\item[--] zmiana ustawieñ zmiennych œrodowiskowych \texttt{JAVA\_HOME} oraz \texttt{PATH} tak, by wskazywa³y one na 32-bitow¹ JVM,
+	\item[--] odinstalowanie 64-bitowej JVM i zainstalowanie jej ponownie w wersji 32-bitowej.
+\end{itemize}
+
+\section{Aplikacja sieciowa}
+
+\emph{UWAGA: z uwagi na problemy w implementacji tego rozwi¹zania, aplikacja sieciowa nie dzia³a poprawnie. Jeœli jednak w przysz³oœci zostan¹ naprawione b³êdy, spowodowane b³êdn¹ kompilacj¹ plików Ÿród³owych przez Java2Script, nale¿y postêpowaæ zgodnie z wymienion¹ instrukcj¹.}
+
+Aby uruchomiæ aplikacjê LawCreator, musz¹ zostaæ spe³nione okreœlone wymagania wstêpne:
+\begin{itemize}
+	\item[--] system operacyjny Windows, Linus lub Mac OS,
+	\item[--] przegl¹darka internetowa Internet Explorer, Mozilla Firefox lub Opera, obs³uguj¹ca skrypty JavaScript.
+\end{itemize}
+
+Instrukcja przygotowana zosta³a z wykorzystaniem programu XAMPP w wersji 3.1.0. Jest to pakiet, który sk³ada siê g³ównie z serwera Apache (który jest potrzebny do wdro¿enia aplikacji LawCreator), bazy danych MySQL oraz interpreterów skryptów PHP i Perl.
+
+Przygotowanie œrodowiska do uruchomienia aplikacji sieciowej LawCreator wymaga wykonania nastêpuj¹cych czynnoœci: nale¿y przenieœæ folder g³ówny serwisu LawCreator (zwany dalej \texttt{\%LAWCREATOR\%}) do folderu \texttt{htdocs}, umieszczonego w miejscu instalacji programu XAMPP (zwanego dalej \texttt{\%XAMPPDIR\%}). Œcie¿ka do aplikacji LawCreator ma wygl¹daæ nastêpuj¹co: \texttt{\%XAMPPDIR\%/htdocs/\%LAWCREATOR\%/}. Nastêpnie nale¿y uruchomiæ program XAMPP i w³¹czyæ serwis Apache. 
+
+Po tych czynnoœciach mo¿na ostatecznie uruchomiæ aplikacjê sieciow¹ LawCreator, wpisuj¹c w przegl¹darce nastêpuj¹cy adres: \url{http://localhost/lawcreator/pl.wroc.pwr.student.lawcreator.Application.html}.
