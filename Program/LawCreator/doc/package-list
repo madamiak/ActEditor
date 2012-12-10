@@ -1,0 +1,11 @@
+pl.wroc.pwr.student.lawcreator
+pl.wroc.pwr.student.lawcreator.registry
+pl.wroc.pwr.student.lawcreator.utils
+pl.wroc.pwr.student.lawcreator.view
+pl.wroc.pwr.student.lawcreator.xml
+pl.wroc.pwr.student.lawcreator.xml.nodes
+test.lawcreator
+test.lawcreator.registry
+test.lawcreator.utils
+test.lawcreator.xml
+test.lawcreator.xml.nodes
