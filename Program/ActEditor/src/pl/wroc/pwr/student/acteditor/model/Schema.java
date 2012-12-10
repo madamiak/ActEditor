@@ -1,5 +1,13 @@
 package pl.wroc.pwr.student.acteditor.model;
 
+/**
+ * Zapewnia dostep do zawartosci Schematu XML.
+ * 
+ * Zawiera zawartosc Schematu XML, skonstruowanego przez MSWiA.
+ * 
+ * @author Mateusz
+ *
+ */
 public class Schema {
 	private String schemaContent = "" +
 			"<xsd:schema targetNamespace=\"http://www.crd.mswia.gov.pl/repo/\" xmlns=\"http://www.crd.mswia.gov.pl/repo/\" xmlns:xsd=\"http://www.w3.org/2001/XMLSchema\">\n"+
@@ -1975,6 +1983,11 @@ public class Schema {
 			"				</xsd:element>\n"+
 			"</xsd:schema>\n";
 
+	/**
+	 * Zwraca zawartoœæ Schematu XML.
+	 * 
+	 * @return Zawartoœæ Schematu XML.
+	 */
 	public String getSchemaContent() {
 		return schemaContent.replaceAll("\t", "  ");
 	}

@@ -7,12 +7,11 @@ G³ównym pomys³odawc¹ i konstruktorem wtyczki jest Zhou Renjian, który od 2005 ro
 
 G³ówne funkcje i w³aœciwoœci J2S \cite{J2SOOP}:
 \begin{itemize}
-	\item[--] Polimorfizm,
-	\item[--] Dziedziczenie,
-	\item[--] Implementacja interfejsów,
-	\item[--] Zapewnia generowanie klas anonimowych,
-	\item[--] Zapewnia poprawne dzia³anie zmiennych finalnych,
-	\item[--] Zapewnia poprawne dzia³anie typów klas.
+	\item[--] zapewnienie wsparcia dla polimorfizmu,
+	\item[--] zaimplementowanie mechanizmu dziedziczenia,
+	\item[--] zaimplementowanie mechanizmu interfejsów,
+	\item[--] zapewnienie obs³ugi generowania klas anonimowych,
+	\item[--] zapewnienie obs³ugi zmiennych finalnych.
 \end{itemize}
 
 \section{Zasada dzia³ania}
@@ -45,28 +44,28 @@ Technologia J2S ma na celu konwersjê klas œrodowiska Java do skryptów JavaScript
 	\item[--] JavaScript pozwala na bezpoœredni¹ konwersjê bardzo wielu typów.
 \end{itemize}
 
-\section{Przegl¹d istniej¹cych serwisów, w których wykorzystano Java2Script}	
-\paragraph{Karoo Lark Web Messenger} \hfill \\
-		\begin{figure}[!htb]
+\section{Przegl¹d istniej¹cych serwisów, w których wykorzystano Java2Script}
+	\paragraph{Karoo Lark Web Messenger} \hfill \\	
+Na rys.~\ref{fig:web_messenger} pokazano zrzut ekranu z interfejsem u¿ytkownika aplikacji. Serwis udostêpnia wersje online s³ynnych komunikatorów, takich jak Facebook Chat, Google Talk czy Windows Live Messenger (MSN). G³ównymi zaletami takiego rozwi¹zania s¹: ³atwoœæ wyboru komunikatorów, których chcemy u¿ywaæ oraz ³atwe prze³¹czanie siê miêdzy nimi. Jednak aplikacja posiada równie¿ inn¹ zaletê. WyobraŸmy sobie sytuacjê, gdy jesteœmy uczniem lub studentem i korzystamy z komputera nale¿¹cego do jednostki edukacyjnej. Niektóre z nich blokuj¹ us³ugi komunikatorów przy u¿yciu zapór ogniowych. Jednak zazwyczaj nie blokuj¹ one stron internetowych, takich jak karoolark.com. Dziêki temu serwisowi mo¿emy bez obaw zalogowaæ siê do interesuj¹cych nas komunikatorów.
+\begin{figure}[h]
 		\centering
 			\includegraphics[width=0.8\linewidth]{./rys02/karoolark-web-messenger.jpg}
 		\caption{Interfejs u¿ytkownika aplikacji Karoo Lark Web Messenger (\url{http://karoolark.com/images/karoolark-web-messenger.jpg} dostêp z dnia 5 grudnia 2012r.)}
 		\label{fig:web_messenger}
-	\end{figure}
-	\begin{figure}[!htb]
+	\end{figure}	
+	\paragraph{Lemon Dove Web Mail Client} \hfill \\
+Serwis ten jest darmowym klientem poczty elektronicznej. Zapewnia po³¹czenie z najpopularniejszymi skrzynkami pocztowymi, takimi jak Google Mail, Hotmail, Yahoo! Mail, czy AOL/AIM Mail. G³ówn¹ zalet¹ tego rozwi¹zania jest to, ¿e mo¿emy zalogowaæ siê do konkretnej skrzynki pomimo zapory ogniowej, która mo¿e blokowaæ tak¹ us³ugê. Serwis zaprojektowany jest z myœl¹ o uruchamianiu go na ró¿nych systemach operacyjnych i w ró¿nych sytuacjach - czy w domu, czy w biurze z w³¹czon¹ zapor¹. Zapewnia te¿ doœæ intuicyjne korzystanie z aplikacji dla u¿ytkowników poczty Gmail, ze wzglêdu na podobieñstwo interfejsu, co widaæ na rys.~\ref{fig:web_mail}.
+\begin{figure}[h]
 		\centering
 			\includegraphics[width=0.8\linewidth]{./rys03/dove.png}
 		\caption{Interfejs u¿ytkownika aplikacji Lemon Dove Web Mail Client (\url{http://lemondove.com/images/dove.png} dostêp z dnia 5 grudnia 2012r.)}
 		\label{fig:web_mail}
 	\end{figure}
-	\begin{figure}[!htb]
+	\begin{figure}[h]
 		\centering
 			\includegraphics[width=0.7\linewidth]{./rys04/imageViewerScreenshot.png}
 		\caption{Interfejs u¿ytkownika aplikacji Advanced Image Viewer}
 		\label{fig:image_viewer}
 	\end{figure}
-Na rys.~\ref{fig:web_messenger} pokazano zrzut ekranu z interfejsem u¿ytkownika aplikacji. Serwis udostêpnia wersje online s³ynnych komunikatorów, takich jak Facebook Chat, Google Talk czy Windows Live Messenger (MSN). G³ównymi zaletami takiego rozwi¹zania s¹: ³atwoœæ wyboru komunikatorów, których chcemy u¿ywaæ oraz ³atwe prze³¹czanie siê miêdzy nimi. Jednak aplikacja posiada równie¿ inn¹ zaletê. WyobraŸmy sobie sytuacjê, gdy jesteœmy uczniem lub studentem i korzystamy z komputera nale¿¹cego do jednostki edukacyjnej. Niektóre z nich blokuj¹ us³ugi komunikatorów przy u¿yciu zapór ogniowych. Jednak zazwyczaj nie blokuj¹ one stron internetowych, takich jak karoolark.com. Dziêki temu serwisowi mo¿emy bez obaw zalogowaæ siê do interesuj¹cych nas komunikatorów.
-	\paragraph{Lemon Dove Web Mail Client} \hfill \\
-Serwis ten jest darmowym klientem poczty elektronicznej. Zapewnia po³¹czenie z najpopularniejszymi skrzynkami pocztowymi, takimi jak Google Mail, Hotmail, Yahoo! Mail, czy AOL/AIM Mail. G³ówn¹ zalet¹ tego rozwi¹zania jest to, ¿e mo¿emy zalogowaæ siê do konkretnej skrzynki pomimo zapory ogniowej, która mo¿e blokowaæ tak¹ us³ugê. Serwis zaprojektowany jest z myœl¹ o uruchamianiu go na ró¿nych systemach operacyjnych i w ró¿nych sytuacjach - czy w domu, czy w biurze z w³¹czon¹ zapor¹. Zapewnia te¿ doœæ intuicyjne korzystanie z aplikacji dla u¿ytkowników poczty Gmail, ze wzglêdu na podobieñstwo interfejsu, co widaæ na rys.~\ref{fig:web_mail}.
 	\paragraph{Advanced Image Viewer} \hfill \\
 Aplikacja pozwala u¿ytkownikowi za³adowaæ obraz z Internetu, obejrzeæ i manipulowaæ nim online. Wspierane s¹ takie operacje, jak obrót, zbli¿enie, import, eksport, zaawansowane filtry (np. rozmycie), wykrywanie krawêdzi i wiele innych. Aplikacja przeznaczona jest dla u¿ytkowników, którzy chc¹ w sposób zaawansowany manipulowaæ danym obrazem w pe³ni po stronie klienta serwisu. W odró¿nieniu do wiêkszoœci projektów z u¿yciem J2S, nie u¿ywa biblioteki SWT do wyœwietlenia interfejsu. U¿ywa natomiast YUI z frameworkiem Raphaël -- na rys.~\ref{fig:image_viewer} przedstawiono jak wygl¹da ten interfejs.

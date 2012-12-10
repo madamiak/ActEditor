@@ -1,4 +1,4 @@
-!SESSION 2012-11-15 14:09:49.394 -----------------------------------------------
+!SESSION 2012-12-01 09:36:15.754 -----------------------------------------------
 eclipse.buildId=M20120914-1800
 java.version=1.7.0_07
 java.vendor=Oracle Corporation
@@ -7,12 +7,225 @@ Framework arguments:  -product org.eclipse.epp.package.jee.product
 Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
 This is a continuation of log file D:\Opera Unite\EDAP\Program\.metadata\.bak_0.log
-Created Time: 2012-11-15 16:26:33.406
+Created Time: 2012-12-01 15:11:31.818
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:33.406
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.818
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
+	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
+	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.828
+!MESSAGE /IMG_ETOOL_DELETE
+!STACK 0
+java.io.FileNotFoundException: /IMG_ETOOL_DELETE
+	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
+	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.828
+!MESSAGE /IMG_TOOL_COPY
+!STACK 0
+java.io.FileNotFoundException: /IMG_TOOL_COPY
+	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
+	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
+	at java.net.URL.openConnection(Unknown Source)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
+	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
+	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
+	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
+	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
+	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
+	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
+	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
+	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
+	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
+	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
+	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
+	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
+	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
+	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
+	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
+	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
+	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
+	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
+	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
+	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
+	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
+	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
+	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
+	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
+	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
+	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
+	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
+	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
+	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
+	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
+	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
+	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
+	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
+	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
+	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
+	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
+	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
+	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
+	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
+	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
+	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
+	at java.lang.reflect.Method.invoke(Unknown Source)
+	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
+	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
+	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
+	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.858
+!MESSAGE /IMG_ETOOL_DELETE
+!STACK 0
+java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
 	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
 	at java.net.URL.openConnection(Unknown Source)
@@ -96,10 +309,10 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:33.406
-!MESSAGE /IMG_TOOL_COPY
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.878
+!MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
+java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
 	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
 	at java.net.URL.openConnection(Unknown Source)
@@ -183,10 +396,10 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:33.421
-!MESSAGE /IMG_TOOL_COPY
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.888
+!MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
+java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
 	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
 	at java.net.URL.openConnection(Unknown Source)
@@ -270,10 +483,10 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:33.421
-!MESSAGE /IMG_TOOL_COPY
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:11:31.888
+!MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
+java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
 	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
 	at java.net.URL.openConnection(Unknown Source)
@@ -357,7 +570,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:44.954
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.009
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -428,7 +641,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:44.954
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.009
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -499,7 +712,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:44.970
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.019
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -570,7 +783,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:44.970
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.019
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -641,7 +854,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:44.986
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.029
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -712,7 +925,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:44.986
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.039
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -783,7 +996,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:45.001
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.039
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -854,7 +1067,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:45.001
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:16:04.039
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -925,355 +1138,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:45.079
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:461)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer$4.handleEvent(MenuManagerRenderer.java:202)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:41)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4687)
-	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:187)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:58)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.e4.ui.model.application.ui.menu.impl.ItemImpl.setEnabled(ItemImpl.java:264)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:215)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:139)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:101)
-	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:55)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:476)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:45.095
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:461)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer$4.handleEvent(MenuManagerRenderer.java:202)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:41)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4687)
-	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:187)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:58)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.e4.ui.model.application.ui.menu.impl.ItemImpl.setEnabled(ItemImpl.java:264)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:215)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:139)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:101)
-	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:55)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:476)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:45.095
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:461)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer$4.handleEvent(MenuManagerRenderer.java:202)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:41)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4687)
-	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:187)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:58)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.e4.ui.model.application.ui.menu.impl.ItemImpl.setEnabled(ItemImpl.java:264)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:215)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:139)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:101)
-	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:55)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:476)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-
-!ENTRY org.eclipse.jface 4 0 2012-11-15 16:26:45.095
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:461)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer$4.handleEvent(MenuManagerRenderer.java:202)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler$1.run(UIEventHandler.java:41)
-	at org.eclipse.swt.widgets.Synchronizer.syncExec(Synchronizer.java:180)
-	at org.eclipse.ui.internal.UISynchronizer.syncExec(UISynchronizer.java:150)
-	at org.eclipse.swt.widgets.Display.syncExec(Display.java:4687)
-	at org.eclipse.e4.ui.internal.workbench.swt.E4Application$1.syncExec(E4Application.java:187)
-	at org.eclipse.e4.ui.services.internal.events.UIEventHandler.handleEvent(UIEventHandler.java:38)
-	at org.eclipse.equinox.internal.event.EventHandlerWrapper.handleEvent(EventHandlerWrapper.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:197)
-	at org.eclipse.equinox.internal.event.EventHandlerTracker.dispatchEvent(EventHandlerTracker.java:1)
-	at org.eclipse.osgi.framework.eventmgr.EventManager.dispatchEvent(EventManager.java:230)
-	at org.eclipse.osgi.framework.eventmgr.ListenerQueue.dispatchEventSynchronous(ListenerQueue.java:148)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.dispatchEvent(EventAdminImpl.java:135)
-	at org.eclipse.equinox.internal.event.EventAdminImpl.sendEvent(EventAdminImpl.java:78)
-	at org.eclipse.equinox.internal.event.EventComponent.sendEvent(EventComponent.java:39)
-	at org.eclipse.e4.ui.services.internal.events.EventBroker.send(EventBroker.java:81)
-	at org.eclipse.e4.ui.internal.workbench.UIEventPublisher.notifyChanged(UIEventPublisher.java:58)
-	at org.eclipse.emf.common.notify.impl.BasicNotifierImpl.eNotify(BasicNotifierImpl.java:374)
-	at org.eclipse.e4.ui.model.application.ui.menu.impl.ItemImpl.setEnabled(ItemImpl.java:264)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRendererFilter.updateElementVisibility(MenuManagerRendererFilter.java:215)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.showMenu(MenuManagerShowProcessor.java:139)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerShowProcessor.menuAboutToHide(MenuManagerShowProcessor.java:101)
-	at org.eclipse.jface.internal.MenuManagerEventHelper.showEventPostHelper(MenuManagerEventHelper.java:55)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:476)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
-
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.772
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:47.998
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -1344,7 +1209,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.772
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:47.998
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -1415,7 +1280,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.788
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:48.008
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -1486,7 +1351,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.788
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:48.008
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -1557,7 +1422,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.803
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:48.018
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -1628,7 +1493,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.803
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:48.018
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -1699,7 +1564,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.803
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:48.028
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -1770,7 +1635,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:18.803
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:48:48.028
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -1841,7 +1706,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.608
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.114
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -1912,7 +1777,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.618
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.124
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -1983,7 +1848,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.618
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.124
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -2054,7 +1919,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.638
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.124
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -2125,7 +1990,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.648
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.134
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -2196,7 +2061,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.648
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.144
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -2267,7 +2132,7 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.658
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.144
 !MESSAGE /IMG_ETOOL_DELETE
 !STACK 0
 java.io.FileNotFoundException: /IMG_ETOOL_DELETE
@@ -2338,7 +2203,7 @@ java.io.FileNotFoundException: /IMG_ETOOL_DELETE
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:02:28.658
+!ENTRY org.eclipse.jface 4 0 2012-12-01 15:55:46.154
 !MESSAGE /IMG_TOOL_COPY
 !STACK 0
 java.io.FileNotFoundException: /IMG_TOOL_COPY
@@ -2409,1138 +2274,665 @@ java.io.FileNotFoundException: /IMG_TOOL_COPY
 	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
 	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.808
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.818
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.828
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.828
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.858
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.858
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.868
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.539
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:42.868
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:21:40.549
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
+!SESSION 2012-12-01 16:26:32.846 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.526
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.jface 2 0 2012-12-01 16:26:48.926
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-01 16:26:48.926
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2fd1c882,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@349a4313,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-01 16:26:48.926
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3735a5e7,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@231efd02,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-01 16:26:48.926
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1d775221,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@1660664,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@645c428,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-01 16:26:48.926
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@192820c9,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@418985fe,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.526
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.jobs 2 2 2012-12-01 16:44:32.789
+!MESSAGE Job found still running after platform shutdown.  Jobs should be canceled by the plugin that scheduled them during shutdown: com.aptana.usage.StudioAnalytics$1
+!SESSION 2012-12-02 01:01:17.881 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.542
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.resources 2 10035 2012-12-02 01:01:29.317
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.542
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.jface 2 0 2012-12-02 01:02:02.644
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 01:02:02.644
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@52de713a,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@9dbc157,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 01:02:02.644
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3a723bcf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@21b4b103,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 01:02:02.644
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5dd14d3e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@58265190,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3bb4f226,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 01:02:02.644
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6485bb69,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7d31e0e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2012-12-02 10:03:39.383 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\Opera Unite\EDAP\Program -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.558
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.jface 2 0 2012-12-02 10:04:04.773
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 10:04:04.773
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@47fa160e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@73be160c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 10:04:04.773
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4499a931,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4432f326,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 10:04:04.773
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6cf966c4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@69ca05c0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4e3fb682,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 10:04:04.773
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@38e738f0,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@544b31bf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2012-12-02 14:24:53.612 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\Opera Unite\EDAP\Program -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.558
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.jface 2 0 2012-12-02 14:25:15.987
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 14:25:15.987
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3aa1abcd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4c163dcd,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 14:25:15.987
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@483384c1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2e50bfef,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 14:25:15.987
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3768fbaa,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4d627251,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7a3f4b87,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-02 14:25:15.987
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5177cac4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@fa133a5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2012-12-04 11:52:03.405 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\Opera Unite\EDAP\Program -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.573
-!MESSAGE /IMG_ETOOL_DELETE
-!STACK 0
-java.io.FileNotFoundException: /IMG_ETOOL_DELETE
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.jface 2 0 2012-12-04 11:52:17.435
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 11:52:17.435
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3f5d53ae,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@820e502,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 11:52:17.435
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@42461162,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4e9287d1,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 11:52:17.435
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@7612d2a3,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4dc307e4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3f3b319e,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 11:52:17.435
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@47369c80,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@525cbc06,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2012-12-04 17:14:41.477 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
 
-!ENTRY org.eclipse.jface 4 0 2012-11-15 17:03:52.573
-!MESSAGE /IMG_TOOL_COPY
-!STACK 0
-java.io.FileNotFoundException: /IMG_TOOL_COPY
-	at org.eclipse.osgi.framework.internal.protocol.bundleentry.Handler.findBundleEntry(Handler.java:44)
-	at org.eclipse.osgi.framework.internal.core.BundleResourceHandler.openConnection(BundleResourceHandler.java:175)
-	at java.net.URL.openConnection(Unknown Source)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.connect(PlatformURLConnection.java:110)
-	at org.eclipse.core.internal.boot.PlatformURLConnection.getURLAsLocal(PlatformURLConnection.java:238)
-	at org.eclipse.core.internal.runtime.PlatformURLConverter.toFileURL(PlatformURLConverter.java:36)
-	at org.eclipse.core.runtime.FileLocator.toFileURL(FileLocator.java:206)
-	at org.eclipse.jface.resource.URLImageDescriptor.getFilePath(URLImageDescriptor.java:137)
-	at org.eclipse.jface.resource.URLImageDescriptor.createImage(URLImageDescriptor.java:157)
-	at org.eclipse.jface.resource.ImageDescriptor.createResource(ImageDescriptor.java:165)
-	at org.eclipse.jface.resource.DeviceResourceManager.allocate(DeviceResourceManager.java:56)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.LocalResourceManager.allocate(LocalResourceManager.java:82)
-	at org.eclipse.jface.resource.AbstractResourceManager.create(AbstractResourceManager.java:88)
-	at org.eclipse.jface.resource.ResourceManager.createImage(ResourceManager.java:172)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.getImage(HandledContributionItem.java:598)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.updateIcons(HandledContributionItem.java:571)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.update(HandledContributionItem.java:471)
-	at org.eclipse.e4.ui.workbench.renderers.swt.HandledContributionItem.fill(HandledContributionItem.java:355)
-	at org.eclipse.jface.action.MenuManager.doItemFill(MenuManager.java:746)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:827)
-	at org.eclipse.jface.action.MenuManager.update(MenuManager.java:687)
-	at org.eclipse.e4.ui.workbench.renderers.swt.MenuManagerRenderer.processContents(MenuManagerRenderer.java:520)
-	at org.eclipse.ui.internal.PopupMenuExtender.addMenuContributions(PopupMenuExtender.java:408)
-	at org.eclipse.ui.internal.PopupMenuExtender.menuAboutToShow(PopupMenuExtender.java:379)
-	at org.eclipse.jface.action.MenuManager.fireAboutToShow(MenuManager.java:343)
-	at org.eclipse.jface.action.MenuManager.handleAboutToShow(MenuManager.java:475)
-	at org.eclipse.jface.action.MenuManager.access$1(MenuManager.java:470)
-	at org.eclipse.jface.action.MenuManager$2.menuShown(MenuManager.java:500)
-	at org.eclipse.swt.widgets.TypedListener.handleEvent(TypedListener.java:255)
-	at org.eclipse.swt.widgets.EventTable.sendEvent(EventTable.java:84)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1053)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1077)
-	at org.eclipse.swt.widgets.Widget.sendEvent(Widget.java:1058)
-	at org.eclipse.swt.widgets.Control.WM_INITMENUPOPUP(Control.java:4881)
-	at org.eclipse.swt.widgets.Control.windowProc(Control.java:4557)
-	at org.eclipse.swt.widgets.Canvas.windowProc(Canvas.java:341)
-	at org.eclipse.swt.widgets.Decorations.windowProc(Decorations.java:1627)
-	at org.eclipse.swt.widgets.Shell.windowProc(Shell.java:2069)
-	at org.eclipse.swt.widgets.Display.windowProc(Display.java:4976)
-	at org.eclipse.swt.internal.win32.OS.TrackPopupMenu(Native Method)
-	at org.eclipse.swt.widgets.Menu._setVisible(Menu.java:257)
-	at org.eclipse.swt.widgets.Display.runPopups(Display.java:4210)
-	at org.eclipse.swt.widgets.Display.readAndDispatch(Display.java:3752)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine$9.run(PartRenderingEngine.java:1029)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.e4.ui.internal.workbench.swt.PartRenderingEngine.run(PartRenderingEngine.java:923)
-	at org.eclipse.e4.ui.internal.workbench.E4Workbench.createAndRunUI(E4Workbench.java:86)
-	at org.eclipse.ui.internal.Workbench$5.run(Workbench.java:588)
-	at org.eclipse.core.databinding.observable.Realm.runWithDefault(Realm.java:332)
-	at org.eclipse.ui.internal.Workbench.createAndRunWorkbench(Workbench.java:543)
-	at org.eclipse.ui.PlatformUI.createAndRunWorkbench(PlatformUI.java:149)
-	at org.eclipse.ui.internal.ide.application.IDEApplication.start(IDEApplication.java:124)
-	at org.eclipse.equinox.internal.app.EclipseAppHandle.run(EclipseAppHandle.java:196)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.runApplication(EclipseAppLauncher.java:110)
-	at org.eclipse.core.runtime.internal.adaptor.EclipseAppLauncher.start(EclipseAppLauncher.java:79)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:353)
-	at org.eclipse.core.runtime.adaptor.EclipseStarter.run(EclipseStarter.java:180)
-	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at sun.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at sun.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.lang.reflect.Method.invoke(Unknown Source)
-	at org.eclipse.equinox.launcher.Main.invokeFramework(Main.java:629)
-	at org.eclipse.equinox.launcher.Main.basicRun(Main.java:584)
-	at org.eclipse.equinox.launcher.Main.run(Main.java:1438)
-	at org.eclipse.equinox.launcher.Main.main(Main.java:1414)
+!ENTRY org.eclipse.core.resources 2 10035 2012-12-04 17:14:47.067
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY org.eclipse.jface 2 0 2012-12-04 17:15:00.050
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:15:00.050
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@2c811365,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@4e2062b6,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:15:00.050
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3030c2cc,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5144f7cb,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:15:00.050
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6e85a1c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@73e7cf,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@3977c744,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:15:00.050
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@66bb5ed5,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@174f26a4,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SESSION 2012-12-04 17:23:41.484 -----------------------------------------------
+eclipse.buildId=M20120914-1800
+java.version=1.7.0_07
+java.vendor=Oracle Corporation
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=pl_PL
+Framework arguments:  -product org.eclipse.epp.package.jee.product
+Command-line arguments:  -data D:\Opera Unite\EDAP\Program -os win32 -ws win32 -arch x86_64 -product org.eclipse.epp.package.jee.product
+
+!ENTRY org.eclipse.jface 2 0 2012-12-04 17:23:56.869
+!MESSAGE Keybinding conflicts occurred.  They may interfere with normal accelerator operation.
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:23:56.869
+!MESSAGE A conflict occurred for ALT+SHIFT+D R:
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.debug,Debug on Server,
+		Debug the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@db1fb70,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+D R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.debug,Debug Ruby Application,
+		Debug Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@78368577,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:23:56.869
+!MESSAGE A conflict occurred for ALT+SHIFT+X R:
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(org.eclipse.wst.server.launchShortcut.run,Run on Server,
+		Run the current selection on a server,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@43748549,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(ALT+SHIFT+X R,
+	ParameterizedCommand(Command(com.aptana.ruby.debug.ui.RubyShortcut.run,Run Ruby Application,
+		Run Ruby Application,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@16da9e38,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:23:56.869
+!MESSAGE A conflict occurred for CTRL+SHIFT+D:
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.eclipse.jdt.debug.ui.commands.Display,Display,
+		Display result of evaluating selected text,
+		Category(org.eclipse.debug.ui.category.run,Run/Debug,Run/Debug command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@51793685,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.dialogAndWindow,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.download,Download...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@6cea7f8c,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+D,
+	ParameterizedCommand(Command(org.radrails.rails.ui.command.debug.server,Debug Server,
+		,
+		Category(org.radrails.rails.ui.category,Rails,null,true),
+		org.eclipse.ui.internal.MakeHandlersGo@175bf831,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+!SUBENTRY 1 org.eclipse.jface 2 0 2012-12-04 17:23:56.869
+!MESSAGE A conflict occurred for CTRL+SHIFT+U:
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(org.eclipse.jdt.ui.edit.text.java.search.occurrences.in.file.quickMenu,Show Occurrences in File Quick Menu,
+		Shows the Occurrences in File quick menu,
+		Category(org.eclipse.search.ui.category.search,Search,Search command category,true),
+		org.eclipse.ui.internal.MakeHandlersGo@170364f2,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)
+Binding(CTRL+SHIFT+U,
+	ParameterizedCommand(Command(com.aptana.ide.syncing.ui.commands.upload,Upload...,
+		,
+		Category(com.aptana.ide.syncing.ui.commands.category,File Transfer,File Transfer Commands,true),
+		org.eclipse.ui.internal.MakeHandlersGo@5fd857ab,
+		,,true),null),
+	org.eclipse.ui.defaultAcceleratorConfiguration,
+	org.eclipse.ui.contexts.window,,,system)

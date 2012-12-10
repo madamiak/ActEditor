@@ -4,18 +4,42 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
+/**
+ * Przechowuje i udostepnia dane o definicjach elementów, elementach sequence i
+ * choice dokumentu XML.
+ * 
+ * @author Mateusz
+ * 
+ */
 public class Composition implements Element {
-//	private List<Element> elements = new ArrayList<Element>();
 	private List elements = Collections.synchronizedList(new ArrayList());
+	private List attributes = Collections.synchronizedList(new ArrayList());
 	private String description = "";
 	private String name = "";
 	private String type = "";
 	private String minOccurs = "1";
 	private String maxOccurs = "1";
-	
+	private String value = "";
+
+	/**
+	 * Tworzy obiekt typu Composition z ustawionymi wartoœciami name i type.
+	 * 
+	 * @param name
+	 *          Nazwa atrybutu.
+	 * @param type
+	 *          Typ atrybutu.
+	 */
 	public Composition(String name, String type) {
 		this.name = name;
 		this.type = type;
+	}
+
+	public String toString() {
+		String result = name + " " + description + " " + type + " " + minOccurs + "/" + maxOccurs;
+		for (Object e : elements) {
+			result += "\n\t" + e.toString();
+		}
+		return result;
 	}
 
 	@Override
@@ -30,33 +54,25 @@ public class Composition implements Element {
 
 	@Override
 	public Element get(int index) {
-		return (Element)elements.get(index);
+		return (Element) elements.get(index);
 	}
 
 	@Override
 	public List getElements() {
-//		for(Element e : elements) {
-//			e.getElements();
-//		}
+		// for(Element e : elements) {
+		// e.getElements();
+		// }
 		return elements;
 	}
 
 	@Override
 	public String getDescription() {
-		return description+"\n"+minOccurs+"\n"+maxOccurs;
+		return description;
 	}
 
 	@Override
 	public void setDescription(String description) {
 		this.description = description;
-	}
-	
-	public String toString() {
-		String result = name + " " + description;
-		for(Object e : elements) {
-			result += "\n\t" + e.toString();
-		}
-		return result;
 	}
 
 	public String getName() {
@@ -73,6 +89,16 @@ public class Composition implements Element {
 
 	public void setType(String type) {
 		this.type = type;
+	}
+
+	@Override
+	public List getAttributes() {
+		return attributes;
+	}
+
+	@Override
+	public void addAttribute(Attribute attribute) {
+		attributes.add(attribute);
 	}
 
 	@Override
@@ -93,6 +119,16 @@ public class Composition implements Element {
 	@Override
 	public void setMaxOccurs(String maxOccurs) {
 		this.maxOccurs = maxOccurs;
+	}
+
+	@Override
+	public String getValue() {
+		return value;
+	}
+
+	@Override
+	public void setValue(String value) {
+		this.value = value;
 	}
 
 }

@@ -52,7 +52,7 @@ window["j2s.lib"] = {
 		ClazzLoader.packageClasspath ("java", j2sBase, true);
 		ClazzLoader.packageClasspath ("org.eclipse.swt", j2sBase, true);
 		ClazzLoader.setPrimaryFolder ("bin");
-		ClazzLoader.packageClasspath (["pl.wroc.pwr.student.acteditor.parsing", "$.paarsing", "$.model", "$.view", "$.util", "pl.wroc.pwr.student.acteditor.parsing.xsd", "pl.wroc.pwr.student.acteditor.test", "pl.wroc.pwr.student.acteditor", "pl.wroc.pwr.student.acteditor.parsing.xml", "pl.wroc.pwr.student.acteditor.model.tags"], "bin/");
+		ClazzLoader.packageClasspath (["pl.wroc.pwr.student.acteditor.parsing", "$.paarsing", "$.model", "$.view", "$.util", "pl.wroc.pwr.student.acteditor.parsing.xsd", "org.eclipse.wb.swt", "pl.wroc.pwr.student.acteditor.test", "pl.wroc.pwr.student.acteditor", "pl.wroc.pwr.student.acteditor.parsing.xml", "pl.wroc.pwr.student.acteditor.model.tags"], "bin/");
 		ClazzLoader.loadClass ("pl.wroc.pwr.student.acteditor.Application", function () {
 			pl.wroc.pwr.student.acteditor.Application.main([]);
 		});

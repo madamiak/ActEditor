@@ -3,9 +3,17 @@ package pl.wroc.pwr.student.acteditor.model;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Zapewnia dostep do rejestru dokumentow.
+ * 
+ * Rejestr zawiera nazwy dostepnych dokumentow XML.
+ * 
+ * @author Mateusz
+ *
+ */
 public class DocumentRegistry {
 	private static DocumentRegistry registry;
-	List documents;
+	private List documents;
 	
 	private DocumentRegistry() {
 		documents = new ArrayList();

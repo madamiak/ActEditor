@@ -1,152 +1,123 @@
 package pl.wroc.pwr.student.acteditor.parsing.xsd;
 
+import java.util.Stack;
+
+import pl.wroc.pwr.student.acteditor.model.AttributeRegistry;
+import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
+import pl.wroc.pwr.student.acteditor.model.TypeRegistry;
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup;
 import pl.wroc.pwr.student.acteditor.model.tags.Composition;
 import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute;
 import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
 
+/**
+ * Klasa pomocnicza do wczytywania dokumentu XML.
+ * 
+ * @author Mateusz
+ *
+ */
 public class XSDHelper {
-	public int getToken(String line) {
-		if(hasElementDefinition(line)) {
-			return 0;
-		} else if(hasElementReference(line)) {
-			return 1;
-		} else if(hasAnnotation(line)) {
-			return 2;
-		} else if(hasDocumentation(line)) {
-			return 3;
-		} else if(hasComplexType(line)) {
-			return 4;
-		} else if(hasSequence(line)) {
-			return 5;
-		} else if(hasGroupDefinition(line)) {
-			return 6;
-		} else if(hasGroupReference(line)) {
-			return 7;
-		} else if(hasChoice(line)) {
-			return 8;
+	
+	public XSDHelper() {
+	}
+
+	public SimpleType createSimpleTypeDefinition(String line) {
+		SimpleType simpleType = new SimpleType();
+		String name = getAttribute("name", line);
+		simpleType.setName(name);
+		return simpleType;
+	}
+
+	public Attribute createGroupReference(String line) {
+		Attribute attribute = new AttributeGroup();
+		String name = getAttribute("ref", line);
+		attribute.setName(name);
+		return attribute;
+	}
+
+	public Attribute createGroupDefinition(String line) {
+		Attribute attribute = new AttributeGroup();
+		String name = getAttribute("name", line);
+		attribute.setName(name);
+		return attribute;
+	}
+
+	public Attribute createAttribute(String line) {
+		String name = getAttribute("name", line);
+		String defaultValue = getAttribute("default", line);
+		String type = getAttribute("type", line);
+		String use = getAttribute("use", line);
+		Attribute attribute = new SimpleAttribute();
+		attribute.setName(name);
+		attribute.setType(type);
+		if(!defaultValue.equals("")) {
+			attribute.setDefault(defaultValue);
 		}
-		
-		return -1;
+		if(!use.equals("")) {
+			attribute.setUse(use);
+		}
+		return attribute;
 	}
 
-	private boolean hasElementDefinition(String line) {
-		return (line.contains("<xsd:element") && line.contains("name=")) ? true : false;
+	public Element createElementGroupReference(String line) {
+		String name = getAttribute("ref", line);
+		Element element = new Composition(name, "ref");
+		return element;
 	}
 
-	private boolean hasElementReference(String line) {
-		return (line.contains("<xsd:element") && line.contains("ref=")) ? true : false;
+	public Element createElementGroupDefinition(String line) {
+		String name = getAttribute("name", line);
+		Element element = new Composition(name, "group");
+		return element;
 	}
 
-	private boolean hasAnnotation(String line) {
-		return (line.contains("<xsd:annotation")) ? true : false;
+	public Element createElementReference(String line) {
+		String name = getAttribute("ref", line);
+		String minOccurs = getAttribute("minOccurs", line);
+		String maxOccurs = getAttribute("maxOccurs", line);
+		Element element = new Composition(name, "ref");
+		if(!minOccurs.equals("")) {
+			element.setMinOccurs(minOccurs);
+		}
+		if(!maxOccurs.equals("")) {
+			element.setMaxOccurs(maxOccurs);
+		}
+		return element;
 	}
 
-	private boolean hasDocumentation(String line) {
-		return (line.contains("<xsd:documentation")) ? true : false;
+	public Object setDescription(Object object, String line) {
+		String description = line.substring(line.indexOf(">")+1, line.lastIndexOf("<"));
+		if(object instanceof Composition || object instanceof SimpleElement) {
+			if(((Element)object).getDescription().length() == 0) {
+				((Element)object).setDescription(description);
+			}
+		} else if(object instanceof Attribute || object instanceof AttributeGroup) {
+			if(((Attribute)object).getDescription().length() == 0) {
+				((Attribute)object).setDescription(description);
+			}
+		} else if(object instanceof SimpleType) {
+			if(((SimpleType)object).getDescription().length() == 0) {
+				((SimpleType)object).setDescription(description);
+			}
+		}
+		return object;
 	}
 
-	private boolean hasComplexType(String line) {
-		return (line.contains("<xsd:complexType")) ? true : false;
+	public Element createElementDefinition(String line) {
+		String name = getAttribute("name", line);
+		Element result = new Composition(name, "all");
+		return result;
 	}
 
-	private boolean hasSequence(String line) {
-		return (line.contains("<xsd:sequence")) ? true : false;
-	}
-
-	private boolean hasGroupDefinition(String line) {
-		return (line.contains("<xsd:group") && line.contains("name=")) ? true : false;
-	}
-	
-	private boolean hasGroupReference(String line) {
-		return (line.contains("<xsd:group") && line.contains("ref=")) ? true : false;
-	}
-
-	private boolean hasChoice(String line) {
-		return (line.contains("<xsd:choice")) ? true : false;
-	}
-	
 	public String getAttribute(String name, String line) {
 		if(line.contains(name)) {
 			int begin = line.indexOf(name + "=\"") + (name + "=\"").length();
 			int end = line.indexOf("\"", line.indexOf(name + "=\"") + (name + "=\"").length());
 			return line.substring(begin, end);
 		}
-		
-		return null;
-	}
-	
-	public String getDescription(String line) {
-		return line.substring(line.indexOf(">") + 1, line.lastIndexOf("<"));
-	}
-	
-	public Element createComposition(String line, String type) {
-		String name = getAttribute("name", line);
-		Element e = new Composition(name, type);
-		return e;
-	}
-
-	public Element createReference(String line) {
-		String name = getAttribute("ref", line);
-		Element e = new SimpleElement(name);
-		return e;
-	}
-
-	public Element createGroup(String line, String type) {
-		String name = getAttribute("ref", line);
-		Element e = new Composition(name, type);
-		return e;
-	}
-
-	public int checkIfClosed(String line) {
-		if(closedElementDefinition(line)) {
-			return 8;
-		} else if(closedSimpleElement(line)) {
-			return 9;
-		} else if(closedAnnotation(line)) {
-			return 10;
-		} else if(closedDocumentation(line)) {
-			return 11;
-		} else if(closedComplexType(line)) {
-			return 12;
-		} else if(closedSequence(line)) {
-			return 13;
-		} else if(closedGroup(line)) {
-			return 14;
-		} else if(closedChoice(line)) {
-			return 15;
-		}
-		return -1;
-	}
-
-	private boolean closedElementDefinition(String line) {
-		return (line.contains("</xsd:element>")) ? true : false;
-	}
-
-	private boolean closedSimpleElement(String line) {
-		return (line.contains("xsd:element>") && line.contains("/>")) ? true : false;
-	}
-
-	private boolean closedAnnotation(String line) {
-		return (line.contains("</xsd:annotation>")) ? true : false;
-	}
-
-	private boolean closedDocumentation(String line) {
-		return (line.contains("</xsd:documentation>")) ? true : false;
-	}
-
-	private boolean closedComplexType(String line) {
-		return (line.contains("</xsd:complexType>>")) ? true : false;
-	}
-
-	private boolean closedSequence(String line) {
-		return (line.contains("</xsd:sequence>")) ? true : false;
-	}
-
-	private boolean closedGroup(String line) {
-		return (line.contains("</xsd:group>")) ? true : false;
-	}
-
-	private boolean closedChoice(String line) {
-		return (line.contains("</xsd:choice>")) ? true : false;
+		return "";
 	}
 }

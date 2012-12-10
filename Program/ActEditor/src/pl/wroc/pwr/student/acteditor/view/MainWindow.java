@@ -18,7 +18,18 @@ import org.eclipse.swt.widgets.Text;
 
 import pl.wroc.pwr.student.acteditor.model.DocumentRegistry;
 
+/**
+ * Wyswietla glówne okno aplikacji.
+ * 
+ * @author Mateusz
+ *
+ */
 public class MainWindow extends Window {
+	
+	/**
+	 * Tworzy obiekt typu MainWindow z ustawionym tytulem okna.
+	 * @param name Nazwa okna
+	 */
 	public MainWindow(String name) {
 		super(name);
 	}
@@ -120,15 +131,11 @@ public class MainWindow extends Window {
 	}
 
 	@Override
-	protected void dispose() {
+	public void dispose() {
 		while (!shell.isDisposed()) {
 			if (!display.readAndDispatch())
 				display.sleep();
 		}
 		display.dispose();
-	}
-
-	public Display getMainDisplay() {
-		return display;
 	}
 }

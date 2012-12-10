@@ -27,7 +27,7 @@
 \contentsline {section}{\numberline {3.4}System dziedziczenia w zanurzonym JavaScript}{15}{section.3.4}
 \contentsline {section}{\numberline {3.5}Przegl\k ad istniej\k acych serwis\'ow, w kt\'orych wykorzystano Java2Script}{16}{section.3.5}
 \contentsline {paragraph}{Karoo Lark Web Messenger}{16}{section*.14}
-\contentsline {paragraph}{Lemon Dove Web Mail Client}{16}{section*.18}
+\contentsline {paragraph}{Lemon Dove Web Mail Client}{16}{section*.16}
 \contentsline {paragraph}{Advanced Image Viewer}{18}{section*.19}
 \contentsline {chapter}{\chapternumberline {4}XML i Schemat XML}{19}{chapter.4}
 \contentsline {section}{\numberline {4.1}XML}{19}{section.4.1}
@@ -38,6 +38,9 @@
 \contentsline {section}{\numberline {5.2}Druga iteracja -- ActEditor}{22}{section.5.2}
 \contentsline {section}{\numberline {5.3}Trzecia iteracja -- LawCreator}{25}{section.5.3}
 \contentsline {chapter}{\chapternumberline {6}Opis implementacji}{27}{chapter.6}
+\contentsline {section}{\numberline {6.1}Podzia\IeC {\l } aplikacji na modu\IeC {\l }y}{27}{section.6.1}
+\contentsline {section}{\numberline {6.2}Przetwarzanie danych}{27}{section.6.2}
+\contentsline {section}{\numberline {6.3}Implementacja interfejsu graficznego}{28}{section.6.3}
 \contentsline {chapter}{\chapternumberline {7}Testowanie}{30}{chapter.7}
 \contentsline {section}{\numberline {7.1}Testy jednostkowe}{30}{section.7.1}
 \contentsline {section}{\numberline {7.2}Testy akceptacyjne}{32}{section.7.2}
@@ -50,7 +53,7 @@
 \contentsline {paragraph}{Przypadek testowy nr 3}{33}{section*.26}
 \contentsline {paragraph}{Przypadek testowy nr 4}{33}{section*.27}
 \contentsline {paragraph}{Przypadek testowy nr 5}{33}{section*.28}
-\contentsline {section}{\numberline {7.3}Testy funkcjonalne}{34}{section.7.3}
+\contentsline {section}{\numberline {7.3}Testy funkcjonalne}{33}{section.7.3}
 \contentsline {chapter}{\chapternumberline {8}Podsumowanie}{35}{chapter.8}
 \contentsline {section}{\numberline {8.1}Ocena projektu}{35}{section.8.1}
 \contentsline {section}{\numberline {8.2}Wnioski}{36}{section.8.2}

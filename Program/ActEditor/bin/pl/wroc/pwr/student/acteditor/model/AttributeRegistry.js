@@ -16,12 +16,24 @@ if (pl.wroc.pwr.student.acteditor.model.AttributeRegistry.registry == null) {
 });
 Clazz.defineMethod (c$, "add", 
 function (attribute) {
+for (var each, $each = this.attributes.iterator (); $each.hasNext () && ((each = $each.next ()) || true);) {
+if ((each).getName ().equals (attribute.getName ())) {
+return ;
+}}
 this.attributes.add (attribute);
 }, "pl.wroc.pwr.student.acteditor.model.tags.Attribute");
 Clazz.defineMethod (c$, "get", 
 function (index) {
 return this.attributes.get (index);
 }, "~N");
+Clazz.defineMethod (c$, "get", 
+function (name) {
+for (var each, $each = this.attributes.iterator (); $each.hasNext () && ((each = $each.next ()) || true);) {
+if ((each).getName ().equals (name)) {
+return each;
+}}
+return null;
+}, "~S");
 Clazz.defineMethod (c$, "getAttributes", 
 function () {
 return this.attributes;

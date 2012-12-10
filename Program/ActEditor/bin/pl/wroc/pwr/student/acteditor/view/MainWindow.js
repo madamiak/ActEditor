@@ -69,10 +69,6 @@ this.display.dispose ();
 });
 return;
 });
-Clazz.defineMethod (c$, "getMainDisplay", 
-function () {
-return this.display;
-});
 c$.$MainWindow$1$ = function () {
 Clazz.pu$h ();
 c$ = Clazz.declareAnonymous (pl.wroc.pwr.student.acteditor.view, "MainWindow$1", $wt.events.SelectionAdapter);

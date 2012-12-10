@@ -1,4 +1,12 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
 <typeInfoHistroy>
-<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model.tags{TagFactory.java[TagFactory" modifiers="1" timestamp="1351682352318"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.view{MainWindow.java[MainWindow" modifiers="1" timestamp="1354368243784"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.test{SchemaLoader.java[SchemaLoader" modifiers="1" timestamp="1354289259604"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor{Application.java[Application" modifiers="17" timestamp="1354368414903"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model{Schema.java[Schema" modifiers="1" timestamp="1354363541317"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model.tags{AttributeGroup.java[AttributeGroup" modifiers="1" timestamp="1354366168562"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model.tags{Composition.java[Composition" modifiers="1" timestamp="1354366249670"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model.tags{SimpleAttribute.java[SimpleAttribute" modifiers="1" timestamp="1354372454394"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model.tags{SimpleElement.java[SimpleElement" modifiers="1" timestamp="1354373026238"/>
+<typeInfo handle="=ActEditor/src&lt;pl.wroc.pwr.student.acteditor.model.tags{SimpleType.java[SimpleType" modifiers="1" timestamp="1354366777156"/>
 </typeInfoHistroy>

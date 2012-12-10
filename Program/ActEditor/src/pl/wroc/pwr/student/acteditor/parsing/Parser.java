@@ -1,5 +1,11 @@
 package pl.wroc.pwr.student.acteditor.parsing;
 
+/**
+ * Interfejs udostepniajacy parsowanie wczytanych danych.
+ * 
+ * @author Mateusz
+ *
+ */
 public interface Parser {
 	public void loadData();
 }

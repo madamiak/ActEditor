@@ -1,144 +1,95 @@
 ﻿Clazz.declarePackage ("pl.wroc.pwr.student.acteditor.parsing.xsd");
-Clazz.load (null, "pl.wroc.pwr.student.acteditor.parsing.xsd.XSDHelper", ["pl.wroc.pwr.student.acteditor.model.tags.Composition", "$.SimpleElement"], function () {
+Clazz.load (null, "pl.wroc.pwr.student.acteditor.parsing.xsd.XSDHelper", ["pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup", "$.Composition", "$.SimpleAttribute", "$.SimpleType"], function () {
 c$ = Clazz.declareType (pl.wroc.pwr.student.acteditor.parsing.xsd, "XSDHelper");
-Clazz.defineMethod (c$, "getToken", 
+Clazz.makeConstructor (c$, 
+function () {
+});
+Clazz.defineMethod (c$, "createSimpleTypeDefinition", 
 function (line) {
-if (this.hasElementDefinition (line)) {
-return 0;
-} else if (this.hasElementReference (line)) {
-return 1;
-} else if (this.hasAnnotation (line)) {
-return 2;
-} else if (this.hasDocumentation (line)) {
-return 3;
-} else if (this.hasComplexType (line)) {
-return 4;
-} else if (this.hasSequence (line)) {
-return 5;
-} else if (this.hasGroupDefinition (line)) {
-return 6;
-} else if (this.hasGroupReference (line)) {
-return 7;
-} else if (this.hasChoice (line)) {
-return 8;
-}return -1;
+var simpleType =  new pl.wroc.pwr.student.acteditor.model.tags.SimpleType ();
+var name = this.getAttribute ("name", line);
+simpleType.setName (name);
+return simpleType;
 }, "~S");
-Clazz.defineMethod (c$, "hasElementDefinition", 
-($fz = function (line) {
-return (line.contains ("<xsd:element") && line.contains ("name=")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasElementReference", 
-($fz = function (line) {
-return (line.contains ("<xsd:element") && line.contains ("ref=")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasAnnotation", 
-($fz = function (line) {
-return (line.contains ("<xsd:annotation")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasDocumentation", 
-($fz = function (line) {
-return (line.contains ("<xsd:documentation")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasComplexType", 
-($fz = function (line) {
-return (line.contains ("<xsd:complexType")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasSequence", 
-($fz = function (line) {
-return (line.contains ("<xsd:sequence")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasGroupDefinition", 
-($fz = function (line) {
-return (line.contains ("<xsd:group") && line.contains ("name=")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasGroupReference", 
-($fz = function (line) {
-return (line.contains ("<xsd:group") && line.contains ("ref=")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "hasChoice", 
-($fz = function (line) {
-return (line.contains ("<xsd:choice")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
+Clazz.defineMethod (c$, "createGroupReference", 
+function (line) {
+var attribute =  new pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup ();
+var name = this.getAttribute ("ref", line);
+attribute.setName (name);
+return attribute;
+}, "~S");
+Clazz.defineMethod (c$, "createGroupDefinition", 
+function (line) {
+var attribute =  new pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup ();
+var name = this.getAttribute ("name", line);
+attribute.setName (name);
+return attribute;
+}, "~S");
+Clazz.defineMethod (c$, "createAttribute", 
+function (line) {
+var name = this.getAttribute ("name", line);
+var defaultValue = this.getAttribute ("default", line);
+var type = this.getAttribute ("type", line);
+var use = this.getAttribute ("use", line);
+var attribute =  new pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute ();
+attribute.setName (name);
+attribute.setType (type);
+if (!defaultValue.equals ("")) {
+attribute.setDefault (defaultValue);
+}if (!use.equals ("")) {
+attribute.setUse (use);
+}return attribute;
+}, "~S");
+Clazz.defineMethod (c$, "createElementGroupReference", 
+function (line) {
+var name = this.getAttribute ("ref", line);
+var element =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, "ref");
+return element;
+}, "~S");
+Clazz.defineMethod (c$, "createElementGroupDefinition", 
+function (line) {
+var name = this.getAttribute ("name", line);
+var element =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, "group");
+return element;
+}, "~S");
+Clazz.defineMethod (c$, "createElementReference", 
+function (line) {
+var name = this.getAttribute ("ref", line);
+var minOccurs = this.getAttribute ("minOccurs", line);
+var maxOccurs = this.getAttribute ("maxOccurs", line);
+var element =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, "ref");
+if (!minOccurs.equals ("")) {
+element.setMinOccurs (minOccurs);
+}if (!maxOccurs.equals ("")) {
+element.setMaxOccurs (maxOccurs);
+}return element;
+}, "~S");
+Clazz.defineMethod (c$, "setDescription", 
+function (object, line) {
+var description = line.substring (line.indexOf (">") + 1, line.lastIndexOf ("<"));
+if (Clazz.instanceOf (object, pl.wroc.pwr.student.acteditor.model.tags.Composition) || Clazz.instanceOf (object, pl.wroc.pwr.student.acteditor.model.tags.SimpleElement)) {
+if ((object).getDescription ().length == 0) {
+(object).setDescription (description);
+}} else if (Clazz.instanceOf (object, pl.wroc.pwr.student.acteditor.model.tags.Attribute) || Clazz.instanceOf (object, pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup)) {
+if ((object).getDescription ().length == 0) {
+(object).setDescription (description);
+}} else if (Clazz.instanceOf (object, pl.wroc.pwr.student.acteditor.model.tags.SimpleType)) {
+if ((object).getDescription ().length == 0) {
+(object).setDescription (description);
+}}return object;
+}, "~O,~S");
+Clazz.defineMethod (c$, "createElementDefinition", 
+function (line) {
+var name = this.getAttribute ("name", line);
+var result =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, "all");
+return result;
+}, "~S");
 Clazz.defineMethod (c$, "getAttribute", 
 function (name, line) {
 if (line.contains (name)) {
 var begin = line.indexOf (name + "=\"") + (name + "=\"").length;
 var end = line.indexOf ("\"", line.indexOf (name + "=\"") + (name + "=\"").length);
 return line.substring (begin, end);
-}return null;
+}return "";
 }, "~S,~S");
-Clazz.defineMethod (c$, "getDescription", 
-function (line) {
-return line.substring (line.indexOf (">") + 1, line.lastIndexOf ("<"));
-}, "~S");
-Clazz.defineMethod (c$, "createComposition", 
-function (line, type) {
-var name = this.getAttribute ("name", line);
-var e =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, type);
-return e;
-}, "~S,~S");
-Clazz.defineMethod (c$, "createReference", 
-function (line) {
-var name = this.getAttribute ("ref", line);
-var e =  new pl.wroc.pwr.student.acteditor.model.tags.SimpleElement (name);
-return e;
-}, "~S");
-Clazz.defineMethod (c$, "createGroup", 
-function (line, type) {
-var name = this.getAttribute ("ref", line);
-var e =  new pl.wroc.pwr.student.acteditor.model.tags.Composition (name, type);
-return e;
-}, "~S,~S");
-Clazz.defineMethod (c$, "checkIfClosed", 
-function (line) {
-if (this.closedElementDefinition (line)) {
-return 8;
-} else if (this.closedSimpleElement (line)) {
-return 9;
-} else if (this.closedAnnotation (line)) {
-return 10;
-} else if (this.closedDocumentation (line)) {
-return 11;
-} else if (this.closedComplexType (line)) {
-return 12;
-} else if (this.closedSequence (line)) {
-return 13;
-} else if (this.closedGroup (line)) {
-return 14;
-} else if (this.closedChoice (line)) {
-return 15;
-}return -1;
-}, "~S");
-Clazz.defineMethod (c$, "closedElementDefinition", 
-($fz = function (line) {
-return (line.contains ("</xsd:element>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedSimpleElement", 
-($fz = function (line) {
-return (line.contains ("xsd:element>") && line.contains ("/>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedAnnotation", 
-($fz = function (line) {
-return (line.contains ("</xsd:annotation>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedDocumentation", 
-($fz = function (line) {
-return (line.contains ("</xsd:documentation>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedComplexType", 
-($fz = function (line) {
-return (line.contains ("</xsd:complexType>>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedSequence", 
-($fz = function (line) {
-return (line.contains ("</xsd:sequence>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedGroup", 
-($fz = function (line) {
-return (line.contains ("</xsd:group>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
-Clazz.defineMethod (c$, "closedChoice", 
-($fz = function (line) {
-return (line.contains ("</xsd:choice>")) ? true : false;
-}, $fz.isPrivate = true, $fz), "~S");
 });

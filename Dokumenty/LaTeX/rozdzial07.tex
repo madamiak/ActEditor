@@ -63,13 +63,13 @@ W tym podrozdziale zosta³ przedstawiony przyk³adowy test akceptacyjny serwisu La
 
 \paragraph{Cel scenariusza:} Utworzenie nowego aktu prawnego.
 \paragraph{Opis scenariusza:}
-\begin{enumerate}
-	\item Uruchomienie programu
-	\item Wype³nienie i zapis elementu "`Metryka"'
-	\item Wype³nienie i zapis elementu "`Akapit"'
-	\item Ponowne wype³nienie i zapis elementu "`Akapit"'
-	\item Wybór "`Generuj XML"'
-\end{enumerate}
+\begin{itemize}
+	\item[1.] Uruchomienie programu
+	\item[2.] Wype³nienie i zapis elementu "`Metryka"'
+	\item[3.] Wype³nienie i zapis elementu "`Akapit"'
+	\item[4.] Ponowne wype³nienie i zapis elementu "`Akapit"'
+	\item[5.] Wybór "`Generuj XML"'
+\end{itemize}
 \paragraph{Oczekiwane wyniki:} Treœæ dokumentu XML (~\ref{lis:xml}).
 \begin{lstlisting}[language=XML,label=lis:xml,caption=Oczekiwana treœæ dokumentu XML]
 <?xml version="1.0" encoding="UTF-8"?>
@@ -103,7 +103,7 @@ Uzyskany wynik: Element zosta³ poprawnie dodany do drzewa.\\
 Uwagi: brak.
 \paragraph{Przypadek testowy nr 5} Wybór "`Generuj XML"'.\\
 Dane wejœciowe: brak.\\
-Oczekiwany wynik: U¿ytkonikowi ma ukazaæ siê okno, zawieraj¹ce treœæ dokumentu XML (~\ref{lis:xml}).\\
+Oczekiwany wynik: U¿ytkonikowi ma ukazaæ siê okno, zawieraj¹ce treœæ dokumentu XML (listing ~\ref{lis:xml}).\\
 Uzyskany wynik: U¿ytkownikowi ukazuje siê okno zawieraj¹ce treœæ dokumentu XML.\\
 Uwagi: W pewnych miejscach (np. po atrybucie \texttt{status-aktu}) wystêpuj¹ bia³e znaki.
 

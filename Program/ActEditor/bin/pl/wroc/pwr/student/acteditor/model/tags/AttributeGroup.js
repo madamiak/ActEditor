@@ -1,9 +1,10 @@
 ﻿Clazz.declarePackage ("pl.wroc.pwr.student.acteditor.model.tags");
 Clazz.load (["pl.wroc.pwr.student.acteditor.model.tags.Attribute"], "pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup", ["java.util.ArrayList"], function () {
 c$ = Clazz.decorateAsClass (function () {
-this.name = null;
-this.type = null;
-this.use = null;
+this.name = "";
+this.type = "";
+this.use = "";
+this.description = "";
 this.attributes = null;
 Clazz.instantialize (this, arguments);
 }, pl.wroc.pwr.student.acteditor.model.tags, "AttributeGroup", null, pl.wroc.pwr.student.acteditor.model.tags.Attribute);
@@ -12,7 +13,15 @@ function () {
 this.attributes =  new java.util.ArrayList ();
 this.use = "optional";
 });
-Clazz.overrideMethod (c$, "getName", 
+Clazz.overrideMethod (c$, "toString", 
+function () {
+var result = this.name + " " + this.description + " " + this.type + " " + this.use + "\n";
+for (var o, $o = this.attributes.iterator (); $o.hasNext () && ((o = $o.next ()) || true);) {
+result += "\t" + (o).getName () + "\n";
+}
+return result;
+});
+Clazz.defineMethod (c$, "getName", 
 function () {
 return this.name;
 });
@@ -44,8 +53,26 @@ Clazz.overrideMethod (c$, "getAttributes",
 function () {
 return this.attributes;
 });
-Clazz.overrideMethod (c$, "toString", 
+Clazz.overrideMethod (c$, "getDescription", 
 function () {
-return this.name;
+return this.description;
 });
+Clazz.overrideMethod (c$, "setDescription", 
+function (description) {
+this.description = description;
+}, "~S");
+Clazz.overrideMethod (c$, "getSimpleType", 
+function () {
+return null;
+});
+Clazz.overrideMethod (c$, "setSimpleType", 
+function (simpleType) {
+}, "pl.wroc.pwr.student.acteditor.model.tags.SimpleType");
+Clazz.overrideMethod (c$, "getDefault", 
+function () {
+return null;
+});
+Clazz.overrideMethod (c$, "setDefault", 
+function (defaultValue) {
+}, "~S");
 });

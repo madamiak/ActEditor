@@ -63,6 +63,8 @@
           <tags>persp.actionSet:org.eclipse.debug.ui.breakpointActionSet</tags>
           <tags>persp.actionSet:org.eclipse.wst.ws.explorer.explorer</tags>
           <tags>persp.actionSet:org.eclipse.emf.facet.common.editor.actionSet</tags>
+          <tags>persp.actionSet:com.aptana.browser.actionSet</tags>
+          <tags>persp.actionSet:com.aptana.ruby.debug.ui.RubyDebugActionSet</tags>
           <children xsi:type="basic:PartSashContainer" xmi:id="_RqSlICHHEeKOsZknqwPf1g" selectedElement="_RqSlISHHEeKOsZknqwPf1g" horizontal="true">
             <children xsi:type="basic:PartStack" xmi:id="_RqSlISHHEeKOsZknqwPf1g" elementId="topLeft" containerData="2500" selectedElement="_RqSlIiHHEeKOsZknqwPf1g">
               <tags>newtablook</tags>
@@ -162,8 +164,10 @@
           <tags>persp.perspSC:org.eclipse.wst.jsdt.ui.JavaPerspective</tags>
           <tags>persp.actionSet:org.eclipse.debug.ui.debugActionSet</tags>
           <tags>persp.actionSet:org.eclipse.emf.facet.common.editor.actionSet</tags>
-          <children xsi:type="basic:PartSashContainer" xmi:id="_ed1JFiHHEeKOsZknqwPf1g" selectedElement="_ed7PtSHHEeKOsZknqwPf1g" horizontal="true">
-            <children xsi:type="basic:PartStack" xmi:id="_ed1JFyHHEeKOsZknqwPf1g" elementId="left" containerData="2394" selectedElement="_ed1JGCHHEeKOsZknqwPf1g">
+          <tags>persp.actionSet:com.aptana.browser.actionSet</tags>
+          <tags>persp.actionSet:com.aptana.ruby.debug.ui.RubyDebugActionSet</tags>
+          <children xsi:type="basic:PartSashContainer" xmi:id="_ed1JFiHHEeKOsZknqwPf1g" selectedElement="_ed1JFyHHEeKOsZknqwPf1g" horizontal="true">
+            <children xsi:type="basic:PartStack" xmi:id="_ed1JFyHHEeKOsZknqwPf1g" elementId="left" containerData="2592" selectedElement="_ed1JGCHHEeKOsZknqwPf1g">
               <tags>newtablook</tags>
               <tags>org.eclipse.e4.primaryNavigationStack</tags>
               <children xsi:type="advanced:Placeholder" xmi:id="_ed1JGCHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.ui.PackageExplorer" ref="_edvCcCHHEeKOsZknqwPf1g"/>
@@ -173,19 +177,19 @@
               <children xsi:type="advanced:Placeholder" xmi:id="_ed7PviHHEeKOsZknqwPf1g" elementId="org.eclipse.ant.ui.views.AntView" toBeRendered="false" ref="_ed1JESHHEeKOsZknqwPf1g"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_ed7PsCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.views.ResourceNavigator" toBeRendered="false" ref="_RgTisCHHEeKOsZknqwPf1g"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_ed7PsSHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.navigator.ProjectExplorer" toBeRendered="false" ref="_RgGHUCHHEeKOsZknqwPf1g"/>
-              <children xsi:type="advanced:Placeholder" xmi:id="_ed7PsiHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.junit.ResultView" ref="_ed1JEiHHEeKOsZknqwPf1g"/>
+              <children xsi:type="advanced:Placeholder" xmi:id="_ed7PsiHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.junit.ResultView" toBeRendered="false" ref="_ed1JEiHHEeKOsZknqwPf1g"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_ed7PsyHHEeKOsZknqwPf1g" elementId="org.eclipse.wb.core.StructureView" toBeRendered="false" ref="_ed1JEyHHEeKOsZknqwPf1g"/>
               <children xsi:type="advanced:Placeholder" xmi:id="_ed7PtCHHEeKOsZknqwPf1g" elementId="org.eclipse.wb.core.PaletteView" toBeRendered="false" ref="_ed1JFCHHEeKOsZknqwPf1g"/>
             </children>
-            <children xsi:type="basic:PartSashContainer" xmi:id="_ed7PtSHHEeKOsZknqwPf1g" containerData="7606" selectedElement="_ed7PvyHHEeKOsZknqwPf1g">
-              <children xsi:type="basic:PartSashContainer" xmi:id="_ed7PtiHHEeKOsZknqwPf1g" containerData="7135" selectedElement="_ed7PtyHHEeKOsZknqwPf1g" horizontal="true">
-                <children xsi:type="advanced:Placeholder" xmi:id="_ed7PtyHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.editorss" containerData="8130" ref="_ReuOUCHHEeKOsZknqwPf1g"/>
+            <children xsi:type="basic:PartSashContainer" xmi:id="_ed7PtSHHEeKOsZknqwPf1g" containerData="7408" selectedElement="_ed7PtiHHEeKOsZknqwPf1g">
+              <children xsi:type="basic:PartSashContainer" xmi:id="_ed7PtiHHEeKOsZknqwPf1g" containerData="5827" selectedElement="_ed7PtyHHEeKOsZknqwPf1g" horizontal="true">
+                <children xsi:type="advanced:Placeholder" xmi:id="_ed7PtyHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.editorss" containerData="4808" ref="_ReuOUCHHEeKOsZknqwPf1g"/>
                 <children xsi:type="basic:PartStack" xmi:id="_ed7PuSHHEeKOsZknqwPf1g" elementId="org.eclipse.mylyn.tasks.ui.views.tasksMStack" toBeRendered="false" containerData="1870">
                   <tags>newtablook</tags>
                   <children xsi:type="advanced:Placeholder" xmi:id="_ed7PuiHHEeKOsZknqwPf1g" elementId="org.eclipse.mylyn.tasks.ui.views.tasks" toBeRendered="false" ref="_RqJbMCHHEeKOsZknqwPf1g"/>
                 </children>
               </children>
-              <children xsi:type="basic:PartStack" xmi:id="_ed7PvyHHEeKOsZknqwPf1g" elementId="bottom" containerData="2865" selectedElement="_xeWzsSHHEeKOsZknqwPf1g">
+              <children xsi:type="basic:PartStack" xmi:id="_ed7PvyHHEeKOsZknqwPf1g" elementId="bottom" containerData="4173" selectedElement="_ed7PxCHHEeKOsZknqwPf1g">
                 <tags>newtablook</tags>
                 <tags>org.eclipse.e4.secondaryDataStack</tags>
                 <children xsi:type="advanced:Placeholder" xmi:id="_ed7PwCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.views.ProblemView" ref="_RqBfYCHHEeKOsZknqwPf1g"/>
@@ -197,9 +201,10 @@
                 <children xsi:type="advanced:Placeholder" xmi:id="_ed7PxiHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.views.ProgressView" ref="_RqD7oSHHEeKOsZknqwPf1g"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_xeWzsSHHEeKOsZknqwPf1g" elementId="net.sf.j2s.ui.console.J2SConsoleView" ref="_xeWzsCHHEeKOsZknqwPf1g"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_c5A1cCHJEeKtj620MGA4Bw" elementId="org.eclipse.team.sync.views.SynchronizeView" ref="_c46u0CHJEeKtj620MGA4Bw"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="__MxXUSdgEeKApePUVgI_ZA" elementId="org.eclipse.debug.ui.ExpressionView" ref="__MxXUCdgEeKApePUVgI_ZA"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_SY2DgCHjEeK1wMR2BDFmRQ" elementId="org.eclipse.debug.ui.DebugView" ref="_SY01YCHjEeK1wMR2BDFmRQ"/>
                 <children xsi:type="advanced:Placeholder" xmi:id="_KxR3YCHyEeKPh8C6kO1DoQ" elementId="org.eclipse.ui.views.PropertySheet" ref="_Rpi-QCHHEeKOsZknqwPf1g"/>
-                <children xsi:type="advanced:Placeholder" xmi:id="__MxXUSdgEeKApePUVgI_ZA" elementId="org.eclipse.debug.ui.ExpressionView" ref="__MxXUCdgEeKApePUVgI_ZA"/>
+                <children xsi:type="advanced:Placeholder" xmi:id="_4UfI4TF8EeKo2LZZMJl0mg" elementId="org.eclipse.pde.runtime.LogView" toBeRendered="false" ref="_4UfI4DF8EeKo2LZZMJl0mg"/>
               </children>
             </children>
           </children>
@@ -229,96 +234,48 @@
       <tags>categoryTag:Help</tags>
     </sharedElements>
     <sharedElements xsi:type="advanced:Area" xmi:id="_ReuOUCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.editorss" selectedElement="_Reu1YCHHEeKOsZknqwPf1g">
-      <children xsi:type="basic:PartStack" xmi:id="_Reu1YCHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_X1d9IC18EeKs59F3OmwIyA">
+      <children xsi:type="basic:PartStack" xmi:id="_Reu1YCHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.primaryDataStack" selectedElement="_cAc_MDvHEeKII7TV9t5xhw">
         <tags>newtablook</tags>
         <tags>org.eclipse.e4.primaryDataStack</tags>
         <tags>EditorStack</tags>
-        <children xsi:type="basic:Part" xmi:id="_9_cvgCy5EeK5wfiwi3YyrQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Application.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/Application.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/Application.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_IXpMkDvHEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SchemaLoader.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/test/SchemaLoader.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/test/SchemaLoader.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;198&quot; selectionOffset=&quot;776&quot; selectionTopPixel=&quot;8658&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="__TLBMCy5EeK5wfiwi3YyrQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="DecisionWindow.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/view/DecisionWindow.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/view/DecisionWindow.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;2173&quot; selectionTopPixel=&quot;555&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_UeMHoDvHEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Tokenizer.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/Tokenizer.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/Tokenizer.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;78&quot; selectionTopPixel=&quot;2538&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_cAc_MDvHEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="XSDHelper.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDHelper.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDHelper.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;3670&quot; selectionTopPixel=&quot;1398&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_3kb4oDvHEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="XSDParser.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDParser.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDParser.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;1071&quot; selectionTopPixel=&quot;213&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_O9d0kDvIEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="XSDEventHandler.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDEventHandler.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDEventHandler.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;570&quot; selectionTopPixel=&quot;4713&quot;/>&#xD;&#xA;&lt;/editor>"/>
+          <tags>Editor</tags>
+          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
+          <tags>removeOnHide</tags>
+        </children>
+        <children xsi:type="basic:Part" xmi:id="_ChslgDvKEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SubWindow.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/view/SubWindow.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/view/SubWindow.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;47&quot; selectionOffset=&quot;2775&quot; selectionTopPixel=&quot;975&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.wb.core.guiEditor</tags>
           <tags>removeOnHide</tags>
         </children>
-        <children xsi:type="basic:Part" xmi:id="_qROb8Cy6EeK5wfiwi3YyrQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Composition.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/Composition.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/Composition.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;5&quot; selectionOffset=&quot;232&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_t1VmcCy7EeK5wfiwi3YyrQ" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Schema.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/model/Schema.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/model/Schema.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;46&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_1rScwCzAEeKEK5vzt2agJA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="XSDParser.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDParser.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDParser.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;493&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_45gFMCzAEeKEK5vzt2agJA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="XSDHelper.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDHelper.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/XSDHelper.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;434&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_X1d9IC18EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="ElementRegistry.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/model/ElementRegistry.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/model/ElementRegistry.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;861&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_zCH7sC18EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Element.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/Element.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/Element.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;229&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_zgw_gC18EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="SimpleElement.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/SimpleElement.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/xsd/SimpleElement.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;701&quot; selectionTopPixel=&quot;673&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_I5VDEC1-EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Parser.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/Parser.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/Parser.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_5oWW4C1-EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Utils.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/util/Utils.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/util/Utils.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;260&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_H7rSkC1_EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="WindowBuilder.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/view/WindowBuilder.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/view/WindowBuilder.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;323&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_JsxcwC1_EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Window.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/view/Window.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/view/Window.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_KG83UC1_EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="MainWindow.java" iconURI="platform:/plugin/org.eclipse.wb.core.ui/icons/gui_editor.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/view/MainWindow.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.wb.core.guiEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/view/MainWindow.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
-          <tags>Editor</tags>
-          <tags>org.eclipse.wb.core.guiEditor</tags>
-          <tags>removeOnHide</tags>
-        </children>
-        <children xsi:type="basic:Part" xmi:id="_QdIWQC1_EeKs59F3OmwIyA" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Formatter.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/Formatter.java" closeable="true">
-          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/parsing/Formatter.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;0&quot; selectionTopPixel=&quot;0&quot;/>&#xD;&#xA;&lt;/editor>"/>
+        <children xsi:type="basic:Part" xmi:id="_Dp1SQDvKEeKII7TV9t5xhw" elementId="org.eclipse.e4.ui.compatibility.editor" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor" label="Presenter.java" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/obj16/jcu_obj.gif" tooltip="ActEditor/src/pl/wroc/pwr/student/acteditor/view/Presenter.java" closeable="true">
+          <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;editor id=&quot;org.eclipse.jdt.ui.CompilationUnitEditor&quot;>&#xD;&#xA;&lt;input factoryID=&quot;org.eclipse.ui.part.FileEditorInputFactory&quot; path=&quot;/ActEditor/src/pl/wroc/pwr/student/acteditor/view/Presenter.java&quot;/>&#xD;&#xA;&lt;editorState selectionHorizontalPixel=&quot;0&quot; selectionLength=&quot;0&quot; selectionOffset=&quot;7103&quot; selectionTopPixel=&quot;2718&quot;/>&#xD;&#xA;&lt;/editor>"/>
           <tags>Editor</tags>
           <tags>org.eclipse.jdt.ui.CompilationUnitEditor</tags>
           <tags>removeOnHide</tags>
@@ -377,8 +334,8 @@
       <tags>View</tags>
       <tags>categoryTag:General</tags>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_RqBfYCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/problems_view.gif" tooltip="0 errors, 31 warnings, 0 others" closeable="true">
-      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Errors&quot;/>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (9 items)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;259&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
+    <sharedElements xsi:type="basic:Part" xmi:id="_RqBfYCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.views.ProblemView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Problems" iconURI="platform:/plugin/org.eclipse.ui.ide//icons/full/eview16/problems_view.gif" tooltip="0 errors, 178 warnings, 0 others (Filter matched 100 of 178 items)" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view PRIMARY_SORT_FIELD=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot; categoryGroup=&quot;org.eclipse.ui.ide.severity&quot; markerContentGenerator=&quot;org.eclipse.ui.ide.problemsGenerator&quot; partName=&quot;Problems&quot;>&#xD;&#xA;&lt;expanded>&#xD;&#xA;&lt;category IMemento.internal.id=&quot;Warnings (100 of 178 items)&quot;/>&#xD;&#xA;&lt;/expanded>&#xD;&#xA;&lt;columnWidths org.eclipse.ui.ide.locationField=&quot;90&quot; org.eclipse.ui.ide.markerType=&quot;90&quot; org.eclipse.ui.ide.pathField=&quot;120&quot; org.eclipse.ui.ide.resourceField=&quot;90&quot; org.eclipse.ui.ide.severityAndDescriptionField=&quot;918&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.severityAndDescriptionField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.resourceField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.pathField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.locationField&quot;/>&#xD;&#xA;&lt;visible IMemento.internal.id=&quot;org.eclipse.ui.ide.markerType&quot;/>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:General</tags>
       <menus xmi:id="_exkkcCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.views.ProblemView">
@@ -442,6 +399,7 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view group_libraries=&quot;1&quot; layout=&quot;2&quot; linkWithEditor=&quot;0&quot; rootMode=&quot;1&quot; workingSetName=&quot;&quot;>&#xD;&#xA;&lt;customFilters userDefinedPatternsEnabled=&quot;false&quot;>&#xD;&#xA;&lt;xmlDefinedFilters>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.LocalTypesFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.StaticsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.ExternalPluginLibrariesFilter1&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ClosedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonSharedProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaElementFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ContainedLibraryFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.CuAndClassFileFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonJavaProjectsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyInnerPackageFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.PackageDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.EmptyPackageFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsConnections&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.ImportDeclarationFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.FieldsFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.internal.ui.PackageExplorer.HideInnerClassFilesFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.NonPublicFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_.*&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.EmptyLibraryContainerFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer_patternFilterId_RemoteSystemsTempFiles&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.pde.ui.BinaryProjectFilter1&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.jdt.ui.PackageExplorer.SyntheticMembersFilter&quot; isEnabled=&quot;true&quot;/>&#xD;&#xA;&lt;child filterId=&quot;org.eclipse.mylyn.java.ui.MembersFilter&quot; isEnabled=&quot;false&quot;/>&#xD;&#xA;&lt;/xmlDefinedFilters>&#xD;&#xA;&lt;/customFilters>&#xD;&#xA;&lt;/view>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
+      <tags>activeOnClose</tags>
       <menus xmi:id="_ee8jYCHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.ui.PackageExplorer">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -452,9 +410,15 @@
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_edvCciHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.ui.SourceView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Declaration" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/eview16/source.gif" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_edvCciHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.ui.SourceView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Declaration" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/eview16/source.gif" tooltip="" closeable="true">
+      <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
+      <menus xmi:id="_2TuLADF8EeKo2LZZMJl0mg" elementId="org.eclipse.jdt.ui.SourceView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_2TuLATF8EeKo2LZZMJl0mg" elementId="org.eclipse.jdt.ui.SourceView" visible="false"/>
     </sharedElements>
     <sharedElements xsi:type="basic:Part" xmi:id="_ed1JECHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.texteditor.TemplatesView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Templates" iconURI="platform:/plugin/org.eclipse.jdt.ui//icons/full/eview16/templates.gif" closeable="true">
       <tags>View</tags>
@@ -464,7 +428,7 @@
       <tags>View</tags>
       <tags>categoryTag:Ant</tags>
     </sharedElements>
-    <sharedElements xsi:type="basic:Part" xmi:id="_ed1JEiHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.junit.ResultView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="JUnit" iconURI="platform:/plugin/org.eclipse.jdt.junit//icons/full/eview16/junit.gif" tooltip="TagFactoryTest [Runner: JUnit 4]" closeable="true">
+    <sharedElements xsi:type="basic:Part" xmi:id="_ed1JEiHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.junit.ResultView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="JUnit" iconURI="platform:/plugin/org.eclipse.jdt.junit//icons/full/eview16/junit.gif" tooltip="AllTests [Runner: JUnit 4]" closeable="true">
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view failuresOnly=&quot;false&quot; layout=&quot;1&quot; orientation=&quot;2&quot; ratio=&quot;500&quot; scroll=&quot;false&quot; time=&quot;true&quot;/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java</tags>
@@ -486,7 +450,6 @@
       <persistedState key="memento" value="&lt;?xml version=&quot;1.0&quot; encoding=&quot;UTF-8&quot;?>&#xD;&#xA;&lt;view/>"/>
       <tags>View</tags>
       <tags>categoryTag:Java2Script</tags>
-      <tags>activeOnClose</tags>
       <menus xmi:id="_xe8CgCHHEeKOsZknqwPf1g" elementId="net.sf.j2s.ui.console.J2SConsoleView">
         <tags>ViewMenu</tags>
         <tags>menuContribution:menu</tags>
@@ -523,6 +486,15 @@
       </menus>
       <toolbar xmi:id="__ODJsSdgEeKApePUVgI_ZA" elementId="org.eclipse.debug.ui.ExpressionView" visible="false"/>
     </sharedElements>
+    <sharedElements xsi:type="basic:Part" xmi:id="_4UfI4DF8EeKo2LZZMJl0mg" elementId="org.eclipse.pde.runtime.LogView" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView" label="Error Log" iconURI="platform:/plugin/org.eclipse.ui.views.log//icons/eview16/error_log.gif" tooltip="" closeable="true">
+      <tags>View</tags>
+      <tags>categoryTag:General</tags>
+      <menus xmi:id="_4ViRwDF8EeKo2LZZMJl0mg" elementId="org.eclipse.pde.runtime.LogView">
+        <tags>ViewMenu</tags>
+        <tags>menuContribution:menu</tags>
+      </menus>
+      <toolbar xmi:id="_4ViRwTF8EeKo2LZZMJl0mg" elementId="org.eclipse.pde.runtime.LogView" visible="false"/>
+    </sharedElements>
     <trimBars xmi:id="_Qp9JgCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.main.toolbar">
       <children xsi:type="menu:ToolBar" xmi:id="_RTOI8CHHEeKOsZknqwPf1g" elementId="group.file" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -530,19 +502,20 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RTUPkCHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.workbench.file">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUAC17EeKs59F3OmwIyA" elementId="new.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUAS17EeKs59F3OmwIyA" elementId="newWizardDropDown"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUAi17EeKs59F3OmwIyA" elementId="new.ext" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUAy17EeKs59F3OmwIyA" elementId="save.group" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUBC17EeKs59F3OmwIyA" elementId="save"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUBS17EeKs59F3OmwIyA" elementId="saveAll"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOHUBi17EeKs59F3OmwIyA" elementId="save.ext" visible="false"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_vOQd8C17EeKs59F3OmwIyA" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.gif" tooltip="Print" enabled="false" command="_P5Cp8yHHEeKOsZknqwPf1g"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOaO8C17EeKs59F3OmwIyA" elementId="print.ext" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOaO8S17EeKs59F3OmwIyA" elementId="build.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOaO8i17EeKs59F3OmwIyA" elementId="build.ext" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOaO8y17EeKs59F3OmwIyA" elementId="additions"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-MC17EeKs59F3OmwIyA" elementId="org.eclipse.wb.core.wizards.actions.NewDesignerTypeDropDownAction"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AWvAQD4vEeKoVuItq2MDwA" elementId="new.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AWvAQT4vEeKoVuItq2MDwA" elementId="newWizardDropDown"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AWvAQj4vEeKoVuItq2MDwA" elementId="new.ext" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AWvAQz4vEeKoVuItq2MDwA" elementId="save.group" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AWvARD4vEeKoVuItq2MDwA" elementId="save"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AW1G4D4vEeKoVuItq2MDwA" elementId="saveAll"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AW1G4T4vEeKoVuItq2MDwA" elementId="save.ext" visible="false"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_AW1G4j4vEeKoVuItq2MDwA" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/print_edit.gif" tooltip="Print" enabled="false" command="_P5Cp8yHHEeKOsZknqwPf1g"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXsCgD4vEeKoVuItq2MDwA" elementId="print.ext" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXsCgT4vEeKoVuItq2MDwA" elementId="build.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXsCgj4vEeKoVuItq2MDwA" elementId="build"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJID4vEeKoVuItq2MDwA" elementId="build.ext" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJIT4vEeKoVuItq2MDwA" elementId="additions"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkFfwD4vEeKoVuItq2MDwA" elementId="org.eclipse.wb.core.wizards.actions.NewDesignerTypeDropDownAction"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RTUPkSHHEeKOsZknqwPf1g" elementId="additions" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -550,46 +523,46 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_kNcQECHvEeK-J96LavHCRw" elementId="org.eclipse.debug.ui.debugActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-MS17EeKs59F3OmwIyA" elementId="renderGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-Mi17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.DropToFrame"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-My17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.ToggleStepFilters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-NC17EeKs59F3OmwIyA" elementId="emptyStepGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-NS17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.RunToLine"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-Ni17EeKs59F3OmwIyA" elementId="stepReturnGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-Ny17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.StepReturn"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-OC17EeKs59F3OmwIyA" elementId="stepOverGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-OS17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.StepOver"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vYq-Oi17EeKs59F3OmwIyA" elementId="stepIntoGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vMC17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.StepInto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vMS17EeKs59F3OmwIyA" elementId="threadGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vMi17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.Resume"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vMy17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.Suspend"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vNC17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.Terminate"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vNS17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.toolbar.Disconnect"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkFfwT4vEeKoVuItq2MDwA" elementId="renderGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkHU8D4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.DropToFrame"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkHU8T4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.ToggleStepFilters"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkIjED4vEeKoVuItq2MDwA" elementId="emptyStepGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkIjET4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.RunToLine"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkKYQD4vEeKoVuItq2MDwA" elementId="stepReturnGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkKYQT4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.StepReturn"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkLmYD4vEeKoVuItq2MDwA" elementId="stepOverGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkNbkD4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.StepOver"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkNbkT4vEeKoVuItq2MDwA" elementId="stepIntoGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkOpsD4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.StepInto"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkOpsT4vEeKoVuItq2MDwA" elementId="threadGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkOpsj4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.Resume"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkQe4D4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.Suspend"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkQe4T4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.Terminate"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkRtAD4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.toolbar.Disconnect"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_k3TXICHIEeKtj620MGA4Bw" elementId="org.eclipse.debug.ui.breakpointActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vNi17EeKs59F3OmwIyA" elementId="breakpointGroup"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vNy17EeKs59F3OmwIyA" elementId="org.eclipse.debug.ui.actions.SkipAllBreakpoints"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkRtAT4vEeKoVuItq2MDwA" elementId="breakpointGroup"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkTiMD4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.ui.actions.SkipAllBreakpoints"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SHQN8CHHEeKOsZknqwPf1g" elementId="org.eclipse.debug.ui.launchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vOC17EeKs59F3OmwIyA" elementId="debug"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vOS17EeKs59F3OmwIyA" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vOi17EeKs59F3OmwIyA" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vOy17EeKs59F3OmwIyA" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkTiMT4vEeKoVuItq2MDwA" elementId="debug"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkTiMj4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.internal.ui.actions.DebugDropDownAction"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkUwUD4vEeKoVuItq2MDwA" elementId="org.eclipse.debug.internal.ui.actions.RunDropDownAction"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkUwUT4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.externaltools.ExternalToolMenuDelegateToolbar"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_NpC5QCHzEeKyNpHdLlbVBA" elementId="org.eclipse.emf.facet.common.editor.actionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vPC17EeKs59F3OmwIyA" elementId="Normal"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vPS17EeKs59F3OmwIyA" elementId="org.eclipse.emf.facet.util.emf.actions.OpenModelFromEmfRegistry"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkWlgD4vEeKoVuItq2MDwA" elementId="Normal"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkWlgT4vEeKoVuItq2MDwA" elementId="org.eclipse.emf.facet.util.emf.actions.OpenModelFromEmfRegistry"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_e1nW8CHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.ui.JavaElementCreationActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vPi17EeKs59F3OmwIyA" elementId="JavaWizards"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vPy17EeKs59F3OmwIyA" elementId="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY0vQC17EeKs59F3OmwIyA" elementId="org.eclipse.jdt.ui.actions.OpenPackageWizard"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95IC17EeKs59F3OmwIyA" elementId="org.eclipse.jdt.ui.actions.NewTypeDropDown"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzoD4vEeKoVuItq2MDwA" elementId="JavaWizards"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzoT4vEeKoVuItq2MDwA" elementId="org.eclipse.jdt.ui.actions.OpenProjectWizard"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzoj4vEeKoVuItq2MDwA" elementId="org.eclipse.jdt.ui.actions.OpenPackageWizard"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzoz4vEeKoVuItq2MDwA" elementId="org.eclipse.jdt.ui.actions.NewTypeDropDown"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SKOpcCHHEeKOsZknqwPf1g" elementId="org.eclipse.jst.j2ee.J2eeMainActionSet" visible="false">
         <tags>Draggable</tags>
@@ -602,50 +575,20 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SIMCECHHEeKOsZknqwPf1g" elementId="org.eclipse.search.searchActionSet">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95IS17EeKs59F3OmwIyA" elementId="Search"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95Ii17EeKs59F3OmwIyA" elementId="openType"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95Iy17EeKs59F3OmwIyA" elementId="org.eclipse.mylyn.tasks.ui.openTask"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95JC17EeKs59F3OmwIyA" elementId="org.eclipse.search.OpenSearchDialogPage"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzpD4vEeKoVuItq2MDwA" elementId="Search"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzpT4vEeKoVuItq2MDwA" elementId="openType"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AkXzpj4vEeKoVuItq2MDwA" elementId="org.eclipse.mylyn.tasks.ui.openTask"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Akd6QD4vEeKoVuItq2MDwA" elementId="org.eclipse.search.OpenSearchDialogPage"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_meWNcCHIEeKtj620MGA4Bw" elementId="org.eclipse.ui.edit.text.actionSet.presentation">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0GB0CveEeKNqr1CUpaS6A" elementId="Presentation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0GB0SveEeKNqr1CUpaS6A" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0GB0iveEeKNqr1CUpaS6A" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0GB0yveEeKNqr1CUpaS6A" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0H3ACveEeKNqr1CUpaS6A" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0H3ASveEeKNqr1CUpaS6A" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_W0H3AiveEeKNqr1CUpaS6A" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_rMI8MCviEeKBJJKkNuQsxg" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_rMhWsCviEeKBJJKkNuQsxg" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_rMndUCviEeKBJJKkNuQsxg" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_rMndUSviEeKBJJKkNuQsxg" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_rMndUiviEeKBJJKkNuQsxg" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_rMtj8CviEeKBJJKkNuQsxg" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_eLFi0Cy1EeKpZ5licEB4PA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_eLFi0Sy1EeKpZ5licEB4PA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_eLFi0iy1EeKpZ5licEB4PA" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_eLLpcCy1EeKpZ5licEB4PA" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_eLNeoCy1EeKpZ5licEB4PA" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_eLNeoSy1EeKpZ5licEB4PA" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-RwngCy5EeK5wfiwi3YyrQ" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-RwngSy5EeK5wfiwi3YyrQ" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-Rwngiy5EeK5wfiwi3YyrQ" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-R2uICy5EeK5wfiwi3YyrQ" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-R2uISy5EeK5wfiwi3YyrQ" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_-R2uIiy5EeK5wfiwi3YyrQ" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bNe9sCy_EeKEK5vzt2agJA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bNgL0Cy_EeKEK5vzt2agJA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bNhZ8Cy_EeKEK5vzt2agJA" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bNioECy_EeKEK5vzt2agJA" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bNjPICy_EeKEK5vzt2agJA" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_bNkdQCy_EeKEK5vzt2agJA" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_X5C1kC18EeKs59F3OmwIyA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_X5C1kS18EeKs59F3OmwIyA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_X5L_gC18EeKs59F3OmwIyA" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_X5L_gS18EeKs59F3OmwIyA" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_X5L_gi18EeKs59F3OmwIyA" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_X5L_gy18EeKs59F3OmwIyA" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CR7hoD4vEeKoVuItq2MDwA" elementId="Presentation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CR7hoT4vEeKoVuItq2MDwA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleBreadcrumb"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CR7hoj4vEeKoVuItq2MDwA" elementId="org.eclipse.jdt.ui.edit.text.java.toggleMarkOccurrences"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CR7hoz4vEeKoVuItq2MDwA" elementId="org.eclipse.mylyn.java.ui.editor.folding.auto"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CSBoQD4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.edit.text.toggleBlockSelectionMode"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CSBoQT4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.edit.text.toggleShowWhitespaceCharacters"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_CSBoQj4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.edit.text.toggleShowSelectedElementOnly"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_SI_6YCHHEeKOsZknqwPf1g" elementId="org.eclipse.wst.server.ui.internal.webbrowser.actionSet" visible="false">
         <tags>Draggable</tags>
@@ -667,15 +610,15 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RTUPlSHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.workbench.navigate">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOaO9C17EeKs59F3OmwIyA" elementId="history.group"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOaO9S17EeKs59F3OmwIyA" elementId="group.application" visible="false"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vOtJ4C17EeKs59F3OmwIyA" elementId="backardHistory"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vO264C17EeKs59F3OmwIyA" elementId="forwardHistory"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vO264S17EeKs59F3OmwIyA" elementId="pin.group"/>
-        <children xsi:type="menu:HandledToolItem" xmi:id="_vO264i17EeKs59F3OmwIyA" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.gif" tooltip="Pin the current editor" enabled="false" command="_P4w9JCHHEeKOsZknqwPf1g"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95JS17EeKs59F3OmwIyA" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95Ji17EeKs59F3OmwIyA" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vY95Jy17EeKs59F3OmwIyA" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJIj4vEeKoVuItq2MDwA" elementId="history.group"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJIz4vEeKoVuItq2MDwA" elementId="group.application" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJJD4vEeKoVuItq2MDwA" elementId="backardHistory"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJJT4vEeKoVuItq2MDwA" elementId="forwardHistory"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AXyJJj4vEeKoVuItq2MDwA" elementId="pin.group"/>
+        <children xsi:type="menu:HandledToolItem" xmi:id="_AXyJJz4vEeKoVuItq2MDwA" iconURI="platform:/plugin/org.eclipse.ui/icons/full/etool16/pin_editor.gif" tooltip="Pin the current editor" enabled="false" command="_P4w9JCHHEeKOsZknqwPf1g"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Akd6QT4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.edit.text.gotoNextAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Akd6Qj4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.edit.text.gotoPreviousAnnotation"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_Akd6Qz4vEeKoVuItq2MDwA" elementId="org.eclipse.ui.edit.text.gotoLastEditPosition"/>
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RTUPliHHEeKOsZknqwPf1g" elementId="group.editor" toBeRendered="false">
         <tags>toolbarSeparator</tags>
@@ -687,8 +630,8 @@
       </children>
       <children xsi:type="menu:ToolBar" xmi:id="_RTUPmiHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.workbench.help" visible="false">
         <tags>Draggable</tags>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vO264y17EeKs59F3OmwIyA" elementId="group.help"/>
-        <children xsi:type="menu:OpaqueToolItem" xmi:id="_vO265C17EeKs59F3OmwIyA" elementId="group.application" visible="false"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AX4PwD4vEeKoVuItq2MDwA" elementId="group.help"/>
+        <children xsi:type="menu:OpaqueToolItem" xmi:id="_AX4PwT4vEeKoVuItq2MDwA" elementId="group.application" visible="false"/>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_SNxssCHHEeKOsZknqwPf1g" elementId="PerspectiveSpacer" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.renderers.swt/org.eclipse.e4.ui.workbench.renderers.swt.LayoutModifierToolControl">
         <tags>stretch</tags>
@@ -729,6 +672,9 @@
         <tags>TrimStack</tags>
       </children>
       <children xsi:type="menu:ToolControl" xmi:id="_1hVjUCH7EeKm-_NT23O1vw" elementId="bottom(org.eclipse.jdt.ui.JavaPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
+        <tags>TrimStack</tags>
+      </children>
+      <children xsi:type="menu:ToolControl" xmi:id="_uohlIDe3EeKriO5am1dTSg" elementId="PartStack@1a4c52a1(org.eclipse.jdt.ui.JavaPerspective)" toBeRendered="false" contributionURI="bundleclass://org.eclipse.e4.ui.workbench.addons.swt/org.eclipse.e4.ui.workbench.addons.minmax.TrimStack">
         <tags>TrimStack</tags>
       </children>
     </trimBars>
@@ -880,6 +826,7 @@
     <bindings xmi:id="_QB8HQCHHEeKOsZknqwPf1g" keySequence="CTRL+ARROW_LEFT" command="_P4gecSHHEeKOsZknqwPf1g"/>
     <bindings xmi:id="_QB-jgCHHEeKOsZknqwPf1g" keySequence="CTRL+D" command="_P4i6uiHHEeKOsZknqwPf1g"/>
     <bindings xmi:id="_QB_xoCHHEeKOsZknqwPf1g" keySequence="CTRL+ARROW_RIGHT" command="_P5FtRCHHEeKOsZknqwPf1g"/>
+    <bindings xmi:id="_lqEDsDAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+R" command="_lm6pJjAUEeKNAMCbWZWItw"/>
   </bindingTables>
   <bindingTables xmi:id="_P8HMESHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.contexts.window" bindingContext="_P0dE7CHHEeKOsZknqwPf1g">
     <bindings xmi:id="_P8HzICHHEeKOsZknqwPf1g" keySequence="CTRL+SHIFT+NUMPAD_MULTIPLY" command="_P4wWFCHHEeKOsZknqwPf1g"/>
@@ -1035,6 +982,47 @@
     <bindings xmi:id="_tsDDECHwEeKPh8C6kO1DoQ" keySequence="CTRL+SHIFT+F3" command="_tp8xVCHwEeKPh8C6kO1DoQ"/>
     <bindings xmi:id="_X3nykCKiEeK127N6T9N4JA" keySequence="ALT+SHIFT+D S" command="_X2E6cCKiEeK127N6T9N4JA"/>
     <bindings xmi:id="_X5Cu4CKiEeK127N6T9N4JA" keySequence="ALT+SHIFT+X S" command="_X2ETYCKiEeK127N6T9N4JA"/>
+    <bindings xmi:id="_loogUTAUEeKNAMCbWZWItw" keySequence="CTRL+TAB" command="_lm0igzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_loum8DAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+D R" command="_lmub2DAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo0tkDAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+TAB" command="_lnAvwTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo0tkjAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+D" command="_lmub8zAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo0tkzAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G ARROW_RIGHT" command="_lnG2XjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo0tlDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G P" command="_lmub0jAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo0tlTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G E" command="_lm6pEjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60MDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G 3" command="_lmub6jAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60MTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G G" command="_lm0ijDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60MjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G ARROW_LEFT" command="_lmoVSTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60MzAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G S" command="_lmoVPzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60NDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G C" command="_lmub1zAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60NTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G R" command="_lnAvxjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60NjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G NUMPAD_SUBTRACT" command="_lnAvuDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo60NzAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G NUMPAD_ADD" command="_lmoVQTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA60DAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G A" command="_lmoVPDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA60TAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G W" command="_lnG2UTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA60jAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G M" command="_lmoVOjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA60zAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G NUMPAD_DIVIDE" command="_lmub5jAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA61DAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G NUMPAD_6" command="_lmub3TAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA61TAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G NUMPAD_9" command="_lm0ifzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA61jAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G I" command="_lnAvxzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpA61zAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G U" command="_lmoVODAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBcDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G J" command="_lnG2VjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBcTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G H" command="_lm6pIzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBcjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G T" command="_lnAvwjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBczAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G F" command="_lmoVQzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBdDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G DEL" command="_lm6pEzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBdTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G B" command="_lm6pLTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpHBdjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G V" command="_lmub5TAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpNIEDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G ." command="_lm6pETAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpNIETAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G X" command="_lnAvujAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpNIEjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G D" command="_lnAvwzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpNIEzAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+G Q" command="_lmub0TAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqEDsTAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+R" command="_lm0iezAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqEDsjAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+U" command="_lmoVNjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqWXkDAUEeKNAMCbWZWItw" keySequence="CTRL+T" command="_P4iTryHHEeKOsZknqwPf1g"/>
+    <bindings xmi:id="_lrHMkDAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+\" command="_lm0idTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2kDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+X R" command="_lm0icDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lsu9MTAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+D" command="_lnG2WDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lsu9MzAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+D" command="_lm6pLDAUEeKNAMCbWZWItw"/>
   </bindingTables>
   <bindingTables xmi:id="_P8PH4SHHEeKOsZknqwPf1g" elementId="org.eclipse.datatools.sqltools.SQLEditorScope" bindingContext="_P5eu1CHHEeKOsZknqwPf1g">
     <bindings xmi:id="_P8Pu8CHHEeKOsZknqwPf1g" keySequence="ALT+C" command="_P4t51yHHEeKOsZknqwPf1g"/>
@@ -1397,6 +1385,195 @@
   <bindingTables xmi:id="_76VNQSvhEeKBJJKkNuQsxg" bindingContext="_76VNQCvhEeKBJJKkNuQsxg"/>
   <bindingTables xmi:id="_76WbYCvhEeKBJJKkNuQsxg" bindingContext="_76VNQyvhEeKBJJKkNuQsxg"/>
   <bindingTables xmi:id="_76YQkCvhEeKBJJKkNuQsxg" bindingContext="_76WbYivhEeKBJJKkNuQsxg"/>
+  <bindingTables xmi:id="_locTEDAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.textEditorScope.findbar" bindingContext="_lnTDkjAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_loogUDAUEeKNAMCbWZWItw" keySequence="ALT+K" command="_lm6pGzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_loogVDAUEeKNAMCbWZWItw" keySequence="ALT+C" command="_lm6pJDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpNIFDAUEeKNAMCbWZWItw" keySequence="ALT+B" command="_lm6pKDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpZVUDAUEeKNAMCbWZWItw" keySequence="ALT+CR" command="_lnG2XTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpZVUTAUEeKNAMCbWZWItw" keySequence="CR" command="_lm0iiDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpZVUjAUEeKNAMCbWZWItw" keySequence="NUMPAD_ENTER" command="_lm0iiDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpZVUzAUEeKNAMCbWZWItw" keySequence="ALT+N" command="_lm0iiDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpZVVjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+CR" command="_lnG2XTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpZVVzAUEeKNAMCbWZWItw" keySequence="ALT+W" command="_lmoVOzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb8TAUEeKNAMCbWZWItw" keySequence="ALT+M" command="_lnAvyDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb8jAUEeKNAMCbWZWItw" keySequence="ALT+L" command="_lm0iejAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb8zAUEeKNAMCbWZWItw" keySequence="ALT+T" command="_lmub2jAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb9TAUEeKNAMCbWZWItw" keySequence="ALT+P" command="_lm0ijzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb9zAUEeKNAMCbWZWItw" keySequence="ALT+O" command="_lm6pGTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lprpMDAUEeKNAMCbWZWItw" keySequence="SHIFT+NUMPAD_ENTER" command="_lm0ijjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lprpMTAUEeKNAMCbWZWItw" keySequence="ESC" command="_lm6pKzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lp99EDAUEeKNAMCbWZWItw" keySequence="SHIFT+CR" command="_lm0ijjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lp99ETAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+K" command="_lm0ijjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lp99EjAUEeKNAMCbWZWItw" keySequence="CTRL+K" command="_lmub9zAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lp99EzAUEeKNAMCbWZWItw" keySequence="F12" command="_lm6pKzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqEDszAUEeKNAMCbWZWItw" keySequence="F3" command="_lm0iiDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqceMzAUEeKNAMCbWZWItw" keySequence="ALT+X" command="_lm0ihTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lquyEDAUEeKNAMCbWZWItw" keySequence="ALT+S" command="_lnG2UjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltl40DAUEeKNAMCbWZWItw" keySequence="CTRL+F" command="_lnG2UzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltl40jAUEeKNAMCbWZWItw" keySequence="ALT+E" command="_lmub4DAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltr_cDAUEeKNAMCbWZWItw" keySequence="ALT+F" command="_lmoVTzAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_loogUjAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.outline" bindingContext="_lnM89TAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_loogUzAUEeKNAMCbWZWItw" keySequence="ALT+CTRL++" command="_lm6pITAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lprpMzAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+9" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lprpNDAUEeKNAMCbWZWItw" elementId="level" name="level" value="9"/>
+    </bindings>
+    <bindings xmi:id="_lprpNTAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+8" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lprpNjAUEeKNAMCbWZWItw" elementId="level" name="level" value="8"/>
+    </bindings>
+    <bindings xmi:id="_lprpNzAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+7" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lprpODAUEeKNAMCbWZWItw" elementId="level" name="level" value="7"/>
+    </bindings>
+    <bindings xmi:id="_lprpOTAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+6" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lprpOjAUEeKNAMCbWZWItw" elementId="level" name="level" value="6"/>
+    </bindings>
+    <bindings xmi:id="_lprpOzAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+5" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lprpPDAUEeKNAMCbWZWItw" elementId="level" name="level" value="5"/>
+    </bindings>
+    <bindings xmi:id="_lprpPTAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+4" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lprpPjAUEeKNAMCbWZWItw" elementId="level" name="level" value="4"/>
+    </bindings>
+    <bindings xmi:id="_lp32cDAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+3" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lp32cTAUEeKNAMCbWZWItw" elementId="level" name="level" value="3"/>
+    </bindings>
+    <bindings xmi:id="_lp32cjAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+2" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lp32czAUEeKNAMCbWZWItw" elementId="level" name="level" value="2"/>
+    </bindings>
+    <bindings xmi:id="_lp32dDAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+1" command="_lmub7jAUEeKNAMCbWZWItw">
+      <parameters xmi:id="_lp32dTAUEeKNAMCbWZWItw" elementId="level" name="level" value="1"/>
+    </bindings>
+    <bindings xmi:id="_lp32djAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+-" command="_lm0idjAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_loum8TAUEeKNAMCbWZWItw" elementId="com.aptana.editor.context" bindingContext="_lnTDkzAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_loum8jAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+F" command="_lm0icjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lo0tkTAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+I" command="_lnAvzDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lprpMjAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+W" command="_P4hsoyHHEeKOsZknqwPf1g"/>
+    <bindings xmi:id="_lqWXkTAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+P" command="_lnG2WzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqceMTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+O" command="_lmoVTDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqik0DAUEeKNAMCbWZWItw" keySequence="CTRL+O" command="_lnAvxTAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_loum8zAUEeKNAMCbWZWItw" elementId="org.python.pydev.ui.editor.scope" bindingContext="_lnM89jAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_loum9DAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+F" command="_lm0igjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpNIFTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+ARROW_UP" command="_lmub4zAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplikDAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+CR" command="_lmub5DAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplikTAUEeKNAMCbWZWItw" keySequence="CTRL+5" command="_lmoVPjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplikjAUEeKNAMCbWZWItw" keySequence="CTRL+4" command="_lm0ifDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplikzAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+4" command="_lmoVQDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplilDAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+3" command="_lnG2WTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplilTAUEeKNAMCbWZWItw" keySequence="CTRL+3" command="_lm0ifjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpliljAUEeKNAMCbWZWItw" keySequence="CTRL+-" command="_lm6pFzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplilzAUEeKNAMCbWZWItw" keySequence="CTRL+9" command="_lm6pFjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplimDAUEeKNAMCbWZWItw" keySequence="CTRL+0" command="_lm6pEDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplimTAUEeKNAMCbWZWItw" keySequence="CTRL+2" command="_lm0ihzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplimjAUEeKNAMCbWZWItw" keySequence="F9" command="_lnAvszAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplimzAUEeKNAMCbWZWItw" keySequence="CTRL+F9" command="_lnAvsDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lplinDAUEeKNAMCbWZWItw" keySequence="ALT+CTRL+F9" command="_lnAvyjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqKKUjAUEeKNAMCbWZWItw" keySequence="F3" command="_lmub6zAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqKKVjAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+T" command="_lm6pFDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqKKVzAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+L" command="_lnG2VDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqQQ8DAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+M" command="_lnAvxDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqWXkjAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+P" command="_lmoVSjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqceMDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+R" command="_lmub4jAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqceMjAUEeKNAMCbWZWItw" keySequence="CTRL+/" command="_lnAvtzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqik0TAUEeKNAMCbWZWItw" keySequence="CTRL+O" command="_lnAvtjAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqorcDAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+F9" command="_lm0iizAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqorcTAUEeKNAMCbWZWItw" keySequence="F4" command="_lnG2VTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqorcjAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+O" command="_lmoVNzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lq04sTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+ARROW_DOWN" command="_lmub9jAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lq6_UDAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+ARROW_UP" command="_lmub8DAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lq6_UTAUEeKNAMCbWZWItw" keySequence="CTRL+\" command="_lnG2WTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lrBF8DAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+I" command="_lnAvwDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lrHMkjAUEeKNAMCbWZWItw" keySequence="CTRL+=" command="_lm6pKTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2kTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+T P" command="_lm0ieDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2kjAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+T C" command="_lnAvtTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2kzAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+T O" command="_lmub1TAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2lDAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+T L" command="_lnG2VDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2lTAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+T I" command="_lnAvwDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lso2ljAUEeKNAMCbWZWItw" keySequence="ALT+SHIFT+T E" command="_lnAvxDAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lsu9MDAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+ARROW_DOWN" command="_lmub8TAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lsu9MjAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+D" command="_lm6pJzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltl41DAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+G" command="_lmub7DAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_lpZVVDAUEeKNAMCbWZWItw" elementId="com.aptana.org.eclipse.tm.terminal.TerminalContext" bindingContext="_lnM88DAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_lpZVVTAUEeKNAMCbWZWItw" keySequence="ALT+N" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb8DAUEeKNAMCbWZWItw" keySequence="ALT+W" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb9DAUEeKNAMCbWZWItw" keySequence="ALT+T" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb9jAUEeKNAMCbWZWItw" keySequence="ALT+P" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lpfb-DAUEeKNAMCbWZWItw" keySequence="ALT+R" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lquyETAUEeKNAMCbWZWItw" keySequence="ALT+S" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lquyEjAUEeKNAMCbWZWItw" keySequence="ALT+V" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lq04sDAUEeKNAMCbWZWItw" keySequence="ALT+A" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lrHMkTAUEeKNAMCbWZWItw" keySequence="ALT+G" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltl40TAUEeKNAMCbWZWItw" keySequence="ALT+H" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltl40zAUEeKNAMCbWZWItw" keySequence="ALT+E" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_ltr_cTAUEeKNAMCbWZWItw" keySequence="ALT+F" command="_lmoVTTAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_lqEDtDAUEeKNAMCbWZWItw" elementId="com.aptana.scripting.context" bindingContext="_lnTDkDAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_lqEDtTAUEeKNAMCbWZWItw" keySequence="F3" command="_lm0ifTAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_lqKKUDAUEeKNAMCbWZWItw" elementId="com.aptana.editor.php.editorContext" bindingContext="_lnTDkTAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_lqKKUTAUEeKNAMCbWZWItw" keySequence="F3" command="_lnAvyzAUEeKNAMCbWZWItw"/>
+    <bindings xmi:id="_lqKKUzAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+T" command="_lnAvzjAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_lqKKVDAUEeKNAMCbWZWItw" elementId="com.python.pydev.contexts.window" bindingContext="_lnM88zAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_lqKKVTAUEeKNAMCbWZWItw" keySequence="CTRL+SHIFT+T" command="_lnAvvTAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_lqQQ8TAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.context.dialog.commit" bindingContext="_lnM89DAUEeKNAMCbWZWItw">
+    <bindings xmi:id="_lqQQ8jAUEeKNAMCbWZWItw" keySequence="CTRL+CR" command="_lnG2UDAUEeKNAMCbWZWItw"/>
+  </bindingTables>
+  <bindingTables xmi:id="_l8X7sTAUEeKNAMCbWZWItw" bindingContext="_l8X7sDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8eCUTAUEeKNAMCbWZWItw" bindingContext="_l8eCUDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8eCUzAUEeKNAMCbWZWItw" bindingContext="_l8eCUjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8eCVTAUEeKNAMCbWZWItw" bindingContext="_l8eCVDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8eCVzAUEeKNAMCbWZWItw" bindingContext="_l8eCVjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8kI8TAUEeKNAMCbWZWItw" bindingContext="_l8kI8DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8kI8zAUEeKNAMCbWZWItw" bindingContext="_l8kI8jAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8kI9TAUEeKNAMCbWZWItw" bindingContext="_l8kI9DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8kI9zAUEeKNAMCbWZWItw" bindingContext="_l8kI9jAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8qPkTAUEeKNAMCbWZWItw" bindingContext="_l8qPkDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8qPkzAUEeKNAMCbWZWItw" bindingContext="_l8qPkjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8qPlTAUEeKNAMCbWZWItw" bindingContext="_l8qPlDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8qPlzAUEeKNAMCbWZWItw" bindingContext="_l8qPljAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l8wWMTAUEeKNAMCbWZWItw" bindingContext="_l8wWMDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9bEkTAUEeKNAMCbWZWItw" bindingContext="_l9bEkDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9bEkzAUEeKNAMCbWZWItw" bindingContext="_l9bEkjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9bElTAUEeKNAMCbWZWItw" bindingContext="_l9bElDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9bElzAUEeKNAMCbWZWItw" bindingContext="_l9bEljAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9hLMTAUEeKNAMCbWZWItw" bindingContext="_l9hLMDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9hLMzAUEeKNAMCbWZWItw" bindingContext="_l9hLMjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9hLNTAUEeKNAMCbWZWItw" bindingContext="_l9hLNDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9nR0TAUEeKNAMCbWZWItw" bindingContext="_l9nR0DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9nR0zAUEeKNAMCbWZWItw" bindingContext="_l9nR0jAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9nR1TAUEeKNAMCbWZWItw" bindingContext="_l9nR1DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9tYcTAUEeKNAMCbWZWItw" bindingContext="_l9tYcDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9tYczAUEeKNAMCbWZWItw" bindingContext="_l9tYcjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9zfETAUEeKNAMCbWZWItw" bindingContext="_l9zfEDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9zfEzAUEeKNAMCbWZWItw" bindingContext="_l9zfEjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9zfFTAUEeKNAMCbWZWItw" bindingContext="_l9zfFDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9zfFzAUEeKNAMCbWZWItw" bindingContext="_l9zfFjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l95lsTAUEeKNAMCbWZWItw" bindingContext="_l95lsDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l95lszAUEeKNAMCbWZWItw" bindingContext="_l95lsjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l95ltTAUEeKNAMCbWZWItw" bindingContext="_l95ltDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9_sUTAUEeKNAMCbWZWItw" bindingContext="_l9_sUDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9_sUzAUEeKNAMCbWZWItw" bindingContext="_l9_sUjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9_sVTAUEeKNAMCbWZWItw" bindingContext="_l9_sVDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l9_sVzAUEeKNAMCbWZWItw" bindingContext="_l9_sVjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l-Fy8TAUEeKNAMCbWZWItw" bindingContext="_l-Fy8DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l-Fy8zAUEeKNAMCbWZWItw" bindingContext="_l-Fy8jAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l-Fy9TAUEeKNAMCbWZWItw" bindingContext="_l-Fy9DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l-Fy9zAUEeKNAMCbWZWItw" bindingContext="_l-Fy9jAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l-Fy-TAUEeKNAMCbWZWItw" bindingContext="_l-Fy-DAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_l-L5kDAUEeKNAMCbWZWItw" bindingContext="_l-Fy-jAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nDAzoTAUEeKNAMCbWZWItw" bindingContext="_nDAzoDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nDtXMTAUEeKNAMCbWZWItw" bindingContext="_nDtXMDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nDtXMzAUEeKNAMCbWZWItw" bindingContext="_nDtXMjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nDtXNTAUEeKNAMCbWZWItw" bindingContext="_nDtXNDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nFI6kDAUEeKNAMCbWZWItw" bindingContext="_nDtXNjAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nFI6kjAUEeKNAMCbWZWItw" bindingContext="_nFI6kTAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nFI6lDAUEeKNAMCbWZWItw" bindingContext="_nFI6kzAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nFI6ljAUEeKNAMCbWZWItw" bindingContext="_nFI6lTAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nFPBMTAUEeKNAMCbWZWItw" bindingContext="_nFPBMDAUEeKNAMCbWZWItw"/>
+  <bindingTables xmi:id="_nFVH0TAUEeKNAMCbWZWItw" bindingContext="_nFVH0DAUEeKNAMCbWZWItw"/>
   <rootContext xmi:id="_P0dE6yHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.contexts.dialogAndWindow" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs and Windows" description="Either a dialog or a window is open">
     <children xmi:id="_P0dE7CHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.contexts.window" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Windows" description="A window is open">
       <children xmi:id="_P0dE7SHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.ui.contexts.views" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="%bindingcontext.name.bindingView"/>
@@ -1443,6 +1620,8 @@
         </children>
         <children xmi:id="_P5iZMiHHEeKOsZknqwPf1g" elementId="org.eclipse.jst.jsf.facesconfig.editorContext" name="In Faces Config Editor" description="Key binding context when using the Faces Config Editor"/>
         <children xmi:id="_tqI-kSHwEeKPh8C6kO1DoQ" elementId="org.eclipse.xtext.ui.XtextEditorScope" name="Editing Xtext Source" description="Editing Xtext Source Context"/>
+        <children xmi:id="_lnM89jAUEeKNAMCbWZWItw" elementId="org.python.pydev.ui.editor.scope" name="PyDev editor scope" description="PyDev commands"/>
+        <children xmi:id="_lnTDkjAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.textEditorScope.findbar" name="Find Bar" description="Find Bar Context is active when the find text box has the focus."/>
       </children>
       <children xmi:id="_P5eu1yHHEeKOsZknqwPf1g" elementId="org.eclipse.datatools.sqltools.schemaobjecteditor.schemaediting" name="Schema Object Editor" description="Schema Object Editor"/>
       <children xmi:id="_P5fV4SHHEeKOsZknqwPf1g" elementId="org.eclipse.compare.compareEditorScope" name="Comparing in an Editor" description="Comparing in an Editor"/>
@@ -1450,6 +1629,8 @@
         <children xmi:id="_P5hLESHHEeKOsZknqwPf1g" elementId="org.eclipse.debug.ui.memory.abstractasynctablerendering" name="In Table Memory Rendering" description="In Table Memory Rendering"/>
         <children xmi:id="_P5hLEiHHEeKOsZknqwPf1g" elementId="org.eclipse.wst.xsl.debug.ui.context" name="XSLT Debugging" description="Context for debugging XSLT"/>
         <children xmi:id="_P5hLFiHHEeKOsZknqwPf1g" elementId="org.eclipse.jdt.debug.ui.debugging" name="Debugging Java" description="Debugging Java programs"/>
+        <children xmi:id="_lnM88TAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.debugging" name="JavaScript Debugging"/>
+        <children xmi:id="_lnM88jAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.debugging" name="Debugging Ruby" description="Debugging Ruby"/>
       </children>
       <children xmi:id="_P5hyICHHEeKOsZknqwPf1g" elementId="org.eclipse.debug.ui.memoryview" name="In Memory View" description="In Memory View"/>
       <children xmi:id="_P5iZMSHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.console.ConsoleView" name="In Console View" description="In Console View"/>
@@ -1458,8 +1639,15 @@
       <children xmi:id="_9wT0ECH0EeKm-_NT23O1vw" elementId="org.eclipse.gmf.runtime.diagram.ui.diagramContext" name="Diagram Editing" description="GMF Diagram Editing">
         <children xmi:id="_9wT0ESH0EeKm-_NT23O1vw" elementId="org.eclipse.emf.ecoretools.diagram.ui.diagramContext" name="In Ecore Diagram Editor" description="Ecore Diagram Editing"/>
       </children>
+      <children xmi:id="_lnM88zAUEeKNAMCbWZWItw" elementId="com.python.pydev.contexts.window" name="PyDev view" description="PyDev view (PyUnit, PyOutline, etc)."/>
+      <children xmi:id="_lnTDkDAUEeKNAMCbWZWItw" elementId="com.aptana.scripting.context" name="Aptana Scriptable Context">
+        <children xmi:id="_lnTDkTAUEeKNAMCbWZWItw" elementId="com.aptana.editor.php.editorContext" name="PHP Source Editing" description="PHP source editing context"/>
+      </children>
+      <children xmi:id="_lnTDkzAUEeKNAMCbWZWItw" elementId="com.aptana.editor.context" name="Aptana Editor"/>
     </children>
-    <children xmi:id="_P0dE7iHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs" description="A dialog is open"/>
+    <children xmi:id="_P0dE7iHHEeKOsZknqwPf1g" elementId="org.eclipse.ui.contexts.dialog" contributorURI="platform:/plugin/org.eclipse.ui.workbench" name="In Dialogs" description="A dialog is open">
+      <children xmi:id="_lnM89DAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.context.dialog.commit" name="Git Commit Dialog"/>
+    </children>
     <children xmi:id="_tqI-kCHwEeKPh8C6kO1DoQ" elementId="org.eclipse.xtext.ui.embeddedTextEditorScope" name="Embedded Xtext Editor context" description="Embedded Xtext Editor is active"/>
   </rootContext>
   <rootContext xmi:id="_P5dgsCHHEeKOsZknqwPf1g" elementId="org.eclipse.wst.xsd.ui.editor.designView" name="XSD Editor Design View" description="XSD Editor Design View"/>
@@ -1595,6 +1783,61 @@
   <rootContext xmi:id="_76VNQCvhEeKBJJKkNuQsxg" elementId="org.eclipse.uml2.uml.editor.UnapplyStereotypeActionID" name="Auto::org.eclipse.uml2.uml.editor.UnapplyStereotypeActionID"/>
   <rootContext xmi:id="_76VNQyvhEeKBJJKkNuQsxg" elementId="org.eclipse.uml2.uml.editor.DestroyElementActionID" name="Auto::org.eclipse.uml2.uml.editor.DestroyElementActionID"/>
   <rootContext xmi:id="_76WbYivhEeKBJJKkNuQsxg" elementId="org.eclipse.uml2.uml.editor.ApplyStereotypeActionID" name="Auto::org.eclipse.uml2.uml.editor.ApplyStereotypeActionID"/>
+  <rootContext xmi:id="_lnM88DAUEeKNAMCbWZWItw" elementId="com.aptana.org.eclipse.tm.terminal.TerminalContext" name="Terminal widget context" description="Override ALT+x menu access keys"/>
+  <rootContext xmi:id="_lnM89TAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.outline" name="Aptana Outline"/>
+  <rootContext xmi:id="_l8X7sDAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.doubleClickBreakpointAction" name="Auto::com.aptana.ruby.debug.ui.doubleClickBreakpointAction"/>
+  <rootContext xmi:id="_l8eCUDAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.actions.htmlDoubleClickBreakpointAction" name="Auto::com.aptana.js.debug.ui.actions.htmlDoubleClickBreakpointAction"/>
+  <rootContext xmi:id="_l8eCUjAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.actions.jsDoubleClickBreakpointAction" name="Auto::com.aptana.js.debug.ui.actions.jsDoubleClickBreakpointAction"/>
+  <rootContext xmi:id="_l8eCVDAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.actions.phpDoubleClickBreakpointAction" name="Auto::com.aptana.js.debug.ui.actions.phpDoubleClickBreakpointAction"/>
+  <rootContext xmi:id="_l8eCVjAUEeKNAMCbWZWItw" elementId="com.python.pydev.actions.pyShowHierarchy" name="Auto::com.python.pydev.actions.pyShowHierarchy"/>
+  <rootContext xmi:id="_l8kI8DAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.RenameMenuAction" name="Auto::org.python.pydev.refactoring.ui.actions.RenameMenuAction"/>
+  <rootContext xmi:id="_l8kI8jAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.OverrideMethodsMenuAction" name="Auto::org.python.pydev.refactoring.ui.actions.OverrideMethodsMenuAction"/>
+  <rootContext xmi:id="_l8kI9DAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.ConstructorFieldMenuAction" name="Auto::org.python.pydev.refactoring.ui.actions.ConstructorFieldMenuAction"/>
+  <rootContext xmi:id="_l8kI9jAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.actions.GenerateMenuAction" name="Auto::org.python.pydev.refactoring.actions.GenerateMenuAction"/>
+  <rootContext xmi:id="_l8qPkDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.ExtractMethodActionCommand" name="Auto::org.python.pydev.refactoring.ui.actions.ExtractMethodActionCommand"/>
+  <rootContext xmi:id="_l8qPkjAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.ExtractLocalMenuAction" name="Auto::org.python.pydev.refactoring.ui.actions.ExtractLocalMenuAction"/>
+  <rootContext xmi:id="_l8qPlDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.InlineLocalMenuAction" name="Auto::org.python.pydev.refactoring.ui.actions.InlineLocalMenuAction"/>
+  <rootContext xmi:id="_l8qPljAUEeKNAMCbWZWItw" elementId="com.python.pydev.refactoring.actions.PyFindAllOccurrences" name="Auto::com.python.pydev.refactoring.actions.PyFindAllOccurrences"/>
+  <rootContext xmi:id="_l8wWMDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyGoToDefinition" name="Auto::org.python.pydev.editor.actions.navigation.pyGoToDefinition"/>
+  <rootContext xmi:id="_l9bEkDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.convertSpaceToTab" name="Auto::org.python.pydev.editor.actions.convertSpaceToTab"/>
+  <rootContext xmi:id="_l9bEkjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.convertTabToSpace" name="Auto::org.python.pydev.editor.actions.convertTabToSpace"/>
+  <rootContext xmi:id="_l9bElDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.uncomment" name="Auto::org.python.pydev.editor.actions.uncomment"/>
+  <rootContext xmi:id="_l9bEljAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.comment" name="Auto::org.python.pydev.editor.actions.comment"/>
+  <rootContext xmi:id="_l9hLMDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.togglecomment" name="Auto::org.python.pydev.editor.actions.togglecomment"/>
+  <rootContext xmi:id="_l9hLMjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.removeBlockComment" name="Auto::org.python.pydev.editor.actions.removeBlockComment"/>
+  <rootContext xmi:id="_l9hLNDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.addBlockComment" name="Auto::org.python.pydev.editor.actions.addBlockComment"/>
+  <rootContext xmi:id="_l9nR0DAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.addSingleBlockComment" name="Auto::org.python.pydev.editor.actions.addSingleBlockComment"/>
+  <rootContext xmi:id="_l9nR0jAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.nextMethod" name="Auto::org.python.pydev.editor.actions.navigation.nextMethod"/>
+  <rootContext xmi:id="_l9nR1DAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.previousMethod" name="Auto::org.python.pydev.editor.actions.navigation.previousMethod"/>
+  <rootContext xmi:id="_l9tYcDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyCollapse" name="Auto::org.python.pydev.editor.actions.navigation.pyCollapse"/>
+  <rootContext xmi:id="_l9tYcjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyUnCollapse" name="Auto::org.python.pydev.editor.actions.navigation.pyUnCollapse"/>
+  <rootContext xmi:id="_l9zfEDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyCollapseAll" name="Auto::org.python.pydev.editor.actions.navigation.pyCollapseAll"/>
+  <rootContext xmi:id="_l9zfEjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyUnCollapseAll" name="Auto::org.python.pydev.editor.actions.navigation.pyUnCollapseAll"/>
+  <rootContext xmi:id="_l9zfFDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyShowOutline" name="Auto::org.python.pydev.editor.actions.navigation.pyShowOutline"/>
+  <rootContext xmi:id="_l9zfFjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyShowBrowser" name="Auto::org.python.pydev.editor.actions.navigation.pyShowBrowser"/>
+  <rootContext xmi:id="_l95lsDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyOrganizeImports" name="Auto::org.python.pydev.editor.actions.navigation.pyOrganizeImports"/>
+  <rootContext xmi:id="_l95lsjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyFormatStd" name="Auto::org.python.pydev.editor.actions.navigation.pyFormatStd"/>
+  <rootContext xmi:id="_l95ltDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.pySelectWord" name="Auto::org.python.pydev.editor.actions.pySelectWord"/>
+  <rootContext xmi:id="_l9_sUDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.wrapparagraph" name="Auto::org.python.pydev.editor.actions.wrapparagraph"/>
+  <rootContext xmi:id="_l9_sUjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.copyqualifiedname" name="Auto::org.python.pydev.editor.actions.copyqualifiedname"/>
+  <rootContext xmi:id="_l9_sVDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.goToMatchingBracket" name="Auto::org.python.pydev.editor.actions.goToMatchingBracket"/>
+  <rootContext xmi:id="_l9_sVjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.selectEnclosingScope" name="Auto::org.python.pydev.editor.actions.selectEnclosingScope"/>
+  <rootContext xmi:id="_l-Fy8DAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.deselectEnclosingScope" name="Auto::org.python.pydev.editor.actions.deselectEnclosingScope"/>
+  <rootContext xmi:id="_l-Fy8jAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.runEditorBasedOnNatureTypeAction" name="Auto::org.python.pydev.debug.ui.actions.runEditorBasedOnNatureTypeAction"/>
+  <rootContext xmi:id="_l-Fy9DAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.runEditorAsCustomUnitTestAction" name="Auto::org.python.pydev.debug.ui.actions.runEditorAsCustomUnitTestAction"/>
+  <rootContext xmi:id="_l-Fy9jAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.relaunchLastAction" name="Auto::org.python.pydev.debug.ui.actions.relaunchLastAction"/>
+  <rootContext xmi:id="_l-Fy-DAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.terminateAllLaunchesAction" name="Auto::org.python.pydev.debug.ui.actions.terminateAllLaunchesAction"/>
+  <rootContext xmi:id="_l-Fy-jAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.BreakpointRulerAction" name="Auto::org.python.pydev.debug.BreakpointRulerAction"/>
+  <rootContext xmi:id="_nDAzoDAUEeKNAMCbWZWItw" elementId="com.aptana.browser.actionSet" name="Auto::com.aptana.browser.actionSet"/>
+  <rootContext xmi:id="_nDtXMDAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.presentation" name="Auto::com.aptana.editor.common.presentation"/>
+  <rootContext xmi:id="_nDtXMjAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.actionSet" name="Auto::com.aptana.js.debug.ui.actionSet"/>
+  <rootContext xmi:id="_nDtXNDAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.RubyDebugActionSet" name="Auto::com.aptana.ruby.debug.ui.RubyDebugActionSet"/>
+  <rootContext xmi:id="_nDtXNjAUEeKNAMCbWZWItw" elementId="com.aptana.terminal.actionSet" name="Auto::com.aptana.terminal.actionSet"/>
+  <rootContext xmi:id="_nFI6kTAUEeKNAMCbWZWItw" elementId="com.aptana.ui.globalActionSet" name="Auto::com.aptana.ui.globalActionSet"/>
+  <rootContext xmi:id="_nFI6kzAUEeKNAMCbWZWItw" elementId="com.python.pydev.navigate.actionSet" name="Auto::com.python.pydev.navigate.actionSet"/>
+  <rootContext xmi:id="_nFI6lTAUEeKNAMCbWZWItw" elementId="com.python.pydev.debug.actionSet" name="Auto::com.python.pydev.debug.actionSet"/>
+  <rootContext xmi:id="_nFPBMDAUEeKNAMCbWZWItw" elementId="org.python.pydev.exceptionBreakpoints" name="Auto::org.python.pydev.exceptionBreakpoints"/>
+  <rootContext xmi:id="_nFVH0DAUEeKNAMCbWZWItw" elementId="org.python.pydev.pyPropertyTrace" name="Auto::org.python.pydev.pyPropertyTrace"/>
   <descriptors xmi:id="_QG-YQCHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.ui.compatibility.editor" allowMultiple="true" category="org.eclipse.e4.primaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityEditor">
     <tags>Editor</tags>
   </descriptors>
@@ -2009,6 +2252,74 @@
   <descriptors xmi:id="_YB6-ECKiEeK127N6T9N4JA" elementId="org.eclipse.swtbot.eclipse.spy.views.EclipseSpyView" label="EclipseSpy View" iconURI="platform:/plugin/org.eclipse.swtbot.eclipse.spy/icons/sample.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
     <tags>View</tags>
     <tags>categoryTag:SWTBot Category</tags>
+  </descriptors>
+  <descriptors xmi:id="_l0728DAUEeKNAMCbWZWItw" elementId="com.aptana.browser.views.webbrowser" label="Web Browser" iconURI="platform:/plugin/com.aptana.browser/icons/obj16/browser.png" allowMultiple="true" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1B9kDAUEeKNAMCbWZWItw" elementId="com.aptana.explorer.view" label="App Explorer" iconURI="platform:/plugin/com.aptana.explorer/icons/full/cview16/filenav_nav.png" allowMultiple="true" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1B9kTAUEeKNAMCbWZWItw" elementId="com.aptana.index.core.ui.view" label="Index View" iconURI="platform:/plugin/com.aptana.index.core.ui/icons/index-view.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1B9kjAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.AJAXMonitorView" label="Studio Ajax Monitor" iconURI="platform:/plugin/com.aptana.js.debug.ui/icons/full/obj16/xhrmon.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Debug</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1IEMDAUEeKNAMCbWZWItw" elementId="com.aptana.js.debug.ui.scriptsView" label="Loaded Scripts" iconURI="platform:/plugin/com.aptana.js.debug.ui/icons/full/obj16/script.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Debug</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1IEMTAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.DisplayView" label="Display" iconURI="platform:/plugin/com.aptana.ruby.debug.ui//icons/full/etool16/disp_sbook.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Debug</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1IEMjAUEeKNAMCbWZWItw" elementId="com.aptana.samples.ui.SamplesView" label="Samples" iconURI="platform:/plugin/com.aptana.samples.ui/icons/samples.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1IEMzAUEeKNAMCbWZWItw" elementId="com.aptana.scripting.views.BundleView" label="Bundles" iconURI="platform:/plugin/com.aptana.scripting.ui/icons/bundle_entry.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1IENDAUEeKNAMCbWZWItw" elementId="com.aptana.snippets.ui.views.SnippetsView" label="Snippets" iconURI="platform:/plugin/com.aptana.scripting.ui/icons/snippet.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1IENTAUEeKNAMCbWZWItw" elementId="com.aptana.terminal.views.terminal" label="Terminal" iconURI="platform:/plugin/com.aptana.terminal/icons/terminal.png" allowMultiple="true" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1OK0DAUEeKNAMCbWZWItw" elementId="com.aptana.ui.io.remoteview" label="Remote" iconURI="platform:/plugin/com.aptana.ui.io/icons/full/eview16/remote.png" allowMultiple="true" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1OK0TAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.ui.view" label="Servers" iconURI="platform:/plugin/com.aptana.webserver.ui/icons/obj16/server.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:Studio</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1OK0jAUEeKNAMCbWZWItw" elementId="com.python.pydev.ui.hierarchy.PyHierarchyView" label="Hierarchy View" iconURI="platform:/plugin/com.python.pydev/icons/class_hi.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:PyDev</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1OK0zAUEeKNAMCbWZWItw" elementId="com.python.pydev.analysis.indexview.PyIndexView" label="Index View" iconURI="platform:/plugin/com.python.pydev.analysis/icons/opentype.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:PyDev</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1OK1DAUEeKNAMCbWZWItw" elementId="org.python.pydev.navigator.view" label="PyDev Package Explorer" iconURI="platform:/plugin/org.python.pydev/icons/pydev_package_explorer.gif" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:PyDev</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1URcDAUEeKNAMCbWZWItw" elementId="org.python.pydev.views.PyCodeCoverageView" label="Code Coverage" iconURI="platform:/plugin/org.python.pydev.debug/icons/python_coverage.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:PyDev</tags>
+  </descriptors>
+  <descriptors xmi:id="_l1URcTAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.pyunit.pyUnitView" label="PyUnit" iconURI="platform:/plugin/org.python.pydev.debug/icons/pyunit.png" category="org.eclipse.e4.secondaryDataStack" closeable="true" contributionURI="bundleclass://org.eclipse.ui.workbench/org.eclipse.ui.internal.e4.compatibility.CompatibilityView">
+    <tags>View</tags>
+    <tags>categoryTag:PyDev</tags>
   </descriptors>
   <commands xmi:id="_P0dE7yHHEeKOsZknqwPf1g" elementId="e4.exit" contributorURI="platform:/plugin/org.eclipse.ui.workbench" commandName="%command.name.exit" description=""/>
   <commands xmi:id="_P0dE8CHHEeKOsZknqwPf1g" elementId="e4.show.view" contributorURI="platform:/plugin/org.eclipse.ui.workbench" commandName="%command.name.showView">
@@ -3117,6 +3428,186 @@
   <commands xmi:id="_76VNQivhEeKBJJKkNuQsxg" elementId="AUTOGEN:::org.eclipse.uml2.uml.editor.UMLEditorContributionID/org.eclipse.uml2.uml.editor.UnapplyStereotypeActionID" commandName="&amp;Unapply Stereotype..."/>
   <commands xmi:id="_76WbYSvhEeKBJJKkNuQsxg" elementId="AUTOGEN:::org.eclipse.uml2.uml.editor.UMLEditorContributionID/org.eclipse.uml2.uml.editor.DestroyElementActionID" commandName="&amp;Destroy"/>
   <commands xmi:id="_76YQkSvhEeKBJJKkNuQsxg" elementId="AUTOGEN:::org.eclipse.uml2.uml.editor.UMLEditorContributionID/org.eclipse.uml2.uml.editor.ApplyStereotypeActionID" commandName="&amp;Apply Stereotype..."/>
+  <commands xmi:id="_lmoVNjAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.upload" commandName="Upload..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVNzAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.pyOrganizeImports" commandName="Python Organize Imports" description="Organize Imports" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVODAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.unstash" commandName="Unstash" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVOTAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.toggleforcetabs" commandName="Toggle Force tabs" description="Forces or not tabs in the current editor" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVOjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.merge_branch" commandName="Merge Branch..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVOzAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.toggleWordMatching" commandName="Toggle Whole Word Matching" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmoVPDAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.create_branch" commandName="Create Branch..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVPTAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.newconnection" commandName="Add New Connection..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVPjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.removeBlockComment" commandName="Remove Comment Block" description="Removes a python comment block" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVPzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.status" commandName="Status" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVQDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.addSingleBlockComment" commandName="Add Single Comment Block" description="Creates a comment block from a single line" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVQTAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.stage" commandName="Stage" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVQjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.convertSpaceToTab" commandName="Convert space-tabs to tabs" description="Converts tab-width space groups to tabs from selected region or whole document if nothing selected" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVQzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.diff" commandName="Diff..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVRDAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.diagnostic" commandName="Run Diagnostic Test..." description="Runs Diagnostic Test" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVRTAUEeKNAMCbWZWItw" elementId="com.aptana.editor.html.outline.toggle_text" commandName="Toggle Text Nodes" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmoVRjAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.pyConfigureException" commandName="Add Python Exception Breakpoint..." description="Add Python Exception Breakpoint..." category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVRzAUEeKNAMCbWZWItw" elementId="org.radrails.rails.ui.command.preview" commandName="Preview" category="_lmiOkjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVSDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.convertTabToSpace" commandName="Convert tabs to space-tabs" description="Converts tabs to tab-width space groups from selected region or whole document if nothing selected" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVSTAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.pull" commandName="Pull" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVSjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.goToMatchingBracket" commandName="Go to Matching Bracket" description="Go to Matching Bracket" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVSzAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.sendfeedback" commandName="Send Feedback..." description="Send feedback on the Studio 3 Release" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVTDAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.toggleMarkOccurrences" commandName="Mark Occurrences" description="Toggle mark occurrences" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVTTAUEeKNAMCbWZWItw" elementId="com.aptana.org.eclipse.tm.terminal.command1" commandName="Terminal view insert" category="_lmiOkzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVTjAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.pyPropertyTrace" commandName="Disable Step into properties" description="Disable Step into properties" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmoVTzAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.focusFind" commandName="Find Bar Focus Find" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmoVUDAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.synchronize.files" commandName="Synchronize..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub0DAUEeKNAMCbWZWItw" elementId="com.aptana.samples.ui.commands.preview" commandName="Preview sample..." category="_lmiOljAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub0TAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.squash_merge_branch" commandName="Squash Merge Branch..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub0jAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.push_to_remote" commandName="Push to Remote..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub0zAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.pySelectWord" commandName="Select Word" description="Select the whole word" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub1DAUEeKNAMCbWZWItw" elementId="com.aptana.index.core.ui.commands.exclude" commandName="Exclude from build" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub1TAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.OverrideMethodsCommand" commandName="Override/Implement Methods..." description="PEPTIC: Override/Implement Methods" category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub1jAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.command.delete_server" commandName="Delete Server" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub1zAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.commit" commandName="Commit..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub2DAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.RubyShortcut.debug" commandName="Debug Ruby Application" description="Debug Ruby Application" category="_P4ZJuCHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub2TAUEeKNAMCbWZWItw" elementId="com.aptana.ui.s3.command.add" commandName="Add New S3 Site..." category="_lmoVMzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub2jAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.searchInCurrentFile" commandName="Search in Current File" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub2zAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.command.start_server" commandName="Start Server" category="_P4ZwxyHHEeKOsZknqwPf1g">
+    <parameters xmi:id="_lmub3DAUEeKNAMCbWZWItw" elementId="mode" name="mode" optional="false"/>
+  </commands>
+  <commands xmi:id="_lmub3TAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.push_tags" commandName="Push all tags to remote..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub3jAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.reportbug" commandName="Report Bug..." description="Report a bug on Studio 3 Release" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub3zAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.cloak" commandName="Cloak this file type" category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub4DAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.focusReplace" commandName="Find Bar Focus Replace" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub4TAUEeKNAMCbWZWItw" elementId="com.aptana.samples.ui.commands.help" commandName="View Help..." category="_lmiOljAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub4jAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.RenameCommand" commandName="Rename..." description="Rename Refactoring..." category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub4zAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.selectEnclosingScope" commandName="Select Enclosing Scope" description="Select Enclosing Scope" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub5DAUEeKNAMCbWZWItw" elementId="org.python.pydev.interactiveconsole.evaluateActionSetter" commandName="Interactive Console" description="Activates the interactive console." category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub5TAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.compare_with_revision" commandName="Compare With Revision..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub5jAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.rebase_branch" commandName="Rebase..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub5zAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.clearlog" commandName="Clear Log File" description="Clear Studio log file" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub6DAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.scripting.commands.show" commandName="Show Commands Menu" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub6TAUEeKNAMCbWZWItw" elementId="com.aptana.deploy.commands.ftp.settings" commandName="Deployment Settings..." category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub6jAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.delete_remote" commandName="Delete Remote..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub6zAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyGoToDefinition" commandName="Python Go To Definition" description="Goes to the definition of a python element" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub7DAUEeKNAMCbWZWItw" elementId="com.python.pydev.refactoring.actions.PyFindAllOccurrences" commandName="Find all references" description="Find all references" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub7TAUEeKNAMCbWZWItw" elementId="org.radrails.rails.ui.command.script.console" commandName="Rails console" category="_lmiOkjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub7jAUEeKNAMCbWZWItw" elementId="com.aptana.editor.commands.ExpandLevel" commandName="Expand to Level" description="Expand to Level" category="_P4ZJsiHHEeKOsZknqwPf1g">
+    <parameters xmi:id="_lmub7zAUEeKNAMCbWZWItw" elementId="level" name="Level"/>
+  </commands>
+  <commands xmi:id="_lmub8DAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.previousMethod" commandName="Previous Method or Class" description="Navigates to the previous method or class definition" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub8TAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.nextMethod" commandName="Next Method or Class" description="Navigates to the next method or class definition" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub8jAUEeKNAMCbWZWItw" elementId="com.aptana.ui.ftp.command.add" commandName="Add New FTP Site..." category="_lmoVNDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub8zAUEeKNAMCbWZWItw" elementId="com.aptana.deploy.commands.deployApp" commandName="Deploy App" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub9DAUEeKNAMCbWZWItw" elementId="com.aptana.editor.toggleWordWrapCommand" commandName="Word Wrap" category="_P4YioyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub9TAUEeKNAMCbWZWItw" elementId="com.aptana.portal.ui.command.newProjectFromTemplate" commandName="Create Project From Template" description="Create a new project from a template" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub9jAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.deselectEnclosingScope" commandName="Deselect Enclosing Scope" description="Deselect Enclosing Scope" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lmub9zAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.findNext" commandName="Find Next" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lmub-DAUEeKNAMCbWZWItw" elementId="com.aptana.editor.ruby.outline.toggle_fields" commandName="Toggle Fields" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0icDAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.RubyShortcut.run" commandName="Run Ruby Application" description="Run Ruby Application" category="_P4ZJuCHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0icTAUEeKNAMCbWZWItw" elementId="com.aptana.deploy.commands.deploywizard" commandName="Run Web Deployment Wizard..." category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0icjAUEeKNAMCbWZWItw" elementId="com.aptana.editor.commands.Format" commandName="Format" description="Format the selected text" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0iczAUEeKNAMCbWZWItw" elementId="com.aptana.ui.ftp.command.duplicate" commandName="Duplicate" category="_lmoVNDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0idDAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.viewreleasenotes" commandName="View Release Notes..." description="View the Release Notes for Studio 3 Release" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0idTAUEeKNAMCbWZWItw" elementId="org.radrails.rails.ui.command.server" commandName="Run Server" category="_lmiOkjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0idjAUEeKNAMCbWZWItw" elementId="com.aptana.editor.commands.CollapseAll" commandName="Collapse All" description="Collapse All" category="_P4ZJsiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0idzAUEeKNAMCbWZWItw" elementId="com.aptana.index.core.ui.commands.include" commandName="Include in build" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ieDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.GeneratePropertiesCommand" commandName="Generate Properties..." description="PEPTIC: Generate properties using Fields" category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ieTAUEeKNAMCbWZWItw" elementId="com.aptana.ui.io.commands.compareWithEachOther" commandName="Each Other" description="Compare the Selected Files" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0iejAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.toggleSearchSelection" commandName="Toggle Search Selection" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0iezAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.setnext" commandName="Set Next Statement" category="_lmoVMTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ifDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.addBlockComment" commandName="Add Comment Block" description="Creates a python comment block" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ifTAUEeKNAMCbWZWItw" elementId="com.aptana.editor.js.openDeclaration" commandName="Open Declaration" description="Open a selected JS element's declaration" category="_P4Zw0CHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0ifjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.comment" commandName="Python Comment" description="Comments a python line (Adds # to beggining of the line)" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ifzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.create_tag" commandName="Create Tag..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0igDAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.viewlog" commandName="View Log File" description="View Studio log file" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0igTAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.wrapparagraph" commandName="Wrap Paragraph (Ctrl+2,w)" description="Wraps the current paragraph" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0igjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.pyFormatStd" commandName="Python Format Code" description="Format Code" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0igzAUEeKNAMCbWZWItw" elementId="com.aptana.editor.NextEditorCommand" commandName="Next Editor (Aptana)" category="_P4YioyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0ihDAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.commands.toggleOutline" commandName="Show/Hide Outline" description="Toggle to show or hide Outline view" category="_P4ZJsiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0ihTAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.toggleRegexpMatching" commandName="Toggle Regular Expression Matching" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0ihjAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar" commandName="Show Find Bar" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0ihzAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.scriptEngine" commandName="Offline Action for scripting" description="Offline Action for scripting" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0iiDAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.findNextOrPrev" commandName="Find Next or Previous (depends on search backward configuration)" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0iiTAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.synchronize.project" commandName="Synchronize Project..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0iijAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.commands.ModifyCatchpoint" commandName="Ruby Exception Breakpoint" category="_P4ZJuCHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0iizAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.relaunchLastAction" commandName="Relaunch last pydev launch" description="Relaunch last pydev launch." category="_lmoVMTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ijDAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.github.network" commandName="Show Github Network" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ijTAUEeKNAMCbWZWItw" elementId="com.aptana.jira.ui.commands.submit" commandName="Submit a Ticket..." description="Submit a JIRA ticket" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm0ijjAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.findPrevious" commandName="Find Previous" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm0ijzAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.searchInEnclosingProject" commandName="Search in Enclosing Project" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pEDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyUnCollapseAll" commandName="Python Un Collapse All" description="Un Collapse all blocks of code" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pETAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.compare_with_HEAD" commandName="Compare With HEAD" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pEjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.add_remote" commandName="Add Remote..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pEzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.disconnect" commandName="Disconnect" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pFDAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.pyShowBrowser" commandName="Python Show Global Tokens (Editor)" description="Python Show Global Tokens (Editor)" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pFTAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.command.stop_server" commandName="Stop Server" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pFjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyCollapseAll" commandName="Python Collapse All" description="Collapse all blocks of code" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pFzAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyCollapse" commandName="Python Collapse" description="Collapse block of code" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pGDAUEeKNAMCbWZWItw" elementId="com.aptana.editor.ruby.outline.toggle_private" commandName="Toggle Non-public Members" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pGTAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.showOptions" commandName="Show Find Bar Options" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pGjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.cherry-pick" commandName="cherry-pick" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pGzAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.searchInWorkspace" commandName="Search in Workspace" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pHDAUEeKNAMCbWZWItw" elementId="com.aptana.editor.ruby.outline.toggle_singleton" commandName="Toggle Singletons" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pHTAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.synchronize" commandName="Transfer Files..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pHjAUEeKNAMCbWZWItw" elementId="com.aptana.samples.ui.commands.collapseall" commandName="Collapse All" category="_lmiOljAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pHzAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.command.edit_server" commandName="Edit Server" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pIDAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.uncloak" commandName="Uncloak this file type" category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pITAUEeKNAMCbWZWItw" elementId="com.aptana.editor.commands.ExpandAll" commandName="Expand All" description="Expand All" category="_P4ZJsiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pIjAUEeKNAMCbWZWItw" elementId="com.aptana.theme.command.open_pref" commandName="Open Theme Preferences" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pIzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.showInResourceHistory" commandName="Show in Resource History" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pJDAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.toggleCaseMatching" commandName="Toggle Case Sensitive Matching" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pJTAUEeKNAMCbWZWItw" elementId="com.aptana.ui.command.ShowInFileManager" commandName="Show In File Manager" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pJjAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.scripting.commands.FilterThroughCommand" commandName="Filter Through Command" description="Filter Through Command" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pJzAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.command.Display" commandName="Display Command" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pKDAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.toggleSearchBackward" commandName="Toggle Search Backward" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pKTAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.navigation.pyUnCollapse" commandName="Python Un Collapse" description="Un Collapse block of code" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pKjAUEeKNAMCbWZWItw" elementId="com.aptana.explorer.commands.toggleAppExplorer" commandName="Show/Hide App Explorer" description="Toggle to show or hide App Explorer view" category="_P4ZJsiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pKzAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.hide" commandName="Hide Find Bar" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lm6pLDAUEeKNAMCbWZWItw" elementId="org.radrails.rails.ui.command.debug.server" commandName="Debug Server" category="_lmiOkjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lm6pLTAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.blame" commandName="Blame" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvsDAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.runEditorAsCustomUnitTestAction" commandName="Run custom tests" description="Run custom tests from editor." category="_lmoVMTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvsTAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.command.clear_display" commandName="Clear" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvsjAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.connectionmanager" commandName="Connection Manager..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvszAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.runEditorBasedOnNatureTypeAction" commandName="Run editor with current interpreter" description="Run the editor based on the python nature" category="_lmoVMTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvtDAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.command.new_server" commandName="Add Server" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvtTAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.ConstructorFieldCommand" commandName="Generate Constructor using Fields..." description="PEPTIC: Generate Constructor using Fields" category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvtjAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.pyShowOutline" commandName="Python Show Outline" description="Show Outline" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvtzAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.togglecomment" commandName="Python Toggle Comment" description="Toggles comments of python line/s (Adds/Removes # at beggining of the line)" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvuDAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.unstage" commandName="Unstage" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvuTAUEeKNAMCbWZWItw" elementId="com.aptana.ruby.debug.ui.commands.execute" commandName="Execute" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvujAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.merge_conflicts" commandName="Merge Conflicts..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvuzAUEeKNAMCbWZWItw" elementId="com.aptana.portal.ui.command.openStartPage" commandName="Show Aptana Studio Start Page" description="Aptana Studio Start Page" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvvDAUEeKNAMCbWZWItw" elementId="com.aptana.preview.commands.showPreview" commandName="Show Preview" description="Show Preview Editor" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvvTAUEeKNAMCbWZWItw" elementId="com.python.pydev.analysis.actions.pyGlobalsBrowserWorkbench" commandName="Python Show Global Tokens (Global)" description="Python Show Global Tokens (Global)" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvvjAUEeKNAMCbWZWItw" elementId="com.aptana.samples.ui.commands.import" commandName="Import sample as project..." category="_lmiOljAUEeKNAMCbWZWItw">
+    <parameters xmi:id="_lnAvvzAUEeKNAMCbWZWItw" elementId="id" name="Sample ID"/>
+  </commands>
+  <commands xmi:id="_lnAvwDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.InlineLocalCommand" commandName="Inline Local Variable..." description="PEPTIC: Inlines the selected variable" category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvwTAUEeKNAMCbWZWItw" elementId="com.aptana.editor.PreviousEditorCommand" commandName="Previous Editor (Aptana)" category="_P4YioyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvwjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.attach" commandName="Initialize Git repository" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvwzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.delete_branch" commandName="Delete Branch..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvxDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.ExtractMethodActionCommand" commandName="Extract Method..." description="PEPTIC: Extracts the selected code into a new method" category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvxTAUEeKNAMCbWZWItw" elementId="com.aptana.editor.js.quick_outline" commandName="Quick Outline" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvxjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.revert" commandName="Revert" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvxzAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.ignore" commandName="Add to .gitignore" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvyDAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.toggleMatchCount" commandName="Toggle Show Match Count" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvyTAUEeKNAMCbWZWItw" elementId="com.aptana.projects.promote" commandName="Promote the folder to become a project" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvyjAUEeKNAMCbWZWItw" elementId="org.python.pydev.debug.ui.actions.terminateAllLaunchesAction" commandName="Terminate all launches" description="Terminate all launches" category="_lmoVMTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvyzAUEeKNAMCbWZWItw" elementId="com.aptana.editor.php.openDeclaration" commandName="Open Declaration" description="Open a selected PHP element declaration" category="_P4Zw0CHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvzDAUEeKNAMCbWZWItw" elementId="com.aptana.debug.ui.commands.Inspect" commandName="Inspect" category="_P4ZJuCHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnAvzTAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.copyqualifiedname" commandName="Copy Context Qualified Name" description="Copies the Path of the selected context" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvzjAUEeKNAMCbWZWItw" elementId="com.aptana.editor.php.openType.command" commandName="Open PHP Type" description="Open a PHP Type (class, function, constant, etc.)" category="_lmiOlzAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnAvzzAUEeKNAMCbWZWItw" elementId="com.aptana.explorer.commands.toggleChangedFilesFilter" commandName="Filter to changed files" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2UDAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.commit.dialog" commandName="Perform Commit" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2UTAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.switch_branch" commandName="Switch Branch..." category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2UjAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.searchInOpenFiles" commandName="Search in Open Files" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2UzAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.focusFindOrOpenEclipseSearch" commandName="Find Bar Focus Find or Open Eclipse Search Dialog (depends on configuration)" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2VDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.ui.actions.ExtractLocalCommand" commandName="Extract Local Variable..." description="PEPTIC: Extracts the selected expression into a new local variable" category="_lmiOlDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2VTAUEeKNAMCbWZWItw" elementId="com.python.pydev.actions.pyShowHierarchy" commandName="Show Python Class Hierarchy" description="Show the class hierarchy for a python class" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2VjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.stash" commandName="Stash" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2VzAUEeKNAMCbWZWItw" elementId="com.aptana.webserver.command.restart_server" commandName="Restart Server" category="_P4ZwxyHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2WDAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.download" commandName="Download..." category="_lmiOlTAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2WTAUEeKNAMCbWZWItw" elementId="org.python.pydev.editor.actions.uncomment" commandName="Python Uncomment" description="Uncomments a python line (Removes # from the beggining of the line)" category="_lmoVMDAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2WjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.history.switch_branch" commandName="Switch branch of History" category="_lmoVMjAUEeKNAMCbWZWItw"/>
+  <commands xmi:id="_lnG2WzAUEeKNAMCbWZWItw" elementId="com.aptana.editor.common.gotoMatchingBracket" commandName="Goto Matching Bracket" description="Goto Matching Bracket" category="_P4ZwwiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2XDAUEeKNAMCbWZWItw" elementId="com.aptana.terminal.commands.openTerminal" commandName="Open Terminal" category="_P4ZJsiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2XTAUEeKNAMCbWZWItw" elementId="org.eclipse.ui.edit.findbar.inputNewline" commandName="Input Newline in Find Bar" category="_P4ZwxiHHEeKOsZknqwPf1g"/>
+  <commands xmi:id="_lnG2XjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.command.push" commandName="Push" category="_lmoVMjAUEeKNAMCbWZWItw"/>
   <addons xmi:id="_P0dE9CHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.core.commands.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.core.commands/org.eclipse.e4.core.commands.CommandServiceAddon"/>
   <addons xmi:id="_P0dE9SHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.ui.contexts.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.services/org.eclipse.e4.ui.services.ContextServiceAddon"/>
   <addons xmi:id="_P0dE9iHHEeKOsZknqwPf1g" elementId="org.eclipse.e4.ui.bindings.service" contributorURI="platform:/plugin/org.eclipse.ui.workbench" contributionURI="bundleclass://org.eclipse.e4.ui.bindings/org.eclipse.e4.ui.bindings.BindingServiceAddon"/>
@@ -3179,4 +3670,17 @@
   <categories xmi:id="_MqJBAiHzEeKyNpHdLlbVBA" elementId="org.eclipse.emf.facet.widgets.nattable.examples.ecore.internal.commands.category" name="Sample Category"/>
   <categories xmi:id="_MqJBAyHzEeKyNpHdLlbVBA" elementId="org.eclipse.emf.facet.infra.browser.category" name="EMF Facet Model Browser"/>
   <categories xmi:id="_9wNGYSH0EeKm-_NT23O1vw" elementId="org.eclipse.emf.ecoretools.diagram.part.EcoreDiagramEditorID" name="EcoreTools Editor Commands" description="EcoreTools Editor Commands"/>
+  <categories xmi:id="_lmiOkTAUEeKNAMCbWZWItw" elementId="org.python.pydev.ui.category.refactoring" name="PyDev - Refactor" description="Python refactor category"/>
+  <categories xmi:id="_lmiOkjAUEeKNAMCbWZWItw" elementId="org.radrails.rails.ui.category" name="Rails"/>
+  <categories xmi:id="_lmiOkzAUEeKNAMCbWZWItw" elementId="com.aptana.org.eclipse.tm.terminal.category1" name="Terminal view commands" description="%terminal.view.insertion.description"/>
+  <categories xmi:id="_lmiOlDAUEeKNAMCbWZWItw" elementId="org.python.pydev.refactoring.pepticCategory" name="pepticcategory" description="PEPTIC Refactoring"/>
+  <categories xmi:id="_lmiOlTAUEeKNAMCbWZWItw" elementId="com.aptana.ide.syncing.ui.commands.category" name="File Transfer" description="File Transfer Commands"/>
+  <categories xmi:id="_lmiOljAUEeKNAMCbWZWItw" elementId="com.aptana.samples.ui.category" name="Studio Samples"/>
+  <categories xmi:id="_lmiOlzAUEeKNAMCbWZWItw" elementId="com.aptana.ui.category" name="Aptana"/>
+  <categories xmi:id="_lmoVMDAUEeKNAMCbWZWItw" elementId="org.python.pydev.ui.category.source" name="PyDev - Editor" description="PyDev editor category"/>
+  <categories xmi:id="_lmoVMTAUEeKNAMCbWZWItw" elementId="org.python.pydev.ui.category.run" name="PyDev - Run" description="Python run category"/>
+  <categories xmi:id="_lmoVMjAUEeKNAMCbWZWItw" elementId="com.aptana.git.ui.category" name="Git"/>
+  <categories xmi:id="_lmoVMzAUEeKNAMCbWZWItw" elementId="com.aptana.ui.s3.category" name="S3"/>
+  <categories xmi:id="_lmoVNDAUEeKNAMCbWZWItw" elementId="com.aptana.ui.ftp.category" name="FTP"/>
+  <categories xmi:id="_lmoVNTAUEeKNAMCbWZWItw" elementId="com.aptana.editor.php.source.category" name="PHP Source" description="PHP Source Actions"/>
 </application:Application>

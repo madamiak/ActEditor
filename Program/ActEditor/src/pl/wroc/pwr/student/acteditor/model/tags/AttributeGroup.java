@@ -3,15 +3,33 @@ package pl.wroc.pwr.student.acteditor.model.tags;
 import java.util.ArrayList;
 import java.util.List;
 
+/**
+ * Przechowuje i udostepnia dane o grupie atrybutów dokumentu XML.
+ * 
+ * @author Mateusz
+ * 
+ */
 public class AttributeGroup implements Attribute {
-	private String name;
-	private String type;
-	private String use;
+	private String name = "";
+	private String type = "";
+	private String use = "";
+	private String description = "";
 	private List attributes;
-	
+
+	/**
+	 * Tworzy obiekt AttributeGroup z ustawiona wartoscia use na optional.
+	 */
 	public AttributeGroup() {
 		attributes = new ArrayList();
 		use = "optional";
+	}
+	
+	public String toString() {
+		String result = name + " " + description + " " + type + " " + use + "\n";
+		for (Object o : attributes) {
+			result += "\t" + ((Attribute) o).getName() + "\n";
+		}
+		return result;
 	}
 
 	@Override
@@ -53,9 +71,35 @@ public class AttributeGroup implements Attribute {
 	public List getAttributes() {
 		return attributes;
 	}
-	
-	public String toString() {
-		return name;
+
+	@Override
+	public String getDescription() {
+		return description;
+	}
+
+	@Override
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public SimpleType getSimpleType() {
+		return null;
+	}
+
+	@Override
+	public void setSimpleType(SimpleType simpleType) {
+
+	}
+
+	@Override
+	public String getDefault() {
+		return null;
+	}
+
+	@Override
+	public void setDefault(String defaultValue) {
+
 	}
 
 }

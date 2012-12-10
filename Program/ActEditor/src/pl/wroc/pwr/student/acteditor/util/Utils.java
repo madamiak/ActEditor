@@ -2,13 +2,34 @@ package pl.wroc.pwr.student.acteditor.util;
 
 import java.util.List;
 
+/**
+ * Klasa pomocnicza.
+ * 
+ * @author Mateusz
+ * 
+ */
 public final class Utils {
+	/**
+	 * Konwertuje liste typu String do tablicy.
+	 * 
+	 * @param list
+	 *          Lista do skonwertowania
+	 * @return Powstala tablica typu String
+	 */
 	public static String[] convertStringListToArray(List list) {
 		String[] result = new String[list.size()];
 		list.toArray(result);
 		return result;
 	}
-	
+
+	/**
+	 * Mapuje otrzymany lancuch znakow na jego wartosc, ktora ma zostac
+	 * wyswietlona.
+	 * 
+	 * @param name
+	 *          Lancuch znakow do mapowania
+	 * @return Zmapowana wartosc typu String
+	 */
 	public static String map(String name) {
 		switch (name) {
 		case "decyzja":

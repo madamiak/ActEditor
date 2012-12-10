@@ -2,6 +2,12 @@ package pl.wroc.pwr.student.acteditor.model.tags;
 
 import java.util.List;
 
+/**
+ * Udostêpnia interfejs elementu XML.
+ * 
+ * @author Mateusz
+ *
+ */
 public interface Element {	
 	public void add(Element element);
 	public void remove(Element element);
@@ -13,8 +19,12 @@ public interface Element {
 	public void setName(String name);
 	public String getType();
 	public void setType(String type);
+	public List getAttributes();
+	public void addAttribute(Attribute attribute);
 	public String getMinOccurs();
 	public void setMinOccurs(String minOccurs);
 	public String getMaxOccurs();
 	public void setMaxOccurs(String maxOccurs);
+	public String getValue();
+	public void setValue(String value);
 }

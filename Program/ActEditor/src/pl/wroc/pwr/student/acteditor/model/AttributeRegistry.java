@@ -5,29 +5,83 @@ import java.util.List;
 
 import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
 
+/**
+ * Zapewnia dostep do rejestru atrybutow.
+ * 
+ * Rejestr zawiera atrybuty Schematu XML, ktore sa identyfikowane po nazwie
+ * atrybutu.
+ * 
+ * @author Mateusz
+ * 
+ */
 public class AttributeRegistry {
 	private static AttributeRegistry registry;
-	List attributes;
-	
+	private List attributes;
+
 	private AttributeRegistry() {
 		attributes = new ArrayList();
 	}
-	
+
+	/**
+	 * Zwraca referencje do rejestru atrybutów.
+	 * 
+	 * @return Referencja do rejestru atrybutów.
+	 */
 	public static AttributeRegistry getRegistry() {
-		if(registry == null) {
+		if (registry == null) {
 			registry = new AttributeRegistry();
 		}
 		return registry;
 	}
-	
+
+	/**
+	 * Dodaje atrybut do rejestru, jesli atrybut o takiej nazwie nie istnieje
+	 * jeszcze w rejestrze.
+	 * 
+	 * @param attribute
+	 *          Atrybut, który ma zostac dodany do rejestru.
+	 */
 	public void add(Attribute attribute) {
+		for (Object each : attributes) {
+			if (((Attribute) each).getName().equals(attribute.getName())) {
+				return;
+			}
+		}
 		attributes.add(attribute);
 	}
-	
+
+	/**
+	 * Zwraca atrybut z rejestru o podanym indeksie.
+	 * 
+	 * @param index
+	 *          Indeks atrybutu w rejestrze.
+	 * @return Atrybut o podanym indeksie.
+	 */
 	public Attribute get(int index) {
 		return (Attribute) attributes.get(index);
 	}
-	
+
+	/**
+	 * Zwraca atrybut z rejestru o podanej nazwie.
+	 * 
+	 * @param name
+	 *          Nazwa atrybutu w rejestrze.
+	 * @return Atrybut o podanej nazwie.
+	 */
+	public Attribute get(String name) {
+		for (Object each : attributes) {
+			if (((Attribute) each).getName().equals(name)) {
+				return (Attribute) each;
+			}
+		}
+		return null;
+	}
+
+	/**
+	 * Zwraca liste atrybutow istniejacych w rejestrze.
+	 * 
+	 * @return Lista atrybutów.
+	 */
 	public List getAttributes() {
 		return attributes;
 	}

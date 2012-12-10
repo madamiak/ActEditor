@@ -26,17 +26,20 @@
 \BOOKMARK [1][-]{section.5.2}{Druga iteracja \205 ActEditor}{chapter.5}% 26
 \BOOKMARK [1][-]{section.5.3}{Trzecia iteracja \205 LawCreator}{chapter.5}% 27
 \BOOKMARK [0][-]{chapter.6}{Opis implementacji}{}% 28
-\BOOKMARK [0][-]{chapter.7}{Testowanie}{}% 29
-\BOOKMARK [1][-]{section.7.1}{Testy jednostkowe}{chapter.7}% 30
-\BOOKMARK [1][-]{section.7.2}{Testy akceptacyjne}{chapter.7}% 31
-\BOOKMARK [2][-]{subsection.7.2.1}{Przyk\233adowy test akceptacyjny aplikacji LawCreator}{section.7.2}% 32
-\BOOKMARK [1][-]{section.7.3}{Testy funkcjonalne}{chapter.7}% 33
-\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 34
-\BOOKMARK [1][-]{section.8.1}{Ocena projektu}{chapter.8}% 35
-\BOOKMARK [1][-]{section.8.2}{Wnioski}{chapter.8}% 36
-\BOOKMARK [0][-]{section*.30}{Literatura}{}% 37
-\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 38
-\BOOKMARK [1][-]{section.A.1}{Aplikacja desktopowa}{appendix.A}% 39
-\BOOKMARK [2][-]{subsection.A.1.1}{Znane problemy}{section.A.1}% 40
-\BOOKMARK [1][-]{section.A.2}{Aplikacja sieciowa}{appendix.A}% 41
-\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 42
+\BOOKMARK [1][-]{section.6.1}{Podzia\233 aplikacji na modu\233y}{chapter.6}% 29
+\BOOKMARK [1][-]{section.6.2}{Przetwarzanie danych}{chapter.6}% 30
+\BOOKMARK [1][-]{section.6.3}{Implementacja interfejsu graficznego}{chapter.6}% 31
+\BOOKMARK [0][-]{chapter.7}{Testowanie}{}% 32
+\BOOKMARK [1][-]{section.7.1}{Testy jednostkowe}{chapter.7}% 33
+\BOOKMARK [1][-]{section.7.2}{Testy akceptacyjne}{chapter.7}% 34
+\BOOKMARK [2][-]{subsection.7.2.1}{Przyk\233adowy test akceptacyjny aplikacji LawCreator}{section.7.2}% 35
+\BOOKMARK [1][-]{section.7.3}{Testy funkcjonalne}{chapter.7}% 36
+\BOOKMARK [0][-]{chapter.8}{Podsumowanie}{}% 37
+\BOOKMARK [1][-]{section.8.1}{Ocena projektu}{chapter.8}% 38
+\BOOKMARK [1][-]{section.8.2}{Wnioski}{chapter.8}% 39
+\BOOKMARK [0][-]{section*.30}{Literatura}{}% 40
+\BOOKMARK [0][-]{appendix.A}{Instrukcja wdrozenia}{}% 41
+\BOOKMARK [1][-]{section.A.1}{Aplikacja desktopowa}{appendix.A}% 42
+\BOOKMARK [2][-]{subsection.A.1.1}{Znane problemy}{section.A.1}% 43
+\BOOKMARK [1][-]{section.A.2}{Aplikacja sieciowa}{appendix.A}% 44
+\BOOKMARK [0][-]{appendix.B}{Instrukcja uzytkownika}{}% 45

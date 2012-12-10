@@ -5,3 +5,27 @@
 1352992814408	Delete element
 1352992928997	Rename type 'DecisionWindow'
 1352993055385	Rename field 'type'
+1353088258384	Delete elements
+1353088292271	Delete elements
+1353089369902	Delete element
+1353147947996	Rename method 'function'
+1353151248309	Rename local variable 's'
+1353151264750	Rename method 'isElement'
+1353151339711	Rename method 'hasElement'
+1353151625707	Rename local variable 'flag'
+1353151664758	Rename field 'xsdLines'
+1353151681151	Rename local variable 'line'
+1353161676385	Rename method 'hasElement'
+1353163331437	Rename method 'hasReferene'
+1353163915543	Rename method 'createSimpleElement'
+1353164198326	Rename method 'hasReference'
+1353164222831	Rename method 'hasGroup'
+1353235988262	Rename field 'documents'
+1353236001142	Rename field 'combo'
+1353238251912	Delete element
+1353240822921	Delete element
+1353241542825	Delete element
+1353241551192	Delete element
+1353241556737	Delete element
+1353241760076	Move compilation units
+1353263086551	Rename method 'hasAttributeGroup'
