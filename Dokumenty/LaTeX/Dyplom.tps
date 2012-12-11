@@ -14,11 +14,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=rozdzial03.tex
+Document=rozdzial02.tex
 
 [Frame0_View0,0]
-TopLine=56
-Cursor=5947
+TopLine=62
+Cursor=6465
 
 [Frame1]
 Flags=0
@@ -32,11 +32,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=rozdzial06.tex
+Document=rozdzial03.tex
 
 [Frame1_View0,0]
-TopLine=16
-Cursor=3322
+TopLine=62
+Cursor=6940
 
 [Frame2]
 Flags=0
@@ -50,11 +50,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=rozdzial07.tex
+Document=rozdzial06.tex
 
 [Frame2_View0,0]
-TopLine=0
-Cursor=5173
+TopLine=16
+Cursor=3322
 
 [Frame3]
 Flags=0
@@ -68,11 +68,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=rozdzial05.tex
+Document=rozdzial07.tex
 
 [Frame3_View0,0]
 TopLine=0
-Cursor=8975
+Cursor=5173
 
 [Frame4]
 Flags=0
@@ -86,11 +86,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=dodatek02.tex
+Document=rozdzial05.tex
 
 [Frame4_View0,0]
-TopLine=4
-Cursor=733
+TopLine=0
+Cursor=8975
 
 [Frame5]
 Flags=0
@@ -104,11 +104,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=dodatek01.tex
+Document=dodatek02.tex
 
 [Frame5_View0,0]
-TopLine=0
-Cursor=54
+TopLine=4
+Cursor=733
 
 [Frame6]
 Flags=0
@@ -122,11 +122,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=rozdzial01.tex
+Document=dodatek01.tex
 
 [Frame6_View0,0]
-TopLine=4
-Cursor=2613
+TopLine=0
+Cursor=54
 
 [Frame7]
 Flags=0
@@ -140,11 +140,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=Dyplom.tex
+Document=rozdzial01.tex
 
 [Frame7_View0,0]
-TopLine=114
-Cursor=178
+TopLine=4
+Cursor=2613
 
 [Frame8]
 Flags=0
@@ -158,11 +158,11 @@ NormalPos.top=26
 NormalPos.right=1339
 NormalPos.bottom=415
 Class=LaTeXView
-Document=rozdzial02.tex
+Document=Dyplom.tex
 
 [Frame8_View0,0]
-TopLine=0
-Cursor=1487
+TopLine=114
+Cursor=178
 
 [Frame9]
 Flags=0
@@ -215,7 +215,7 @@ Class=LaTeXView
 Document=rozdzial08.tex
 
 [Frame11_View0,0]
-TopLine=30
+TopLine=29
 Cursor=5879
 
 [SessionInfo]

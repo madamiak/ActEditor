@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.9)  10 DEC 2012 20:00
+This is pdfTeX, Version 3.1415926-2.3-1.40.12 (MiKTeX 2.9) (preloaded format=pdflatex 2012.5.9)  11 DEC 2012 10:30
 entering extended mode
 **Dyplom.tex
 (C:\Users\Mateusz\Desktop\LaTeX\Dyplom.tex
@@ -880,7 +880,7 @@ iera re-jestr ele-men-tów
 
 
 ] [28]) [29] (C:\Users\Mateusz\Desktop\LaTeX\rozdzial07.tex
-<./rys01/tests.png, id=462, 283.0575pt x 414.04688pt>
+<./rys01/tests.png, id=460, 283.0575pt x 414.04688pt>
 File: ./rys01/tests.png Graphic file (type png)
  <use ./rys01/tests.png>
 Package pdftex.def Info: ./rys01/tests.png used on input line 7.
@@ -1456,7 +1456,7 @@ m / article / xml /
 
 ]) [40]
 (C:\Users\Mateusz\Desktop\LaTeX\dodatek02.tex
-<./rys01/zrzut_zaz.png, id=593, 657.95813pt x 373.395pt>
+<./rys01/zrzut_zaz.png, id=591, 657.95813pt x 373.395pt>
 File: ./rys01/zrzut_zaz.png Graphic file (type png)
 
 <use ./rys01/zrzut_zaz.png>
@@ -1467,13 +1467,13 @@ Package pdftex.def Info: ./rys01/zrzut_zaz.png used on input line 8.
 
 
  <C:/Users/Mateusz/Desktop/LaTeX/rys01/zrzut_zaz.png>] <./rys01/dialog.png, id=
-600, 565.36218pt x 348.55219pt>
+598, 565.36218pt x 348.55219pt>
 File: ./rys01/dialog.png Graphic file (type png)
 
 <use ./rys01/dialog.png>
 Package pdftex.def Info: ./rys01/dialog.png used on input line 26.
 (pdftex.def)             Requested size: 409.7169pt x 252.60077pt.
- <./rys01/xml.png, id=602, 563.85657pt x 350.05782pt>
+ <./rys01/xml.png, id=600, 563.85657pt x 350.05782pt>
 File: ./rys01/xml.png Graphic file (type png)
 
 <use ./rys01/xml.png>
@@ -1501,35 +1501,25 @@ Package atveryend Info: Executing hook `AtVeryEndDocument' on input line 327.
 Package atveryend Info: Executing hook `AtEndAfterFileList' on input line 327.
 Package rerunfilecheck Info: File `Dyplom.out' has not changed.
 (rerunfilecheck)             Checksum: 0A84D22E9B2BA5A7C27A2304AEB114CC;3063.
-
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
  ) 
 Here is how much of TeX's memory you used:
- 13217 strings out of 494045
- 190077 string characters out of 3145964
+ 13215 strings out of 494045
+ 190043 string characters out of 3145964
  375166 words of memory out of 3000000
  16062 multiletter control sequences out of 15000+200000
  48943 words of font info for 63 fonts, out of 3000000 for 9000
  715 hyphenation exceptions out of 8191
  38i,12n,53p,1161b,1233s stack positions out of 5000i,500n,10000p,200000b,50000s
-pdfTeX warning (dest): name{figure.caption.16} has been referenced but does n
-ot exist, replaced by a fixed one
-
-pdfTeX warning (dest): name{figure.caption.14} has been referenced but does not
- exist, replaced by a fixed one
-
-{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Program 
-Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files (x8
-6)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKTeX
- 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/
-type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/t
-imes/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmri8
-a.pfb>
-Output written on Dyplom.pdf (43 pages, 1117491 bytes).
+{C:/Program Files (x86)/MiKTeX 2.9/fonts/enc/dvips/fontname/8r.enc}<C:/Progra
+m Files (x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrb8a.pfb><C:/Program Files (
+x86)/MiKTeX 2.9/fonts/type1/urw/courier/ucrr8a.pfb><C:/Program Files (x86)/MiKT
+eX 2.9/fonts/type1/urw/times/utmb8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/font
+s/type1/urw/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw
+/times/utmr8a.pfb><C:/Program Files (x86)/MiKTeX 2.9/fonts/type1/urw/times/utmr
+i8a.pfb>
+Output written on Dyplom.pdf (43 pages, 1117339 bytes).
 PDF statistics:
- 688 PDF objects out of 1000 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
+ 686 PDF objects out of 1000 (max. 8388607)
+ 214 named destinations out of 1000 (max. 500000)
  406 words of extra memory for PDF output out of 10000 (max. 10000000)
 
