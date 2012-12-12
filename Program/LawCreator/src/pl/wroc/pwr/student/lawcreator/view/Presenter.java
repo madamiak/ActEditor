@@ -104,13 +104,17 @@ public class Presenter {
 	 *          Referencja do drzewa dostepnych znacznikow
 	 * @param composite
 	 *          Referencja do kompozycji wyswietlajacej formularz
+	 * @param tagTreeClicked
+	 *          Informacja, czy zostala wybrana pozycja z drzewa dostepnych
+	 *          znacznikow
 	 * @throws ValueFormatException
 	 *           Wyjatek wyrzucany, gdy wypelnione pole formularza nie spelnia
 	 *           okreslonych zasad.
 	 */
-	public void fillOutput(Tree treeOutput, Tree tree, Composite composite) throws ValueFormatException {
-		TreeItem current = tree.getSelection()[0];
-		Stack parents = getParentItems(tree, current);
+	public void fillOutput(Tree treeOutput, Tree tree, Composite composite, boolean tagTreeClicked)
+			throws ValueFormatException {
+		TreeItem current = tagTreeClicked ? tree.getSelection()[0] : treeOutput.getSelection()[0];
+		Stack parents = getParentItems(current);
 
 		current = createMissingItems(treeOutput, parents);
 
@@ -118,8 +122,7 @@ public class Presenter {
 	}
 
 	private void saveValues(TreeItem current, Composite composite) throws ValueFormatException {
-		Tree tree = current.getParent();
-		Stack parents = getParentItems(tree, current);
+		Stack parents = getParentItems(current);
 		List values = new ArrayList();
 		List names = new ArrayList();
 		Node node = getLastNode(parents);
@@ -226,7 +229,7 @@ public class Presenter {
 		return childNode;
 	}
 
-	private Stack getParentItems(Tree tree, TreeItem currentItem) {
+	private Stack getParentItems(TreeItem currentItem) {
 		Stack parents = new Stack();
 
 		parents.push(currentItem);
@@ -335,7 +338,7 @@ public class Presenter {
 	private void updateData(Tree outputTree, Composite composite) {
 		String name = null;
 		TreeItem selectedItem = outputTree.getSelection()[0];
-		Stack parents = getParentItems(outputTree, selectedItem);
+		Stack parents = getParentItems(selectedItem);
 		Node node = getLastNode(parents);
 
 		for (Control kid : composite.getChildren()) {

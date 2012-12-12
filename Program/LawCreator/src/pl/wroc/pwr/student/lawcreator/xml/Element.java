@@ -113,7 +113,7 @@ public interface Element {
 	/**
 	 * Ustawia maksymalna liczbe wystapien elementu w dokumencie XML.
 	 * 
-	 * @param minOccurs
+	 * @param maxOccurs
 	 *          Maksymalna liczba wystapien
 	 */
 	public void setMaxOccurs(String maxOccurs);

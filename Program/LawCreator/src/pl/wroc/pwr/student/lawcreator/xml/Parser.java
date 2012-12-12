@@ -15,7 +15,7 @@
  * Niniejszy program rozpowszechniany jest z nadzieją, iż będzie on
  * użyteczny - jednak BEZ JAKIEJKOLWIEK GWARANCJI, nawet domyślnej
  * gwarancji PRZYDATNOŚCI HANDLOWEJ albo PRZYDATNOŚCI DO OKREŚLONYCH
- * ZASTOSOWAŃ. W celu uzyskania bliższych informacji - Powszechna
+ * ZASTOSOWAN. W celu uzyskania bliższych informacji - Powszechna
  * Licencja Publiczna GNU.
  * 
  * Z pewnością wraz z niniejszym programem otrzymałeś też egzemplarz
@@ -51,13 +51,14 @@ public class Parser {
 		String positive = "[0-9]+";
 
 		Attribute[] atr_wspolne = new Attribute[] { createAttribute("Uchylony", createType(null, "tak", "nie")),
-				createAttribute("Status", new TypeImpl()), createAttribute("Komentarz", new TypeImpl()),
-				createAttribute("Obowiazuje od", createType(dataPattern)),
+				createAttribute("Widoczny", createType(null, "tak", "nie")), createAttribute("Status", new TypeImpl()),
+				createAttribute("Komentarz", new TypeImpl()), createAttribute("Obowiazuje od", createType(dataPattern)),
 				createAttribute("Obowiazuje do", createType(dataPattern)) };
 
 		Attribute[] atr_wspolne_nr = new Attribute[] { createAttribute("Nr", createType(positive)),
-				createAttribute("Uchylony", createType(null, "tak", "nie")), createAttribute("Status", new TypeImpl()),
-				createAttribute("Komentarz", createType(dataPattern)),
+				createAttribute("Uchylony", createType(null, "tak", "nie")),
+				createAttribute("Widoczny", createType(null, "tak", "nie")), createAttribute("Status", new TypeImpl()),
+				createAttribute("Komentarz", new TypeImpl()),
 				createAttribute("Obowiazuje od", createType(dataPattern)), createAttribute("Obowiazuje do", new TypeImpl()) };
 
 		createElement("Uchwała", "Element główny dokumentu XML-owego reprezentującego uchwałę.", false, new Attribute[] {},
@@ -106,13 +107,14 @@ public class Parser {
 		createElement("Załącznik binarny", "Element umożliwiający zapis dowolnego pliku, jako czesc aktu.", false,
 				new Attribute[] {}, new String[] {});
 
-		createElement("Tytuł", "Element reprezentujacy tytul aktu.", false, new Attribute[] {}, new String[] { "Przypis",
+		createElement("Tytuł", "Element reprezentujacy tytul aktu.", true, atr_wspolne_nr, new String[] { "Przypis",
 				"Fragment" });
 
-		createElement("Adres publikacji", "Element reprezentujacy adres publikacji aktu.", false, new Attribute[] {},
+		createElement("Adres publikacji", "Element reprezentujacy adres publikacji aktu.", true, new Attribute[] {},
 				new String[] { "Dziennik urzędowy" });
 
-		createElement("Przypis", "Odnosnik do przypisu", false, new Attribute[] {}, new String[] {});
+		createElement("Przypis", "Odnosnik do przypisu", false, new Attribute[] { createAttribute("Nr", new TypeImpl()) },
+				new String[] {});
 
 		createElement("Fragment", "Znakowy fragment tekstu.", false, atr_wspolne, new String[] {});
 
@@ -120,24 +122,28 @@ public class Parser {
 				"Dziennik urzędowy",
 				"Element identyfikujacy dziennik urzedowy, w ktorym opublikowano akt.",
 				false,
-				new Attribute[] { createAttribute(
-						"Typ",
-						createType(null, "Dziennik Ustaw", "Monitor Polski", "Dziennik Urzedowy Ministra Finansow",
-								"Dziennik Urzedowy Ministra Zdrowia", "Dziennik Urzedowy Narodowego Banku Polskiego",
-								"Dziennik Urzedowy Ministra Sprawiedliwosci",
-								"Dziennik Urzedowy Ministra Srodowiska i Glownego Inspektora Ochrony Srodowiska",
-								"Dziennik Urzedowy Ministra Skarbu Panstwa", "Dziennik Urzedowy Ministra Infrastruktury",
-								"Dziennik Urzedowy Urzedu Regulacji Telekomunikacji i Poczty",
-								"Dziennik Urzedowy Ministra Transportu i Budownictwa",
-								"Dziennik Urzedowy Urzedu Komunikacji Elektronicznej",
-								"Dziennik Urzedowy Ministra Spraw Wewnetrznych i Administracji",
-								"Dziennik Urzedowy Ministra Transportu", "Dziennik Urzedowy Ministra Budownictwa",
-								"Dziennik Urzedowy Ministra Nauki i Szkolnictwa Wyzszego", "Dziennik Urzedowy Glownego Urzedu Miar",
-								"Dziennik Urzedowy Ministra Edukacji Narodowej", "Dziennik Urzedowy Ministra Gospodarki Morskiej")) },
+				new Attribute[] {
+						createAttribute(
+								"Typ",
+								createType(null, "Dziennik Ustaw", "Monitor Polski", "Dziennik Urzedowy Ministra Finansow",
+										"Dziennik Urzedowy Ministra Zdrowia", "Dziennik Urzedowy Narodowego Banku Polskiego",
+										"Dziennik Urzedowy Ministra Sprawiedliwosci",
+										"Dziennik Urzedowy Ministra Srodowiska i Glownego Inspektora Ochrony Srodowiska",
+										"Dziennik Urzedowy Ministra Skarbu Panstwa", "Dziennik Urzedowy Ministra Infrastruktury",
+										"Dziennik Urzedowy Urzedu Regulacji Telekomunikacji i Poczty",
+										"Dziennik Urzedowy Ministra Transportu i Budownictwa",
+										"Dziennik Urzedowy Urzedu Komunikacji Elektronicznej",
+										"Dziennik Urzedowy Ministra Spraw Wewnetrznych i Administracji",
+										"Dziennik Urzedowy Ministra Transportu", "Dziennik Urzedowy Ministra Budownictwa",
+										"Dziennik Urzedowy Ministra Nauki i Szkolnictwa Wyzszego",
+										"Dziennik Urzedowy Glownego Urzedu Miar", "Dziennik Urzedowy Ministra Edukacji Narodowej",
+										"Dziennik Urzedowy Ministra Gospodarki Morskiej")),
+						createAttribute("Rok", createType("(19|20)[0-9]{2}")), createAttribute("Numer", createType(positive)),
+						createAttribute("Pozycja", new TypeImpl()), createAttribute("tj", createType(null, "tak", "nie")) },
 				new String[] {});
 
 		createElement("Tytuł (jako część struktury)", "Element reprezentujacy tytul (jako czesc struktury).", false,
-				new Attribute[] {}, new String[] { "Tytuł", "Dział", "Artykuł" });
+				atr_wspolne_nr, new String[] { "Tytuł", "Dział", "Artykuł" });
 
 		createElement("Dział", "Element reprezentujący dział", false, atr_wspolne_nr, new String[] { "Tytuł", "Rozdział",
 				"Artykuł" });

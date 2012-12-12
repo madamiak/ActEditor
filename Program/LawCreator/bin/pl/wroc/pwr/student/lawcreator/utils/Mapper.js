@@ -117,6 +117,14 @@ case "Zaskarżony":
 return "zaskarzony";
 case "Po wyroku":
 return "po-wyroku";
+case "Widoczny":
+return "widoczny";
+case "Stan":
+return "stan";
+case "Rok":
+return "rok";
+case "Pozycja":
+return "pozycja";
 }
 return tag;
 }, "~S");

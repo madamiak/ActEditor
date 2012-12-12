@@ -31,16 +31,15 @@ this.recursiveFillingTree (child, each, level);
 }
 }, $fz.isPrivate = true, $fz), "$wt.widgets.TreeItem,~O,~N");
 Clazz.defineMethod (c$, "fillOutput", 
-function (treeOutput, tree, composite) {
-var current = tree.getSelection ()[0];
-var parents = this.getParentItems (tree, current);
+function (treeOutput, tree, composite, tagTreeClicked) {
+var current = tagTreeClicked ? tree.getSelection ()[0] : treeOutput.getSelection ()[0];
+var parents = this.getParentItems (current);
 current = this.createMissingItems (treeOutput, parents);
 this.saveValues (current, composite);
-}, "$wt.widgets.Tree,$wt.widgets.Tree,$wt.widgets.Composite");
+}, "$wt.widgets.Tree,$wt.widgets.Tree,$wt.widgets.Composite,~B");
 Clazz.defineMethod (c$, "saveValues", 
 ($fz = function (current, composite) {
-var tree = current.getParent ();
-var parents = this.getParentItems (tree, current);
+var parents = this.getParentItems (current);
 var values =  new java.util.ArrayList ();
 var names =  new java.util.ArrayList ();
 var node = this.getLastNode (parents);
@@ -132,12 +131,12 @@ parentNode.addNote (childNode);
 return childNode;
 }, $fz.isPrivate = true, $fz), "pl.wroc.pwr.student.lawcreator.xml.nodes.Node,$wt.widgets.TreeItem");
 Clazz.defineMethod (c$, "getParentItems", 
-($fz = function (tree, currentItem) {
+($fz = function (currentItem) {
 var parents =  new java.util.Stack ();
 parents.push (currentItem);
 parents = this.pushParents (currentItem, parents);
 return parents;
-}, $fz.isPrivate = true, $fz), "$wt.widgets.Tree,$wt.widgets.TreeItem");
+}, $fz.isPrivate = true, $fz), "$wt.widgets.TreeItem");
 Clazz.defineMethod (c$, "pushParents", 
 ($fz = function (currentItem, parents) {
 var parent = currentItem.getParentItem ();
@@ -196,7 +195,7 @@ Clazz.defineMethod (c$, "updateData",
 ($fz = function (outputTree, composite) {
 var name = null;
 var selectedItem = outputTree.getSelection ()[0];
-var parents = this.getParentItems (outputTree, selectedItem);
+var parents = this.getParentItems (selectedItem);
 var node = this.getLastNode (parents);
 for (var kid, $kid = 0, $$kid = composite.getChildren (); $kid < $$kid.length && ((kid = $$kid[$kid]) || true); $kid++) {
 if (Clazz.instanceOf (kid, $wt.widgets.Label)) {

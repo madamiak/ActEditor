@@ -52,7 +52,8 @@ public class MainWindow {
 	private Shell shell;
 	private Text textDescription;
 	private Text textFormDescription;
-
+	private boolean tagTreeClicked;
+	
 	/**
 	 * Tworzy obiekt typu MainWindow.
 	 * 
@@ -75,6 +76,7 @@ public class MainWindow {
 
 		display = new Display();
 		shell = new Shell(display, SWT.CLOSE | SWT.TITLE | SWT.MIN);
+		shell.setSize(776, 447);
 		shell.setMinimumSize(new Point(740, 455));
 
 		shell.setText("Law Creator");
@@ -94,7 +96,7 @@ public class MainWindow {
 		final Composite composite = new Composite(shell, SWT.NONE);
 		GridData gd_composite = new GridData(SWT.FILL, SWT.CENTER, false, false, 2, 1);
 		gd_composite.heightHint = 312;
-		gd_composite.widthHint = 349;
+		gd_composite.widthHint = 538;
 		composite.setLayoutData(gd_composite);
 		composite.setLayout(new GridLayout(2, false));
 
@@ -106,6 +108,7 @@ public class MainWindow {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				try {
+					tagTreeClicked = false;
 					presenter.retrieveData(outputTree, composite);
 				} catch (BlankFormException e1) {
 					MessageBox box = new MessageBox(shell);
@@ -116,14 +119,14 @@ public class MainWindow {
 		});
 		GridData gd_outputTree = new GridData(SWT.LEFT, SWT.FILL, false, false, 1, 2);
 		gd_outputTree.heightHint = 275;
-		gd_outputTree.widthHint = 134;
+		gd_outputTree.widthHint = 155;
 		outputTree.setLayoutData(gd_outputTree);
 
 		presenter.fillTrees(tagTree, outputTree);
 
 		textFormDescription = new Text(shell, SWT.READ_ONLY | SWT.WRAP);
 		GridData gd_textFormDescription = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 2);
-		gd_textFormDescription.widthHint = 260;
+		gd_textFormDescription.widthHint = 420;
 		textFormDescription.setLayoutData(gd_textFormDescription);
 		new Label(shell, SWT.NONE);
 
@@ -134,14 +137,15 @@ public class MainWindow {
 		textDescription.setLayoutData(gd_textDescription);
 
 		Button btnZapisz = new Button(shell, SWT.NONE);
-		GridData gd_btnZapisz = new GridData(SWT.FILL, SWT.BOTTOM, false, false, 1, 1);
-		gd_btnZapisz.heightHint = 25;
+		GridData gd_btnZapisz = new GridData(SWT.RIGHT, SWT.BOTTOM, false, false, 1, 1);
+		gd_btnZapisz.widthHint = 93;
+		gd_btnZapisz.heightHint = 23;
 		btnZapisz.setLayoutData(gd_btnZapisz);
 		btnZapisz.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
 				try {
-					presenter.fillOutput(outputTree, tagTree, composite);
+					presenter.fillOutput(outputTree, tagTree, composite, tagTreeClicked);
 				} catch (ValueFormatException e1) {
 					MessageBox box = new MessageBox(shell);
 					box.setMessage(e1.getMessage());
@@ -171,6 +175,7 @@ public class MainWindow {
 		tagTree.addSelectionListener(new SelectionAdapter() {
 			@Override
 			public void widgetSelected(SelectionEvent e) {
+				tagTreeClicked = true;
 				String name = tagTree.getSelection()[0].getText();
 				presenter.setDescription(name, textDescription);
 				try {
