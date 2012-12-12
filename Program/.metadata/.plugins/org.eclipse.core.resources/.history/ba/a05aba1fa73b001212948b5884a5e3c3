@@ -1,0 +1,26 @@
+package pl.wroc.pwr.student.acteditor;
+
+import pl.wroc.pwr.student.acteditor.view.MainWindow;
+
+/**
+ * Klasa startowa aplikacji.
+ * 
+ * @author Mateusz
+ *
+ */
+public final class Application {
+
+	/**
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Application.run();
+	}
+
+	/**
+	 * Wyœwietla g³ówne okno aplikacji.
+	 */
+	private static void run() {
+		new MainWindow(null);
+	}
+}

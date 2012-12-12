@@ -1,0 +1,51 @@
+package pl.wroc.pwr.student.acteditor.parsing.xsd;
+
+import java.util.Stack;
+
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
+
+public class XSDEventHandler {
+	private Stack stack;
+	
+	public XSDEventHandler() {
+		stack = new Stack();
+	}
+	
+	private void patternEventHandle(String line) {
+		SimpleType simpleType = (SimpleType) stack.pop();
+		String pattern = getAttribute("value", line);
+		simpleType.setPattern(pattern);
+		stack.push(simpleType);
+	}
+
+	private void enumerationEventHandle(String line) {
+		SimpleType simpleType = (SimpleType) stack.pop();
+		String enumeration = getAttribute("value", line);
+		simpleType.add(enumeration);
+		stack.push(simpleType);
+	}
+
+	private void simpleTypeBeginningEventHandle(String line) {
+		SimpleType simpleType = new SimpleType();
+		stack.push(simpleType);
+	}
+
+	private void closingSimpleTypeEventHandle(String line) {
+		SimpleType simpleType = (SimpleType) stack.pop();
+		if(!stack.isEmpty()) {
+			Object parent = stack.pop();
+			if(parent instanceof Attribute) {
+				((Attribute)parent).setSimpleType(simpleType);
+				stack.push(parent);
+			}
+		} else {
+			types.add(simpleType);
+		}
+	}
+
+	private void simpleTypeDefinitionEventHandle(String line) {
+		SimpleType simpleType = createSimpleTypeDefinition(line);
+		stack.push(simpleType);
+	}
+}

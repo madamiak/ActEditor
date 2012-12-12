@@ -1,0 +1,204 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import java.util.List;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Device;
+import org.eclipse.swt.graphics.Rectangle;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.DateTime;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeItem;
+
+import pl.wroc.pwr.student.acteditor.model.AttributeRegistry;
+import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
+import pl.wroc.pwr.student.acteditor.model.TypeRegistry;
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
+import pl.wroc.pwr.student.acteditor.test.SchemaLoader;
+
+public class Presenter {
+	private SchemaLoader loader;
+	private ElementRegistry elementRegistry;
+	private AttributeRegistry attributeRegistry;
+	private TypeRegistry typeRegistry;
+	private Color white;
+
+	public Presenter() {
+		loader = new SchemaLoader();
+		loader.parseSAX();
+		elementRegistry = ElementRegistry.getRegistry();
+		attributeRegistry = AttributeRegistry.getRegistry();
+		typeRegistry = TypeRegistry.getRegistry();
+		Device device = Display.getCurrent();
+		white = new Color(device, 255, 255, 255);
+	}
+
+	public void fill(Tree tree, String name) {
+		Element element = elementRegistry.get(name);
+		recursionTreeFilling(tree, element, 0);
+	}
+
+	private void recursionTreeFilling(Object tree, Element element, int level) {
+		if (isEnd(level)) {
+			return;
+		} else {
+			level++;
+		}
+
+		TreeItem ti = createItem(tree);
+		ti.setText(((Element) element).getName());
+
+		if (element.getElements() == null || element.getElements().size() == 0) {
+			if (elementRegistry.get(element.getName()).getElements() == null) {
+				return;
+			}
+
+			for (Object e : elementRegistry.get(element.getName()).getElements()) {
+				recursionTreeFilling(ti, (Element) e, level);
+			}
+			return;
+		}
+		try {
+			for (Object e : element.getElements()) {
+				recursionTreeFilling(ti, (Element) e, level);
+			}
+		} catch (NullPointerException e) {
+		}
+	}
+
+	private TreeItem createItem(Object tree) {
+		if (tree instanceof Tree) {
+			return new TreeItem((Tree) tree, SWT.NONE);
+		} else if (tree instanceof TreeItem) {
+			return new TreeItem((TreeItem) tree, SWT.NONE);
+		}
+		return null;
+	}
+
+	private boolean isEnd(int level) {
+		return level < 20 ? false : true;
+	}
+
+	public void fill(Composite composite, TreeItem item) {
+		for (Control kid : composite.getChildren()) {
+			kid.dispose();
+		}
+		String name = item.getText();
+		Element element = elementRegistry.get(name);
+		List attributes;
+		try {
+			attributes = element.getAttributes();
+		} catch (NullPointerException e) {
+			return;
+		}
+		for (Object each : attributes) {
+			if(each instanceof SimpleAttribute) {
+				Attribute attribute = (Attribute) each;
+				displayAttribute(attribute, composite);
+			} else if (each instanceof AttributeGroup) {
+				AttributeGroup group = (AttributeGroup) each;
+				List subAttributes = group.getAttributes();
+				for(Object sub : subAttributes) {
+					displayAttribute((Attribute) sub, composite);
+				}
+			}
+		}
+		if(item.getText().equals("tytul") ||
+				item.getText().equals("srodtytul") ||
+				item.getText().equals("element_redakcyjny") ||
+				item.getText().equals("preambula") ||
+				item.getText().equals("czesc") ||
+				item.getText().equals("ksiega") ||
+				item.getText().equals("tyt") ||
+				item.getText().equals("dzial") ||
+				item.getText().equals("rozdzial") ||
+				item.getText().equals("oddzial") ||
+				item.getText().equals("artykul") ||
+				item.getText().equals("paragraf") ||
+				item.getText().equals("sentencja") ||
+				item.getText().equals("ustep") ||
+				item.getText().equals("zaskarzenie") ||
+				item.getText().equals("punkt") ||
+				item.getText().equals("litera") ||
+				item.getText().equals("tiret") ||
+				item.getText().equals("akapit"))
+		displayValue(composite);
+
+		composite.pack();
+	}
+
+	private void displayValue(Composite composite) {
+		GridData gridData = new GridData();
+		gridData.horizontalAlignment = GridData.FILL;
+		gridData.horizontalSpan = 2;
+		gridData.grabExcessVerticalSpace = true;
+		gridData.heightHint = 200;
+		gridData.widthHint = 400;
+		Text txt = new Text(composite, SWT.BORDER | SWT.MULTI | SWT.WRAP | SWT.V_SCROLL);
+		txt.setLayoutData(gridData);
+	}
+
+	private void displayAttribute(Attribute attribute, Composite composite) {
+		Label label;
+		SimpleType simpleType = attribute.getSimpleType();
+		String type = attribute.getType();
+
+		label = new Label(composite, SWT.NONE);
+		label.setText(attribute.getName());
+		label.setBackground(white);
+
+		if (simpleType != null) {
+			if (simpleType.getEnumeratinos().size() > 0) {
+				Combo combo = new Combo(composite, SWT.NONE);
+				for (Object choice : simpleType.getEnumeratinos()) {
+					combo.add((String) choice);
+				}
+			} else {
+				new Text(composite, SWT.BORDER);
+			}
+		} else if (!type.equals("") && type != null) {
+			if (type.equals("data") || type.equals("zakres_lat")) {
+				DateTime date = new DateTime(composite, SWT.NONE);
+			} else {
+				new Text(composite, SWT.BORDER);
+			}
+		} else {
+			new Text(composite, SWT.BORDER);
+		}
+	}
+
+	public String getItemDescription(TreeItem item) {
+		try {
+			String result = elementRegistry.get(item.getText()).getDescription();
+			return result;
+		} catch (NullPointerException e) {
+			return "";
+		}
+	}
+
+	public void fillOutput(Tree treeOutput, Tree tree, Composite composite) {
+		TreeItem current = tree.getSelection()[0];
+		TreeItem parent = current.getParentItem();
+		while(parent != null) {
+			System.out.println(parent.getText());
+			parent = parent.getParentItem();
+		}
+		System.out.println("Top: " +current.getParent().getTopItem().getText());
+	}
+
+	public void initializeOutput(Tree tree, Tree treeOutput) {
+		TreeItem ti = new TreeItem(treeOutput, SWT.NONE);
+		ti.setText(tree.getItem(0).getParent().getTopItem().getText());
+	}
+}

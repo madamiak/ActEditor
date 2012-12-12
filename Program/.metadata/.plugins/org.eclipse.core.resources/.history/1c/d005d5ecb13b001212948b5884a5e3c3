@@ -1,0 +1,111 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+import java.util.List;
+
+/**
+ * Udostepnia interfejs atrybutu XML.
+ * 
+ * @author Mateusz
+ * 
+ */
+public interface Attribute {
+	/**
+	 * Konwertuje dane o atrybucie do String.
+	 * 
+	 * @return Atrybut w postaci ciagu znaków.
+	 */
+	public String toString();
+
+	/**
+	 * Zwraca nazwe atrybutu.
+	 * 
+	 * @return Nazwa atrybutu.
+	 */
+	public String getName();
+
+	/**
+	 * Ustawia nazwê atrybutu.
+	 * 
+	 * @param name
+	 *          Nazwa atrybutu.
+	 */
+	public void setName(String name);
+
+	/**
+	 * Zwraca typ atrybutu.
+	 * 
+	 * @return Typ atrybutu.
+	 */
+	public String getType();
+
+	/**
+	 * Ustawia typ atrybutu.
+	 * 
+	 * @param type
+	 *          Typ atrybutu.
+	 */
+	public void setType(String type);
+
+	/**
+	 * Zwraca typ prosty atrybutu.
+	 * 
+	 * @return Typ prosty atrybutu.
+	 */
+	public SimpleType getSimpleType();
+
+	/**
+	 * Ustawia typ prosty atrybutu.
+	 * 
+	 * @param simpleType
+	 *          Typ prosty atrybutu.
+	 */
+	public void setSimpleType(SimpleType simpleType);
+
+	/**
+	 * Zwraca wartoœæ use.
+	 * 
+	 * Pole use mówi, w jaki sposób atrybut ma byæ uzywany.
+	 * 
+	 * @return Wartoœæ use.
+	 */
+	public String getUse();
+
+	/**
+	 * Ustawia wartoœæ use.
+	 * 
+	 * Pole use mówi, w jaki sposób atrybut ma byæ u¿ywany.
+	 * 
+	 * @param use
+	 *          Wartoœæ use.
+	 */
+	public void setUse(String use);
+
+	/**
+	 * Zwraca opis atrybutu.
+	 * 
+	 * @return Opis atrybutu.
+	 */
+	public String getDescription();
+
+	/**
+	 * Ustawia opis atrybutu.
+	 * 
+	 * @param description
+	 *          Opis atrybutu.
+	 */
+	public void setDescription(String description);
+
+	/**
+	 * Dodaje atrybut-dziecko.
+	 * 
+	 * @param attribute
+	 *          Atrybut, ktory ma zostac dodany do listy dzieci.
+	 */
+	public void add(Attribute attribute);
+
+	public List getAttributes();
+
+	public String getDefault();
+
+	public void setDefault(String defaultValue);
+}

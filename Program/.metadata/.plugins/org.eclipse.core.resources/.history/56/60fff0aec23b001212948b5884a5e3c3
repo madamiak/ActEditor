@@ -1,0 +1,24 @@
+package test.pl.wroc.pwr.student.acteditor;
+
+import org.junit.runner.RunWith;
+import org.junit.runners.Suite;
+import org.junit.runners.Suite.SuiteClasses;
+// by FYICenter.com
+
+import test.pl.wroc.pwr.student.acteditor.model.RegistryTest;
+import test.pl.wroc.pwr.student.acteditor.model.SchemaTest;
+import test.pl.wroc.pwr.student.acteditor.model.tags.AttributeGroupTest;
+
+// specify a runner class: Suite.class
+@RunWith(Suite.class)
+
+// specify an array of test classes
+@Suite.SuiteClasses({
+  RegistryTest.class,
+  SchemaTest.class,
+  AttributeGroupTest.class
+  })
+
+// the actual class is empty
+public class AllTests {
+}

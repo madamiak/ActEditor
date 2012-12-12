@@ -1,0 +1,19 @@
+package test.pl.wroc.pwr.student.acteditor;
+
+import static org.junit.Assert.*;
+
+import org.eclipse.swt.widgets.Display;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.Application;
+
+public class ApplicationTest {
+
+	@Test
+	public void test() {
+		Application.main(new String[] {""});
+//		assertNotNull(Display.getCurrent());
+		Application.getWindow().dispose();
+	}
+
+}

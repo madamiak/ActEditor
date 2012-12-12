@@ -1,0 +1,56 @@
+package pl.wroc.pwr.student.acteditor.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
+
+/**
+ * Zapewnia dostep do rejestru prostych typów.
+ * 
+ * Rejestr zawiera proste typy Schematu XML, które sa identyfikowane po nazwie.
+ * 
+ * @author Mateusz
+ * 
+ */
+public class TypeRegistry {
+	private static TypeRegistry registry;
+	private List types;
+
+	private TypeRegistry() {
+		types = new ArrayList();
+	}
+
+	public static TypeRegistry getRegistry() {
+		if (registry == null) {
+			registry = new TypeRegistry();
+		}
+		return registry;
+	}
+
+	public void add(SimpleType type) {
+		for (Object each : types) {
+			if (((SimpleType) each).getName().equals(type.getName())) {
+				return;
+			}
+		}
+		types.add(type);
+	}
+
+	public SimpleType get(int index) {
+		return (SimpleType) types.get(index);
+	}
+
+	public SimpleType get(String name) {
+		for (Object each : types) {
+			if (((SimpleType) each).getName().equals(name)) {
+				return (SimpleType) each;
+			}
+		}
+		return null;
+	}
+
+	public List getTypes() {
+		return types;
+	}
+}

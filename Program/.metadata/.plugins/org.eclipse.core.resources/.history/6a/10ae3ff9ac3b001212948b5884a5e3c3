@@ -1,0 +1,140 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Device;
+import org.eclipse.swt.layout.FormAttachment;
+import org.eclipse.swt.layout.FormData;
+import org.eclipse.swt.layout.FormLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Combo;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+
+import pl.wroc.pwr.student.acteditor.model.DocumentRegistry;
+
+/**
+ * Wyœwietla g³ówne okno aplikacji.
+ * 
+ * @author Mateusz
+ *
+ */
+public class MainWindow extends Window {
+	public MainWindow(String name) {
+		super(name);
+	}
+
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	@Override
+	protected void initialize(String name) {
+		Text txtProgramZostaPrzygotowany;
+//		final Display display = new Display();
+//		Shell shell = new Shell(display);
+		display = new Display();
+		
+		Device device = Display.getCurrent();
+		Color white = new Color (device, 255, 255, 255);
+		
+		shell = new Shell(display);
+		shell.setBackground(white);
+		shell.setSize(782, 625);
+		shell.setText("Witamy w Act Editor");
+		shell.setLayout(new FormLayout());
+		
+		Composite composite_1 = new Composite(shell, SWT.NONE);
+		composite_1.setBackground(white);
+		FormData fd_composite_1 = new FormData();
+		fd_composite_1.top = new FormAttachment(0, 10);
+		fd_composite_1.right = new FormAttachment(100, -10);
+		composite_1.setLayoutData(fd_composite_1);
+
+		Label label = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
+		
+		Composite composite = new Composite(shell, SWT.NONE);
+		FormData fd_composite = new FormData();
+		fd_composite.right = new FormAttachment(label);
+		composite.setLayoutData(fd_composite);
+		
+		txtProgramZostaPrzygotowany = new Text(composite, SWT.READ_ONLY | SWT.WRAP | SWT.MULTI);
+		txtProgramZostaPrzygotowany.setText("Program zosta\u0142 przygotowany na potrzeby projektu in\u017Cynierskiego. " +
+				"Jest on odpowiednikiem edytora akt\u00F3w prawnych EDAP. Pozwala tworzy\u0107 dokumenty prawne zgodnie " +
+				"z:\r\nROZPORZ\u0104DZENIEM MINISTRA SPRAW WEWN\u0118TRZNYCH I ADMINISTRACJI z dnia 25 kwietnia 2008 r. " +
+				"w sprawie wymaga\u0144 technicznych dokument\u00F3w elektronicznych zawieraj\u0105cych akty normatywne i " +
+				"inne akty prawne, elektronicznej formy dziennik\u00F3w urz\u0119dowych oraz \u015Brodk\u00F3w komunikacji " +
+				"elektronicznej i informatycznych no\u015Bnik\u00F3w danych (Dz. U. 2008 Nr 75, poz. 451 z p\u00F3\u017An. " +
+				"zm.).\r\n\r\nW celu skorzystania z edytora, nale\u017Cy wybra\u0107 jedn\u0105 z opcji po prawej stronie " +
+				"ekranu. Ponadto w lewym dolnym rogu ekranu tytu\u0142owego edytora znajduje si\u0119 link prowadz\u0105cy " +
+				"do instrukcji obs\u0142ugi serwisu.");
+		txtProgramZostaPrzygotowany.setEditable(false);
+		txtProgramZostaPrzygotowany.setBounds(10, 10, 446, 266);
+		
+		final Combo combo = new Combo(composite_1, SWT.NONE);
+		combo.setBounds(10, 79, 262, 23);
+		combo.select(0);
+		
+		Button btnUtwrz = new Button(composite_1, SWT.NONE);
+		btnUtwrz.setBounds(223, 112, 49, 25);
+		btnUtwrz.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				WindowBuilder builder = new WindowBuilder(display);
+				int choice = combo.getSelectionIndex();
+				builder.openWindow(choice);
+			}
+		});
+		btnUtwrz.setText("Utw\u00F3rz");
+		
+		fd_composite.bottom = new FormAttachment(label, 0, SWT.BOTTOM);
+		fd_composite.right = new FormAttachment(label);
+		fd_composite.top = new FormAttachment(label, 0, SWT.TOP);
+		fd_composite_1.left = new FormAttachment(0, 474);
+
+		FormData fd_label = new FormData();
+		fd_label.right = new FormAttachment(composite_1, -6);
+		fd_label.left = new FormAttachment(0, 466);
+		fd_label.bottom = new FormAttachment(100, -138);
+		fd_label.top = new FormAttachment(0);
+		label.setLayoutData(fd_label);
+		
+		Label label_1 = new Label(shell, SWT.SEPARATOR | SWT.HORIZONTAL);
+		fd_composite.left = new FormAttachment(label_1, 0, SWT.LEFT);
+		fd_composite_1.bottom = new FormAttachment(label_1, -25);
+		FormData fd_label_1 = new FormData();
+		fd_label_1.bottom = new FormAttachment(100, -136);
+		fd_label_1.top = new FormAttachment(label);
+		fd_label_1.right = new FormAttachment(100);
+		fd_label_1.left = new FormAttachment(0);
+		label_1.setLayoutData(fd_label_1);
+		
+		DocumentRegistry registry = DocumentRegistry.getRegistry();
+		for(Object each : registry.getDocuments()) {
+			combo.add(each.toString());
+		}
+		
+	}
+
+	@Override
+	protected void open() {
+		shell.open();
+	}
+
+	@Override
+	protected void dispose() {
+		while (!shell.isDisposed()) {
+			if (!display.readAndDispatch())
+				display.sleep();
+		}
+		display.dispose();
+	}
+
+	public Display getMainDisplay() {
+		return display;
+	}
+}

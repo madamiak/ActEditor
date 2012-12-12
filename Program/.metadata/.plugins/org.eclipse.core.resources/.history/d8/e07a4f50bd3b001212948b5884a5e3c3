@@ -1,0 +1,79 @@
+package test.pl.wroc.pwr.student.acteditor.model;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.AttributeRegistry;
+import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
+import pl.wroc.pwr.student.acteditor.model.TypeRegistry;
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
+
+public class RegistryTest {
+	private AttributeRegistry aRegistry;
+	private ElementRegistry eRegistry;
+	private TypeRegistry tRegistry;
+	
+	@Before
+	public void setUp() {
+		aRegistry = AttributeRegistry.getRegistry();
+		eRegistry = ElementRegistry.getRegistry();
+		tRegistry = TypeRegistry.getRegistry();
+	}
+
+	@Test
+	public void registryExistTest() {
+		assertNotNull(aRegistry);
+		assertNotNull(eRegistry);
+		assertNotNull(tRegistry);
+	}
+	
+	@Test
+	public void addingItemTest() {
+		Attribute a = new SimpleAttribute();
+		a.setName("nazwa");
+		Element e = new SimpleElement("nazwa");
+		SimpleType t = new SimpleType();
+		t.setName("nazwa");
+		
+		aRegistry.add(a);
+		eRegistry.add(e);
+		tRegistry.add(t);
+		
+		assertTrue(aRegistry.getAttributes().size() == 1);
+		assertTrue(eRegistry.getElements().size() == 1);
+		assertTrue(tRegistry.getTypes().size() == 1);
+		
+	}
+	
+	@Test
+	public void gettingItemByNameTest() {
+		assertEquals("nazwa", aRegistry.get("nazwa").getName());
+		assertEquals("nazwa", eRegistry.get("nazwa").getName());
+		assertEquals("nazwa", tRegistry.get("nazwa").getName());
+	}
+	
+	public void addingItemWithNameAlreadyInRegistryTest() {
+		Attribute a = new SimpleAttribute();
+		a.setName("nazwa");
+		Element e = new SimpleElement("nazwa");
+		SimpleType t = new SimpleType();
+		t.setName("nazwa");
+		
+		aRegistry.add(a);
+		eRegistry.add(e);
+		tRegistry.add(t);
+		
+		assertTrue(aRegistry.getAttributes().size() == 1);
+		assertTrue(eRegistry.getElements().size() == 1);
+		assertTrue(tRegistry.getTypes().size() == 1);
+	}
+
+}

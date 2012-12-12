@@ -1,0 +1,118 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.SWT;
+import org.eclipse.swt.events.SelectionAdapter;
+import org.eclipse.swt.events.SelectionEvent;
+import org.eclipse.swt.graphics.Color;
+import org.eclipse.swt.graphics.Device;
+import org.eclipse.swt.graphics.Point;
+import org.eclipse.swt.layout.GridData;
+import org.eclipse.swt.layout.GridLayout;
+import org.eclipse.swt.widgets.Button;
+import org.eclipse.swt.widgets.Composite;
+import org.eclipse.swt.widgets.Control;
+import org.eclipse.swt.widgets.Display;
+import org.eclipse.swt.widgets.Event;
+import org.eclipse.swt.widgets.Label;
+import org.eclipse.swt.widgets.Listener;
+import org.eclipse.swt.widgets.Shell;
+import org.eclipse.swt.widgets.Text;
+import org.eclipse.swt.widgets.Tree;
+import org.eclipse.swt.widgets.TreeItem;
+
+public class SubWindow extends Window {
+	private Text text;
+	
+	public SubWindow(Display display, String name) {
+		super(name);
+		this.display = display;
+	}
+
+	/**
+	 * @wbp.parser.entryPoint
+	 */
+	@Override
+	protected void initialize(String name) {
+		final Presenter presenter = new Presenter();
+		Device device = Display.getCurrent ();
+		Color white = new Color (device, 255, 255, 255);
+		shell = new Shell(display);
+//		Display display = new Display();
+//		Shell shell = new Shell(display);
+		shell.setSize(790, 480);
+		shell.setBackground(white);
+		shell.setText(name);
+		shell.setLayout(new GridLayout(4, false));
+
+		final Tree tree = new Tree(shell, SWT.NONE);
+		GridData gd_tree = new GridData(SWT.LEFT, SWT.TOP, false, false, 1, 1);
+		gd_tree.heightHint = 329;
+		gd_tree.widthHint = 186;
+		tree.setLayoutData(gd_tree);
+		
+		presenter.fill(tree, name);
+		
+		Label label = new Label(shell, SWT.SEPARATOR | SWT.VERTICAL);
+		label.setBackground(white);
+		GridData gd_label = new GridData(SWT.FILL, SWT.FILL, false, false, 1, 3);
+		gd_label.heightHint = 336;
+		gd_label.widthHint = 14;
+		label.setLayoutData(gd_label);
+		
+		final Composite composite = new Composite(shell, SWT.NONE);
+		composite.setBackground(white);
+		composite.setLayout(new GridLayout(2, false));
+		GridData gd_composite = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 2);
+		gd_composite.widthHint = 436;
+		gd_composite.heightHint = 336;
+		composite.setLayoutData(gd_composite);
+		
+		Tree treeOutput = new Tree(shell, SWT.NONE);
+		GridData gd_treeOutput = new GridData(SWT.FILL, SWT.FILL, true, true, 1, 3);
+		gd_treeOutput.heightHint = 432;
+		gd_treeOutput.widthHint = 194;
+		treeOutput.setLayoutData(gd_treeOutput);
+		
+		presenter.initializeOutput(tree, treeOutput);
+		
+		text = new Text(shell, SWT.READ_ONLY | SWT.WRAP);
+		GridData gd_text = new GridData(SWT.FILL, SWT.TOP, false, false, 1, 2);
+		gd_text.widthHint = 115;
+		gd_text.heightHint = 44;
+		text.setLayoutData(gd_text);
+		text.setBackground(white);
+		text.setEditable(false);
+		
+		Button btnSave = new Button(shell, SWT.NONE);
+		btnSave.addSelectionListener(new SelectionAdapter() {
+			@Override
+			public void widgetSelected(SelectionEvent e) {
+				
+			}
+		});
+		btnSave.setLayoutData(new GridData(SWT.RIGHT, SWT.CENTER, false, false, 1, 1));
+		btnSave.setText("Zapisz");
+		
+		tree.addListener(SWT.MouseDown, new Listener() {
+      public void handleEvent(Event event) {
+        Point point = new Point(event.x, event.y);
+        TreeItem item = tree.getItem(point);
+        if (item != null) {
+        	String dsc = presenter.getItemDescription(item);
+      		presenter.fill(composite, item);
+      		text.setText(dsc);
+        }
+      }
+    });
+	}
+
+	@Override
+	protected void open() {
+		shell.pack();
+		shell.open();
+	}
+
+	@Override
+	protected void dispose() {
+	}
+}

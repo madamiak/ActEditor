@@ -1,0 +1,26 @@
+package test.pl.wroc.pwr.student.acteditor.model;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.Schema;
+
+public class SchemaTest {
+	private Schema schema;
+
+	@Before
+	public void setUp() throws Exception {
+		schema = new Schema();
+	}
+
+	@Test
+	public void test() {
+		String content = schema.getSchemaContent();
+		
+		assertNotNull(content);
+		assertEquals("<!--  D o k u m e n t y  -->", content.split("\n")[1]);
+	}
+
+}

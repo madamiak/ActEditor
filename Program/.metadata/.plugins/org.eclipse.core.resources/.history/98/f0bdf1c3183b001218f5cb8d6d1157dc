@@ -1,0 +1,19 @@
+package pl.wroc.pwr.student.acteditor.parsing.xml;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pl.wroc.pwr.student.acteditor.parsing.Formatter;
+
+public class XMLFormatter implements Formatter {
+	private List tags = new ArrayList();
+
+	@Override
+	public void add(String tag) {
+		tags.add(tag);
+	}
+
+	@Override
+	public String generate() {
+	}
+}

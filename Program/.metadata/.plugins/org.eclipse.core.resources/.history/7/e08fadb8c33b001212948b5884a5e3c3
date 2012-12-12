@@ -1,0 +1,50 @@
+package test.pl.wroc.pwr.student.acteditor.model.tags;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
+
+public class SimpleAttributeTest {
+	Attribute attribute;
+	
+	@Before
+	public void setUp() {
+		attribute = new SimpleAttribute();
+	}
+
+	@Test
+	public void settingAndGettingTest() {
+		attribute.setDefault("default");
+		attribute.setDescription("description");
+		attribute.setName("name");
+		SimpleType t = new SimpleType();
+		t.setName("name");
+		attribute.setSimpleType(t);
+		attribute.setType("type");
+		attribute.setUse("use");
+		
+		assertEquals("default", attribute.getDefault());
+		assertEquals("description", attribute.getDescription());
+		assertEquals("name", attribute.getName());
+		assertNotSame(t, attribute.getSimpleType());
+		assertNull(attribute.getSimpleType());
+		assertEquals("type", attribute.getType());
+		assertEquals("use", attribute.getUse());
+	}
+
+	@Test
+	public void addingItemsTest() {
+		Attribute a = new SimpleAttribute();
+		a.setName("name");
+		
+		attribute.add(a);
+		
+		assertNull(attribute.getAttributes());
+		
+	}
+}

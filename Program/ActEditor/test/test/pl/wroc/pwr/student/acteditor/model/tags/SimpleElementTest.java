@@ -1,0 +1,55 @@
+package test.pl.wroc.pwr.student.acteditor.model.tags;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
+
+public class SimpleElementTest {
+	Element element;
+
+	@Before
+	public void setUp() throws Exception {
+		element = new SimpleElement("name");
+	}
+
+	@Test
+	public void settingAndGettingTest() {
+		element.setDescription("description");
+		element.setMaxOccurs("unbounded");
+		element.setMinOccurs("3");
+		element.setType("type");
+		element.setValue("value");
+		
+		assertEquals("name", element.getName());
+		assertEquals("description", element.getDescription());
+		assertEquals("unbounded", element.getMaxOccurs());
+		assertEquals("3", element.getMinOccurs());
+		assertEquals("type", element.getType());
+		assertEquals("value", element.getValue());
+	}
+	
+	public void addingItemsTest() {
+		Element sub = new SimpleElement("sub");
+		
+		element.add(sub);
+		
+		assertNull(element.getElements());
+	}
+	
+	public void addingAttributesTest() {
+		Attribute a = new SimpleAttribute();
+		a.setName("att");
+		
+		element.addAttribute(a);
+		
+		assertTrue(element.getAttributes().size() == 1);
+		assertEquals(a, element.getAttributes().get(0));
+	}
+
+}

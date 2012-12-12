@@ -1,0 +1,27 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+import java.util.List;
+
+/**
+ * Udostepnia interfejs atrybutu XML.
+ * 
+ * @author Mateusz
+ *
+ */
+public interface Attribute {
+	public String toString();
+	public String getName();
+	public void setName(String name);
+	public String getType();
+	public void setType(String type);
+	public SimpleType getSimpleType();
+	public void setSimpleType(SimpleType simpleType);
+	public String getUse();
+	public void setUse(String use);
+	public String getDescription();
+	public void setDescription(String description);
+	public void add(Attribute attribute);
+	public List getAttributes();
+	public String getDefault();
+	public void setDefault(String defaultValue);
+}

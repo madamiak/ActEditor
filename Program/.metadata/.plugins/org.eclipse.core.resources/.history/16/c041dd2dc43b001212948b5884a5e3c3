@@ -1,0 +1,93 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+import java.util.List;
+
+/**
+ * Przechowuje i udostepnia dane o atrybucie dokumentu XML.
+ * 
+ * @author Mateusz
+ *
+ */
+public class SimpleAttribute implements Attribute {
+	private String name = "";
+	private String type = "";
+	private SimpleType simpleType;
+	private String defaultValue = "";
+	private String use = "optional";
+	private String description = "";
+
+	public String toString() {
+		return "\n"+name;
+	}
+	
+	@Override
+	public String getName() {
+		return name;
+	}
+
+	@Override
+	public void setName(String name) {
+		this.name = name;
+	}
+
+	@Override
+	public String getType() {
+		return type;
+	}
+
+	@Override
+	public void setType(String type) {
+		this.type = type;
+	}
+
+	@Override
+	public String getUse() {
+		return use;
+	}
+
+	@Override
+	public void setUse(String use) {
+		this.use = use;
+	}
+
+	@Override
+	public void add(Attribute attribute) {
+		this.simpleType = (SimpleType)attribute;
+	}
+
+	@Override
+	public List getAttributes() {
+		return null;
+	}
+
+	@Override
+	public String getDescription() {
+		return description;
+	}
+
+	@Override
+	public void setDescription(String description) {
+		this.description = description;
+	}
+
+	@Override
+	public SimpleType getSimpleType() {
+		return simpleType;
+	}
+
+	@Override
+	public void setSimpleType(SimpleType simpleType) {
+		this.simpleType = simpleType;
+	}
+
+	@Override
+	public String getDefault() {
+		return defaultValue;
+	}
+
+	@Override
+	public void setDefault(String defaultValue) {
+		this.defaultValue = defaultValue;
+	}
+
+}

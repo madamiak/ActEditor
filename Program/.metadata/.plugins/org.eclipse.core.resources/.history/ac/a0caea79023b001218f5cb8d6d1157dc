@@ -1,0 +1,630 @@
+package pl.wroc.pwr.student.acteditor.test;
+
+import java.util.Stack;
+
+import pl.wroc.pwr.student.acteditor.model.AttributeRegistry;
+import pl.wroc.pwr.student.acteditor.model.ElementRegistry;
+import pl.wroc.pwr.student.acteditor.model.Schema;
+import pl.wroc.pwr.student.acteditor.model.TypeRegistry;
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.AttributeGroup;
+import pl.wroc.pwr.student.acteditor.model.tags.Composition;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleAttribute;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleType;
+
+public class SchemaLoader {
+	private ElementRegistry elements = ElementRegistry.getRegistry();
+	private AttributeRegistry attributes = AttributeRegistry.getRegistry();
+	private TypeRegistry types = TypeRegistry.getRegistry();
+	private String[] lines = new Schema().getSchemaContent().split("\n");
+	private Stack stack = new Stack();
+	private boolean complexTypeDefinition = false;
+	
+	public void parseSAX() {
+		String token = "";
+		for(String line : lines) {
+			token = getEvent(line);
+			handleEvent(token, line);
+		}
+//		for(Object o : attributes.getAttributes()) {
+//			System.out.println(o);
+//		}
+//		for(Object o : elements.getElements()) {
+//			System.out.println(o);
+//		}
+//		for(Object o : types.getTypes()) {
+//			System.out.println(o);
+//		}
+	}
+
+	private void handleEvent(String token, String line) {
+//		if(token.equals("ignore")) System.out.println(token+"\t"+line);
+		System.out.println(token+"\t"+line);
+		switch(token) {
+		case "documentation":
+			documentationEventHandle(line);
+			break;
+		case "element-def":
+			elementDefinitionEventHandle(line);
+			break;
+		case "one-line-element-def":
+			oneLineElementDefinitionEventHandle(line);
+			break;
+		case "close-element-def":
+			closingElementEventHandle(line);
+			break;
+		case "element-ref-without-closing":
+			elementReferenceEventHandle(line);
+			break;
+		case "one-line-element-ref":
+			oneLineElementReferenceEventHandle(line);
+			break;
+		case "sequence":
+			sequenceEventHandle(line);
+			break;
+		case "closing-sequence":
+			closingSequenceEventHandle(line);
+			break;
+		case "choice":
+			choiceEventHandle(line);
+			break;
+		case "closing-choice":
+			closingChoiceEventHandle(line);
+			break;
+		case "element-group-def":
+			elementGroupDefinitionEventHandle(line);
+			break;
+		case "element-group-ref":
+			elementGroupReferenceEventHandle(line);
+			break;
+		case "closing-element-group-def":
+			closingElementGroupDefinitionEventHandle(line);
+			break;
+		case "complex-type-def":
+			complexTypeDefinition = true;
+			complexTypeDefinitionEventHandle(line);
+			break;
+		case "closing-complex-type-def":
+			if(complexTypeDefinition) {
+				closingComplexTypeDefinitionEventHandler(line);
+				complexTypeDefinition = false;
+			}
+			break;
+		case "attribute-def-without-closing":
+			attributeDefinitionEventHandle(line);
+			break;
+		case "one-line-attribute-def":
+			oneLineAttributeDefinitionEventHandle(line);
+			break;
+		case "closing-attribute-def":
+			closingAttributeDefinitionEventHandle(line);
+			break;
+		case "attribute-group-def":
+			attributeGroupDefinitionEventHandle(line);
+			break;
+		case "attribute-group-ref":
+			attributeGroupReferenceEventHandle(line);
+			break;
+		case "closing-attribute-group":
+			closingAttributeGroupEventHandle(line);
+			break;
+		case "simple-type-def":
+			simpleTypeDefinitionEventHandle(line);
+			break;
+		case "simple-type-beg":
+			simpleTypeBeginningEventHandle(line);
+			break;
+		case "closing-simple-type" :
+			closingSimpleTypeEventHandle(line);
+			break;
+		case "enumeration" :
+			enumerationEventHandle(line);
+			break;
+		case "pattern" :
+			patternEventHandle(line);
+			break;
+		}
+	}
+
+	private void patternEventHandle(String line) {
+		SimpleType simpleType = (SimpleType) stack.pop();
+		String pattern = getAttribute("value", line);
+		simpleType.setPattern(pattern);
+		stack.push(simpleType);
+	}
+
+	private void enumerationEventHandle(String line) {
+		SimpleType simpleType = (SimpleType) stack.pop();
+		String enumeration = getAttribute("value", line);
+		simpleType.add(enumeration);
+		stack.push(simpleType);
+	}
+
+	private void simpleTypeBeginningEventHandle(String line) {
+		SimpleType simpleType = new SimpleType();
+		stack.push(simpleType);
+	}
+
+	private void closingSimpleTypeEventHandle(String line) {
+		SimpleType simpleType = (SimpleType) stack.pop();
+		if(!stack.isEmpty()) {
+			Object parent = stack.pop();
+			if(parent instanceof Attribute) {
+				((Attribute)parent).setSimpleType(simpleType);
+				stack.push(parent);
+			}
+		} else {
+			types.add(simpleType);
+		}
+	}
+
+	private void simpleTypeDefinitionEventHandle(String line) {
+		SimpleType simpleType = createSimpleTypeDefinition(line);
+		stack.push(simpleType);
+	}
+
+	private SimpleType createSimpleTypeDefinition(String line) {
+		SimpleType simpleType = new SimpleType();
+		String name = getAttribute("name", line);
+		simpleType.setName(name);
+		return simpleType;
+	}
+
+	private void closingAttributeGroupEventHandle(String line) {
+		Attribute attribute = (Attribute) stack.pop();
+		attributes.add(attribute);
+	}
+
+	private void attributeGroupReferenceEventHandle(String line) {
+		Attribute attribute = createGroupReference(line);
+		Object parent = stack.pop();
+		if(parent instanceof Element) {
+			((Element)parent).addAttribute(attribute);
+		} else if(parent instanceof Attribute) {
+			((Attribute)parent).add(attribute);
+		}
+		stack.push(parent);
+	}
+
+	private Attribute createGroupReference(String line) {
+		Attribute attribute = new AttributeGroup();
+		String name = getAttribute("ref", line);
+		attribute.setName(name);
+		return attribute;
+	}
+
+	private void attributeGroupDefinitionEventHandle(String line) {
+		Attribute attribute = createGroupDefinition(line);
+		stack.push(attribute);
+	}
+
+	private Attribute createGroupDefinition(String line) {
+		Attribute attribute = new AttributeGroup();
+		String name = getAttribute("name", line);
+		attribute.setName(name);
+		return attribute;
+	}
+
+	private void closingAttributeDefinitionEventHandle(String line) {
+		Attribute attribute = (Attribute) stack.pop();
+		Object parent = stack.pop();
+		if(parent instanceof Element) {
+			((Element)parent).addAttribute(attribute);
+		} else if(parent instanceof Attribute) {
+			((Attribute)parent).add(attribute);
+		}
+		stack.push(parent);
+	}
+
+	private void oneLineAttributeDefinitionEventHandle(String line) {
+		Attribute attribute = createAttribute(line);
+		Object parent = stack.pop();
+		if(parent instanceof Element) {
+			((Element)parent).addAttribute(attribute);
+		} else if(parent instanceof Attribute) {
+			((Attribute)parent).add(attribute);
+		}
+		stack.push(parent);
+	}
+
+	private void attributeDefinitionEventHandle(String line) {
+		Attribute attribute = createAttribute(line);
+		stack.push(attribute);
+	}
+
+	private Attribute createAttribute(String line) {
+		String name = getAttribute("name", line);
+		String defaultValue = getAttribute("default", line);
+		String type = getAttribute("type", line);
+		String use = getAttribute("use", line);
+		Attribute attribute = new SimpleAttribute();
+		attribute.setName(name);
+		if(!defaultValue.equals("")) {
+			attribute.setDefault(defaultValue);
+		}
+		if(!use.equals("")) {
+			attribute.setUse(use);
+		}
+		return attribute;
+	}
+
+	private void closingComplexTypeDefinitionEventHandler(String line) {
+		Element element = (Element) stack.pop();
+		elements.add(element);
+	}
+
+	private void complexTypeDefinitionEventHandle(String line) {
+		String name = getAttribute("name", line);
+		Element element = new Composition(name, "complex");
+		stack.push(element);
+	}
+
+	private void closingElementGroupDefinitionEventHandle(String line) {
+		Element element = (Element) stack.pop();
+		elements.add(element);
+	}
+
+	private void elementGroupReferenceEventHandle(String line) {
+		Element element = createElementGroupReference(line);
+		String minOccurs = getAttribute("minOccurs", line);
+		String maxOccurs = getAttribute("maxOccurs", line);
+		if(!minOccurs.equals("")) {
+			element.setMinOccurs(minOccurs);
+		}
+		if(!maxOccurs.equals("")) {
+			element.setMaxOccurs(maxOccurs);
+		}
+		Element parent = (Element) stack.pop();
+		parent.add(element);
+		stack.push(parent);
+	}
+
+	private Element createElementGroupReference(String line) {
+		String name = getAttribute("ref", line);
+		Element element = new Composition(name, "ref");
+		return element;
+	}
+
+	private void elementGroupDefinitionEventHandle(String line) {
+		Element element = createElementGroupDefinition(line);
+		stack.push(element);
+	}
+
+	private Element createElementGroupDefinition(String line) {
+		String name = getAttribute("name", line);
+		Element element = new Composition(name, "group");
+		return element;
+	}
+
+	private void closingChoiceEventHandle(String line) {
+		Element element = (Element) stack.pop();
+		if(!stack.isEmpty()) {
+			Element parent = (Element) stack.pop();
+			parent.add(element);
+			stack.push(parent);
+		}
+	}
+
+	private void choiceEventHandle(String line) {
+		Element element = new Composition("rozwiñ", "choice");
+		String minOccurs = getAttribute("minOccurs", line);
+		String maxOccurs = getAttribute("maxOccurs", line);
+		if(!minOccurs.equals("")) {
+			element.setMinOccurs(minOccurs);
+		}
+		if(!maxOccurs.equals("")) {
+			element.setMaxOccurs(maxOccurs);
+		}
+		stack.push(element);		
+	}
+
+	private void closingSequenceEventHandle(String line) {
+		Element element = (Element) stack.pop();
+		Element parent = (Element) stack.pop();
+		parent.add(element);
+		stack.push(parent);
+	}
+
+	private void sequenceEventHandle(String line) {
+		Element element = new Composition("rozwiñ", "seq");
+		String minOccurs = getAttribute("minOccurs", line);
+		String maxOccurs = getAttribute("maxOccurs", line);
+		if(!minOccurs.equals("")) {
+			element.setMinOccurs(minOccurs);
+		}
+		if(!maxOccurs.equals("")) {
+			element.setMaxOccurs(maxOccurs);
+		}
+		stack.push(element);
+	}
+
+	private void oneLineElementDefinitionEventHandle(String line) {
+		Element element = createElementDefinition(line);
+		elements.add(element);
+	}
+
+	private void elementReferenceEventHandle(String line) {
+		Element element = createElementReference(line);
+		stack.push(element);
+	}
+
+	private void oneLineElementReferenceEventHandle(String line) {
+		Element element = createElementReference(line);
+		Element parent = null;
+		if(!stack.isEmpty()) {
+			parent = (Element) stack.pop();
+			parent.add(element);
+			stack.push(parent);
+		}
+	}
+
+	private Element createElementReference(String line) {
+		String name = getAttribute("ref", line);
+		String minOccurs = getAttribute("minOccurs", line);
+		String maxOccurs = getAttribute("maxOccurs", line);
+		Element element = new Composition(name, "ref");
+		if(!minOccurs.equals("")) {
+			element.setMinOccurs(minOccurs);
+		}
+		if(!maxOccurs.equals("")) {
+			element.setMaxOccurs(maxOccurs);
+		}
+		return element;
+	}
+
+	private void closingElementEventHandle(String line) {
+		Element element = (Element) stack.pop();
+		if(element.getType().equals("ref")) {
+			Element parent = (Element) stack.pop();
+			parent.add(element);
+			stack.push(parent);
+		} else {
+			elements.add(element);
+		}
+	}
+
+	private void documentationEventHandle(String line) {
+		Object parent = null;
+		if(!stack.isEmpty()) {
+			parent = stack.pop();
+		}
+		if(parent instanceof Composition || parent instanceof SimpleElement) {
+			Element element = (Element) parent;
+			element = (Element) setDescription(element, line);
+			stack.push(element);
+		}	else if(parent instanceof Attribute || parent instanceof AttributeGroup) {
+			Attribute attribute = (Attribute) parent;
+			attribute = (Attribute) setDescription(attribute, line);
+			stack.push(attribute);
+		} else if(parent instanceof SimpleType) {
+			SimpleType simpleType = (SimpleType) parent;
+			simpleType = (SimpleType) setDescription(simpleType, line);
+			stack.push(simpleType);
+ 		}
+	}
+
+	private Object setDescription(Object object, String line) {
+		String description = line.substring(line.indexOf(">")+1, line.lastIndexOf("<"));
+		if(object instanceof Composition || object instanceof SimpleElement) {
+			if(((Element)object).getDescription().length() == 0) {
+				((Element)object).setDescription(description);
+			}
+		} else if(object instanceof Attribute || object instanceof AttributeGroup) {
+			if(((Attribute)object).getDescription().length() == 0) {
+				((Attribute)object).setDescription(description);
+			}
+		} else if(object instanceof SimpleType) {
+			if(((SimpleType)object).getDescription().length() == 0) {
+				((SimpleType)object).setDescription(description);
+			}
+		}
+		return object;
+	}
+
+	private void elementDefinitionEventHandle(String line) {
+		Element element = createElementDefinition(line);
+		stack.push(element);
+	}
+
+	private Element createElementDefinition(String line) {
+		String name = getAttribute("name", line);
+		Element result = new Composition(name, "all");
+		return result;
+	}
+
+	private String getAttribute(String name, String line) {
+		if(line.contains(name)) {
+			int begin = line.indexOf(name + "=\"") + (name + "=\"").length();
+			int end = line.indexOf("\"", line.indexOf(name + "=\"") + (name + "=\"").length());
+			return line.substring(begin, end);
+		}
+		return "";
+	}
+
+	private String getEvent(String line) {
+		if(containsDocumentation(line)) {
+			return "documentation";
+		} else if(containsElementDefinition(line)) {
+			return "element-def";
+		} else if(containsOneLineElementDefinition(line)) {
+			return "one-line-element-def";
+		} else if(containsClosingElementDefinition(line)) {
+			return "close-element-def";
+		} else if(containsElementReferenceWithoutClosingSign(line)) {
+			return "element-ref-without-closing";
+		} else if(containsOneLineElementReference(line)) {
+			return "one-line-element-ref";
+		} else if(containsSequence(line)) {
+			return "sequence";
+		} else if(containsClosingSequence(line)) {
+			return "closing-sequence";
+		} else if(containsChoice(line)) {
+			return "choice";
+		} else if(containsClosingChoice(line)) {
+			return "closing-choice";
+		} else if(containsGroupDefinition(line)) {
+			return "element-group-def";
+		} else if(containstGroupReference(line)) {
+			return "element-group-ref";
+		}	else if(containsClosingGroupDefinition(line)) {
+			return "closing-element-group-def";
+		} else if(containstComplexTypeDefinition(line)) {
+			return "complex-type-def";
+		} else if(containsClosingComplexTypeDefinition(line)) {
+			return "closing-complex-type-def";
+		} else if(containsComplexContent(line)) {
+			return "complex-content";
+		} else if(containsClosingComplexContent(line)) {
+			return "closing-complex-content";
+		} else if(containsAttributeDefinitionWithoutClosingSign(line)) {
+			return "attribute-def-without-closing";
+		} else if(containsOneLineAttributeDefinition(line)) {
+			return "one-line-attribute-def";
+		} else if(containsClosingAttributeDefinition(line)) {
+			return "closing-attribute-def";
+		} else if(containsAttributeGroupDefinition(line)) {
+			return "attribute-group-def";
+		} else if(containsAttributeGroupReference(line)) {
+			return "attribute-group-ref";
+		} else if(containsClosingAttributeGroup(line)) {
+			return "closing-attribute-group";
+		} else if(containsSimpleTypeDefinition(line)) {
+			return "simple-type-def";
+		} else if(containsSimpleTypeBeginning(line)) {
+			return "simple-type-beg";
+		} else if(containsClosingSimpleType(line)) {
+			return "closing-simple-type";
+		} else if(containsExtension(line)) {
+			return "extension";
+		} else if(containsClosingExtension(line)) {
+			return "closing-extension";
+		} else if(containsPattern(line)) {
+			return "pattern";
+		} else if(containsEnumeration(line)) {
+			return "enumeration";
+		}
+ 		return "ignore";
+	}
+
+	private boolean containsEnumeration(String line) {
+		return line.contains("<xsd:enumeration");
+	}
+
+	private boolean containsPattern(String line) {
+		return line.contains("<xsd:pattern");
+	}
+
+	private boolean containsClosingExtension(String line) {
+		return line.contains("</xsd:extension");
+	}
+
+	private boolean containsExtension(String line) {
+		return line.contains("<xsd:extension");
+	}
+
+	private boolean containsClosingSimpleType(String line) {
+		return line.contains("</xsd:simpleType>");
+	}
+
+	private boolean containsSimpleTypeBeginning(String line) {
+		return line.contains("<xsd:simpleType>");
+	}
+
+	private boolean containsSimpleTypeDefinition(String line) {
+		return (line.contains("<xsd:simpleType") && line.contains("name="));
+	}
+
+	private boolean containsClosingAttributeGroup(String line) {
+		return (line.contains("</xsd:attributeGroup>"));
+	}
+
+	private boolean containsAttributeGroupReference(String line) {
+		return (line.contains("attributeGroup") && line.contains("ref="));
+	}
+
+	private boolean containsAttributeGroupDefinition(String line) {
+		return (line.contains("attributeGroup") && line.contains("name="));
+	}
+
+	private boolean containsOneLineAttributeDefinition(String line) {
+		return (line.contains("attribute ") && line.contains("name=") && line.contains("/>"));
+	}
+
+	private boolean containsClosingAttributeDefinition(String line) {
+		return line.contains("</xsd:attribute>");
+	}
+
+	private boolean containsAttributeDefinitionWithoutClosingSign(String line) {
+		return (line.contains("attribute ") && line.contains("name=") && !line.contains("/>"));
+	}
+
+	private boolean containsClosingComplexContent(String line) {
+		return line.contains("</xsd:complexContent>");
+	}
+
+	private boolean containsComplexContent(String line) {
+		return line.contains("complexContent");
+	}
+
+	private boolean containsClosingComplexTypeDefinition(String line) {
+		return (line.contains("</xsd:complexType>"));
+	}
+
+	private boolean containstComplexTypeDefinition(String line) {
+		return (line.contains("complexType") && line.contains("name="));
+	}
+
+	private boolean containstGroupReference(String line) {
+		return (line.contains("group") && !line.contains("attributeGroup") && line.contains("ref="));
+	}
+
+	private boolean containsClosingGroupDefinition(String line) {
+		return line.contains("</xsd:group>");
+	}
+
+	private boolean containsGroupDefinition(String line) {
+		return (line.contains("group") && !line.contains("attributeGroup") && line.contains("name="));
+	}
+
+	private boolean containsClosingChoice(String line) {
+		return line.contains("</xsd:choice>");
+	}
+
+	private boolean containsChoice(String line) {
+		return line.contains("<xsd:choice");
+	}
+
+	private boolean containsClosingSequence(String line) {
+		return line.contains("</xsd:sequence>");
+	}
+
+	private boolean containsSequence(String line) {
+		return line.contains("<xsd:sequence");
+	}
+
+	private boolean containsOneLineElementDefinition(String line) {
+		return (line.contains("element") && line.contains("name=") && line.contains("/>"));
+	}
+
+	private boolean containsOneLineElementReference(String line) {
+		return (line.contains("element") && line.contains("ref=") && line.contains("/>"));
+	}
+
+	private boolean containsElementReferenceWithoutClosingSign(String line) {
+		return (line.contains("element") && line.contains("ref=") && !line.contains("/>"));
+	}
+
+	private boolean containsClosingElementDefinition(String line) {
+		return line.contains("</xsd:element>");
+	}
+
+	private boolean containsElementDefinition(String line) {
+		return (line.contains("element") && line.contains("name=") && !line.contains("/>"));
+	}
+
+	private boolean containsDocumentation(String line) {
+		return line.contains("documentation");
+	}
+}

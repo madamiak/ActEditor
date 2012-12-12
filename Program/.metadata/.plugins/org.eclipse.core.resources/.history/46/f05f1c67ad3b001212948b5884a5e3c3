@@ -1,0 +1,58 @@
+package pl.wroc.pwr.student.acteditor.model;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import pl.wroc.pwr.student.acteditor.model.tags.Attribute;
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+
+/**
+ * Zapewnia dostep do rejestru atrybutow.
+ * 
+ * Rejestr zawiera atrybuty Schematu XML, ktore sa identyfikowane po nazwie
+ * atrybutu.
+ * 
+ * @author Mateusz
+ * 
+ */
+public class AttributeRegistry {
+	private static AttributeRegistry registry;
+	private List attributes;
+
+	private AttributeRegistry() {
+		attributes = new ArrayList();
+	}
+
+	public static AttributeRegistry getRegistry() {
+		if (registry == null) {
+			registry = new AttributeRegistry();
+		}
+		return registry;
+	}
+
+	public void add(Attribute attribute) {
+		for (Object each : attributes) {
+			if (((Attribute) each).getName().equals(attribute.getName())) {
+				return;
+			}
+		}
+		attributes.add(attribute);
+	}
+
+	public Attribute get(int index) {
+		return (Attribute) attributes.get(index);
+	}
+
+	public Attribute get(String name) {
+		for (Object each : attributes) {
+			if (((Attribute) each).getName().equals(name)) {
+				return (Attribute) each;
+			}
+		}
+		return null;
+	}
+
+	public List getAttributes() {
+		return attributes;
+	}
+}

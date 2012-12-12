@@ -1,0 +1,21 @@
+package test.pl.wroc.pwr.student.acteditor.model.tags;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+public class SimpleType {
+	private SimpleType simpleType;
+	
+	@Before
+	public void setUp() throws Exception {
+		simpleType = new SimpleType();
+	}
+
+	@Test
+	public void settingAndGettingTest() {
+		simpleType.s
+	}
+
+}

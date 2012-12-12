@@ -1,0 +1,6 @@
+package pl.wroc.pwr.student.acteditor.parsing;
+
+public interface Formatter {	
+	public void add(String tag);
+	public void generate();
+}

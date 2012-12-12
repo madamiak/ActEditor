@@ -1,0 +1,29 @@
+package pl.wroc.pwr.student.acteditor;
+
+import pl.wroc.pwr.student.acteditor.view.MainWindow;
+
+/**
+ * Klasa startowa aplikacji.
+ * 
+ * @author Mateusz
+ * 
+ */
+public final class Application {
+
+	/**
+	 * Wyœwietla g³ówne okno aplikacji.
+	 * 
+	 * Aplikacja ActEditor pozwala na generowanie dokumentów prawnych, które s¹
+	 * wymienione w Schemacie XML skonstruowanym przez MSWiA. Zapewnia odpowiedni¹
+	 * walidacjê poprawnoœci dokumentu.
+	 * 
+	 * @param args
+	 */
+	public static void main(String[] args) {
+		Application.run();
+	}
+
+	private static void run() {
+		new MainWindow(null);
+	}
+}

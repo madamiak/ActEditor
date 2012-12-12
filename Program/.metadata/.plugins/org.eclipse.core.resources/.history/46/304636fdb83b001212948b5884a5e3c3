@@ -1,0 +1,26 @@
+package pl.wroc.pwr.student.acteditor.view;
+
+import org.eclipse.swt.widgets.Display;
+
+import pl.wroc.pwr.student.acteditor.model.DocumentRegistry;
+import pl.wroc.pwr.student.acteditor.util.Utils;
+
+/**
+ * Zapewnia otwarcie w³aœciwego okna edycji dokumentu.
+ * 
+ * @author Mateusz
+ *
+ */
+public class WindowBuilder {
+	private Display display;
+	private DocumentRegistry registry;
+	
+	public WindowBuilder(Display display) {
+		this.display = display;
+		this.registry = DocumentRegistry.getRegistry();
+	}
+	
+	public void openWindow(int choice) {
+		new SubWindow(display, Utils.map((String)registry.get(choice)));
+	}
+}

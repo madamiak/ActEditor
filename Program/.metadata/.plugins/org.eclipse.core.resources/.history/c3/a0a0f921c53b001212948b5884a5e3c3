@@ -1,0 +1,24 @@
+package test.pl.wroc.pwr.student.acteditor.model.tags;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+import pl.wroc.pwr.student.acteditor.model.tags.SimpleElement;
+
+public class SimpleElementTest {
+	Element element;
+
+	@Before
+	public void setUp() throws Exception {
+		element = new SimpleElement("name");
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

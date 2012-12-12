@@ -1,0 +1,23 @@
+package test.pl.wroc.pwr.student.acteditor.model.tags;
+
+import static org.junit.Assert.*;
+
+import org.junit.Before;
+import org.junit.Test;
+
+import pl.wroc.pwr.student.acteditor.model.tags.Element;
+
+public class Composition {
+	private Element element;
+	
+	@Before
+	public void setUp() {
+		element = new Composition()
+	}
+
+	@Test
+	public void test() {
+		fail("Not yet implemented");
+	}
+
+}

@@ -1,0 +1,17 @@
+1353929107780	Rename method 'createGroup'
+1354050990604	Delete element
+1354051009860	Delete element
+1354054396106	Rename method 'eventHandle'
+1354055762013	Rename local variable 'element'
+1354057604895	Rename method 'containsElementReference'
+1354057779001	Rename method 'elementReferenceEventHandle'
+1354058651113	Rename method 'containsElementReferenceWithClosingSign'
+1354099479038	Rename method 'containsGroup'
+1354099491318	Rename method 'containsClosingGroup'
+1354100961238	Rename method 'elementGroupEventHandle'
+1354101411149	Rename method 'closingElementDefinitionEventHandle'
+1354118586924	Rename method 'containsAttributeDefinition'
+1354214441927	Rename field 'attributes'
+1354214636249	Encapsulate field 'pattern'
+1354214670429	Encapsulate field 'description'
+1354214755842	Rename field 'enumeration'

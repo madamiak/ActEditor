@@ -1,0 +1,23 @@
+package pl.wroc.pwr.student.acteditor.model.tags;
+
+import java.util.ArrayList;
+import java.util.List;
+
+import org.junit.runner.Describable;
+
+public class SimpleType {
+	private List enumeration;
+	private String pattern;
+	private String type;
+	private String name;
+	private String description = "";
+	
+	public SimpleType() {
+		enumeration = new ArrayList();
+	}
+
+	public String getName() {
+		return name;
+	}
+
+}
